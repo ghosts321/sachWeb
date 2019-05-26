@@ -1,0 +1,539 @@
+[{
+    "columnname": "cmx-i-1",
+    "columnindex": "cmx-i-1",
+    "serialnumber": "P0001",
+    "type": "separator",
+    "name": "申请信息",
+    "attribute": {
+        "default": "",
+        "notnull": 1,
+        "title": "申请信息",
+        "desc": ""
+    },
+    "extra": {
+        "class": "margin-bottom-10",
+        "func": "",
+        "width": 12,
+        "layout": "",
+        "placeholder": ""
+    }
+},
+{
+    "columnname": "cmx-i-2",
+    "columnindex": "cmx-i-2",
+    "serialnumber": "P0002",
+    "type": "text",
+    "name": "审核机构",
+    "attribute": {
+        "default": "",
+        "notnull": 1,
+        "stype": "short"
+    },
+    "extra": {
+        "class": "margin-bottom-20",
+        "func": "",
+        "width": "6",
+        "layout": "",
+        "placeholder": ""
+    }
+},
+{
+    "columnname": "cmx-i-3",
+    "columnindex": "cmx-i-3",
+    "serialnumber": "P0003",
+    "type": "text",
+    "name": "出境海关",
+    "attribute": {
+        "default": "",
+        "notnull": 1,
+        "stype": "short"
+    },
+    "extra": {
+        "class": "margin-bottom-20",
+        "func": "",
+        "width": "6",
+        "layout": "",
+        "placeholder": ""
+    }
+},
+{
+    "columnname": "cmx-i-4",
+    "columnindex": "cmx-i-4",
+    "serialnumber": "P0004",
+    "type": "text",
+    "name": "申报单位",
+    "attribute": {
+        "default": "",
+        "notnull": 1,
+        "stype": "short"
+    },
+    "extra": {
+        "class": "margin-bottom-20",
+        "func": "",
+        "width": "6",
+        "layout": "",
+        "placeholder": ""
+    }
+},
+{
+    "columnname": "cmx-i-5",
+    "columnindex": "cmx-i-5",
+    "serialnumber": "P0005",
+    "type": "text",
+    "name": "主管单位",
+    "attribute": {
+        "default": "",
+        "notnull": 1,
+        "stype": "short"
+    },
+    "extra": {
+        "class": "margin-bottom-20",
+        "func": "",
+        "width": "6",
+        "layout": "",
+        "placeholder": ""
+    }
+},
+{
+    "columnname": "cmx-i-6",
+    "columnindex": "cmx-i-6",
+    "serialnumber": "P0006",
+    "type": "text",
+    "name": "住所",
+    "attribute": {
+        "default": "",
+        "notnull": 1,
+        "stype": "short"
+    },
+    "extra": {
+        "class": "margin-bottom-20",
+        "func": "",
+        "width": "6",
+        "layout": "",
+        "placeholder": ""
+    }
+},
+{
+    "columnname": "cmx-i-7",
+    "columnindex": "cmx-i-7",
+    "serialnumber": "P0007",
+    "type": "text",
+    "name": "负责人",
+    "attribute": {
+        "default": "",
+        "notnull": 1,
+        "stype": "short"
+    },
+    "extra": {
+        "class": "margin-bottom-20",
+        "func": "",
+        "width": "6",
+        "layout": "",
+        "placeholder": ""
+    }
+},
+{
+    "columnname": "cmx-i-8",
+    "columnindex": "cmx-i-8",
+    "serialnumber": "P0008",
+    "type": "text",
+    "name": "携运人",
+    "attribute": {
+        "default": "",
+        "notnull": 1,
+        "stype": "short"
+    },
+    "extra": {
+        "class": "margin-bottom-20",
+        "func": "",
+        "width": "6",
+        "layout": "",
+        "placeholder": ""
+    }
+},
+{
+    "columnname": "cmx-i-9",
+    "columnindex": "cmx-i-9",
+    "serialnumber": "P0009",
+    "type": "text",
+    "name": "电话",
+    "attribute": {
+        "default": "",
+        "notnull": 1,
+        "stype": "short"
+    },
+    "extra": {
+        "class": "margin-bottom-20",
+        "func": "",
+        "width": "6",
+        "layout": "",
+        "placeholder": ""
+    }
+},
+{
+    "columnname": "cmx-i-10",
+    "columnindex": "cmx-i-10",
+    "serialnumber": "P0010",
+    "type": "separator",
+    "name": "文物信息",
+    "attribute": {
+        "default": "",
+        "notnull": 1,
+        "title": "申请信息",
+        "desc": ""
+    },
+    "extra": {
+        "class": "margin-bottom-10",
+        "func": "",
+        "width": 12,
+        "layout": "",
+        "placeholder": ""
+    }
+},
+{
+    "columnname": "cmx-i-11",
+    "columnindex": "cmx-i-11",
+    "serialnumber": "P0011",
+    "type": "text",
+    "name": "文物名称",
+    "attribute": {
+        "default": "",
+        "notnull": 1,
+        "stype": "short"
+    },
+    "extra": {
+        "class": "margin-bottom-20",
+        "func": "",
+        "width": "6",
+        "layout": "",
+        "placeholder": ""
+    }
+},
+{
+    "columnname": "cmx-i-12",
+    "columnindex": "cmx-i-12",
+    "serialnumber": "P0012",
+    "type": "text",
+    "name": "年代",
+    "attribute": {
+        "default": "",
+        "notnull": 1,
+        "stype": "short"
+    },
+    "extra": {
+        "class": "margin-bottom-20",
+        "func": "",
+        "width": "6",
+        "layout": "",
+        "placeholder": ""
+    }
+},
+{
+    "columnname": "cmx-i-13",
+    "columnindex": "cmx-i-13",
+    "serialnumber": "P0013",
+    "type": "single",
+    "name": "质地",
+    "attribute": {
+        "default": "",
+        "notnull": 0,
+        "stype": 1,
+        "remark": [{
+                "id": 0,
+                "value": "陶器"
+            },
+            {
+                "id": 1,
+                "value": "瓷器"
+            }, {
+                "id": 2,
+                "value": "玻璃"
+            }, {
+                "id": 3,
+                "value": "铜器"
+            }, {
+                "id": 4,
+                "value": "石器"
+            }, {
+                "id": 5,
+                "value": "玉器"
+            }, {
+                "id": 6,
+                "value": "砖瓦"
+            }, {
+                "id": 7,
+                "value": "竹木"
+            }, {
+                "id": 8,
+                "value": "丝织"
+            }, {
+                "id": 9,
+                "value": "漆器"
+            }, {
+                "id": 10,
+                "value": "骨牙角"
+            }, {
+                "id": 11,
+                "value": "铁器"
+            }, {
+                "id": 12,
+                "value": "金器"
+            }, {
+                "id": 13,
+                "value": "银器"
+            }, {
+                "id": 14,
+                "value": "皮革"
+            }, {
+                "id": 15,
+                "value": "纸质"
+            }, {
+                "id": 16,
+                "value": "其他"
+            }
+        ]
+    },
+    "extra": {
+        "class": "margin-bottom-20",
+        "func": "",
+        "width": "6",
+        "layout": "",
+        "placeholder": ""
+    }
+},
+{
+    "columnname": "cmx-i-14",
+    "columnindex": "cmx-i-14",
+    "serialnumber": "P0014",
+    "type": "single",
+    "name": "级别",
+    "attribute": {
+        "default": "",
+        "notnull": 0,
+        "stype": 1,
+        "remark": [{
+                "id": 0,
+                "value": "一级"
+            },
+            {
+                "id": 1,
+                "value": "二级"
+            },
+            {
+                "id": 2,
+                "value": "三级"
+            },
+            {
+                "id": 3,
+                "value": "一般"
+            },
+            {
+                "id": 4,
+                "value": "不定级"
+            }
+        ]
+    },
+    "extra": {
+        "class": "margin-bottom-20",
+        "func": "",
+        "width": "6",
+        "layout": "",
+        "placeholder": ""
+    }
+},
+{
+    "columnname": "cmx-i-15",
+    "columnindex": "cmx-i-15",
+    "serialnumber": "P0015",
+    "type": "text",
+    "name": "尺寸:",
+    "attribute": {
+        "default": "",
+        "notnull": 1,
+        "stype": "short"
+    },
+    "extra": {
+        "class": "margin-bottom-20",
+        "func": "",
+        "width": "6",
+        "layout": "",
+        "placeholder": ""
+    }
+},
+{
+    "columnname": "cmx-i-16",
+    "columnindex":"cmx-i-16",
+    "serialnumber": "P0016",
+    "type": "num",
+    "name": "数量",
+    "attribute": {
+      "default": "",
+      "notnull": 1,
+      "stype": "count",
+      "prefix": 0,
+      "unit": "个",
+      "decimal": 1,
+      "min": 0,
+      "max": 100
+    },
+    "extra": {
+      "class":"",
+      "func":"",
+      "width":"6",
+      "layout":"",
+      "placeholder":""
+    }
+},
+{
+    "columnname": "cmx-i-17",
+    "columnindex": "cmx-i-17",
+    "serialnumber": "P0017",
+    "type": "text",
+    "name": "收藏单位",
+    "attribute": {
+        "default": "",
+        "notnull": 1,
+        "stype": "short"
+    },
+    "extra": {
+        "class": "margin-bottom-20",
+        "func": "",
+        "width": "6",
+        "layout": "",
+        "placeholder": ""
+    }
+},
+{
+    "columnname": "cmx-i-18",
+    "columnindex": "cmx-i-18",
+    "serialnumber": "P0018",
+    "type": "text",
+    "name": "宽度",
+    "attribute": {
+        "default": "",
+        "notnull": 1,
+        "stype": "short"
+    },
+    "extra": {
+        "class": "margin-bottom-20",
+        "func": "",
+        "width": "6",
+        "layout": "",
+        "placeholder": ""
+    }
+},
+{
+    "columnname": "cmx-i-19",
+    "columnindex": "cmx-i-19",
+    "serialnumber": "P0019",
+    "type": "text",
+    "name": "长度",
+    "attribute": {
+        "default": "",
+        "notnull": 1,
+        "stype": "short"
+    },
+    "extra": {
+        "class": "margin-bottom-20",
+        "func": "",
+        "width": "6",
+        "layout": "",
+        "placeholder": ""
+    }
+},
+{
+    "columnname": "cmx-i-20",
+    "columnindex": "cmx-i-20",
+    "serialnumber": "P0020",
+    "type": "text",
+    "name": "口径",
+    "attribute": {
+        "default": "",
+        "notnull": 1,
+        "stype": "short"
+    },
+    "extra": {
+        "class": "margin-bottom-20",
+        "func": "",
+        "width": "6",
+        "layout": "",
+        "placeholder": ""
+    }
+},
+{
+    "columnname": "cmx-i-21",
+    "columnindex": "cmx-i-21",
+    "serialnumber": "P0021",
+    "type": "text",
+    "name": "高度",
+    "attribute": {
+        "default": "",
+        "notnull": 1,
+        "stype": "short"
+    },
+    "extra": {
+        "class": "margin-bottom-20",
+        "func": "",
+        "width": "6",
+        "layout": "",
+        "placeholder": ""
+    }
+},
+{
+    "columnname": "cmx-i-22",
+    "columnindex": "cmx-i-22",
+    "serialnumber": "P0022",
+    "type": "text",
+    "name": "底径",
+    "attribute": {
+        "default": "",
+        "notnull": 1,
+        "stype": "short"
+    },
+    "extra": {
+        "class": "margin-bottom-20",
+        "func": "",
+        "width": "6",
+        "layout": "",
+        "placeholder": ""
+    }
+},
+{
+    "columnname": "cmx-i-23",
+    "columnindex": "cmx-i-23",
+    "serialnumber": "P0023",
+    "type": "text",
+    "name": "腹径",
+    "attribute": {
+        "default": "",
+        "notnull": 1,
+        "stype": "short"
+    },
+    "extra": {
+        "class": "margin-bottom-20",
+        "func": "",
+        "width": "6",
+        "layout": "",
+        "placeholder": ""
+    }
+},
+{
+    "columnname": "cmx-i-24",
+    "columnindex": "cmx-i-24",
+    "serialnumber": "P0024",
+    "type": "text",
+    "name": "备注",
+    "attribute": {
+        "default": "",
+        "notnull": 1,
+        "stype": "long"
+    },
+    "extra": {
+        "class": "margin-bottom-20",
+        "func": "",
+        "width": "12",
+        "layout": "",
+        "placeholder": ""
+    }
+}
+]

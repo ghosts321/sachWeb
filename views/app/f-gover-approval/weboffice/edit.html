@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-cn">
+
+<head>
+    <title>国家文物局综合行政管理平台</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11" />
+    <meta http-equiv="X-UA-Compatible" content="IE=11" />
+    <meta name="renderer" content="ie-comp">
+    <script src="/vendor/jquery/jquery.min.js"></script>
+    <script src="/themes/classic/global/js/openapi.js"></script>
+    <script src="/themes/classic/global/js/cmx-route.js"></script>
+    <script src="/themes/classic/global/js/main.js"></script>
+    <script src="/vendor/office/WebOffice.js"></script>
+    <link rel="stylesheet" type="text/css" href="/vendor/office/iWebProduct.css">
+    <!-- 以下为2015主要方法 -->
+    <script type="text/javascript">
+        var _para = GetUrlParamString('p');
+        if (IsEmpty(_para)) {
+            alert('参数为空，请重新打开');
+            window.close();
+        }
+        var _para_obj = {};
+        getServiceCache({
+            key: _para,
+            success: function (prevModelData) {
+                //alert(safeDecodeBase64(prevModelData.baseValue))
+                _para_obj = JSON.parse(safeDecodeBase64(prevModelData.baseValue));
+            },
+            error: function (msg) {
+                alert('参数错误，请重新打开' + msg);
+                window.close();
+            }
+        });
+        console.log(_para_obj);
+        var WebOffice = new WebOffice2015(); //创建WebOffice对象
+
+        var _applyId = _para_obj.applyId;
+        var _RecordID;
+        // if (typeof (_para_obj.fileIndex2) != 'undefined' && !IsEmpty(_para_obj.fileIndex2))
+        //     _RecordID = _para_obj.fileIndex2;
+        // else
+        _RecordID = _para_obj.fileIndex;
+        var _DocClass = _para_obj.docClass;
+        var _UserName = _para_obj.userName;
+        var _token = _para_obj.token;
+        var _justlook = _para_obj.justlook;
+        var _first = _para_obj.first == '1';
+        //WriteObj(_para_obj);
+        // alert(_applyId + '  ' + _RecordID + '  ' + _DocClass + '  ' + _UserName + '  ' + _justlook + '  ' + _first);
+        /*
+        CarbonCopy 抄送
+        Content 正文
+        CurrectUser 当前用户、初校
+        IsThePerson 拟稿人
+        MainSend 主送
+        OpenShape 公开形式
+        ProTitle 标题
+        RefNumber 发文字号
+        IsTheUnit 拟稿单位
+        PrintDate 印发时间
+        */
+    </script>
+    <script type="text/javascript">
+        function init() {
+            if (WebOffice.obj.FullSize)
+                WebOffice.ShowTitleBar(true);
+            else
+                WebOffice.ShowTitleBar(false);
+            setTimeout(function () {
+                $('#WebOffice2015').height = document.documentElement.clientHeight - 50 + "px";
+                $('#WebOffice2015').css('height', document.documentElement.clientHeight - 50 + "px");
+                $('#WebOffice2015').css('margin-left', '-10px');
+            }, 100);
+        }
+
+        function printWord(obj) {
+            var wordApp = null;
+            try {
+                wordApp = new ActiveXObject('Word.Application');
+            } catch (e) {
+                alert('请开启IE浏览器下Internet选项-安全-自定义级别-对未标记为可安全执行脚本的ActiveX控件初始化并执行脚本');
+                return;
+            }
+            //var   Doc=wordApp.Documents.Open('http://'+window.location.host+obj.value);  
+            var Doc = wordApp.Documents.Open(obj);
+            wordApp.Application.Visible = false;
+            wordApp.visible = false;
+            wordApp.ActiveDocument.printout();
+            wordApp.ActiveDocument.close();
+            wordApp.Quit();
+            wordApp = null;
+        }
+
+        function Load() {
+            try {
+                //需要改成动态参数
+                //WebOffice.WebUrl="http://192.168.210.119:7070/rest/api/weboffice/getservice";             //WebUrl:系统服务器路径，与服务器文件交互操作，如保存、打开文档，重要文件
+                //URL分离后 分为loadurl 和 saveurl webUrl为系统根路径
+                WebOffice.WebUrl = WebApiUrl;
+                WebOffice.WebLoadUrl = LoadFileUrl;
+                WebOffice.WebSaveUrl = SaveFileUrl;
+                //动态参数tangshaobo
+                WebOffice.RecordID = _RecordID; //RecordID:本文档记录编号
+                if (_DocClass == '19')
+                    WebOffice.DocClass = '9';
+                else
+                    WebOffice.DocClass = _DocClass;
+                //动态参数 tangshaobo
+                WebOffice.FileName = randomString(32) + ".doc"; //FileName:文档名称
+                //动态参数 tangshaobo
+                WebOffice.FileType = ".doc"; //FileType:文档类型  .doc  .xls  
+                //动态参数 tangshaobo
+                WebOffice.UserName = _UserName; //UserName:操作用户名，痕迹保留需要
+                WebOffice.Skin('white'); //设置皮肤
+                WebOffice.HookEnabled();
+                WebOffice.SetCaption();
+                //动态参数 tangshaobo
+                WebOffice.SetUser(_UserName);
+
+                if (WebOffice.WebOpen()) { //打开该文档    交互OfficeServer  调出文档OPTION="LOADFILE"
+                    setTimeout(function () {
+                        //动态参数 tangshaobo
+                        WebOffice.VBASetUserName(WebOffice.UserName); //设置用户名
+                        WebOffice.ShowMenuBar(false);
+                        setTimeout(function () {
+                            self.moveTo(0, 0);
+                            self.resizeTo(screen.availWidth, screen.availHeight);
+                            if (_first) {
+                                WebOffice.WebShow(false, false);
+                                $('#cmx-xianshixiuding').hide();
+                                $('#cmx-yincangxiuding').hide();
+                            } else {
+                                WebOffice.WebShow(true, false);
+                            }
+                            WebOffice.ShowTitleBar(true);
+                            init();
+                        }, 200);
+
+                        WebOffice.ShowTitleBar(false);
+                        getEditVersion(); //判断是否是永中office
+                        StatusMsg(WebOffice.Status);
+                        $('#cmx-full').show();
+                        if (IsEmpty(_justlook) || _justlook == '0') {
+                            switch (_DocClass) {
+                                case '1': //报批件
+                                    $('#cmx-baocun').show();
+                                    $('#cmx-baocunbingguanbi').show();
+                                    $('#cmx-lingcunwei').show();
+                                    $('#cmx-dayin').show();
+                                    $('#cmx-xianshixiuding').show();
+                                    $('#cmx-yincangxiuding').show();
+                                    $('#cmx-jieshouxiuding').show();
+                                    //$('#cmx-taohong').show();
+                                    break;
+                                case '2': //正文
+                                case '7': //正文
+                                    $('#cmx-baocun').show();
+                                    $('#cmx-baocunbingguanbi').show();
+                                    $('#cmx-lingcunwei').show();
+                                    $('#cmx-dayin').show();
+                                    $('#cmx-xianshixiuding').show();
+                                    $('#cmx-yincangxiuding').show();
+                                    $('#cmx-jieshouxiuding').show();
+                                    //$('#cmx-taohong').show();
+                                    break;
+                                case '3': //套红
+                                case '5': //套红
+                                    $('#cmx-baocun').show();
+                                    $('#cmx-baocunbingguanbi').show();
+                                    $('#cmx-lingcunwei').show();
+                                    $('#cmx-dayin').show();
+                                    $('#cmx-xianshixiuding').show();
+                                    $('#cmx-yincangxiuding').show();
+                                    $('#cmx-jieshouxiuding').show();
+                                    $('#cmx-taohong').show();
+                                    WebOffice.RecordID = '';
+                                    _RecordID = '';
+                                    setTimeout(function () {
+                                        WebAcceptAllRevisions(true);
+                                        WebUseTemplate(function () {
+                                            SetBookmarks('CurrectUser', _para_obj.userName);
+                                            SetBookmarks('CarbonCopy', _para_obj.CarbonCopy);
+                                            SetBookmarks('IsThePerson', _para_obj.IsThePerson);
+                                            SetBookmarks('MainSend', _para_obj.MainSend);
+                                            SetBookmarks('OpenShape', _para_obj.OpenShape);
+                                            SetBookmarks('ProTitle', _para_obj.ProTitle);
+                                            SetBookmarks('RefNumber', _para_obj.RefNumber);
+                                            SetBookmarks('IsTheUnit', _para_obj.IsTheUnit);
+                                            SetBookmarks('PrintDate', _para_obj.PrintDate);
+                                            SetBookmarks('SingTime', _para_obj.SingTime);
+                                            SetBookmarks('SignUnit', _para_obj.SignUnit);
+                                            $('#cmx-taohong').hide();
+                                        });
+                                    }, 200);
+                                    break;
+                                case '8': //打印
+                                    $('#cmx-baocun').show();
+                                    $('#cmx-baocunbingguanbi').show();
+                                    $('#cmx-lingcunwei').show();
+                                    $('#cmx-dayin').show();
+                                    $('#cmx-xianshixiuding').show();
+                                    $('#cmx-yincangxiuding').show();
+                                    $('#cmx-jieshouxiuding').show();
+                                    $('#cmx-taohong').show();
+                                    setTimeout(function () {
+                                        // if (typeof (_para_obj.fileIndex2) != 'undefined' && !IsEmpty(
+                                        //         _para_obj.fileIndex2)) {
+                                        //     WebAcceptAllRevisions(true);
+                                        // } else {
+                                        WebOffice.RecordID = '';
+                                        _RecordID = '';
+                                        WebAcceptAllRevisions(true);
+                                        WebUseTemplate(function () {
+                                            SetBookmarks('complete', _para_obj.complete);
+                                            SetBookmarks('OpenShape', _para_obj.OpenShape);
+                                            SetBookmarks('SerialNo', _para_obj.SerialNo);
+                                            SetBookmarks('RefNumber', _para_obj.RefNumber);
+                                            SetBookmarks('PackageTimeMonth', _para_obj.PackageTimeMonth);
+                                            SetBookmarks('PackageTimeDay', _para_obj.PackageTimeDay);
+                                            SetBookmarks('CommonSeal', _para_obj.CommonSeal);
+                                            SetBookmarks('DegreeUrgen', _para_obj.DegreeUrgen);
+                                            SetBookmarks('DisNote', _para_obj.DisNote);
+                                            SetBookmarks('IsTheUnit', _para_obj.IsTheUnit);
+                                            SetBookmarks('IsThePerson', _para_obj.IsThePerson);
+                                            SetBookmarks('ContactTel', _para_obj.ContactTel);
+                                            SetBookmarks('ProTitle', _para_obj.ProTitle);
+                                            SetBookmarks('MainSend', _para_obj.MainSend);
+                                            SetBookmarks('Newspaper', _para_obj.Newspaper);
+                                            SetBookmarks('CarbonCopy', _para_obj.CarbonCopy);
+                                            //SetBookmarks('Content', _para_obj.Content);
+                                            $('#cmx-taohong').hide();
+                                        });
+                                        // }
+                                    }, 300);
+                                    break;
+                                case '9': //查看套红前
+                                    $('#cmx-baocun').show();
+                                    $('#cmx-baocunbingguanbi').show();
+                                    $('#cmx-lingcunwei').show();
+                                    $('#cmx-dayin').show();
+                                    $('#cmx-xianshixiuding').show();
+                                    $('#cmx-yincangxiuding').show();
+                                    $('#cmx-jieshouxiuding').show();
+                                    //$('#cmx-taohong').show();
+                                    break;
+                                case '10': //查看套红后
+                                    $('#cmx-baocun').show();
+                                    $('#cmx-baocunbingguanbi').show();
+                                    $('#cmx-lingcunwei').show();
+                                    $('#cmx-dayin').show();
+                                    $('#cmx-xianshixiuding').show();
+                                    $('#cmx-yincangxiuding').show();
+                                    $('#cmx-jieshouxiuding').show();
+                                    //$('#cmx-taohong').show();
+                                    break;
+                                case '19': //报批件
+                                    $('#cmx-baocun').show();
+                                    $('#cmx-baocunbingguanbi').show();
+                                    $('#cmx-lingcunwei').show();
+                                    $('#cmx-dayin').show();
+                                    $('#cmx-xianshixiuding').show();
+                                    $('#cmx-yincangxiuding').show();
+                                    $('#cmx-jieshouxiuding').show();
+                                    //$('#cmx-taohong').show();
+                                    break;
+                                case '20': //打印
+                                    $('#cmx-baocun').show();
+                                    $('#cmx-baocunbingguanbi').show();
+                                    $('#cmx-lingcunwei').show();
+                                    $('#cmx-dayin').show();
+                                    $('#cmx-xianshixiuding').show();
+                                    $('#cmx-yincangxiuding').show();
+                                    $('#cmx-jieshouxiuding').show();
+                                    $('#cmx-taohong').show();
+                                    setTimeout(function () {
+                                        // if (typeof (_para_obj.fileIndex2) != 'undefined' && !IsEmpty(
+                                        //         _para_obj.fileIndex2)) {
+                                        //     WebAcceptAllRevisions(true);
+                                        // } else {
+                                        WebOffice.RecordID = '';
+                                        _RecordID = '';
+                                        WebAcceptAllRevisions(true);
+                                        WebUseTemplate(function () {
+                                            SetBookmarks('complete', _para_obj.complete);
+                                            SetBookmarks('OpenShape', _para_obj.OpenShape);
+                                            SetBookmarks('SerialNo', _para_obj.SerialNo);
+                                            SetBookmarks('RefNumber', _para_obj.RefNumber);
+                                            SetBookmarks('PackageTimeMonth', _para_obj.PackageTimeMonth);
+                                            SetBookmarks('PackageTimeDay', _para_obj.PackageTimeDay);
+                                            SetBookmarks('CommonSeal', _para_obj.CommonSeal);
+                                            SetBookmarks('DegreeUrgen', _para_obj.DegreeUrgen);
+                                            SetBookmarks('DisNote', _para_obj.DisNote);
+                                            SetBookmarks('IsTheUnit', _para_obj.IsTheUnit);
+                                            SetBookmarks('IsThePerson', _para_obj.IsThePerson);
+                                            SetBookmarks('ContactTel', _para_obj.ContactTel);
+                                            SetBookmarks('ProTitle', _para_obj.ProTitle);
+                                            SetBookmarks('MainSend', _para_obj.MainSend);
+                                            SetBookmarks('Newspaper', _para_obj.Newspaper);
+                                            SetBookmarks('CarbonCopy', _para_obj.CarbonCopy);
+                                            //SetBookmarks('Content', _para_obj.Content);
+                                            $('#cmx-taohong').hide();
+                                        });
+                                        // }
+                                    }, 300);
+                                    break;
+                            }
+                        } else if (_justlook == '1') {
+                            $('#cmx-dayin').show();
+                            $('#cmx-xianshixiuding').show();
+                            $('#cmx-yincangxiuding').show();
+                            $('#cmx-lingcunwei').show();
+                            //WebOffice.WebSetProtect(true, '864210');
+                        }
+                    }, 200);
+                }
+            } catch (e) {
+                alert(e.description);
+            }
+        }
+        //作用：保存并关闭
+        function SaveDocumentAndLeave() {
+            SaveDocument({
+                callback: function () {
+                    window.close();
+                }
+            })
+        }
+        //作用：保存文档
+        function SaveDocument(param) {
+            WebOffice.RecordID = _RecordID; //RecordID:本文档记录编号
+            WebOffice.DocClass = _DocClass;
+            //动态参数 tangshaobo
+            WebOffice.FileName = randomString(32) + ".doc"; //FileName:文档名称
+            //动态参数 tangshaobo
+            WebOffice.FileType = ".doc"; //FileType:文档类型  .doc  .xls  
+            if (WebOffice.WebSave()) {
+                var baskkey = '';
+                switch (_DocClass) {
+                    case '1': //报批件
+                        baskkey = 'zfw-bpj:' + _applyId;
+                        break;
+                    case '2': //正文
+                    case '7': //正文
+                        baskkey = 'zfw-zw:' + _applyId;
+                        break;
+                    case '3': //套红
+                    case '5': //套红
+                        baskkey = 'zfw-thh:' + _applyId;
+                        break;
+                    case '8': //打印
+                        baskkey = 'zfw-dayin:' + _applyId;
+                        break;
+                    case '9': //查看套红前
+                        baskkey = 'zfw-zw:' + _applyId;
+                        break;
+                    case '10': //查看套红后
+                        baskkey = 'zfw-thh:' + _applyId;
+                        break;
+                    case '19': //查看报批件
+                        baskkey = 'zfw-qianbao:' + _applyId;
+                        break;
+                    case '20': //查看报批件打印
+                        baskkey = 'zfw-dayinbpj:' + _applyId;
+                        break;
+                }
+                jQuery.support.cors = true;
+                setServiceCache({
+                    key: baskkey,
+                    value: _RecordID,
+                    token: _token,
+                    success: function () {
+                        alert("保存成功！");
+                        if (param.callback && typeof (param.callback) == 'function')
+                            param.callback();
+                    },
+                    error: function (msg) {
+                        alert("保存失败，" + msg);
+                    }
+                });
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+
+        //设置页面中的状态值
+        function StatusMsg(mValue) {
+            try {
+                document.getElementById('state').innerHTML = mValue;
+            } catch (e) {
+                return false;
+            }
+        }
+
+        //作用：获取文档Txt正文
+        function WebGetWordContent() {
+            try {
+                alert(WebOffice.WebObject.ActiveDocument.Content.Text);
+            } catch (e) {
+                alert(e.description);
+            }
+        }
+
+        //作用：写Word内容
+        function WebSetWordContent() {
+            var mText = window.prompt("请输入内容:", "测试内容");
+            if (mText == null) {
+                return (false);
+            } else {
+                WebOffice.WebObject.ActiveDocument.Application.Selection.Range.Text = mText + "\n";
+            }
+        }
+
+        //作用：获取文档页数
+        function WebDocumentPageCount() {
+            if (WebOffice.FileType == ".doc" || WebOffice.FileType == ".docx") {
+                var intPageTotal = WebOffice.WebObject.ActiveDocument.Application.ActiveDocument.BuiltInDocumentProperties(
+                    14);
+                intPageTotal = WebOffice.blnIE() ? intPageTotal : intPageTotal.Value();
+                alert("文档页总数：" + intPageTotal);
+            }
+            if (WebOffice.FileType == ".wps") {
+                var intPageTotal = WebOffice.WebObject.ActiveDocument.PagesCount();
+                alert("文档页总数：" + intPageTotal);
+            }
+        }
+
+        //接受文档中全部痕迹
+        function WebAcceptAllRevisions() {
+            try {
+                WebOffice.WebObject.ActiveDocument.Application.ActiveDocument.AcceptAllRevisions();
+                var mCount = WebOffice.WebObject.ActiveDocument.Application.ActiveDocument.Revisions.Count;
+                if (mCount > 0) {
+                    return false;
+                } else {
+                    return true;
+                }
+            } catch (e) {
+                return false;
+            }
+        }
+
+        //作用：设置书签值  vbmName:标签名称，vbmValue:标签值   标签名称注意大小写
+        function SetBookmarks(val1, val2) {
+            try {
+                BookMarkName = val1;
+                BookMarkValue = val2;
+                WebOffice.WebSetBookmarks(val1, val2);
+                StatusMsg("设置成功");
+                return true;
+            } catch (e) {
+                StatusMsg("书签不存在");
+                return false;
+            }
+        }
+        //打开书签窗口
+        function WebOpenBookMarks() {
+            WebOffice.WebOpenBookMarks();
+        }
+        //保存为PDF
+        function WebSaveAsPdf() {
+            WebOffice.SaveAsPdf();
+        }
+        //添加书签
+        function WebAddBookMarks() { //书签名称，书签值
+            WebOffice.WebAddBookMarks("JK", "KingGrid");
+        }
+        //定位书签
+        function WebFindBookMarks() {
+            WebOffice.WebFindBookMarks("JK");
+        }
+        //删除书签
+        function WebDelBookMarks() { //书签名称，
+            WebOffice.WebDelBookMarks("JK"); //删除书签
+        }
+        //调用模板
+        function WebUseTemplate(func) {
+            var fileName = randomString(32) + '.doc';
+            if (WebOffice.WebAcceptAllRevisions()) { //清除正文痕迹的目的是为了避免痕迹状态下出现内容异常问题。
+                var currFilePath;
+                currFilePath = WebOffice.getFilePath(); //获取2015特殊路径
+                WebOffice.WebSaveLocalFile(currFilePath + WebOffice.iWebOfficeTempName); //将当前文档保存下来
+                var _TempDocClass = _DocClass;
+                if (_DocClass == '20')
+                    _TempDocClass = '10';
+                if (WebOffice.DownloadToFile(fileName, currFilePath, "", _TempDocClass)) { //下载服务器指定的文件
+                    WebOffice.OpenLocalFile(currFilePath + fileName); //打开该文件
+                    setTimeout(function () {
+                        if (!WebOffice.VBAInsertFile("Content", currFilePath + WebOffice.iWebOfficeTempName,
+                                func)) { //插入文档
+                            StatusMsg("插入文档失败");
+                            return false;
+                        }
+                    }, 200);
+                    StatusMsg("模板套红成功");
+                    return true;
+                }
+                StatusMsg("下载文档失败");
+                return false;
+            }
+            StatusMsg("清除正文痕迹失败，套红中止");
+            return false;
+        }
+
+        function getEditVersion() {
+            var getVersion = WebOffice.getEditVersion(); //获取当前编辑器软件版本
+            if (getVersion == "YozoWP.exe" || getVersion == "YozoSS.exe") //如果是永中office,隐藏手写功能等
+            {
+                document.getElementById("handWriting1").style.display = 'none';
+                document.getElementById("handWriting2").style.display = 'none';
+                document.getElementById("expendFunction").style.display = 'none';
+                document.getElementById("enableCopy1").style.display = 'none';
+                document.getElementById("enableCopy2").style.display = 'none';
+                document.getElementById("OpenBookMarks").style.display = 'none';
+                document.getElementById("areaProtect").style.display = 'none';
+                document.getElementById("areaUnprotect").style.display = 'none';
+
+            } else if (getVersion == "WINWORD.EXE" || getVersion == "wps.exe") {
+                try {
+                    WebOffice.ShowWritingUser(true);
+                } catch (e) {
+
+                }
+            }
+
+        }
+        //全屏
+        function FullSize(mValue) {
+            WebOffice.FullSize(mValue);
+            WebOffice.ShowTitleBar(true);
+        }
+        //添加区域保护
+        function WebAreaProtect() {
+            var mText = window.prompt("请输入书签名称", "KingGrid", "");
+            if (mText != null) WebOffice.WebAreaProtect(mText);
+        }
+        //取消区域保护
+        function WebAreaUnprotect() {
+            var mText = window.prompt("请输入书签名称", "KingGrid", "");
+            if (mText != null) WebOffice.WebAreaUnprotect(mText);
+        }
+    </script>
+    <script language="javascript" for="WebOffice2015" event="OnReady()">
+        WebOffice.setObj(document.getElementById('WebOffice2015')); //给2015对象赋值
+        Load(); //避免页面加载完，控件还没有加载情况
+    </script>
+
+    <script language="javascript" for="WebOffice2015" event="OnRecvStart(nTotleBytes)">
+        nSendTotleBytes = nTotleBytes;
+        nSendedSumBytes = 0;
+    </script>
+    <script language="javascript" for="WebOffice2015" event="OnRecving(nRecvedBytes)">
+        nSendedSumBytes += nRecvedBytes;
+    </script>
+    <script language="javascript" for="WebOffice2015" event="OnRecvEnd(bSucess)">
+    </script>
+    <script language="javascript" for="WebOffice2015" event="OnSendStart(nTotleBytes)">
+        nSendTotleBytes = nTotleBytes;
+        nSendedSumBytes = 0;
+    </script>
+    <script language="javascript" for="WebOffice2015" event="OnSending(nSendedBytes)">
+        nSendedSumBytes += nSendedBytes;
+    </script>
+    <script language="javascript" for="WebOffice2015" event="OnSendEnd(bSucess)">
+        if (bSucess) {
+            if (WebOffice.sendMode == "LoadImage") {
+                var httpclient = WebOffice.WebObject.Http;
+                WebOffice.hiddenSaveLocal(httpclient, WebOffice, false, false, WebOffice.ImageName);
+                WebOffice.InsertImageByBookMark();
+                WebOffice.ImageName = null;
+                WebOffice.BookMark = null;
+                StatusMsg("插入图片成功");
+                return
+            }
+            StatusMsg("插入图片失败");
+        }
+    </script>
+
+</head>
+
+<body onresize="init()" style="overflow-y:hidden;overflow-x:hidden" onUnload="WebOffice.WebClose()">
+    <table id="maintable" cellspacing="0" cellpadding="0">
+        <tr>
+            <td class="title" colspan="2" id="cmx-opt">
+                <a href="#" onclick="SaveDocumentAndLeave();" id="cmx-baocunbingguanbi">
+                    <div>保存并关闭</div>
+                </a>
+                <a href="#" onclick="SaveDocument()" id="cmx-baocun">
+                    <div>保存</div>
+                </a>
+                <a href="#" onclick="WebOffice.WebSaveLocal()" id="cmx-lingcunwei">
+                    <div>另存到本地</div>
+                </a>
+                <!-- <a href="#" onclick="WebOffice.WebPageSetup()" style="display:none !important;" id="cmx-yemianshezhi">
+                    <div>页面设置</div>
+                </a> -->
+                <a href="#" onclick="WebOffice.WebOpenPrint()" id="cmx-dayin">
+                    <div>打印</div>
+                </a>
+                <!-- <a href="#" onclick="WebSetWordContent()" class="hidden">
+                    <div>写Word内容</div>
+                </a> -->
+                <a href="#" onclick="WebOffice.WebShow(true,true);" id="cmx-xianshixiuding">
+                    <div>显示修订痕迹</div>
+                </a>
+                <a href="#" onclick="WebOffice.WebShow(true,false);" id="cmx-yincangxiuding">
+                    <div>隐藏修订痕迹</div>
+                </a>
+                <!-- <a href="#" onclick="WebAcceptAllRevisions()" id="cmx-jieshouxiuding">
+                    <div>接受全部修订</div>
+                </a> -->
+                <a href="#" onclick="FullSize(true)" id="cmx-full">
+                    <div>全屏</div>
+                </a>
+                <a href="#" onclick="WebOffice.WebSetProtect(true,'864210')" class="hidden">
+                    <div>保护文档</div>
+                </a>
+                <a href="#" onclick="WebOffice.WebSetProtect(false,'864210')" class="hidden">
+                    <div>解除保护</div>
+                </a>
+                <a href="#" onclick="WebOffice.WebEnableCopy(true)" class="hidden">
+                    <div>允许拷贝</div>
+                </a>
+                <a href="#" onclick="WebOffice.WebEnableCopy(false)" class="hidden">
+                    <div>禁止拷贝</div>
+                </a>
+                <a href="#" onclick="WebAreaProtect();" class="hidden">
+                    <div>添加区域保护</div>
+                </a>
+                <a href="#" onclick="WebAreaUnprotect();" class="hidden">
+                    <div>取消区域保护</div>
+                </a>
+                <a href="#" onclick="WebUseTemplate();" id="cmx-taohong">
+                    <div>套红</div>
+                </a>
+                <a href="#" onclick="SetBookmarks();" class="hidden">
+                    <div>书签填充</div>
+                </a>
+                <!-- 如果直接关闭，要提示 -->
+            </td>
+        </tr>
+        <tr>
+            <td id="showtr" colspan="2" valign="top">
+                <table id="activeTable">
+                    <tr>
+                        <td colspan="8" id="activeTd">&nbsp;
+                            <script src="/vendor/office/iWebOffice2015.js"></script>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <!-- end showList -->
+    </table>
+</body>
+<script language="javascript">
+    $(document).ready(function () {
+
+    });
+</script>
+
+</html>

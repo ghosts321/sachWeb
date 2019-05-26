@@ -1,0 +1,77 @@
+<!-- 已批准计划 立项 -->
+<div class="modal fade in" id="cmx-approvedPlan" aria-hidden="true" aria-labelledby="approvedPlan" role="dialog" tabindex="-1">
+    <div class="modal-dialog modal-center modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span>国家局已批准的计划（立项）</span>
+                <button class="pull-right close" data-dismiss="modal" aria-label="关闭">关闭</button>
+                <div class="clearfix"></div>
+            </div>
+            <div class="modal-body">
+                <div class="panel">
+                    <div class="panel-body">
+                        <div class="nav-tabs-horizontal">
+                            <div class="tab-content relic-content">
+                                <div class="tab-pane active" id="relicTabOne" role="tabpanel">
+                                    <div class="queryTerm">
+                                        <label for="cmx-approve-plan-name">名称</label>
+                                        <input type="text" id="cmx-approve-plan-name">
+
+                                        <div class="right-part">
+                                            <button class="btn btn-primary" id="cmx-plan-search">查询</button>
+                                            <button class="btn btn-primary" id="cmx-plan-delete">清除</button>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                    <div class="tableDiv">
+                                        <table class="table table-hover table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th class="num"></th>
+                                                    <th class="pName">项目名称</th>
+                                                    <th class="pType">工程类型</th>
+                                                    <th class="mUnit">管理使用单位</th>
+                                                    <th class="eProtectionScope">工程防护范围</th>
+                                                    <th class="targetOrPosition">工程防护重点目标或部位</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="cmx-plan-tbody">
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="relic-footer">
+                                        <!--  分页 -->
+                                        <ul class="pagination" id="cmx-plan-Pagination">
+                                            <li>
+                                                <a href="javascript:;" class="first">首页</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;" class="pre">上一页</a>
+                                            </li>
+                                            <li>
+                                                <span>
+                                                    <span class="nowpage">0</span>/
+                                                <span class="totalpage">0</span>页</span>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;" class="next">下一页</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;" class="last">尾页</a>
+                                            </li>
+                                        </ul>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" type="button" id="cmx-plan-confirm-btn">确认</button>
+                <button type="button" class="btn btn-default cmx-cancle-btn" data-dismiss="modal">取消</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,67 @@
+ .page {
+     background-color: white;
+ }
+ 
+ table {
+     table-layout: fixed;
+     width: 100%;
+ }
+ 
+ table .col1 {
+     width: 10%;
+ }
+ 
+ table .col2 {
+     width: 40%;
+ }
+ 
+ table .col3 {
+     width: 40%;
+ }
+ 
+ table .col4 {
+     width: 10%;
+ }
+ 
+ table thead tr th {
+     text-align: center;
+ }
+ 
+ table thead span {
+     color: red;
+ }
+ 
+ table tbody .applyId {
+     text-align: center;
+     color: red;
+ }
+ 
+ table tbody .applyBtn {
+     text-align: center;
+ }
+ 
+ table tbody button.btn {
+     border-radius: 20px;
+     padding-left: 20px;
+     padding-right: 20px;
+     padding-top: 3px;
+     padding-bottom: 3px;
+ }
+ /* .modal-footer .cancel-btn {
+     background-color: #a3afb7;
+ } */
+ 
+ @media (max-width:768px) {
+     table .col1 {
+         width: 16%;
+     }
+     table .col2 {
+         width: 30%;
+     }
+     table .col3 {
+         width: 30%;
+     }
+     table .col4 {
+         width: 24%;
+     }
+ }

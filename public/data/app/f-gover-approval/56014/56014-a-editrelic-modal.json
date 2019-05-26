@@ -1,0 +1,720 @@
+[{
+        "columnname": "cmx-i-1",
+        "columnindex": "cmx-i-1",
+        "serialnumber": "P0001",
+        "type": "separator",
+        "name": "项目内容",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "title": "项目内容",
+            "desc": ""
+        },
+        "extra": {
+            "class": "margin-bottom-10",
+            "func": "",
+            "width": 12,
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-2",
+        "columnindex": "cmx-i-2",
+        "serialnumber": "P0002",
+        "type": "text",
+        "name": "文保单位名称",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": "short",
+            "max_length": 200
+        },
+        "extra": {
+            "class": "margin-left-0 format baseinfo",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-3",
+        "columnindex": "cmx-i-3",
+        "serialnumber": "P0003",
+        "type": "text",
+        "name": "项目名称",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": "short",
+            "max_length": 200
+        },
+        "extra": {
+            "class": "margin-left-0",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-4",
+        "columnindex": "cmx-i-4",
+        "serialnumber": "P0004",
+        "type": "text",
+        "name": "报送单位",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": "short",
+            "max_length": 200
+        },
+        "extra": {
+            "class": "margin-left-0",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-5",
+        "columnindex": "cmx-i-5",
+        "serialnumber": "P0005",
+        "type": "single",
+        "name": "是否列入保护规划",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": 2,
+            "remark": [{
+                    "id": 1,
+                    "value": "是"
+                },
+                {
+                    "id": 2,
+                    "value": "否"
+                }
+            ]
+        },
+        "extra": {
+            "class": "baseinfo",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-6",
+        "columnindex": "cmx-i-6",
+        "serialnumber": "P0006",
+        "type": "special",
+        "name": "设计人(单位)",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": ""
+        },
+        "extra": {
+            "class": "",
+            "func": "cmx_special_5",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-7",
+        "columnindex": "cmx-i-7",
+        "serialnumber": "P0007",
+        "type": "text",
+        "name": "内容",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "long",
+            "max_length": 2000
+        },
+        "extra": {
+            "class": "margin-left-0",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-8",
+        "columnindex": "cmx-i-8",
+        "serialnumber": "P0008",
+        "type": "text",
+        "name": "规模",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "long",
+            "max_length": 2000
+        },
+        "extra": {
+            "class": "margin-left-0",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-9",
+        "columnindex": "cmx-i-9",
+        "serialnumber": "P0009",
+        "type": "text",
+        "name": "面积",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "long",
+            "max_length": 2000
+        },
+        "extra": {
+            "class": "margin-left-0",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-10",
+        "columnindex": "cmx-i-10",
+        "serialnumber": "P0010",
+        "type": "separator",
+        "name": "项目内容",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "title": "项目内容",
+            "desc": ""
+        },
+        "extra": {
+            "class": "margin-bottom-10",
+            "func": "",
+            "width": 12,
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-11",
+        "columnindex": "cmx-i-11",
+        "serialnumber": "P0011",
+        "type": "text",
+        "name": "项目实施的必要性",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "long",
+            "max_length": 2000
+        },
+        "extra": {
+            "class": "margin-left-0",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-12",
+        "columnindex": "cmx-i-12",
+        "serialnumber": "P0012",
+        "type": "text",
+        "name": "项目实施的紧迫性说明",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "long",
+            "max_length": 2000
+        },
+        "extra": {
+            "class": "margin-left-0",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-13",
+        "columnindex": "cmx-i-13",
+        "serialnumber": "P0013",
+        "type": "text",
+        "name": "项目实施的可行性",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "long",
+            "max_length": 2000
+        },
+        "extra": {
+            "class": "margin-left-0",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-14",
+        "columnindex": "cmx-i-14",
+        "serialnumber": "P0014",
+        "type": "text",
+        "name": "管理情况",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "long",
+            "max_length": 2000
+        },
+        "extra": {
+            "class": "margin-left-0",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-15",
+        "columnindex": "cmx-i-15",
+        "serialnumber": "P0015",
+        "type": "text",
+        "name": "相关的政策、人员、资金和现场工作条件等",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "long",
+            "max_length": 2000
+        },
+        "extra": {
+            "class": "margin-left-0",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-16",
+        "columnindex": "cmx-i-16",
+        "serialnumber": "P0016",
+        "type": "text",
+        "name": "项目实施计划",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "long",
+            "max_length": 2000
+        },
+        "extra": {
+            "class": "margin-left-0",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-17",
+        "columnindex": "cmx-i-17",
+        "serialnumber": "P0017",
+        "type": "separator",
+        "name": "项目必要性描述",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "title": "项目必要性描述",
+            "desc": ""
+        },
+        "extra": {
+            "class": "margin-bottom-10",
+            "func": "",
+            "width": 12,
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-18",
+        "columnindex": "cmx-i-18",
+        "serialnumber": "P0018",
+        "type": "text",
+        "name": "实施的必要性",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "long",
+            "max_length": 4000
+        },
+        "extra": {
+            "class": "margin-left-0",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-19",
+        "columnindex": "cmx-i-19",
+        "serialnumber": "P0019",
+        "type": "text",
+        "name": "紧迫性说明",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "long",
+            "max_length": 4000
+        },
+        "extra": {
+            "class": "margin-left-0",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-20",
+        "columnindex": "cmx-i-20",
+        "serialnumber": "P0020",
+        "type": "separator",
+        "name": "项目前期工作",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "title": "项目前期工作",
+            "desc": ""
+        },
+        "extra": {
+            "class": "margin-bottom-10",
+            "func": "",
+            "width": 12,
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-21",
+        "columnindex": "cmx-i-21",
+        "serialnumber": "P0021",
+        "type": "text",
+        "name": "基础工作",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "long",
+            "max_length": 2000
+        },
+        "extra": {
+            "class": "margin-left-0",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-22",
+        "columnindex": "cmx-i-22",
+        "serialnumber": "P0022",
+        "type": "text",
+        "name": "管理情况",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "long",
+            "max_length": 2000
+        },
+        "extra": {
+            "class": "margin-left-0",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-23",
+        "columnindex": "cmx-i-23",
+        "serialnumber": "P0023",
+        "type": "text",
+        "name": "相关情况",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "long",
+            "max_length": 2000
+        },
+        "extra": {
+            "class": "margin-left-0",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-24",
+        "columnindex": "cmx-i-24",
+        "serialnumber": "P0024",
+        "type": "num",
+        "name": "前期经费",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "count",
+            "prefix": 0,
+            "unit": "（万元）",
+            "decimal": 1,
+            "min": 0,
+            "max": 100
+        },
+        "extra": {
+            "class": "",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-25",
+        "columnindex": "cmx-i-25",
+        "serialnumber": "P0025",
+        "type": "separator",
+        "name": "项目计划",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "title": "项目计划",
+            "desc": ""
+        },
+        "extra": {
+            "class": "margin-bottom-10",
+            "func": "",
+            "width": 12,
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-26",
+        "columnindex": "cmx-i-26",
+        "serialnumber": "P0026",
+        "type": "text",
+        "name": "前期工作安排",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "long",
+            "max_length": 2000
+        },
+        "extra": {
+            "class": "margin-left-0",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-27",
+        "columnindex": "cmx-i-27",
+        "serialnumber": "P0027",
+        "type": "text",
+        "name": "设计工作安排",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "long",
+            "max_length": 2000
+        },
+        "extra": {
+            "class": "margin-left-0",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-28",
+        "columnindex": "cmx-i-28",
+        "serialnumber": "P0028",
+        "type": "text",
+        "name": "实施工期",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "long",
+            "max_length": 2000
+        },
+        "extra": {
+            "class": "margin-left-0",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-29",
+        "columnindex": "cmx-i-29",
+        "serialnumber": "P0029",
+        "type": "separator",
+        "name": "项目经费",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "title": "项目经费",
+            "desc": ""
+        },
+        "extra": {
+            "class": "margin-bottom-10",
+            "func": "",
+            "width": 12,
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-30",
+        "columnindex": "cmx-i-30",
+        "serialnumber": "P0030",
+        "type": "text",
+        "name": "经费类别",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "long",
+            "max_length": 2000
+        },
+        "extra": {
+            "class": "margin-left-0",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-31",
+        "columnindex": "cmx-i-31",
+        "serialnumber": "P0031",
+        "type": "text",
+        "name": "分项工程",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "long",
+            "max_length": 2000
+        },
+        "extra": {
+            "class": "margin-left-0",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-32",
+        "columnindex": "cmx-i-32",
+        "serialnumber": "P0032",
+        "type": "text",
+        "name": "工作内容",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "long",
+            "max_length": 2000
+        },
+        "extra": {
+            "class": "margin-left-0",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-33",
+        "columnindex": "cmx-i-33",
+        "serialnumber": "P0033",
+        "type": "text",
+        "name": "工作量",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "long",
+            "max_length": 2000
+        },
+        "extra": {
+            "class": "margin-left-0",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-34",
+        "columnindex": "cmx-i-34",
+        "serialnumber": "P0034",
+        "type": "num",
+        "name": "工程经费",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "count",
+            "prefix": 0,
+            "unit": "（万元）",
+            "decimal": 1,
+            "min": 0,
+            "max": 100
+        },
+        "extra": {
+            "class": "",
+            "func": "",
+            "width": "6",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-35",
+        "columnindex": "cmx-i-35",
+        "serialnumber": "P0035",
+        "type": "num",
+        "name": "经费合计",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "count",
+            "prefix": 0,
+            "unit": "（万元）",
+            "decimal": 1,
+            "min": 0,
+            "max": 100
+        },
+        "extra": {
+            "class": "",
+            "func": "",
+            "width": "6",
+            "layout": "",
+            "placeholder": ""
+        }
+    }
+]

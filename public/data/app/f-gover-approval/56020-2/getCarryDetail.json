@@ -1,0 +1,169 @@
+[
+    {
+        "columnname": "cmx-i-2",
+        "columnindex": "cmx-1-CarryUser",
+        "serialnumber": "P0002",
+        "type": "text",
+        "name": "携运人姓名:",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "short",
+            "max_length": 40
+        },
+        "extra": {
+            "class": "margin-bottom-40",
+            "func": "",
+            "width": "6",
+            "layout": "",
+            "placeholder": "",
+            "readonly":"disabled"
+        }
+    },
+    {
+        "columnname": "cmx-i-3",
+        "columnindex": "cmx-1-Nationality",
+        "serialnumber": "P0003",
+        "type": "text",
+        "name": "国籍:",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "short"
+            
+        },
+        "extra": {
+            "class": "margin-bottom-40",
+            "func": "",
+            "width": "6",
+            "layout": "",
+            "placeholder": "",
+            "readonly":"disabled"
+        }
+    },
+    {
+        "columnname": "cmx-i-4",
+        "columnindex": "cmx-1-TelNO",
+        "serialnumber": "P0004",
+        "type": "text",
+        "name": "电话:",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "short",
+            "max_length": 30
+        },
+        "extra": {
+            "class": "margin-bottom-40",
+            "func": "",
+            "width": 6,
+            "layout": "",
+            "placeholder": "",
+            "readonly":"disabled"
+        }
+    },
+    {
+        "columnname": "cmx-i-5",
+        "columnindex": "cmx-1-IDCardType",
+        "serialnumber": "P0005",
+        "type": "text",
+        "name": "证件类型:",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "short"
+            
+        },
+        "extra": {
+            "class": "margin-bottom-40",
+            "func": "",
+            "width": "6",
+            "layout": "",
+            "placeholder": "",
+            "readonly":"disabled"
+        }
+    },
+    {
+        "columnname": "cmx-i-7",
+        "columnindex": "cmx-1-ReviewInst",
+        "serialnumber": "P0007",
+        "type": "text",
+        "name": "审核机构:",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "short"
+        },
+        "extra": {
+            "class": "margin-bottom-40",
+            "func": "",
+            "width": "6",
+            "layout": "",
+            "placeholder": "",
+            "readonly":"disabled"
+        }
+    },
+    {
+        "columnname": "cmx-i-6",
+        "columnindex": "cmx-1-IDNumber",
+        "serialnumber": "P0006",
+        "type": "text",
+        "name": "证件号码:",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "short",
+            "max_length": 20
+        },
+        "extra": {
+            "class": "margin-bottom-40",
+            "func": "",
+            "width": "6",
+            "layout": "",
+            "placeholder": "",
+            "readonly":"disabled"
+        }
+    },
+    {
+        "columnname": "cmx-i-8",
+        "columnindex": "cmx-1-Address",
+        "serialnumber": "P008",
+        "type": "text",
+        "name": "住所:",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "long",
+            "max_length": 200
+        },
+        "extra": {
+            "class": "margin-bottom-40",
+            "func": "",
+            "width": "6",
+            "layout": "",
+            "placeholder": "",
+            "readonly":"disabled"
+        }
+    },
+    {
+        "columnname": "cmx-i-9",
+        "columnindex": "cmx-1-turnDate",
+        "serialnumber": "P009",
+        "type": "text",
+        "name": "进境时间:",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "short",
+            "max_length": 200
+        },
+        "extra": {
+            "class": "margin-bottom-40",
+            "func": "",
+            "width": "6",
+            "layout": "",
+            "placeholder": "",
+            "readonly":"disabled"
+        }
+    }
+]

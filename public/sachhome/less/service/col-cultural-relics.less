@@ -1,0 +1,218 @@
+// 馆藏文物名录 页面 start
+body{
+	background: url('../../img/museum-bg.png') repeat-y;
+	background-size: 100% auto;
+}
+.museum{
+	padding-top: 30px;
+	padding-bottom: 50px;
+	.position{
+		margin: 0;
+		margin-bottom: 12px;
+		i{
+			width: 16px;
+		    height: 16px;
+		    display: inline-block;
+		    background: url(../../img/house-2.png) no-repeat center center;
+		    background-size: cover;
+		    vertical-align: -3px;
+		    margin-right: 5px;
+		    margin-left: -3px;
+		}
+		span,a{
+			color: #333;
+		    font-size: 14px;
+		    vertical-align: middle;
+		}
+		a{
+			text-decoration: none;
+		}
+	}
+	.relics{		
+		margin-bottom: 20px;
+		.list{
+			font-size: 28px;
+			color: #202020;
+			letter-spacing: 0;
+			font-weight: bold;
+		}
+	}
+	.search-info{
+		background: #F2F9FF;
+		border: 1px solid #62AAEC;
+		box-shadow: 0 2px 0 0 #62AAEC;
+		border-radius: 2px;
+		padding-top: 29px;
+		padding-bottom: 29px;
+		padding-left: 20px;
+    	padding-right: 20px;
+		.museum-left{
+			border-right: 1px dotted #62AAEC;
+			.collection{
+				padding-right: 10px;
+			}
+			.second-line{
+				margin-top: 12px;
+			}
+		}
+		.museum-right{
+			// margin-left: 25px;
+			text-align: center;
+			a{
+				width: 140px;
+				height: 35px;
+				line-height: 35px;
+				background: #62AAEC;
+				border: 1px solid #62AAEC;
+				border-radius: 2px;
+				display: inline-block;
+				font-family: MicrosoftYaHei;
+				font-size: 14px;
+				color: #FFFFFF;
+				letter-spacing: 0;
+				text-decoration: none;
+				font-weight: bold;
+				// margin-top: 22.9px;
+				&+a{
+					margin-top: 10px;
+				}
+			}
+		}
+	}
+
+	.search{
+
+	}
+	input,select{
+		// min-width: 190px;
+		min-width: 300px;
+		border-radius: 2px;
+	}
+	select{
+		border-right: 0 none;
+	    background: url(../../img/arrow.png) no-repeat right center;
+	    background-color: #fff;
+	    background-size: contain;
+	    appearance: none;
+	    -moz-appearance: none;
+	    -webkit-appearance: none;
+	}
+	select::-ms-expand {display: none;}
+	label{
+		min-width: 85px;
+		text-align: right;
+	}
+
+	.museum-content{
+		margin-top: 38px;
+		height: 450px;
+		// border: 1px solid #000;
+		.province,.category{
+			// width: 207px;
+			height: 512px;
+			background: url('../../img/paper.png') no-repeat;
+			background-size: contain;
+		}
+		.province,.category{
+			p{
+				height: 47px;
+				line-height: 52px;
+				width: 195px;
+				span{
+					font-family: MicrosoftYaHei-Bold;
+					font-size: 20px;
+					color: #fff;
+					font-weight: bold;
+				}
+			}
+			.reel{
+				text-align: center;
+				width: 193px;
+				height: 420px;
+				overflow-y: auto;
+			    padding: 0 15px;
+				a{
+					display: block;
+					cursor: pointer;
+					font-family: MicrosoftYaHei;
+					font-size: 14px;
+					color: #000;
+					letter-spacing: 0;
+					line-height: 24px;
+					text-decoration: none;
+					&:hover{
+						background-color: #62AAEC;
+						color: #fff;
+					}
+				}
+			}
+		}
+		.heritage{
+			width: 610px;
+			margin-top: 47.6px;
+			.left-1{
+				width: 218px;
+				.cocr-3{
+					margin-top: 8px;
+				}
+			}
+			.left-2{
+				width: 410px;
+				.cocr-2{
+					margin-left: 8px;
+					margin-bottom: 8px;
+					&+img~img{
+						margin-left: 3px;
+					}
+				}
+			}
+			.left-3{
+				width: 192px;
+				img{
+					margin-left: 8px;
+					&+img{
+						margin-top: 8px;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+@media (max-width: 767px){
+	.museum .search-info .museum-right a{
+		margin-top: 10px;
+	}
+	.museum .search-info .museum-left{
+		border-right: 0 none;
+	}
+	.museum .search-info .date{
+		margin-top: 12px;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 992px){
+	.museum .search-info .museum-right a{
+		margin-top: 10px;
+	}
+	.museum .search-info .museum-left{
+		border-right: 0 none;
+	}
+	.museum .search-info .date{
+		margin-top: 12px;
+	}
+}
+
+@media (min-width: 992px) and (max-width: 1200px){
+	.museum .search-info .museum-right a{
+		margin-top: 10px;
+	}
+	.museum .search-info .museum-left{
+		border-right: 0 none;
+	}
+}
+
+@media (min-width: 1200px) and (max-width: 1280px){
+
+}

@@ -1,0 +1,191 @@
+/* 5*7个页面左边列表统一样式 */
+.part1,.cmx-departExamineApproveInfo,.cmx-departIdentifyInfo,.cmx-departRegisterInfo,.cmx-yuyue,.cmx-departDistributeHandleInfo,.cmx-departDistributeHandleInfo{
+    font-size: 12px;
+    padding: 0;
+}
+.resizetable{
+    background-color: #1d7dd8 !important;
+    border-color: #1869b4;
+    
+}
+.resizetable tr th{
+    color: white !important;
+}
+
+/* 分页统一样式 */
+.pagination{
+    width:100%;
+}
+.pagination li a{
+    font-size: 12px;
+}
+.pagination li span{
+    font-size: 12px;
+}
+.cmx-relicInfo-list:nth-child(2){
+    font-size: 12px;
+}
+
+/* 申请按钮 */
+.add-carry-info{
+    margin:0 10px;
+}
+
+/* 序号 */
+.orderNum{
+    min-width:40px;
+}
+.orderNumFordengji{
+    min-width:50px;
+}
+.operation{
+    min-width:100px;
+}
+.operationFordengji{
+    min-width:180px;
+}
+.relicName{
+    min-width:100px;
+}
+.relicSize{
+    min-width:100px;
+}
+.relicQuality{
+    min-width:60px;
+}
+.imgNum{
+    min-width:60px;
+}
+.operationForShenqing{
+    min-width:110px;
+}
+.relicYear{
+    min-width: 60px;
+}
+.relicType{
+    min-width:65px;
+}
+
+/* 合并样式*35 */
+.panel .panel-heading .panel-title {
+    display: inline-block;
+}
+
+.panel .panel-heading button {
+    display: inline-block;
+}
+
+.part1 .table tbody tr {
+    height: 30px;
+}
+
+
+.pagination li input{
+    width: 20px;
+    border: none;
+    padding: 0;
+}
+.pagination li select{
+    width:130px;
+    padding: 0 10px;
+    height:29px;
+}
+.part1 table thead tr th {
+    text-align: center;
+}
+
+.part1 table tbody tr td {
+    text-align: center;
+}
+
+#cmx-dapart-apply-table td a {
+    margin-right: 3px;
+    color: #76838f;
+}
+
+.imgDiv{
+    border:1px solid #e4eaec;
+}
+.imgDiv>div{
+    position: relative;
+    padding:2px;
+    margin-top: 10px;
+}
+.imgDiv .removeImg{
+    position: absolute;
+    top: -10px;
+    right: -5px;
+    cursor: pointer;
+}
+.imgDiv img{
+    height: 35px;
+    width:100%;
+}
+
+.cmx-form-body {
+    margin-bottom: 5px;
+}
+.input-search-btn{
+    top:-4px;
+}
+.input-search-btn+.form-control {
+    padding-right: 0;
+}
+.table button{
+    margin: 0 5px;
+}
+
+/* 小手指 */
+.cursorPointer{
+    cursor: pointer;
+}
+
+.selectPreAdd{
+    width:115px;
+}
+
+#selectRelicFews{
+    width: 80px;
+}
+
+/* 图片样式 */
+.lightbox-block {
+	max-width: 600px;
+	padding: 15px 20px;
+	margin: 40px auto;
+	overflow: auto;
+	background: #fff;
+	border-radius: 3px;
+}
+
+/* 携运人申请列表样式 */
+.customs{
+    min-width:100px;
+}
+.destination{
+    min-width:80px;
+}
+.carrier{
+    min-width:50px;
+}
+.applyUser{
+    min-width:50px;
+}
+.processState{
+    min-width:80px;
+}
+.applyType{
+    min-width:70px;
+}
+.acceptNum{
+    min-width:120px;
+}
+.remainTime{
+    min-width: 60px;
+}
+.labelState{
+    min-width: 80px;
+}
+.turnDate{
+    min-width: 80px;
+}

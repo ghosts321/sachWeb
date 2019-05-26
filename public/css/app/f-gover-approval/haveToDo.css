@@ -1,0 +1,60 @@
+.form-wrap {
+    margin-bottom: 10px;
+}
+
+.title {
+    color: #62a8ea;
+    font-weight: 600;
+}
+
+.inputon {
+    display: inline-block;
+}
+
+.selectCondition {}
+
+.control-label {
+    width: 57px;
+}
+
+.select-condition {}
+
+
+/* .select-condition label{
+    width: 20%;
+} */
+
+#closeCondition,
+#upCondition {
+    opacity: 0.7;
+}
+
+.proType {
+    color: #358fe4;
+}
+
+.unitType {
+    opacity: 0.6;
+}
+
+#th-head {
+    background-color: #1d7dd8 !important;
+    border-color: #1869b4;
+}
+
+#th-head th {
+    color: white;
+}
+
+#cmx-htd-tbody tr:hover {
+    background: #f4f4f4;
+}
+
+#cmx-htd-tbody td {
+    overflow: hidden;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+.dropdown-menu{
+    z-index: 3000;
+}

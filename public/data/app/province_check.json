@@ -1,0 +1,21 @@
+[
+    {
+        "columnname": "cmx-i-23",
+        "columnindex": "cmx-i-23",
+        "serialnumber": "P0001",
+        "type": "file",
+        "name": "省局行政许可决定书",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "single": "1"
+        },
+        "extra": {
+            "class": "baseinfo",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    }
+]

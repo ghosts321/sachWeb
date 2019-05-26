@@ -1,0 +1,214 @@
+<div class="modal fade in" id="cmx-editrelicinfo" aria-hidden="true" aria-labelledby="addrelicinfo" role="dialog" tabindex="-1">
+    <div class="modal-dialog modal-center" style="width:85%;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span id="modalTitle">修改文物信息</span>
+                <button class="pull-right close closed" data-dismiss="modal" aria-label="关闭">关闭</button>
+                <div class="clearfix"></div>
+            </div>
+            <div class="modal-body">
+                <div class="col-md-12 col-lg-12" id="cmx-addrelicinfor-1" style="height:500px;overflow:scroll;"></div>
+            </div>
+            <div class="modal-footer">
+                <button id="updateRelics" class="btn btn-primary" style="margin-right:10px;">保存</button>
+                <button type="button" class="btn btn-default cmx-cancle-btn closed" data-dismiss="modal" style="margin-right:10px;">取消</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    function addRelicInfo(element, url,applyId) {
+
+        $.ajax({
+            url: url,
+            type: "GET",
+            async: false,
+            success: function (result) {
+                var data = result;
+                for (var i = 0; i < data.length; i++) {
+                    var type = data[i].type;
+                    var width = data[i].extra.width;
+                    var notnull = (data[i].attribute.notnull == 1) ? true : false;
+                    var attrstring = 'cmx-tag="cmx" cmx-lib="' + data[i].serialnumber + '" cmx-index="' +
+                        data[i].columnindex +
+                        '" cmx-column="' + data[i].columnname + '" cmx-type="' + data[i].type +
+                        '" cmx-require="' +
+                        notnull + '"';
+                    if (data[i].extra.width == "") {
+                        width = 12;
+                    }
+                    if (type == 'text' || type == 'single' || type == 'extra') {
+                        attrstring = attrstring + 'cmx-stype="' + data[i].attribute.stype + '"';
+                    }
+                    new cmx.process()
+                        .turn('automated-form-' + type, {
+                            "element": element,
+                            "data": data[i],
+                            "width": width,
+                            "notnull": notnull,
+                            "attrstring": attrstring
+                        })
+                        .ccatch(function (msg) {
+                            console.log('异常终止了 ' + msg);
+                        })
+                        .cfinally(function () {
+                            try {
+                                eval(data[i].extra.func + '(' + JSON.stringify(data[i]) + ')');
+                            } catch (exception) {
+                                console.log(exception)
+                            }
+                        }).start();
+                }
+            },
+            error: function (result) {
+                showAlert({ type: 'error', content: '网络连接失败，请确认网络连接' });
+            },
+            complete: function (result) {
+
+            }
+        });
+         // 鉴定人提交信息接口
+    function cmx_special_jiandingInfo(data) {
+        $("#cmx-30-CheckOpinion").css('border-color','#46be8a');
+        $("#cmx-30-jianRemark").css('border-color','#46be8a');
+        var option = '';
+        $.ajax({
+            url: api_ea + '/eaScrRelicInfo/selectApproveInfo',
+            type: "POST",
+            header: {
+                "Content-Type": "application/json;charset=UTF-8"
+            },
+            beforeSend: function (request) {
+                request.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+            },
+            data: JSON.stringify({
+                relicId: getData("relicId"),
+                token: getData("token"),
+                applyId:applyId
+            }),
+            async: false,
+            success: function (result) {
+                console.log(result);
+                if (result.state == 200) {
+                    var data = result.data;
+                    var html = '<table class="table table-bordered">' +
+                        '<thead>' +
+                        '<tr><th id="checkName">查验人</th>' +
+                        '<th class="isRelicName">是否文物</th>' +
+                        '<th class="isAllowName">是否允许出境</th>' +
+                        '<th id="checkOpinion">查验意见</th>' +
+                        '</tr></thead><tbody>';
+                    for (var i = 0; i < data.length; i++) {
+                        var relic = data[i].isRelic == '1' ? '是' : '否';
+                        var allow = data[i].isAllow == '1' ? '允许' : '不允许';
+                        html += '<tr><td>' + data[i].ideUserId + '</td>' +
+                            '<td class="isRelicName">' + relic + '</td>' +
+                            '<td class="isAllowName">' + allow + '</td>' +
+                            '<td>' + data[i].checkOpinion + '</td></tr>';
+                    }
+                    html += '</tbody></table>';
+                    $("#cmx-special-P0028").append(html);
+                } else {
+                    showAlert({
+                        type: "error",
+                        content: result.msg
+                    })
+                }
+            }
+        });
+    }
+    }
+
+    // 数字字典加载质地
+    function cmx_special_ScrRelicQuality(data) {
+        var readonly = data.extra.readonly;
+        var html = ['<div class="cmx-form-body col-sm-12 col-xs-12 col-md-12 col-lg-12" style="margin:0;padding:0" id="">',
+            '<select ' + readonly + ' class="form-control" data-dic="ScrRelicQuality" id="cmx-30-ScrRelicQuality"   name="">',
+            '<select>',
+            '</div>'].join('');
+        $("#cmx-special-" + data.serialnumber).append(html);
+        new cmx.process()
+            .turn('buildDataDic', {
+                element: $('#cmx-30-ScrRelicQuality')
+            }).cfinally(function () {
+            }).start();
+    }
+
+    // 数字字典加载级别
+    function cmx_special_RelicLevel(data) {
+        var readonly = data.extra.readonly;
+        var html = ['<div class="cmx-form-body col-sm-12 col-xs-12 col-md-12 col-lg-12" style="margin:0;padding:0" id="">',
+            '<select ' + readonly + ' class="form-control" data-dic="RelicLevel" id="cmx-30-RelicLevel"   name="">',
+            '<select>',
+            '</div>'].join('');
+        $("#cmx-special-" + data.serialnumber).append(html);
+        new cmx.process()
+            .turn('buildDataDic', {
+                element: $('#cmx-30-RelicLevel'),
+                hasNull: true,
+                hasAll: false
+            }).cfinally(function () {
+            }).start();
+    }
+
+    function cmx_special_RelicLevel1(data) {
+        var readonly = data.extra.readonly;
+        var html = ['<div class="cmx-form-body col-sm-12 col-xs-12 col-md-12 col-lg-12" style="margin:0;padding:0" id="">',
+            '<select ' + readonly + ' class="form-control" data-dic="RelicLevel" id="cmx-30-RelicLevel1"   name="">',
+            '<select>',
+            '</div>'].join('');
+        $("#cmx-special-" + data.serialnumber).append(html);
+        new cmx.process()
+            .turn('buildDataDic', {
+                element: $('#cmx-30-RelicLevel1'),
+                hasNull: true,
+                hasAll: false
+            }).cfinally(function () {
+            }).start();
+    }
+
+   
+
+    //数字字典加载数量单位
+    function cmx_special_RelicUnits(data) {
+        console.log(data);
+        var readonly = data.extra.readonly;
+        var html0 = ['<div class="cmx-form-body col-sm-12 col-xs-12 col-md-12 col-lg-12" style="margin:0;padding:0">',
+            '<input type="text" value="1件" readonly class="form-control">',
+            '</div>'].join('');
+        var html = ['<div class="cmx-form-body col-sm-3 col-xs-3 col-md-3 col-lg-3" style="margin:0;padding:0">',
+            '<input value="1" readonly type="number" min="0" id="cmx-30-RelicNumberInput" class="form-control" placeholder="" value="">',
+            '</div>',
+            '<div class="cmx-form-body col-sm-3 col-xs-3 col-md-3 col-lg-3" style="margin:0;padding:0">',
+            '<select ' + readonly + ' class="form-control" data-dic="RelicUnits" id="cmx-30-RelicNumberSelect">',
+            '<option value="1">件</option><option value="2">批</option><option value="3">套</option>',
+            '<select>',
+            '</div>'].join('');
+
+        var html2 = ['<div class="cmx-form-body col-sm-3 col-xs-3 col-md-3 col-lg-3" style="margin:0;padding:0;">',
+            '<input value="1" type="number" min="0" id="cmx-30-RelicNumberInput2" class="form-control" placeholder="" value="">',
+            '</div>',
+            '<div class="cmx-form-body col-sm-3 col-xs-3 col-md-3 col-lg-3" style="margin:0;padding:0;">',
+            '<input value="件" readonly type="text" min="0" id="cmx-30-RelicNumberSelect2" class="form-control" placeholder="" value="">',
+            '</div>'].join('');
+
+        $("#cmx-special-" + data.serialnumber).html(html0);
+
+        if (data.extra.custom == '5') {
+            $("#cmx-special-" + data.serialnumber).html(html+html2);
+        }
+    }
+
+    //图片要求
+    function cmx_special_ImageInfo(data) {
+        var html = [
+            '<div class="cmx-form-body col-sm-12 col-xs-12 col-md-12 col-lg-12" style="margin:0;padding:0">',
+            '<div class="input-group">',
+            '<span style="color:red;font-size: 12px;">1.文物图片应能清晰表现该特征<br>2.单张图片不能超过2M<br>3.文物图片最多上传六张',
+            '</span>',
+            '</div>',
+            '</div > ',
+        ].join("");
+        $("#cmx-special-" + data.serialnumber).append(html);
+    }
+</script>

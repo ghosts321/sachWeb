@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+  <title>全国馆藏文物信息</title>
+  <link href="../css/common/ie10-viewport-bug-workaround.css" rel="stylesheet">
+  <!-- Bootstrap -->
+  <link href="../css/common/bootstrap.min.css" rel="stylesheet">
+  <link href="../css/common/pageSwitch.min.css" rel="stylesheet">
+  <link href="../css/common/prettify.css" rel="stylesheet">
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--   [if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif] -->
+  <link href="../css/common/common.css" rel="stylesheet">
+  <link href="../css/service/col-cultural-relics.css" rel="stylesheet">
+  <style type="text/css" id="css-common">
+      /*************** SCROLLBAR BASE CSS ***************/
+
+      .scroll-wrapper {
+          overflow: hidden !important;
+          padding: 0 !important;
+          position: relative;
+      }
+
+      .scroll-wrapper > .scroll-content {
+          border: none !important;
+          box-sizing: content-box !important;
+          height: auto;
+          left: 0;
+          margin: 0;
+          max-height: none;
+          max-width: none !important;
+          overflow: scroll !important;
+          padding: 0;
+          position: relative !important;
+          top: 0;
+          width: auto !important;
+      }
+
+      .scroll-wrapper > .scroll-content::-webkit-scrollbar {
+          height: 0;
+          width: 0;
+      }
+
+      .scroll-element {
+          display: none;
+      }
+      .scroll-element, .scroll-element div {
+          box-sizing: content-box;
+      }
+
+      .scroll-element.scroll-x.scroll-scrollx_visible,
+      .scroll-element.scroll-y.scroll-scrolly_visible {
+          display: block;
+      }
+
+      .scroll-element .scroll-bar,
+      .scroll-element .scroll-arrow {
+          cursor: default;
+      }
+
+      .scroll-textarea {
+          border: 1px solid #cccccc;
+          border-top-color: #999999;
+      }
+      .scroll-textarea > .scroll-content {
+          overflow: hidden !important;
+      }
+      .scroll-textarea > .scroll-content > textarea {
+          border: none !important;
+          box-sizing: border-box;
+          height: 100% !important;
+          margin: 0;
+          max-height: none !important;
+          max-width: none !important;
+          overflow: scroll !important;
+          outline: none;
+          padding: 2px;
+          position: relative !important;
+          top: 0;
+          width: 100% !important;
+      }
+      .scroll-textarea > .scroll-content > textarea::-webkit-scrollbar {
+          height: 0;
+          width: 0;
+      }
+  </style>
+  <style type="text/css">
+      /*************** SIMPLE INNER SCROLLBAR ***************/
+      .scrollbar-inner > .scroll-element,
+      .scrollbar-inner > .scroll-element div
+      {
+          border: none;
+          margin: 0;
+          padding: 0;
+          position: absolute;
+          z-index: 10;
+      }
+      .scrollbar-inner > .scroll-element div {
+          display: block;
+          height: 100%;
+          left: 0;
+          top: 0;
+          width: 100%;
+      }
+      .scrollbar-inner > .scroll-element.scroll-x {
+          bottom: 2px;
+          height: 8px;
+          left: 0;
+          width: 100%;
+      }
+      .scrollbar-inner > .scroll-element.scroll-y {
+          height: 100%;
+          right: 2px;
+          top: 0;
+          width: 8px;
+      }
+      .scrollbar-inner > .scroll-element .scroll-element_outer {
+          overflow: hidden;
+      }
+      .scrollbar-inner > .scroll-element .scroll-element_outer,
+      .scrollbar-inner > .scroll-element .scroll-element_track,
+      .scrollbar-inner > .scroll-element .scroll-bar {
+          -webkit-border-radius: 8px;
+          -moz-border-radius: 8px;
+          border-radius: 8px;
+      }
+      .scrollbar-inner > .scroll-element .scroll-element_track{
+          -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+          filter: alpha(opacity=40);
+          opacity: 0.5;
+      }
+      .scrollbar-inner > .scroll-element .scroll-element_track { background-color: #D0E8FE; }
+      .scrollbar-inner > .scroll-element .scroll-bar { background: #62AAEC;box-shadow: 0 1px 0 0 #19558C; }
+      .scrollbar-inner > .scroll-element:hover .scroll-bar { background: #62AAEC;box-shadow: 0 1px 0 0 #19558C; }
+      .scrollbar-inner > .scroll-element.scroll-draggable .scroll-bar { background: #62AAEC;box-shadow: 0 1px 0 0 #19558C; }
+      /* update scrollbar offset if both scrolls are visible */
+      .scrollbar-inner > .scroll-element.scroll-x.scroll-scrolly_visible .scroll-element_track { left: -12px; }
+      .scrollbar-inner > .scroll-element.scroll-y.scroll-scrollx_visible .scroll-element_track { top: -12px; }
+      .scrollbar-inner > .scroll-element.scroll-x.scroll-scrolly_visible .scroll-element_size { left: -12px; }
+      .scrollbar-inner > .scroll-element.scroll-y.scroll-scrollx_visible .scroll-element_size { top: -12px; }
+  </style>
+</head>
+<body>
+  <!-- 头部 start -->
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+          aria-controls="navbar">
+          <span class="sr-only">切换导航</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="./index.html">
+          <img class="custom-logo" src="../img/custom-logo.png" />
+          <span class="adapt-webtitle visible-lg">国家文物局
+            <br>综合行政管理平台</span>
+        </a>
+      </div>
+      <div id="navbar" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav custom-navbar">
+          <li>
+            <a href="../index.html">首页</a>
+          </li>
+          <li>
+            <a href="../approval/admin-approval-manage.html">行政审批管理</a>
+          </li>
+          <li>
+            <a href="../public/gov-info-open.html">政府信息公开</a>
+          </li>
+          <li>
+            <a href="../industry/integrated-manage.html">行业综合管理</a>
+          </li>
+          <li class="active">
+            <a href="../service/public-info-service.html">公共信息服务</a>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right custom-navbar-right">
+          <li class="user-info">
+            <img src="../img/login.png" alt="">
+            <span class="login-2">登录</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- 头部 end -->
+
+  <!-- 左侧侧边栏 start -->
+  <div class="left-bar hidden-xs">
+    <div>
+      <a href="" class="leftlink">
+  
+      </a>
+    </div>
+    <div>
+      <a href="../administrative-approval.html">
+  
+      </a>
+    </div>
+    <div>
+      <a href="../policy-and-regulations.html">
+  
+      </a>
+    </div>
+    <div>
+      <a href="download.html">
+  
+      </a>
+    </div>
+  </div>
+  <!-- 左侧侧边栏 end -->
+  
+  <!-- 右侧侧边栏 start -->
+  <div class="right-bar hidden-xs">
+    <div>
+      <a href="" class="rightlink">
+  
+      </a>
+    </div>
+    <div>
+      <a href="../complaint-box.html">
+  
+      </a>
+    </div>
+  </div>
+  <!-- 右侧侧边栏 end -->
+
+  <!-- 全国馆藏文物信息 start -->
+  <div class="container museum">
+    <p class="position"><i></i><span>当前位置 >> </span><a href="public-info-service.html">公共信息服务 </a><span>>> 全国馆藏文物信息</span></p>
+    <p class="relics text-center"><span class="list">全国馆藏文物信息</span></p>
+    <div class="search-info">
+      <div class="row">
+        <div class="col-lg-10 museum-left" style="">
+            <div class="collection" id="collection">
+                <div class="row">
+                  <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 form-inline" style="">
+                    <label for="" style="">藏品名称：</label>
+                      <input type="text" class="form-control" placeholder="" style="" id="antiqueName">
+                  </div>
+                  <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 form-inline date">
+                    <label for="" style="">普查登记号：</label>        
+                      <input type="text" class="form-control" id="antiqueId">
+                  </div>
+                  <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 form-inline second-line">
+                    <div>
+                      <label for="date_a">收藏单位：</label>
+                      <input type="text" class="form-control" id="museumName">
+                    </div>
+                  </div>
+                  <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 form-inline second-line pick" style="">
+                    <label for="" style="">藏品年代：</label>
+                    <select class="form-control" style="" id="age">
+
+                    </select>
+                  </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-2 museum-right" style="">
+            <a style="" href="col-cultural-relics-details.html" target="_blank" class="" id="search">检索</a>
+            <a href="" id="reset">重置</a>
+        </div>
+      </div>
+    </div>
+    <div class="museum-content">
+      <div class="row">
+        <div class="col-lg-2 col-md-2">
+          <div class="province pull-left">
+            <p class="text-center"><span class="h3">省份</span></p>
+            <div class="reel scrollbar-inner" id="reel-province">
+    
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-8 col-md-8">
+          <div class="heritage center-block clearfix">
+            <div class="left-2 pull-left">
+              <div class="left-1 pull-left">
+                <img src="../img/cocr-1.png" alt="">
+                <img src="../img/cocr-6.png" alt="">
+                <img src="../img/cocr-3.png" alt="" class="cocr-3">
+              </div>
+              <img src="../img/cocr-2.png" alt="" class="cocr-2">
+              <img src="../img/cocr-5.png" alt="">
+              <img src="../img/cocr-7.png" alt="">
+              <img src="../img/cocr-8.png" alt="">
+            </div>
+            <div class="left-3 pull-left">         
+              <img src="../img/cocr-4.png" alt="">    
+              <img src="../img/cocr-9.png" alt="">    
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-2">
+          <div class="category pull-right">
+            <p class="text-center"><span class="h3">类别</span></p>
+            <div class="reel scrollbar-inner" id="reel-culturalclass">
+    
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 全国馆藏文物信息 end -->
+
+  <!-- 底部 start -->
+  <div class="footer">
+    <div class="container footer-content">
+      <div class="row">
+        <p>
+          <a href="../website-statement.html">网站声明</a>
+          <a href="../website-statement.html">联系我们</a>
+        </p>
+        <i></i>
+      </div>
+      <b>Copyright © 2017 国家文物局版权所有</b>
+    </div>
+  </div>
+  <!-- 底部 end -->
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="../js/common/jquery-1.9.1.min.js"></script> 
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="../js/common/bootstrap.min.js"></script>
+  <script src="../js/common/ie10-viewport-bug-workaround.js"></script>
+  <script src="../js/common/pageSwitch.min.js"></script>
+  <script src="../js/common/pagination.js"></script>
+  <script src="../js/common/main.js"></script>
+  <script src="../js/common/common.js"></script>
+  <script src="../js/common/prettify.js"></script> <!-- 滚动条插件 -->
+  <script src="../js/common/jquery.scrollbar.min.js"></script>
+  <script src="../js/service/col-cultural-relics.js"></script>
+</body>
+</html>

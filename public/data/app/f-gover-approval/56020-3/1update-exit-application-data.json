@@ -1,0 +1,284 @@
+[
+    {
+        "columnname": "cmx-i-1",
+        "columnindex": "cmx-i-1",
+        "serialnumber": "P0001",
+        "type": "separator",
+        "name": "携运人申请信息:",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "title": "携运人申请信息:",
+            "desc": ""
+        },
+        "extra": {
+            "class": "padding-bottom-10",
+            "func": "",
+            "width": 12,
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-2",
+        "columnindex": "cmx-1-CarryUser",
+        "serialnumber": "P0002",
+        "type": "text",
+        "name": "姓名（名称）:",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": "short",
+            "max_length": 40
+        },
+        "extra": {
+            "class": "margin-bottom-40",
+            "func": "",
+            "width": "6",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-3",
+        "columnindex": "cmx-1-Nationality1",
+        "serialnumber": "P0003",
+        "type": "special",
+        "name": "国籍:",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": ""
+            
+        },
+        "extra": {
+            "class": "margin-bottom-40",
+            "func": "cmx_special_Nationality",
+            "width": "6",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-4",
+        "columnindex": "cmx-1-Destination",
+        "serialnumber": "P0004",
+        "type": "text",
+        "name": "出境目的地:",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": "short",
+            "max_length": 100
+        },
+        "extra": {
+            "class": "margin-bottom-40",
+            "func": "",
+            "width": "6",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-5",
+        "columnindex": "cmx-1-CustomsID",
+        "serialnumber": "P0005",
+        "type": "text",
+        "name": "出境海关:",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": "short",
+            "max_length": 200
+        },
+        "extra": {
+            "class": "margin-bottom-40",
+            "func": "",
+            "width": "6",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-6",
+        "columnindex": "cmx-1-TelNO",
+        "serialnumber": "P0006",
+        "type": "num",
+        "name": "电话:",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": "count",
+            "prefix": 1,
+            "unit": "+86",
+            "decimal": 0,
+            "min": 1,
+            "max": 100,
+            "max_length": 30
+        },
+        "extra": {
+            "class": "margin-bottom-40",
+            "func": "",
+            "width": 6,
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-7",
+        "columnindex": "cmx-1-IDCardType",
+        "serialnumber": "P0007",
+        "type": "special",
+        "name": "证件类型:",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": ""
+            
+        },
+        "extra": {
+            "class": "margin-bottom-40",
+            "func": "cmx_special_IDCardType",
+            "width": "6",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-8",
+        "columnindex": "cmx-1-IDNumber",
+        "serialnumber": "P0008",
+        "type": "text",
+        "name": "证件号码:",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": "short",
+            "max_length": 20
+        },
+        "extra": {
+            "class": "margin-bottom-40",
+            "func": "",
+            "width": "6",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-9",
+        "columnindex": "cmx-1-ReviewInst",
+        "serialnumber": "P0009",
+        "type": "special",
+        "name": "审核机构:",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": ""
+        },
+        "extra": {
+            "class": "margin-bottom-40",
+            "func": "cmx_special_ReviewInst",
+            "width": "6",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-10",
+        "columnindex": "cmx-1-Address",
+        "serialnumber": "P0010",
+        "type": "text",
+        "name": "住所:",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": "long",
+            "max_length": 200
+        },
+        "extra": {
+            "class": "margin-bottom-40",
+            "func": "",
+            "width": "6",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-w-1",
+        "columnindex": "cmx-w-1",
+        "serialnumber": "P0001w",
+        "type": "separator",
+        "name": "添加文物信息:",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "title": "临时进出境文物信息:",
+            "desc": ""
+        },
+        "extra": {
+            "class": "padding-bottom-10",
+            "func": "",
+            "width": 12,
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-w-2",
+        "columnindex": "cmx-w-addRelic",
+        "serialnumber": "P0002w",
+        "type": "special",
+        "name": "已选文物:",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": ""
+        },
+        "extra": {
+            "class": "margin-bottom-40",
+            "func": "cmx_special_deleteInfo",
+            "width": "6",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-w-t",
+        "columnindex": "cmx-w-t",
+        "serialnumber": "P0001t",
+        "type": "separator",
+        "name": "添加文物信息:",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "title": "临时进出境文物信息:",
+            "desc": ""
+        },
+        "extra": {
+            "class": "padding-bottom-10",
+            "func": "",
+            "width": 12,
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-w-3",
+        "columnindex": "cmx-w-addRelic",
+        "serialnumber": "P0003w",
+        "type": "special",
+        "name": "可选文物:",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": ""
+        },
+        "extra": {
+            "class": "margin-bottom-40",
+            "func": "cmx_special_relicInfo",
+            "width": "6",
+            "layout": "",
+            "placeholder": ""
+        }
+    }
+]

@@ -1,0 +1,114 @@
+<div class="modal fade in" id="cmx-addrelicinfo" aria-hidden="true" aria-labelledby="addrelicinfo" role="dialog" tabindex="-1">
+    <div class="modal-dialog modal-center" style="width:85%;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span>添加文物信息</span>
+                <button class="pull-right close" data-dismiss="modal" aria-label="关闭">关闭</button>
+                <div class="clearfix"></div>
+            </div>
+            <div id="fromDiv" class="modal-body" style="height:500px;overflow:scroll;">
+                <div  id="cmx-addrelicinfor-modal">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button id="submitRelics" class="btn btn-primary" style="margin-right:10px;">保存</button>
+                <button type="button" class="btn btn-default cmx-cancle-btn" data-dismiss="modal" style="margin-right:10px;">取消</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    function getAutoRelicInfo() {
+        $.ajax({
+            url: getAddRelicData,
+            type: "GET",
+            async: false,
+            success: function (result) {
+                var data = result;
+                for (var i = 0; i < data.length; i++) {
+                    var type = data[i].type;
+                    var width = data[i].extra.width;
+                    var notnull = (data[i].attribute.notnull == 1) ? true : false;
+                    var attrstring = 'cmx-tag="cmx" cmx-lib="' + data[i].serialnumber + '" cmx-index="' + data[i].columnindex +
+                        '" cmx-column="' + data[i].columnname + '" cmx-type="' + data[i].type + '" cmx-require="' +
+                        notnull + '"';
+                    if (data[i].extra.width == "") {
+                        width = 12;
+                    }
+                    if (type == 'text' || type == 'single' || type == 'extra') {
+                        attrstring = attrstring + 'cmx-stype="' + data[i].attribute.stype + '"';
+                    }
+                    new cmx.process()
+                        .turn('automated-form-' + type, {
+                            "element": "#cmx-addrelicinfor-modal",
+                            "data": data[i],
+                            "width": width,
+                            "notnull": notnull,
+                            "attrstring": attrstring
+                        })
+                        .ccatch(function (msg) {
+                            console.log('异常终止了 ' + msg);
+                        })
+                        .cfinally(function () {
+                            try {
+                                eval(data[i].extra.func + '(' + JSON.stringify(data[i]) + ')');
+                            } catch (exception) {
+                                console.log(exception)
+                            }
+                        }).start();
+                }
+            }
+        });
+    }
+
+    // 数字字典加载质地
+    function cmx_special_ScrRelicQuality(data) {
+        var html = ['<div class="cmx-form-body col-sm-12 col-xs-12 col-md-12 col-lg-12" style="margin:0;padding:0" >',
+            '<select class="form-control" data-dic="ScrRelicQuality" id="' + data.columnindex + '"   name="">',
+            '<select>',
+            '</div>'].join('');
+        $("#cmx-special-" + data.serialnumber).append(html);
+        new cmx.process()
+            .turn('buildDataDic', {
+                element: $('#' + data.columnindex + '')
+            }).cfinally(function () {
+            }).start();
+    }
+
+    // 数字字典加载级别
+    function cmx_special_RelicLevel(data) {
+        var html = ['<div class="cmx-form-body col-sm-12 col-xs-12 col-md-12 col-lg-12" style="margin:0;padding:0" >',
+            '<select class="form-control" data-dic="RelicLevel" id="' + data.columnindex + '"   name="">',
+            '<select>',
+            '</div>'].join('');
+        $("#cmx-special-" + data.serialnumber).append(html);
+        new cmx.process()
+            .turn('buildDataDic', {
+                element: $('#' + data.columnindex + ''),
+                hasNull: true,
+                hasAll: false
+            }).cfinally(function () {
+            }).start();
+    }
+
+    //数字字典加载数量单位
+    function cmx_special_RelicUnits(data) {
+        var html = ['<div class="cmx-form-body col-sm-12 col-xs-12 col-md-12 col-lg-12" style="margin:0;padding:0">',
+            '<input type="text" value="1件" readonly class="form-control">',
+            '</div>'].join('');
+        $("#cmx-special-" + data.serialnumber).append(html);
+    }
+
+    //图片要求
+    function cmx_special_ImageInfo(data) {
+        var html = [
+            '<div class="cmx-form-body col-sm-12 col-xs-12 col-md-12 col-lg-12" style="margin:0;padding:0">',
+            '<div class="input-group">',
+            '<span style="color:red;font-size: 12px;">1.文物图片应能清晰表现该特征<br>2.单张图片不能超过2M<br>3.文物图片最多上传六张',
+            '</span>',
+            '</div>',
+            '</div > ',
+        ].join("");
+        $("#cmx-special-" + data.serialnumber).append(html);
+    }
+</script>

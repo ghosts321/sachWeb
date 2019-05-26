@@ -1,0 +1,103 @@
+<div class="modal fade in" id="bushouliModal" aria-hidden="true" aria-labelledby="bushouliModal" role="dialog" tabindex="-1"
+    style="display: block; padding-right: 19px;">
+    <div class="modal-dialog modal-center">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="关闭">
+                    <span aria-hidden="true">×</span>
+                </button>
+                <h4 class="modal-title">不予受理</h4>
+            </div>
+            <div class="modal-body">
+                <table class="table table-bordered">
+                    <tbody>
+                        <tr>
+                            <td colspan="4" class="backg text-center" style="">
+                                <h1 id="notice-title">国家文物局不予受理通知书</h1>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="4">
+                                <div class="example-wrap form-group text-left">
+                                    <div class="radio-custom radio-primary">
+                                        <input id="r2-1" name="rNo" value="2-1" type="radio" checked>
+                                        <label class="resonfor1" for="r2-1">根据法律规定和“三定”方案，不属于我局职责范围。</label>
+                                        <!-- <textarea placeholder="请填写原因……" class="form-control bushouli-extraReson1" rows="3" style="resize:none;margin: 0px 0px 0px 5px; width: 90%; height: 55px;"></textarea> -->
+                                    </div>
+                                    <div class="radio-custom radio-primary">
+                                        <input id="r2-2" name="rNo" value="2-2" type="radio">
+                                        <label class="resonfor2" for="r2-2">根据国务院文件，我局已经下放或取消该项目许可。</label>
+                                        <!-- <textarea placeholder="请填写原因……" class="form-control bushouli-extraReson2" rows="3" style="display:none;resize:none;margin: 0px 0px 0px 5px; width: 90%; height: 55px;"></textarea> -->
+                                    </div>
+                                    <div class="radio-custom radio-primary">
+                                        <input id="r2-3" name="rNo" value="2-3" type="radio">
+                                        <label class="resonfor3" for="r2-3">根据我局行政审批指南，申报材料中有重要因素缺失或错误。</label>
+                                        <!-- <textarea placeholder="请填写原因……" class="form-control bushouli-extraReson3" rows="3" style="display:none;resize:none;margin: 0px 0px 0px 5px; width: 90%; height: 55px;"></textarea> -->
+                                    </div>
+                                    <div class="radio-custom radio-primary">
+                                        <input id="r2-4" name="rNo" value="2-4" type="radio">
+                                        <label class="resonfor4" for="r2-4">其他原因</label>
+                                        <br>
+                                        <textarea maxlength="1000" placeholder="请填写原因……" class="form-control bushouli-extraReson4" rows="3" style="visibility:hidden;resize:none;margin: 0px 0px 0px 5px; width: 90%; height: 55px;"></textarea>
+
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="4" style="padding-left:4%" id="notice-foot">如有疑议，请致电010-56792137详细咨询</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <button type="button" id="bushouliSave" class="btn btn-primary">保存</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">
+                    取消
+                </button>
+
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        $("[name='rNo']").click(function () {
+            if($(this).attr('id')=='r2-4'){
+                $('.bushouli-extraReson4').val('').css('visibility', 'visible');
+            }else{
+                $('.bushouli-extraReson4').val('').css('visibility', 'hidden');
+            }
+            // switch($(this).attr('id')){
+            //     case 'r2-1':
+            //     $('.bushouli-extraReson1').val('').css('display', 'inline');
+            //     $('.bushouli-extraReson2').val('').css('display', 'none');
+            //     $('.bushouli-extraReson3').val('').css('display', 'none');
+            //     $('.bushouli-extraReson4').val('').css('display', 'none');
+            //     break;
+            //     case 'r2-2':
+            //     $('.bushouli-extraReson1').val('').css('display', 'none');
+            //     $('.bushouli-extraReson2').val('').css('display', 'inline');
+            //     $('.bushouli-extraReson3').val('').css('display', 'none');
+            //     $('.bushouli-extraReson4').val('').css('display', 'none');
+            //     break;
+            //     case 'r2-3':
+            //     $('.bushouli-extraReson1').val('').css('display', 'none');
+            //     $('.bushouli-extraReson2').val('').css('display', 'none');
+            //     $('.bushouli-extraReson3').val('').css('display', 'inline');
+            //     $('.bushouli-extraReson4').val('').css('display', 'none');
+            //     break;
+            //     case 'r2-4':
+            //     $('.bushouli-extraReson1').val('').css('display', 'none');
+            //     $('.bushouli-extraReson2').val('').css('display', 'none');
+            //     $('.bushouli-extraReson3').val('').css('display', 'none');
+            //     $('.bushouli-extraReson4').val('').css('display', 'inline');
+            //     break;
+            //     default:
+            //     break;
+            // }
+            
+        })
+    });
+    
+</script>

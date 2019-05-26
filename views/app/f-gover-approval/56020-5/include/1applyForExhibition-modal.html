@@ -1,0 +1,398 @@
+<style></style>
+<div class="modal fade in" id="cmx-applyForExhibition-info" aria-hidden="true" aria-labelledby="" role="dialog" tabindex="-1">
+    <div class="modal-dialog modal-center" style="width:85%;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span>维护展览进出境申请信息</span>
+                <button class="pull-right close" data-dismiss="modal" aria-label="关闭">关闭</button>
+                <div class="clearfix"></div>
+            </div>
+            <div class="modal-body" style="height: 400px;overflow: scroll">
+                <div class="col-md-12 col-lg-12" id="cmx-applyForExhibition-div"></div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary cmx-save-btn" style="margin-right:10px;" id="applyForExhibitionSave">保存</button>
+                <button type="button" class="btn btn-default cmx-cancle-btn" data-dismiss="modal" style="margin-right:10px;">取消</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    //自动获取表单
+    function get_autoForm(applyId, url) {
+        $.ajax({
+            url: url,
+            type: "GET",
+            async: false,
+            success: function (result) {
+                var data = result;
+                for (var i = 0; i < data.length; i++) {
+                    var type = data[i].type;
+                    var width = data[i].extra.width;
+                    var notnull = (data[i].attribute.notnull == 1) ? true : false;
+                    var attrstring = 'cmx-tag="cmx" cmx-lib="' + data[i].serialnumber + '" cmx-index="' +
+                        data[i].columnindex +
+                        '" cmx-column="' + data[i].columnname + '" cmx-type="' + data[i].type +
+                        '" cmx-require="' +
+                        notnull + '"';
+                    if (data[i].extra.width == "") {
+                        width = 12;
+                    }
+                    if (type == 'text' || type == 'single' || type == 'extra') {
+                        attrstring = attrstring + 'cmx-stype="' + data[i].attribute.stype + '"';
+                    }
+                    new cmx.process()
+                        .turn('automated-form-' + type, {
+                            "element": "#cmx-applyForExhibition-div",
+                            "data": data[i],
+                            "width": width,
+                            "notnull": notnull,
+                            "attrstring": attrstring
+                        })
+                        .ccatch(function (msg) {
+                            console.log('异常终止了 ' + msg);
+                        })
+                        .cfinally(function () {
+                            try {
+                                eval(data[i].extra.func + '(' + JSON.stringify(data[i]) + ')');
+                            } catch (exception) {
+                                console.log(exception)
+                            }
+                        }).start();
+                }
+            }
+        });
+        
+        //加载可选文物列表
+        function cmx_special_relicInfo(data) {
+            var searchRelic = " <div class='form-group'>" +
+                " <div class='form-group'>" +
+                " <div class='input-group'>" +
+                " <span class='input-group-addon'>" +
+                "携运人" +
+                " </span>" +
+                "<input type='text' id='search-carrier' class='form-control' placeholder='' autocomplete='off'>" +
+                " <span class='input-group-addon'>" +
+                "出境时间" +
+                " </span>" +
+                "<input type='text' id='search-turnDate' class='form-control' placeholder='' autocomplete='off'>" +
+                "</div>" +
+                " </div>" +
+                " </div>";
+            var searchButton = " <div class='form-group'>" +
+                " <div class='form-group'>" +
+                "<button type='button' class='btn btn-primary inputon' id='search-btn'>查询</button>" +
+                "<button type='button' class='btn inputon' id='clear-search-form'>清除</button>" +
+                " </div>" +
+                " </div>";
+
+            var html = [
+                '<div class="cmx-form-body col-sm-12 col-xs-12 col-md-12 col-lg-12" style="margin:0;padding:0;width:250%;" id="optionalRelic">',
+                '<div class="example table-responsive">',
+                '<table class="table table-bordered">',
+                '<thead>',
+                '<tr>',
+                '<th colspan="5">',
+                searchRelic,
+                '</th>',
+                '<th colspan="2">',
+                searchButton,
+                '</th>',
+                '</tr>',
+                '<tr>',
+                '<th>',
+                '<div class="checkbox-custom checkbox-primary checkbox-inline">',
+                '<input type="checkbox" id="selectAll" name="" value=""><label for="selectAll"></label>',
+                '全&nbsp;&nbsp;选',
+                '</div>',
+                '</th>',
+                '<th>序号</th>',
+                '<th>文物艺术品名称</th>',
+                '<th>年代</th>',
+                '<th>质地</th>',
+                '<th>数量</th>',
+                '<th>尺寸</th>',
+                '</tr>',
+                '</thead>',
+                '<tbody id="search-relicList">',
+                '</tbody>',
+                '</table>',
+                '</div>',
+                '</div>'
+            ].join('');
+
+            $("#cmx-special-" + data.serialnumber).html(html);
+
+            var getTempList = function () {
+                var List = '';
+                $.ajax({
+                    url: api_ea + '/eaScrRelicInfo/selectTempComeRepList',
+                    type: "POST",
+                    header: {
+                        "Content-Type": "application/json;charset=UTF-8"
+                    },
+                    beforeSend: function (request) {
+                        request.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+                    },
+                    async: false,
+                    data: JSON.stringify({
+                        token: getData('token'),
+                        applyClass: 1,
+                        carryUser: $('#search-carrier').val(),
+                        turnDate: $('#search-turnDate').val()
+                    }),
+                    success: function (result) {
+                        if (result.state == "200") {
+                            var relicInfo = result.data;
+                            if (relicInfo.length) {
+                                for (var i = 0; i < relicInfo.length; i++) {
+                                    for (var j = 0; j < relicInfo[i].relicList.length; j++) {
+                                        List += ['<tr>',
+                                            '<td>',
+                                            '<div class="checkbox-custom checkbox-primary checkbox-inline">',
+                                            '<input type="checkbox" id="' + relicInfo[i].relicList[
+                                                j].relicId + '" name="cmx-relicInfo" value="' +
+                                            relicInfo[i].relicList[j].relicId + '"><label for="' +
+                                            relicInfo[i].relicList[j].relicId + '"></label>',
+                                            '第' + (i + 1) + '批',
+                                            '</div>',
+                                            '</td>',
+                                            '<td>',
+                                            '0' + (j + 1) + '',
+                                            '</td>',
+                                            '<td>' + relicInfo[i].relicList[j].relicName + '</td>',
+                                            '<td>' + relicInfo[i].relicList[j].relicYear + '</td>',
+                                            '<td>' + relicInfo[i].relicList[j].relicQualityName +
+                                            '</td>',
+                                            '<td>' + relicInfo[i].relicList[j].relicNumber +
+                                            '</td>',
+                                            '<td>' + relicInfo[i].relicList[j].relicSize + '</td>',
+                                            '</tr>'
+                                        ].join('');
+                                    }
+                                }
+
+                                $("#search-relicList").html(List);
+                            } else {
+                                $("#search-relicList").html('暂无数据');
+                            }
+
+
+                            $('#search-turnDate').datepicker({
+                                language: 'zh-CN',
+                                autoclose: true, //选择之后是否关闭日期选项
+                                todayHighlight: true, //当为true的时候高亮
+                                keyboardNavigation: true,
+                                format: 'yyyy-mm-dd',
+                            });
+                            $('#selectAll').on('click', function () {
+                                if ($(this).prop("checked")) {
+                                    $("[name='cmx-relicInfo']").prop('checked', 'true');
+                                } else {
+                                    $("[name='cmx-relicInfo']").removeProp("checked");
+                                }
+                            })
+
+                        }
+                    },
+                    complete: function () {
+
+                    }
+                });
+            }
+
+            getTempList();
+
+            // 查询
+            $("#search-btn").off("click");
+            $("#search-btn").on("click", function () {
+                getTempList();
+            });
+            $("#clear-search-form").off("click");
+            $("#clear-search-form").on("click", function () {
+                $('#search-carrier').val('');
+                $('#search-turnDate').val('');
+            });
+
+        }
+        
+        //加载已选文物列表--可删除
+        function cmx_special_deleteInfo(data) {
+            var List = '';
+            $.ajax({
+                url: api_ea + '/eaScrRelicInfo/selectRelicListByRelApplyID',
+                type: "POST",
+                header: {
+                    "Content-Type": "application/json;charset=UTF-8"
+                },
+                beforeSend: function (request) {
+                    request.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+                },
+                async: false,
+                data: JSON.stringify({
+                    token: getData('token'),
+                    applyId: applyId,
+                    pageNumber: 1,
+                    pageSize: 1000
+                }),
+                success: function (result) {
+                    if (result.state == "200") {
+                        var relicInfo = result.data.dataList;
+                        if (relicInfo) {
+                            for (var i = 0; i < relicInfo.length; i++) {
+                                List += ['<tr>',
+                                    '<td class="deleteRelic">',
+                                    '<button class="btn btn-warning btn-sm btn-shanchu" onclick="deleteBind(\'' +
+                                    applyId + '\',\'' + relicInfo[i].relicId + '\')"   id="' +
+                                    relicInfo[i].relicId + '">删除</button>',
+                                    '</td>',
+                                    '<td>',
+                                    '0' + (i + 1) + '',
+                                    '</td>',
+                                    '<td>' + relicInfo[i].relicName + '</td>',
+                                    '<td>' + relicInfo[i].relicYear + '</td>',
+                                    '<td>' + relicInfo[i].relicQualityName + '</td>',
+                                    '<td>' + relicInfo[i].relicNumber + '</td>',
+                                    '<td>' + relicInfo[i].relicSize + '</td>',
+                                    '</tr>'
+                                ].join('');
+                            }
+                        }
+
+                        var html = [
+                            '<div class="cmx-form-body col-sm-12 col-xs-12 col-md-12 col-lg-12" style="margin:0;padding:0;width:250%;" id="">',
+                            '<div class="example table-responsive">',
+                            '<table class="table table-bordered">',
+                            '<thead>',
+                            '<tr>',
+                            '<th class="deleteRelic">操作</th>',
+                            '<th>序号</th>',
+                            '<th>文物艺术品名称</th>',
+                            '<th>年代</th>',
+                            '<th>质地</th>',
+                            '<th>数量</th>',
+                            '<th>尺寸</th>',
+                            List.length > 0 ? List : '',
+                            '</tbody>',
+                            '</table>',
+                            '</div>',
+                            '</div>'
+                        ].join('');
+                        $("#cmx-special-" + data.serialnumber).append(html);
+                    } else {
+                        alert(result.msg);
+                    }
+                }
+            });
+        }
+    }
+    // 数字字典加载证件类型
+    function cmx_special_IDCardType(data) {
+        var html = [
+            '<div class="cmx-form-body col-sm-12 col-xs-12 col-md-12 col-lg-12" style="margin:0;padding:0" id="">',
+            '<select class="form-control"  data-dic="IDCardType" id="cmx-1-IDCardType" name="" style="display:inline-block">',
+            '<select>',
+            '</div>'
+        ].join('');
+        $("#cmx-special-" + data.serialnumber).append(html);
+        new cmx.process()
+            .turn('buildDataDic', {
+                element: $('#cmx-1-IDCardType')
+            }).cfinally(function () {}).start();
+        $('#cmx-1-IDCardType').change(function () {
+            if ($(this).val() == 'X') {
+                var html2 = [
+                    '<input maxlength="40" type="text"  id="otherCard" class="form-control" placeholder="请填写证件名称" value="" style="display:inline-block;width:50%">'
+                ].join('');
+                $(this).css('width', '50%').parent().append(html2);
+            } else {
+                $('#otherCard').remove();
+                $(this).css('width', '100%');
+            }
+        })
+    }
+    // 数字字典加载国籍类型
+    function cmx_special_Nationality(data) {
+        var html = [
+            '<div class="cmx-form-body col-sm-12 col-xs-12 col-md-12 col-lg-12" style="margin:0;padding:0" id="">',
+            '<select class="form-control" data-live-search="true" data-dic="Country"  id="cmx-1-Nationality" name="">',
+            '<select>',
+            '</div>'
+        ].join('');
+        $("#cmx-special-" + data.serialnumber).append(html);
+        new cmx.process()
+            .turn('buildDataDic', {
+                element: $('#cmx-1-Nationality'),
+                defaultValue: 'CHN',
+                hasAll: false
+            }).cfinally(function () {
+
+            }).start();
+    }
+    //加载审核机构类型
+    function cmx_special_ReviewInst(data) {
+        var option = '';
+        new cmx.process()
+            .turn('callajax', {
+                url: api_aa + '/inst/aaSachinst/getEntityListByJC',
+                data: {
+                    token: getData("token")
+                },
+                jsonheader: false
+            })
+            .turn(function (prevModelData, send, abort) {
+                if (prevModelData.state == "200" && !IsEmpty(prevModelData)) {
+                    var ReviewInst = prevModelData.data;
+                    for (var i in ReviewInst) {
+                        option += '<option value="' + ReviewInst[i].instId + '">' + ReviewInst[i].instName +
+                            '</option>';
+                    }
+                    var html = [
+                        '<div class="cmx-form-body col-sm-12 col-xs-12 col-md-12 col-lg-12" style="margin:0;padding:0" id="">',
+                        '<select class="form-control"  id="cmx-1-ReviewInst" name="">',
+                        option,
+                        '<select>',
+                        '</div>'
+                    ].join('');
+                    $("#cmx-special-" + data.serialnumber).append(html);
+                    // $('#cmx-1-ReviewInst').selectpicker({ style: 'btn-transparent' });
+                    // $('#cmx-1-ReviewInst').parent().find('div').css('height', '320px')
+                } else {
+                    showAlert({
+                        type: 'error',
+                        content: prevModelData.msg
+                    })
+                }
+            })
+            .start();
+    }
+
+    function deleteBind(applyId, relicId) {
+        // alert(relicId);
+        showAlert({
+            type: 'confirm', //success info warning error confirm input
+            content: '确定删除文物信息吗？',
+            btn_1: '取消', //可选参数，type为confirm时默认为确定，type为input时默认为提交
+            btn_2: '确定', //可选参数，默认为取消
+            callback: function (_state) { //仅type为confirm下有效
+                console.log(_state); //_state可能是yes no cancel
+                if (_state == 'yes') {
+                    new cmx.process()
+                        .turn('callajax', {
+                            url: api_ea + '/eaScrRelicInfo/deleteRepRelicByRelicId',
+                            data: JSON.stringify({
+                                token: getData('token'),
+                                relicId: relicId
+                            })
+                        })
+                        .turn('deleteRelic')
+                        .turn('refreshRelicList', {
+                            "applyId": applyId,
+                            "applyClass": 1
+                        })
+                        .start();
+                }
+            }
+        })
+    }
+</script>

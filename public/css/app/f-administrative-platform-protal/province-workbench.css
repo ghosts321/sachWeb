@@ -1,0 +1,89 @@
+
+.part1 .panel {
+    height: 370px;
+}
+.part2 .panel {
+    height: 370px;
+}
+.panel-title {
+    color: #4397e6;
+}
+
+.part1 .title {
+    color: black;
+    font-size: 16px;
+}
+
+.part1 a {
+    color: gray;
+    font-size: 14px;
+}
+
+.part1 .table thead tr {
+    border-top: 2px solid #65ABE9;
+}
+
+.part1 .table thead tr th {
+    text-align: center;
+    /* border-bottom: 2px solid #65ABE9; */
+    background-color: white;
+}
+
+.part1 .table tbody tr {
+    height: 30px;
+}
+
+.part1 .table tbody tr td {
+    text-align: center;
+    border-top: 1px solid #D7D8D9;
+    border-bottom: 1px solid #D7D8D9;
+}
+
+.pagination li a {
+    font-size: 14px;
+}
+
+/* .pagination li input {
+    width: 10px;
+    border: none;
+    padding: 0;
+    color: #62a8ea;
+} */
+
+.part2 .panel-body {
+    text-align: center;
+}
+
+.part2 table th {
+    text-align: center;
+}
+
+.part3 .imgDiv {
+    cursor: pointer;
+}
+
+.widget-content {
+    box-shadow: 0px 1px 9px -3px #888888;
+}
+
+.widget-content:hover {
+    box-shadow: 0px 1px 9px -2px #62a8ea;
+}
+
+.widget-content:hover span {
+    color: #62a8ea;
+}
+
+.part3 .panel-body {
+    vertical-align: middle;
+    text-align: center;
+}
+
+@media (max-width:768px) {
+    .part1 .panel {
+        height: 100%;
+    }
+    .part2 .panel {
+        height: 100%;
+    }
+}

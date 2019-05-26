@@ -1,0 +1,102 @@
+[
+    {
+        "columnname": "cmx-i-0",
+        "columnindex": "cmx-i-0",
+        "serialnumber": "P0000",
+        "type": "text",
+        "name": "情况汇报题目",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": "short",
+            "max_length": 100
+        },
+        "extra": {
+            "class": "baseinfo",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": "请填写情况汇报题目"
+        }
+    },{
+        "columnname": "cmx-i-1",
+        "columnindex": "cmx-i-1",
+        "serialnumber": "P0001",
+        "type": "text",
+        "name": "情况描述",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": "long",
+            "max_length": 1000
+        },
+        "extra": {
+            "class": "baseinfo",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": "请填写情况描述"
+        }
+    },
+    {
+        "columnname": "cmx-i-2",
+        "columnindex": "cmx-i-2",
+        "serialnumber": "P002",
+        "type": "file",
+        "name": "相关文件",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "single": "0"
+        },
+        "extra": {
+            "class": "baseinfo",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-3",
+        "columnindex": "cmx-i-3",
+        "serialnumber": "P003",
+        "type": "handimg",
+        "name": "相关图片",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "single": "0"
+        },
+        "extra": {
+            "class": "baseinfo",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    },{
+        "columnname": "cmx-i-4",
+        "columnindex": "cmx-i-4",
+        "serialnumber": "P004",
+        "type": "multi",
+        "name": "重要发现提醒",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": 2,
+            "remark": [{
+                    "id": "1",
+                    "value": "如本次汇报有重要发现，请勾选"
+                }
+            ]
+        },
+        "extra": {
+            "class": "label-100",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": "请选择重要发现提醒"
+        }
+    }
+]

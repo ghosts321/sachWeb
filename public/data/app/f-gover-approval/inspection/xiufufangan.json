@@ -1,0 +1,800 @@
+[{
+        "columnname": "cmx-i-1",
+        "columnindex": "cmx-i-1",
+        "serialnumber": "P0001",
+        "type": "separator",
+        "name": "现状调查与评估",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "title": "现状调查与评估",
+            "desc": ""
+        },
+        "extra": {
+            "class": "margin-bottom-10 ",
+            "func": "",
+            "width": 12,
+            "layout": "",
+            "placeholder": ""
+        }
+    }, {
+        "columnname": "cmx-i-2",
+        "columnindex": "cmx-i-2",
+        "serialnumber": "P0002",
+        "type": "single",
+        "name": "价值评估",
+        "key": "item1",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": 2,
+            "remark": [{
+                    "id": 1,
+                    "value": "准确"
+                },
+                {
+                    "id": 2,
+                    "value": "较准确"
+                },
+                {
+                    "id": 3,
+                    "value": "不准确"
+                }
+            ]
+        },
+        "extra": {
+            "class": "",
+            "func": "checkSingle('columnname','columnindex','type')",
+            "width": "",
+            "layout": "",
+            "placeholder": ""
+        }
+    }, {
+        "columnname": "cmx-i-3",
+        "columnindex": "cmx-i-3",
+        "serialnumber": "P0003",
+        "type": "text",
+        "name": "",
+        "key": "item2",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "long",
+            "max_length": 20000
+        },
+        "extra": {
+            "class": "",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    }, {
+        "columnname": "cmx-i-4",
+        "columnindex": "cmx-i-4",
+        "serialnumber": "P0004",
+        "type": "single",
+        "name": "现状调查",
+        "key": "item3",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": 2,
+            "remark": [{
+                    "id": 1,
+                    "value": "全面"
+                },
+                {
+                    "id": 2,
+                    "value": "较全面"
+                },
+                {
+                    "id": 3,
+                    "value": "不全面"
+                }
+            ]
+        },
+        "extra": {
+            "class": "",
+            "func": "checkSingle('columnname','columnindex','type')",
+            "width": "",
+            "layout": "",
+            "placeholder": ""
+        }
+    }, {
+        "columnname": "cmx-i-5",
+        "columnindex": "cmx-i-5",
+        "serialnumber": "P0005",
+        "type": "text",
+        "name": "",
+        "key": "item4",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "long",
+            "max_length": 20000
+        },
+        "extra": {
+            "class": "",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    }, {
+        "columnname": "cmx-i-6",
+        "columnindex": "cmx-i-6",
+        "serialnumber": "P0006",
+        "type": "single",
+        "name": "病害评估",
+        "key": "item5",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": 2,
+            "remark": [{
+                    "id": 1,
+                    "value": "准确"
+                },
+                {
+                    "id": 2,
+                    "value": "较准确"
+                },
+                {
+                    "id": 3,
+                    "value": "不准确"
+                }
+            ]
+        },
+        "extra": {
+            "class": "",
+            "func": "checkSingle('columnname','columnindex','type')",
+            "width": "",
+            "layout": "",
+            "placeholder": ""
+        }
+    }, {
+        "columnname": "cmx-i-7",
+        "columnindex": "cmx-i-7",
+        "serialnumber": "P0007",
+        "type": "text",
+        "name": "",
+        "key": "item6",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "long",
+            "max_length": 20000
+        },
+        "extra": {
+            "class": "",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    }, {
+        "columnname": "cmx-i-8",
+        "columnindex": "cmx-i-8",
+        "serialnumber": "P0008",
+        "type": "single",
+        "name": "检测分析",
+        "key": "item7",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": 2,
+            "remark": [{
+                    "id": 1,
+                    "value": "准确"
+                },
+                {
+                    "id": 2,
+                    "value": "较准确"
+                },
+                {
+                    "id": 3,
+                    "value": "不准确"
+                }
+            ]
+        },
+        "extra": {
+            "class": "",
+            "func": "checkSingle('columnname','columnindex','type')",
+            "width": "",
+            "layout": "",
+            "placeholder": ""
+        }
+    }, {
+        "columnname": "cmx-i-9",
+        "columnindex": "cmx-i-9",
+        "serialnumber": "P0009",
+        "type": "text",
+        "name": "",
+        "key": "item8",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "long",
+            "max_length": 20000
+        },
+        "extra": {
+            "class": "",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    }, {
+        "columnname": "cmx-i-10",
+        "columnindex": "cmx-i-10",
+        "serialnumber": "P0010",
+        "type": "single",
+        "name": "病害图",
+        "key": "item9",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": 2,
+            "remark": [{
+                    "id": 1,
+                    "value": "无"
+                },
+                {
+                    "id": 2,
+                    "value": "准确"
+                },
+                {
+                    "id": 3,
+                    "value": "不准确"
+                }
+            ]
+        },
+        "extra": {
+            "class": "",
+            "func": "checkSingle('columnname','columnindex','type')",
+            "width": "",
+            "layout": "",
+            "placeholder": ""
+        }
+    }, {
+        "columnname": "cmx-i-101",
+        "columnindex": "cmx-i-101",
+        "serialnumber": "P00101",
+        "type": "text",
+        "name": "",
+        "key": "item10",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "long",
+            "max_length": 20000
+        },
+        "extra": {
+            "class": "",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    }, {
+        "columnname": "cmx-i-11",
+        "columnindex": "cmx-i-11",
+        "serialnumber": "P0011",
+        "type": "separator",
+        "name": "保护修复工作目标",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "title": "保护修复工作目标",
+            "desc": ""
+        },
+        "extra": {
+            "class": "margin-bottom-10 ",
+            "func": "",
+            "width": 12,
+            "layout": "",
+            "placeholder": ""
+        }
+    }, {
+        "columnname": "cmx-i-12",
+        "columnindex": "cmx-i-12",
+        "serialnumber": "P0012",
+        "type": "single",
+        "name": "技术指标",
+        "key": "item11",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": 2,
+            "remark": [{
+                    "id": 1,
+                    "value": "明确"
+                },
+                {
+                    "id": 2,
+                    "value": "较明确"
+                },
+                {
+                    "id": 3,
+                    "value": "不明确"
+                }
+            ]
+        },
+        "extra": {
+            "class": "",
+            "func": "checkSingle('columnname','columnindex','type')",
+            "width": "",
+            "layout": "",
+            "placeholder": ""
+        }
+    }, {
+        "columnname": "cmx-i-13",
+        "columnindex": "cmx-i-13",
+        "serialnumber": "P0013",
+        "type": "text",
+        "name": "",
+        "key": "item12",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "long",
+            "max_length": 20000
+        },
+        "extra": {
+            "class": "",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    }, {
+        "columnname": "cmx-i-14",
+        "columnindex": "cmx-i-14",
+        "serialnumber": "P0014",
+        "type": "single",
+        "name": "预期效果",
+        "key": "item13",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": 2,
+            "remark": [{
+                    "id": 1,
+                    "value": "好"
+                },
+                {
+                    "id": 2,
+                    "value": "较好"
+                },
+                {
+                    "id": 3,
+                    "value": "差"
+                }
+            ]
+        },
+        "extra": {
+            "class": "",
+            "func": "checkSingle('columnname','columnindex','type')",
+            "width": "",
+            "layout": "",
+            "placeholder": ""
+        }
+    }, {
+        "columnname": "cmx-i-15",
+        "columnindex": "cmx-i-15",
+        "serialnumber": "P0015",
+        "type": "text",
+        "name": "",
+        "key": "item14",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "long",
+            "max_length": 20000
+        },
+        "extra": {
+            "class": "",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    }, {
+        "columnname": "cmx-i-16",
+        "columnindex": "cmx-i-16",
+        "serialnumber": "P0016",
+        "type": "single",
+        "key": "item15",
+        "name": "技术路线",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": 2,
+            "remark": [{
+                    "id": 1,
+                    "value": "合理"
+                },
+                {
+                    "id": 2,
+                    "value": "较合理"
+                },
+                {
+                    "id": 3,
+                    "value": "不合理"
+                }
+            ]
+        },
+        "extra": {
+            "class": "",
+            "func": "checkSingle('columnname','columnindex','type')",
+            "width": "",
+            "layout": "",
+            "placeholder": ""
+        }
+    }, {
+        "columnname": "cmx-i-17",
+        "columnindex": "cmx-i-17",
+        "serialnumber": "P0017",
+        "type": "text",
+        "name": "",
+        "key": "item16",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "long",
+            "max_length": 20000
+        },
+        "extra": {
+            "class": "",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    }, {
+        "columnname": "cmx-i-18",
+        "columnindex": "cmx-i-18",
+        "serialnumber": "P0018",
+        "type": "single",
+        "name": "修复方案、步骤",
+        "key": "item17",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": 2,
+            "remark": [{
+                    "id": 1,
+                    "value": "合理"
+                },
+                {
+                    "id": 2,
+                    "value": "较合理"
+                },
+                {
+                    "id": 3,
+                    "value": "不合理"
+                }
+            ]
+        },
+        "extra": {
+            "class": "",
+            "func": "checkSingle('columnname','columnindex','type')",
+            "width": "",
+            "layout": "",
+            "placeholder": ""
+        }
+    }, {
+        "columnname": "cmx-i-19",
+        "columnindex": "cmx-i-19",
+        "serialnumber": "P0019",
+        "type": "text",
+        "name": "",
+        "key": "item18",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "long",
+            "max_length": 20000
+        },
+        "extra": {
+            "class": "",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    }, {
+        "columnname": "cmx-i-20",
+        "columnindex": "cmx-i-20",
+        "serialnumber": "P0020",
+        "type": "single",
+        "name": "保护材料",
+        "key": "item19",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": 2,
+            "remark": [{
+                    "id": 1,
+                    "value": "适用"
+                },
+                {
+                    "id": 2,
+                    "value": "不适用"
+                }
+            ]
+        },
+        "extra": {
+            "class": "",
+            "func": "checkSingle('columnname','columnindex','type')",
+            "width": "",
+            "layout": "",
+            "placeholder": ""
+        }
+    }, {
+        "columnname": "cmx-i-21",
+        "columnindex": "cmx-i-21",
+        "serialnumber": "P0021",
+        "type": "text",
+        "name": "",
+        "key": "item20",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "long",
+            "max_length": 20000
+        },
+        "extra": {
+            "class": "",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    }, {
+        "columnname": "cmx-i-22",
+        "columnindex": "cmx-i-22",
+        "serialnumber": "P0022",
+        "type": "separator",
+        "name": "",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "title": "",
+            "desc": ""
+        },
+        "extra": {
+            "class": "margin-bottom-10 ",
+            "func": "",
+            "width": 12,
+            "layout": "",
+            "placeholder": ""
+        }
+    }, {
+        "columnname": "cmx-i-23",
+        "columnindex": "cmx-i-23",
+        "serialnumber": "P0023",
+        "type": "single",
+        "name": "进度安排",
+        "key": "item21",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": 2,
+            "remark": [{
+                    "id": 1,
+                    "value": "恰当"
+                },
+                {
+                    "id": 2,
+                    "value": "过长"
+                },
+                {
+                    "id": 3,
+                    "value": "偏短"
+                }
+            ]
+        },
+        "extra": {
+            "class": "",
+            "func": "checkSingle('columnname','columnindex','type')",
+            "width": "",
+            "layout": "",
+            "placeholder": ""
+        }
+    }, {
+        "columnname": "cmx-i-24",
+        "columnindex": "cmx-i-24",
+        "serialnumber": "P0024",
+        "type": "text",
+        "name": "",
+        "key": "item22",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "long",
+            "max_length": 20000
+        },
+        "extra": {
+            "class": "",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    }, {
+        "columnname": "cmx-i-25",
+        "columnindex": "cmx-i-25",
+        "serialnumber": "P0025",
+        "type": "single",
+        "name": "修复人员",
+        "key": "item23",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": 2,
+            "remark": [{
+                    "id": 1,
+                    "value": "满足需要"
+                },
+                {
+                    "id": 2,
+                    "value": "不能满足需要"
+                }
+            ]
+        },
+        "extra": {
+            "class": "",
+            "func": "checkSingle('columnname','columnindex','type')",
+            "width": "",
+            "layout": "",
+            "placeholder": ""
+        }
+    }, {
+        "columnname": "cmx-i-26",
+        "columnindex": "cmx-i-26",
+        "serialnumber": "P0026",
+        "type": "text",
+        "name": "",
+        "key": "item24",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "long",
+            "max_length": 20000
+        },
+        "extra": {
+            "class": "",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    }, {
+        "columnname": "cmx-i-27",
+        "columnindex": "cmx-i-27",
+        "serialnumber": "P0027",
+        "type": "single",
+        "name": "预防性措施",
+        "key": "item25",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": 2,
+            "remark": [{
+                    "id": 1,
+                    "value": "合理"
+                },
+                {
+                    "id": 2,
+                    "value": "较合理"
+                },
+                {
+                    "id": 3,
+                    "value": "不合理"
+                },
+                {
+                    "id": 4,
+                    "value": "无"
+                }
+            ]
+        },
+        "extra": {
+            "class": "",
+            "func": "checkSingle('columnname','columnindex','type')",
+            "width": "",
+            "layout": "",
+            "placeholder": ""
+        }
+    }, {
+        "columnname": "cmx-i-271",
+        "columnindex": "cmx-i-271",
+        "serialnumber": "P00271",
+        "type": "text",
+        "name": "",
+        "key": "item26",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "long",
+            "max_length": 20000
+        },
+        "extra": {
+            "class": "",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    }, {
+        "columnname": "cmx-i-28",
+        "columnindex": "cmx-i-28",
+        "serialnumber": "P0028",
+        "type": "single",
+        "name": "评审结论",
+        "key": "expertResultsName",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": 2,
+            "remark": [{
+                    "id": 1,
+                    "value": "通过"
+                },
+                {
+                    "id": 2,
+                    "value": "不通过"
+                }
+            ]
+        },
+        "extra": {
+            "class": "",
+            "func": "checkSingle('columnname','columnindex','type')",
+            "width": "",
+            "layout": "",
+            "placeholder": ""
+        }
+    }, {
+        "columnname": "cmx-i-29",
+        "columnindex": "cmx-i-29",
+        "serialnumber": "P0029",
+        "type": "text",
+        "name": "综述",
+        "key": "expertOpinion",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": "long",
+            "max_length": 20000
+        },
+        "extra": {
+            "class": "",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    }, {
+        "columnname": "cmx-i-30",
+        "columnindex": "cmx-i-30",
+        "serialnumber": "P0030",
+        "type": "text",
+        "name": "备注",
+        "key": "remark",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "long",
+            "max_length": 20000
+        },
+        "extra": {
+            "class": "",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    }
+
+]

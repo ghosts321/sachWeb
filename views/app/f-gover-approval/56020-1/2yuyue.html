@@ -1,0 +1,123 @@
+<title>出境申请预约</title>
+<link rel="stylesheet" href="/css/app/f-gover-approval/56020-pub.css">
+<script src="/js/app/f-gover-approval/56020-1/56020-pub.js"></script>
+<script src="/js/app/f-gover-approval/models/public-model.js"></script>
+<script src="/js/app/f-gover-approval/56020-1/models/public-model.js"></script>
+<script src="/js/app/f-gover-approval/56020-1/views/public-view.js"></script>
+<script src="/js/app/f-gover-approval/56020-1/models/2yuyue.js"></script>
+<script src="/js/app/f-gover-approval/56020-1/views/2yuyue.js"></script>
+<script src="/js/app/f-gover-approval/56020-1/2yuyue.js"></script>
+
+<div class="page animation-fade">
+    <div class="page-content">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 cmx-yuyue">
+            <div class="panel">
+                <div class="panel-heading">
+                    <span class="panel-title" style="display:inline-block">出境预约</span>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="panel-body">
+                    <div class="example table-responsive">
+                        <table class="table table-bordered">
+                            <thead class="resizetable">
+                                <th class="remainTime">停留时间</th>
+                                <th class="customs">出境海关</th>
+                                <th class="destination">目的地</th>
+                                <th class="applyUser">申请人</th>
+                                <th class="carrier">携运人</th>
+                                <th class="processState">流程状态</th>
+                            </thead>
+                            <tbody id="cmx-yuyue-table">
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <ul class="pagination">
+                        <li>
+                            <a id="left-first" href="javascript:;">首页</a>
+                        </li>
+                        <li>
+                            <a id="left-prev" href="javascript:;">上一页</a>
+                        </li>
+                        <li>
+                            <span>第
+                                <input id="left-count" type="text" value="1" />/
+                                <span id="left-total">1</span>页</span>
+                        </li>
+                        <li>
+                            <a id="left-next" href="javascript:;">下一页</a>
+                        </li>
+                        <li>
+                            <a id="left-last" href="javascript:;">尾页</a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 cmx-relicInfo-list">
+            <div class="panel">
+                <div class="panel-heading">
+                    <span class="panel-title">文物列表</span>
+                    <a href="/data/userManualForShenhe.doc" download="国家文物局综合行政管理平台试运行阶段_社会文物进出境_操作手册_鉴定站.doc">
+                        <button style="position:absolute;right:0px; top:-20px;" class="btn btn-xs btn-dark" id="cmx-user-manual">点击下载用户手册</button>
+                    </a>
+                </div>
+                <div class="panel-body">
+                    <div class="example table-responsive" id="relicListDiv">
+                        <table class="table table-bordered">
+                            <thead class="resizetable">
+                                <th class="orderNum">序号</th>
+                                <th class="relicName">名称</th>
+                                <th class="relicSize">尺寸</th>
+                                <th class="relicQuality">质地</th>
+                                <th class="relicYear">年代</th>
+                                <th class="relicType">类别</th>
+                            </thead>
+                            <tbody id="relicList">
+                            </tbody>
+                        </table>
+                    </div>
+                    <ul class="pagination">
+                        <li class="pull-left">
+                            <select class="form-control" id="selectRelicFews">
+                                <option value="10">10条/页</option>
+                                <option value="20" selected>20条/页</option>
+                                <option value="50">50条/页</option>
+                                <option value="100">100条/页</option>
+                            </select>
+                        </li>
+                        <li>
+                            <span id="relicTotal">共0条</span>
+                        </li>
+                        <li>
+                            <a id="right-first" href="javascript:;">首页</a>
+                        </li>
+                        <li>
+                            <a id="right-prev" href="javascript:;">上一页</a>
+                        </li>
+                        <li>
+                            <span>第
+                                <input id="right-count" type="text" value="1" />/
+                                <span id="right-total">1</span>页</span>
+                        </li>
+                        <li>
+                            <a id="right-next" href="javascript:;">下一页</a>
+                        </li>
+                        <li>
+                            <a id="right-last" href="javascript:;">尾页</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="cmx-accept-receipt-modal"></div>
+<div id="cmx-no-accept-receipt-modal"></div>
+<div id="cmx-relic-modal"></div>
+<div id="cmx-bushouli-modal"></div>
+<div id="cmx-yicibuzheng-modal"></div>
+<div id="cmx-getDetails-modal"></div>
+<div id="cmx-carry-person-modal"></div>
+<div id="cmx-applicationForExhibition-modal"></div>

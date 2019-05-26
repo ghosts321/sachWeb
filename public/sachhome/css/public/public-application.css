@@ -1,0 +1,513 @@
+.application-open {
+  background-color: #FDFDFA;
+  color: #B0B0AF;
+  line-height: 50px;
+  border-bottom: 1px solid #D7D8D9;
+}
+.application-open i {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  background: url('../../img/house.png') no-repeat center center;
+  background-size: cover;
+  vertical-align: -3px;
+  margin-right: 5px;
+  margin-left: -3px;
+}
+.application-open span,
+.application-open a {
+  color: #B4B4B3;
+  font-size: 14px;
+  vertical-align: middle;
+}
+.application-open a {
+  text-decoration: none;
+}
+.fill-in-the-form {
+  padding-top: 20px;
+}
+.fill-in-the-form .fill-in-the-note h4 {
+  background-color: #62AAEC;
+  color: #fff;
+  font-size: 14px;
+  line-height: 34px;
+  border-bottom: 1px solid #5095D5;
+  text-align: center;
+  margin: 0;
+}
+.fill-in-the-form .fill-in-the-note .list {
+  border: 1px solid #EFEFEF;
+  border-top: 0 none;
+  min-height: 225px;
+  padding: 3px 20px 14px;
+}
+.fill-in-the-form .fill-in-the-note .list p {
+  font-size: 14px;
+  color: #202020;
+  margin: 0;
+  line-height: 22px;
+}
+.fill-in-the-form .fill-in-the-note .list i {
+  width: 19px;
+  height: 19px;
+  line-height: 19px;
+  border-radius: 50%;
+  text-align: center;
+  font-style: normal;
+  font-size: 13px;
+  display: inline-block;
+  margin-top: 17px;
+  color: #fff;
+  background-color: #F4A753;
+  margin-right: 15px;
+}
+.fill-in-the-form .download {
+  min-height: 280px;
+  position: relative;
+}
+.fill-in-the-form .download a {
+  position: absolute;
+  padding: 5px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  background-color: #62AAEC;
+  border: 0 none;
+}
+.fill-in-the-form .download a img {
+  width: 24px;
+  margin-top: -20px;
+  margin-left: 10px;
+}
+.fill-in-the-form .download a span {
+  display: inline-block;
+  width: 115px;
+  height: 100%;
+  word-break: break-all;
+  border-left: 1px dashed #fff;
+  margin-left: 10px;
+  padding-left: 12px;
+  padding-right: 124px;
+}
+#application {
+  min-height: 1096.4px;
+}
+#onlyTable {
+  position: relative;
+}
+#onlyTable .modal-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  opacity: 0;
+  z-index: 100;
+}
+.application-form {
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+.application-form h3 {
+  font-size: 25px;
+  text-align: center;
+}
+.application-form span.item {
+  line-height: 19px;
+  border: 1px solid #eee;
+  border-top: 1px solid #eee;
+  border-bottom: 0 none;
+  text-align: center;
+  font-size: 14px;
+  height: 33px;
+  line-height: 33px;
+  cursor: pointer;
+  display: inline-block;
+  min-width: 127px;
+  background-image: linear-gradient(0deg, #e3e4e8, #fefefe);
+}
+.application-form span.item.on {
+  border-top: 4px solid #60A9EB;
+  border-left: 1px solid #60A9EB;
+  border-right: 1px solid #60A9EB;
+  height: 36px;
+  color: #60A9EB;
+  background-image: none;
+}
+.application-form span.item i {
+  font-style: normal;
+}
+.application-form p {
+  margin-bottom: 0px;
+}
+.application-form .applicant-information {
+  background-color: #62AAEC;
+  color: #fff;
+  font-size: 17px;
+  line-height: 40px;
+  text-align: center;
+}
+.application-form .preview {
+  color: #fff;
+  border: 0 none;
+  font-size: 18px;
+  padding: 10px 56px;
+  border-radius: 3px;
+  background-color: #62AAEC;
+}
+.application-form .preview:hover {
+  background-image: -webkit-linear-gradient(#65abe9 0%, #257dcb 100%);
+  background-image: -o-linear-gradient(#65abe9 0%, #257dcb 100%);
+  background-image: linear-gradient(#65abe9 0%, #257dcb 100%);
+  color: #fff;
+}
+.data {
+  margin-bottom: 15px;
+}
+.data table em {
+  font-style: normal;
+}
+.data table tr {
+  min-height: 40px;
+  line-height: 40px;
+  border: 1px solid #C5C5C5;
+  border-top: 0 none;
+}
+.data table tr th {
+  background-color: #60A9EB;
+  height: 40px;
+  line-height: 29px;
+  font-size: 16px;
+  color: #fff;
+  font-weight: normal;
+}
+.data table tr td {
+  min-width: 150px;
+  padding: 0;
+  white-space: nowrap;
+  text-align: center;
+}
+.data table tr td i {
+  color: #FF312F;
+  font-style: normal;
+  margin-right: 5px;
+}
+.data table tr td.title {
+  background-color: #60A9EB;
+  color: #fff;
+  font-size: 16px;
+  line-height: 40px;
+}
+.data table tr td .colspan-input {
+  width: 100%;
+  border: 0 none;
+  outline: 0 none;
+  height: 40px;
+  text-indent: 1em;
+}
+.data table tr td .colspan-input::-webkit-input-placeholder {
+  text-align: center;
+}
+.data table tr td .colspan-input::-ms-input-placeholder {
+  text-align: center;
+}
+.data table tr td .colspan-input::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: #ABB2B6;
+}
+.data table tr td .colspan-input:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #ABB2B6;
+}
+.data table tr td .colspan-input::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #ABB2B6;
+}
+.data table tr td .colspan-input:-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: #ABB2B6;
+}
+.data table tr td textarea {
+  width: 100%;
+  border: 0 none;
+  outline: 0 none;
+  resize: vertical;
+  box-shadow: none;
+  border-radius: 0;
+  white-space: normal;
+}
+.data table tr .txt {
+  max-width: 15%;
+  border: 1px solid #C5C5C5;
+  line-height: 40px;
+}
+.data table tr .entrance {
+  height: 60px;
+  line-height: 60px;
+  min-height: 60px;
+  max-width: 129px;
+  border-right: 0 none;
+  position: relative;
+}
+.data table tr .entrance i {
+  padding-left: 12px;
+}
+.data table tr .single-box {
+  text-align: left;
+  width: 20%;
+  display: inline-block;
+  padding-top: 10px;
+}
+.data table tr .enter {
+  width: 35%;
+}
+.data table tr .enter input,
+.data table tr .enter select {
+  width: 100%;
+  border: 0 none;
+  outline: 0 none;
+  height: 40px;
+  text-indent: 1em;
+}
+.data table tr .enter select {
+  border-radius: 0;
+  border-right: 0 none;
+  background: url(../../img/option.png) no-repeat right center;
+  background-size: contain;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  box-shadow: none;
+}
+.data table tr .enter select::-ms-expand {
+  display: none;
+}
+.data table tr .verification-code {
+  height: 60px;
+  line-height: 60px;
+  min-height: 60px;
+  line-height: 40px;
+  text-align: left;
+}
+.data table tr .verification-code i {
+  margin-left: 10px;
+}
+.data table tr .verification-code input {
+  height: 30px;
+  line-height: 30px;
+  border: 0 none;
+  text-indent: 1em;
+  background-color: #F2F2F2;
+}
+.data table tr .verification-code span {
+  margin-left: 30px;
+  margin-right: 20px;
+}
+.data table tr .verification-code b {
+  height: 30px;
+  line-height: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+  display: inline-block;
+  background-color: #F2F2F2;
+}
+.data table tr .verification-code img {
+  width: 120px;
+  height: 36px;
+  cursor: pointer;
+}
+.data .auxiliary-text {
+  font-size: 14px;
+  color: #FF312F;
+  margin-top: 5px;
+}
+.win-top {
+  padding-bottom: 40px;
+}
+.win-top h3 {
+  font-size: 25px;
+  text-align: center;
+}
+.win-top span.item {
+  line-height: 19px;
+  border: 1px solid #eee;
+  border-top: 1px solid #eee;
+  text-align: center;
+  font-size: 14px;
+  height: 33px;
+  line-height: 33px;
+  cursor: pointer;
+  display: inline-block;
+  min-width: 127px;
+  background-image: linear-gradient(0deg, #e3e4e8, #fefefe);
+}
+.win-top span.item.on {
+  border-top: 4px solid #60A9EB;
+  border-left: 1px solid #60A9EB;
+  border-right: 1px solid #60A9EB;
+  height: 36px;
+  color: #60A9EB;
+  background-image: none;
+}
+.win-top span.item i {
+  font-style: normal;
+}
+.win-top p {
+  margin-bottom: 0px;
+}
+.win-top .form-control[readonly] {
+  background-color: #fff;
+}
+.win-top .preview-2 {
+  color: #fff;
+  border: 0 none;
+  font-size: 18px;
+  padding: 12px 56px 10px;
+  border-radius: 3px;
+  background-image: linear-gradient(-180deg, #65abe9 0%, #257dcb 100%);
+}
+.win-top .preview-2:hover {
+  color: #fff;
+}
+@media screen and (max-width: 767px) {
+  .table-responsive {
+    border: 0 none;
+  }
+  .data table tr .enter select {
+    text-indent: 1em;
+  }
+  .fill-in-the-form .download {
+    min-height: 100px;
+  }
+}
+.win-bottom {
+  width: 100%;
+  /*是相对于浏览器窗口的*/
+  height: 100%;
+  /*是相对于浏览器窗口的*/
+  position: fixed;
+  /*固定定位是相对于浏览器窗口进行固定定位的*/
+  left: 0;
+  top: 0;
+  /*background-color: #000;*/
+  background-color: #c4c4c4;
+  z-index: 2000;
+  display: none;
+}
+.win-top {
+  width: 530px;
+  position: fixed;
+  /*固定定位是相对于浏览器窗口进行固定定位的*/
+  left: 50%;
+  top: 50%;
+  /*      margin-left: -265px;
+  margin-top: -187px;*/
+  width: 1300px;
+  height: 87%;
+  transform: translate(-50%, -50%);
+  z-index: 3000;
+  display: none;
+  overflow-y: auto;
+  background-color: #fff;
+}
+.win-top .times {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  font-size: 40px;
+  cursor: pointer;
+  color: #ccc;
+  z-index: 1000;
+}
+.content {
+  margin: 20px;
+  margin-top: 0;
+}
+.content ul {
+  list-style: none;
+  margin-bottom: 0;
+}
+.content ul li {
+  list-style: none;
+  width: 100%;
+  float: left;
+}
+body {
+  position: relative;
+}
+#modal {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: none;
+  font-size: 14px;
+  color: #333;
+  z-index: 10000000000;
+}
+#modal .modal-bg {
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0.6;
+  filter: alpha(opacity=60);
+}
+#modal .modal-box {
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: auto;
+  padding: 15px;
+  background: #fff;
+}
+#modal .modal-box.modal-big {
+  width: 800px;
+  height: 600px;
+}
+#modal .modal-box .modal-title {
+  padding-bottom: 5px;
+  border-bottom: 1px solid #e5e5e5;
+}
+#modal .modal-box .modal-title i {
+  font-style: normal;
+}
+#modal .modal-box .modal-title .modal-close {
+  float: right;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1;
+  text-shadow: 0 1px 0 #fff;
+  filter: alpha(opacity=20);
+  opacity: .2;
+  display: inline-block;
+  position: absolute;
+  color: #000;
+  top: 2px;
+  right: 10px;
+  cursor: pointer;
+}
+#modal .modal-box .m-content .modal-ctx {
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+#modal .modal-box .m-content .modal-sure {
+  text-align: center;
+  margin-bottom: 0;
+}
+#modal .modal-box .m-content .modal-sure em {
+  background-color: #E2EAEC;
+  border: 1px solid #E2EAEC;
+  padding: 5px 20px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-style: normal;
+}
+#modal .modal-small {
+  width: 700px;
+  max-height: 600px;
+  overflow-y: auto;
+}

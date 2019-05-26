@@ -1,0 +1,626 @@
+th {
+  white-space: nowrap;
+}
+.giant-screen {
+  height: 252px;
+  color: #fff;
+  background-image: linear-gradient(90deg, #79bdf9, #4497e1);
+}
+.giant-screen.ii1 {
+  height: 300px;
+}
+.giant-screen.ii3 {
+  height: 300px;
+}
+.giant-screen h3 {
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+.giant-screen p {
+  font-size: 14px;
+  margin-top: 13px;
+}
+.giant-screen .classification .tip {
+  display: inline-block;
+  margin-bottom: 20px;
+  margin-top: -10px;
+  color: #fff;
+}
+.giant-screen .classification .classification-left input,
+.giant-screen .classification .classification-left select {
+  border-radius: 0;
+  min-width: 190px;
+  border: 0 none;
+}
+.giant-screen .classification .classification-left input.pis2 {
+  min-width: 810px;
+}
+.giant-screen .classification .classification-left input.ii1 {
+  min-width: 325px;
+}
+.giant-screen .classification .classification-left input.ii2 {
+  min-width: 325px;
+}
+.giant-screen .classification .classification-left select {
+  background: url(../../img/option3.png) no-repeat right center;
+  background-color: #fff;
+  background-size: contain;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+.giant-screen .classification .classification-left select.pis2 {
+  min-width: 335px;
+}
+.giant-screen .classification .classification-left select.ii1 {
+  min-width: 325px;
+}
+.giant-screen .classification .classification-left select.ii2 {
+  min-width: 325px;
+}
+.giant-screen .classification .classification-left select::-ms-expand {
+  display: none;
+}
+.giant-screen .classification .classification-left label {
+  min-width: 85px;
+}
+.giant-screen .classification .classification-left .second-line {
+  margin-top: 12px;
+}
+.giant-screen .classification .classification-right a {
+  width: 150px;
+  height: 35px;
+  line-height: 35px;
+  background: #fff;
+  display: inline-block;
+  font-size: 14px;
+  color: #62AAEC;
+  letter-spacing: 0;
+  text-decoration: none;
+  font-weight: bold;
+}
+.giant-screen .classification .classification-right a + a {
+  margin-top: 10px;
+}
+.giant-screen .classification .classification-right a.download {
+  width: 150px;
+  margin-top: 10px;
+}
+.statistics {
+  min-height: 280px;
+  padding-bottom: 27px;
+}
+.statistics .statistics-table {
+  width: 100%;
+  font-size: 14px;
+  border: 1px solid #62AAEC;
+  margin: 0;
+  margin-bottom: 20px;
+  color: #526069;
+}
+.statistics .statistics-table td + td {
+  border-left: 1px solid #62AAEC;
+}
+.statistics .statistics-table th {
+  border: 0 none;
+  font-weight: normal;
+}
+.statistics .statistics-table td {
+  border-color: #62AAEC;
+}
+.statistics .statistics-table th,
+.statistics .statistics-table td {
+  height: 35px;
+}
+.statistics .statistics-table .statistics-color {
+  color: #202020;
+  background-color: #DAEEFF;
+}
+.statistics .statistics-table .statistics-color th {
+  position: relative;
+  line-height: 17.5px;
+  line-height: 35px;
+}
+.statistics .statistics-table .statistics-color th:first-child:before {
+  border-left: 0 none;
+}
+.statistics .statistics-table .statistics-color th.lh175 {
+  line-height: 17.5px;
+}
+.statistics .statistics-table .statistics-color th:before {
+  content: '';
+  width: 1px;
+  height: 25px;
+  display: block;
+  position: absolute;
+  border-left: 1px dashed #94A0AB;
+  top: 9px;
+  left: 0;
+}
+.unmovable {
+  position: relative;
+}
+.unmovable .modal-box {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  background: rgba(255, 255, 255, 0.5);
+  z-index: 10;
+  display: none;
+}
+.unmovable .modal-box img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.unmovable .unmovableContent {
+  margin-top: 18px;
+  min-height: 400px;
+  position: relative;
+  padding-bottom: 50px;
+  overflow-x: visible;
+}
+.unmovable .unmovableContent span {
+  line-height: 20px;
+}
+.unmovable .unmovableContent .paging {
+  width: 100%;
+  margin: 0;
+  text-align: center;
+}
+.unmovable .unmovableContent .paging .box2 {
+  overflow: hidden;
+}
+.unmovable .unmovableContent .paging .modal-box {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.5);
+  z-index: 10;
+  display: none;
+}
+.unmovable table {
+  width: 100%;
+  font-size: 14px;
+  border: 1px solid #62AAEC;
+  margin: 0;
+  color: #526069;
+  margin-bottom: 20px;
+}
+.unmovable table span {
+  color: #202020;
+  font-weight: normal;
+  display: inline-block;
+  padding: 3px;
+}
+.unmovable table tr {
+  height: 35px;
+}
+.unmovable table thead tr {
+  background-color: #DAEEFF;
+}
+.unmovable table tbody tr:hover {
+  background-color: #f5f5f5;
+}
+.unmovable table th,
+.unmovable table td {
+  white-space: normal;
+  text-align: center;
+  border: 1px solid #62AAEC !important;
+}
+.unmovable table th {
+  border-bottom: 0 none !important;
+}
+.unmovable table th + th {
+  border-left: 1px solid #D7D8D9;
+}
+.unmovable table td + td {
+  border-left: 1px solid #D7D8D9;
+}
+.museum .statistics-table .statistics-color th:first-child {
+  line-height: 35px;
+}
+.museum {
+  padding-bottom: 50px;
+}
+.museum .position {
+  margin: 0;
+  margin-bottom: 12px;
+}
+.museum .position i {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  background: url(../../img/house-2.png) no-repeat center center;
+  background-size: cover;
+  vertical-align: -3px;
+  margin-right: 5px;
+  margin-left: -3px;
+}
+.museum .position span,
+.museum .position a {
+  color: #333;
+  font-size: 14px;
+  vertical-align: middle;
+}
+.museum .position a {
+  text-decoration: none;
+}
+.museum .relics {
+  margin-bottom: 20px;
+}
+.museum .relics .list {
+  font-size: 28px;
+  color: #353638;
+  letter-spacing: 0;
+  font-weight: bold;
+}
+.museum .search-info .museum-left .collection {
+  padding-right: 10px;
+}
+.museum .search-info .museum-left .collection .date input {
+  background: url(../../img/calendar.png) no-repeat 98% center #ffffff;
+  background-size: 20px auto;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+.museum .search-info .museum-left .collection input,
+.museum .search-info .museum-left .collection select {
+  min-width: 190px;
+  border-radius: 2px;
+}
+.museum .search-info .museum-left .collection select {
+  border-right: 0 none;
+  background: url(../../img/option3.png) no-repeat right center;
+  background-color: #fff;
+  background-size: contain;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+.museum .search-info .museum-left .collection select::-ms-expand {
+  display: none;
+}
+.museum .search-info .museum-left .collection label {
+  min-width: 85px;
+  text-align: right;
+}
+.museum .search-info .museum-left .second-line {
+  margin-top: 12px;
+}
+.museum .search-info .museum-left .special label {
+  max-width: 85px;
+}
+.museum .search-info .museum-left .special input,
+.museum .search-info .museum-left .special select {
+  min-width: 352px;
+}
+.museum .search-info .museum-right {
+  text-align: center;
+}
+.museum .search-info .museum-right a {
+  width: 150px;
+  height: 35px;
+  line-height: 35px;
+  background: #fff;
+  display: inline-block;
+  font-size: 14px;
+  color: #62AAEC;
+  letter-spacing: 0;
+  text-decoration: none;
+  font-weight: bold;
+}
+.museum .search-info .museum-right a + a {
+  margin-top: 10px;
+}
+.museum .search-info .museum-right .disabled {
+  pointer-events: none;
+}
+.museum .museum-search-details {
+  margin-top: 18px;
+  background-color: #F2F9FF;
+  border: 1px dashed #62AAEC;
+  min-height: 400px;
+  position: relative;
+  padding-bottom: 50px;
+}
+.museum .museum-search-details table {
+  border-color: #62AAEC;
+}
+.museum .museum-search-details table th {
+  border-bottom: 0 none;
+  line-height: 25px;
+  border-bottom: 1px solid #62AAEC;
+}
+.museum .museum-search-details table td {
+  line-height: 20px;
+  height: 35px;
+  border-top: 0 none;
+  color: #000;
+}
+.museum .museum-search-details table td.antiqueId {
+  padding-left: 25px;
+}
+.museum .museum-search-details .paging {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  margin: 0;
+  text-align: center;
+}
+.museum .museum-search-details .paging .box2 {
+  overflow: hidden;
+}
+.museum .museum-search-details .paging .modal-box {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  opacity: 0.5;
+  background-color: #F2F9FF;
+  display: none;
+}
+@media (max-width: 767px) {
+  .giant-screen {
+    height: 465px;
+  }
+  .giant-screen.pis2 {
+    height: 350px;
+  }
+  .classification input,
+  .classification select {
+    display: inline-block;
+  }
+  .classification label {
+    min-width: 0;
+  }
+  .giant-screen .classification .classification-left label {
+    min-width: 0;
+  }
+  .classification .classification-left .sort img {
+    top: 1px;
+    right: 18px;
+  }
+  .classification .classification-left .batch img {
+    top: 1px;
+    right: 18px;
+  }
+  .classification .classification-left input {
+    width: 79%;
+  }
+  .classification .classification-left {
+    border: 0 none;
+  }
+  .classification a:first-child {
+    margin-right: 10px;
+  }
+  .classification a:first-child + a {
+    margin-left: 10px;
+  }
+  .page-contain a {
+    padding: 0px 5px;
+    margin: 0 3px;
+  }
+  .giant-screen .classification .classification-left input,
+  .giant-screen .classification .classification-left select {
+    width: 60%;
+  }
+  .assort {
+    margin-top: 12px;
+  }
+  .province {
+    margin-top: 12px;
+  }
+  .giant-screen .classification .classification-right a {
+    margin-top: 20px;
+  }
+  .giant-screen .classification .classification-right a + a {
+    margin-top: 20px;
+  }
+  .giant-screen .classification .classification-left input.pis2 {
+    width: 60%;
+    min-width: 0;
+  }
+  .giant-screen .classification .classification-right a {
+    width: 110px;
+  }
+  .M-box a,
+  .M-box1 a,
+  .M-box2 a,
+  .M-box3 a,
+  .M-box4 a {
+    margin: 0 2px;
+    padding: 3px 9px;
+  }
+  .M-box a,
+  .M-box1 a,
+  .M-box2 a,
+  .M-box3 a,
+  .M-box4 a,
+  .M-box .active,
+  .M-box1 .active,
+  .M-box2 .active,
+  .M-box3 .active,
+  .M-box4 .active {
+    padding: 3px 9px;
+  }
+  .M-box span,
+  .M-box1 span,
+  .M-box2 span,
+  .M-box3 span,
+  .M-box4 span {
+    margin: 0 2px;
+    padding: 3px 9px;
+  }
+  .paging input {
+    height: 28px;
+    width: 45px;
+    margin: 0 2px;
+  }
+  .giant-screen .classification .classification-left input.pis2 {
+    width: 84%;
+    min-width: 0;
+  }
+  .giant-screen .classification .classification-left select.pis2 {
+    width: 84%;
+    min-width: 0;
+  }
+  .giant-screen .classification .classification-left input.ii2 {
+    width: 67%;
+    min-width: 0;
+  }
+  .giant-screen .classification .classification-left select.ii2 {
+    width: 67%;
+    min-width: 0;
+  }
+  .giant-screen .classification .classification-left label {
+    min-width: 100px;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .giant-screen {
+    height: 300px;
+  }
+  .giant-screen .classification .classification-left input.ii2 {
+    min-width: 180px;
+  }
+  .giant-screen .classification .classification-left select.ii2 {
+    min-width: 180px;
+  }
+  .giant-screen .classification .classification-right a {
+    width: 100px;
+  }
+  .giant-screen .classification .classification-left input,
+  .giant-screen .classification .classification-left select {
+    min-width: 0;
+    width: 60%;
+  }
+  .giant-screen .classification .classification-left label {
+    min-width: 50px;
+  }
+  .assort {
+    margin-top: 12px;
+  }
+  .M-box a,
+  .M-box1 a,
+  .M-box2 a,
+  .M-box3 a,
+  .M-box4 a {
+    margin: 0 2px;
+    padding: 3px 9px;
+  }
+  .M-box a,
+  .M-box1 a,
+  .M-box2 a,
+  .M-box3 a,
+  .M-box4 a,
+  .M-box .active,
+  .M-box1 .active,
+  .M-box2 .active,
+  .M-box3 .active,
+  .M-box4 .active {
+    padding: 3px 9px;
+  }
+  .M-box span,
+  .M-box1 span,
+  .M-box2 span,
+  .M-box3 span,
+  .M-box4 span {
+    margin: 0 2px;
+    padding: 3px 9px;
+  }
+  .paging input {
+    height: 28px;
+    width: 45px;
+    margin: 0 2px;
+  }
+  .giant-screen .classification .classification-left input.pis2 {
+    width: 84%;
+    min-width: 0;
+  }
+  .giant-screen .classification .classification-left select.pis2 {
+    width: 67%;
+    min-width: 0;
+  }
+  .giant-screen .classification .classification-left input.ii2 {
+    width: 67%;
+    min-width: 0;
+  }
+  .giant-screen .classification .classification-left select.ii2 {
+    width: 67%;
+    min-width: 0;
+  }
+  .giant-screen .classification .classification-left label {
+    min-width: 70px;
+  }
+  .giant-screen .classification .classification-right a {
+    margin-top: 20px;
+  }
+  .giant-screen .classification .classification-right a + a {
+    margin-top: 0;
+    margin-top: 20px;
+    margin-left: 10px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+  .giant-screen {
+    height: 285px;
+  }
+  .giant-screen .classification .classification-left input.ii2 {
+    min-width: 215px;
+  }
+  .giant-screen .classification .classification-left select.ii2 {
+    min-width: 215px;
+  }
+  .giant-screen .classification .classification-right a {
+    width: 125px;
+  }
+  .assort {
+    margin-top: 12px;
+  }
+  .giant-screen .classification .classification-left input.pis2 {
+    width: 84%;
+    min-width: 0;
+  }
+  .giant-screen .classification .classification-left select.pis2 {
+    width: 67%;
+    min-width: 0;
+  }
+  .giant-screen .classification .classification-left input.ii2 {
+    width: 67%;
+    min-width: 0;
+  }
+  .giant-screen .classification .classification-left select.ii2 {
+    width: 67%;
+    min-width: 0;
+  }
+  .giant-screen .classification .classification-left label {
+    min-width: 70px;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1280px) {
+  .giant-screen .classification .classification-left input.pis2 {
+    width: 84%;
+    min-width: 0;
+  }
+  .giant-screen .classification .classification-left select.pis2 {
+    width: 67%;
+    min-width: 0;
+  }
+  .giant-screen .classification .classification-left input.ii2 {
+    width: 67%;
+    min-width: 0;
+  }
+  .giant-screen .classification .classification-left select.ii2 {
+    width: 67%;
+    min-width: 0;
+  }
+  .giant-screen .classification .classification-left label {
+    min-width: 70px;
+  }
+}

@@ -1,0 +1,91 @@
+<!-- 单位列表 -->
+<div class="modal fade in" id="cmx-unitList-modal" aria-hidden="true" aria-labelledby="unitList" role="dialog" tabindex="-1">
+    <div class="modal-dialog  modal-lg modal-center">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span>单位列表</span>
+                <button class="pull-right close" data-dismiss="modal" aria-label="关闭">关闭</button>
+                <div class="clearfix"></div>
+            </div>
+            <div class="modal-body">
+                <div class="panel">
+                    <div class="panel-body">
+                        <div class="nav-tabs-horizontal">
+                            <div class="tab-content relic-content">
+                                <div class="tab-pane active" id="" role="tabpanel">
+                                    <div class="row margin-bottom-10">
+                                        <div class="col-xs-6 col-md-6 col-lg-6">
+                                            <div class="form-wrap">
+                                                <div class="form-group">
+                                                    <div class="input-group">
+                                                        <span class="input-group-addon">
+                                                            名称
+                                                        </span>
+                                                        <input type="text" class="form-control" id="cmx-unit-name" name="name" placeholder="" autocomplete="off">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xs-6 col-md-6 col-lg-6">
+                                            <div class="form-wrap">
+                                                <div class="form-group pull-right">
+                                                    <button type="button" class="btn btn-primary inputon" id="cmx-unit-search">查询</button>
+                                                    <button type="button" class="btn inputon" id="cmx-unit-delete">清除</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tableDiv table-responsive text-nowrap">
+                                        <table class="table table-hover table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th class="num"></th>
+                                                    <th class="uName">名称</th>
+                                                    <!-- <th class="uScope">业务范围</th> -->
+                                                    <th class="uType">资质类型</th>
+                                                    <th class="uUnit">资质等级</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="cmx-unit-tbody">
+                                                <tr>
+
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="relic-footer">
+                                        <!--  分页 -->
+                                        <ul class="pagination" id="cmx-unit-Pagination">
+                                            <li>
+                                                <a href="javascript:;" class="first">首页</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;" class="pre">上一页</a>
+                                            </li>
+                                            <li>
+                                                <span><span class="nowpage">0</span>/
+                                                <span class="totalpage">0</span>页</span>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;" class="next">下一页</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;" class="last">尾页</a>
+                                            </li>
+                                        </ul>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" type="button" id="cmx-unit-confirm-btn">确认</button>
+                <button type="button" class="btn btn-default cmx-cancle-btn" data-dismiss="modal">取消</button>
+            </div>
+        </div>
+    </div>
+</div>

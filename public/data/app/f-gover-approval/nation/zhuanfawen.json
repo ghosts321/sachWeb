@@ -1,0 +1,378 @@
+[{
+        "columnname": "cmx-i-1",
+        "columnindex": "cmx-i-1",
+        "serialnumber": "P0001",
+        "type": "single",
+        "name": "内容分类",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": 1,
+            "remark": [{
+                "id": -1,
+                "value": "请选择"
+            }]
+        },
+        "extra": {
+            "class": "margin-bottom-10 label-nowrap height-42",
+            "func": "",
+            "width": 3,
+            "layout": "",
+            "placeholder": "",
+            "datadic": "ApprContClass"
+        }
+    },
+    {
+        "columnname": "cmx-i-2",
+        "columnindex": "cmx-i-2",
+        "serialnumber": "P0002",
+        "type": "single",
+        "name": "形式代码",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": 1,
+            "remark": [{
+                "id": -1,
+                "value": "请选择"
+            }]
+        },
+        "extra": {
+            "class": "margin-bottom-10 label-nowrap height-42",
+            "func": "",
+            "width": 3,
+            "layout": "",
+            "placeholder": "",
+            "datadic": "OfficalDocForm"
+        }
+    },
+    {
+        "columnname": "cmx-i-3",
+        "columnindex": "cmx-i-3",
+        "serialnumber": "P0003",
+        "type": "single",
+        "name": "公开形式",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": 1,
+            "remark": [{
+                "id": -1,
+                "value": "请选择"
+            }]
+        },
+        "extra": {
+            "class": "margin-bottom-10 label-nowrap height-42",
+            "func": "",
+            "width": 3,
+            "layout": "",
+            "placeholder": "",
+            "datadic": "OpenShape"
+        }
+    },
+    {
+        "columnname": "cmx-i-44444",
+        "columnindex": "cmx-i-555555",
+        "serialnumber": "P0025456456",
+        "type": "text",
+        "name": "流水号",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "short"
+        },
+        "extra": {
+            "class": "margin-bottom-10 label-nowrap height-42",
+            "func": "",
+            "width": 3,
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-5",
+        "columnindex": "cmx-i-1",
+        "serialnumber": "P0005",
+        "type": "special",
+        "name": "文号",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": ""
+        },
+        "extra": {
+            "class": "margin-bottom-10 height-42 formate",
+            "func": "cmx_special_infoNumBeg",
+            "width": 9,
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-123",
+        "columnindex": "cmx-i-123",
+        "serialnumber": "P000123",
+        "type": "single",
+        "name": "缓急",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": 1,
+            "remark": [{
+                    "id": 0,
+                    "value": ""
+                },
+                {
+                    "id": 1,
+                    "value": "加急"
+                },
+                {
+                    "id": 2,
+                    "value": "特急"
+                }
+            ]
+        },
+        "extra": {
+            "class": "margin-bottom-10 height-42",
+            "func": "",
+            "width": 3,
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-124",
+        "columnindex": "cmx-i-124",
+        "serialnumber": "P000124",
+        "type": "special",
+        "name": "拟稿单位",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": ""
+        },
+        "extra": {
+            "class": "margin-bottom-10 formate height-42",
+            "func": "cmx_special_124",
+            "width": 5,
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-125",
+        "columnindex": "cmx-i-125",
+        "serialnumber": "P000125",
+        "type": "special",
+        "name": "拟稿人",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": ""
+        },
+        "extra": {
+            "class": "margin-bottom-10 height-42",
+            "func": "cmx_special_125",
+            "width": 4,
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-11",
+        "columnindex": "cmx-i-11",
+        "serialnumber": "P0011",
+        "type": "text",
+        "name": "电话",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "short"
+        },
+        "extra": {
+            "class": "margin-bottom-10 height-42",
+            "func": "",
+            "width": 3,
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-12",
+        "columnindex": "cmx-i-12",
+        "serialnumber": "P0012",
+        "type": "text",
+        "name": "标题",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "short"
+        },
+        "extra": {
+            "class": "margin-bottom-10 formate height-42",
+            "func": "",
+            "width": 12,
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-13",
+        "columnindex": "cmx-i-13",
+        "serialnumber": "P0013",
+        "type": "text",
+        "name": "主送",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "short"
+        },
+        "extra": {
+            "class": "margin-bottom-10 formate height-42",
+            "func": "",
+            "width": 12,
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-14",
+        "columnindex": "cmx-i-14",
+        "serialnumber": "P0014",
+        "type": "text",
+        "name": "抄送",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "short"
+        },
+        "extra": {
+            "class": "margin-bottom-10 formate height-42",
+            "func": "",
+            "width": 12,
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-15",
+        "columnindex": "cmx-i-15",
+        "serialnumber": "P0015",
+        "type": "text",
+        "name": "局内会签抄送<span class=\"control-label padding-0 margin-0\">单位</span> ",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "short"
+        },
+        "extra": {
+            "class": "formate",
+            "func": "",
+            "width": 12,
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-16",
+        "columnindex": "cmx-i-16",
+        "serialnumber": "P0016",
+        "type": "single",
+        "name": "公章",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": 1,
+            "remark": [
+            ]
+        },
+        "extra": {
+            "class": "margin-bottom-10 formate height-42",
+            "func": "",
+            "width": 5,
+            "layout": "",
+            "placeholder": "",
+            "datadic": "SealType"
+        }
+    },
+    {
+        "columnname": "cmx-i-20",
+        "columnindex": "cmx-i-20",
+        "serialnumber": "P0020",
+        "type": "single",
+        "name": "签发",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": 1,
+            "remark": [
+            ]
+        },
+        "extra": {
+            "class": "margin-bottom-10 height-42",
+            "func": "",
+            "width": 3,
+            "layout": "",
+            "placeholder": "",
+            "readonly": "disabled"
+        }
+    },
+    {
+        "columnname": "cmx-i-22",
+        "columnindex": "cmx-i-22",
+        "serialnumber": "P0022",
+        "type": "text",
+        "name": "签发时间",
+        "attribute": {
+            "default": "",
+            "notnull": "1",
+            "stype": "short"
+        },
+        "extra": {
+            "class": "margin-bottom-10 height-42",
+            "func": "",
+            "width": 4,
+            "layout": "",
+            "placeholder": "",
+            "readonly": "readonly"
+        }
+    },
+    {
+        "columnname": "cmx-i-23",
+        "columnindex": "cmx-i-23",
+        "serialnumber": "P0023",
+        "type": "text",
+        "name": "备注",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "long"
+        },
+        "extra": {
+            "class": "margin-bottom-10 formate",
+            "func": "",
+            "width": 12,
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-25",
+        "columnindex": "cmx-i-25",
+        "serialnumber": "P0025",
+        "type": "text",
+        "name": "办理意见",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "long"
+        },
+        "extra": {
+            "class": "margin-bottom-10 formate",
+            "func": "",
+            "width": 12,
+            "layout": "",
+            "placeholder": ""
+        }
+    }
+]

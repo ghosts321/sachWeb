@@ -1,0 +1,116 @@
+.modal-body {
+    padding: 5px;
+    margin: 0;
+}
+
+.panel-body {
+    padding: 5px 15px;
+}
+
+.modal-dialog {
+    width: 90%;
+}
+
+.modal-header {
+    background-color: #4397e6;
+    color: white;
+    padding: 10px 20px;
+}
+
+.tableDiv {
+    height: 310px;
+}
+
+.modal-header button.close {
+    background-color: #62a8ea;
+    border: none;
+    color: white;
+    font-size: 14px;
+    opacity: 1;
+    margin-top: 3px;
+}
+
+.tab-content .right-part {
+    float: right;
+}
+
+.relic-content .queryTerm {
+    margin-bottom: 5px;
+    margin-left: 10px;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+
+.cmx-more-search-div {
+    margin-top: 5px;
+}
+
+#cmx-select-relic .tableDiv {
+    overflow: scroll;
+}
+
+table tr {
+    height: 30px;
+}
+
+table tr th {
+    white-space: nowrap;
+}
+
+table tr td {
+    white-space: nowrap;
+}
+
+.relic-content .queryTerm input {
+    border: 1px solid #D7D8D9;
+    margin-right: 40px;
+}
+
+.relic-content button {
+    padding: 2px 18px;
+    border-radius: 25px;
+}
+
+.relic-footer .pagination {
+    margin-left: 20px;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    vertical-align: middle;
+}
+
+.relic-footer {
+    background-color: #4397e6;
+    color: white;
+}
+
+.relic-footer .pagination li a,
+.relic-footer .pagination li span {
+    font-size: 14px;
+    color: white;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.relic-footer .pagination li span input {
+    color: #76838f;
+}
+
+.relic-footer .pagination li a:hover,
+.relic-footer .pagination li span:hover {
+    color: white;
+    opacity: 0.8;
+    background-color: #62a8ea;
+}
+
+.relic-footer .pagination li a:focus,
+.relic-footer .pagination li span:focus {
+    background-color: #62a8ea;
+}
+
+.cmx-more-search-div {
+    display: none;
+}
+
+.cmx-pack-up {
+    display: none;
+}

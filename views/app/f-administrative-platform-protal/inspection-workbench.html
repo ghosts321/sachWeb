@@ -1,0 +1,145 @@
+<title>专家与评估机构-工作台</title>
+
+<link rel="stylesheet" href="/css/app/f-administrative-platform-protal/province-workbench.css">
+<div class="page animation-fade">
+    <div class="page-content container-fluid">
+        <div class="row" data-plugin="matchHeight" data-by-row="true">
+            <div class="col-xs-12 col-sm-12 col-md-8 col-lg-9 part1">
+                <div class="part1">
+                    <div class="panel" style="height:auto;padding-bottom:10px;">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">待办任务列表
+                                <a href="/app/f-gover-approval/inspection/inspection-needToDo.html?nowid=cmx-nav-0112" class="pull-right">更多
+                                    <i class="icon fa-angle-double-right" aria-hidden="true"></i>
+                                </a>
+                            </h3>
+                        </div>
+                        <div class="panel-body  text-nowrap padding-bottom-0" style="min-height: 240px;">
+                            <div class="table-responsive  padding-10">
+                                <table class="table margin-bottom-0">
+                                    <thead>
+                                        <tr>
+                                            <th style="width: 30px">序号</th>
+                                            <th style="width: 50px">省别</th>
+                                            <th style="width: 100px">文件标题</th>
+                                            <th style="width: 50px">事项类型</th>
+                                            <th style="width: 60px">收到时间</th>
+                                            <th style="width: 60px">停留时间</th>
+                                            <th style="width: 80px">项目名称</th>
+                                            <th style="width: 50px">网审号</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="cmx-ntd-tbody">
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <ul class="pagination margin-top-10 margin-right-10" id="cmx-pneedPage" style="float:right;">
+                            <li>
+                                <a href="javascript:;" class="first">首页</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;" class="pre">上一页</a>
+                            </li>
+                            <li>
+                                <span>
+                                    <input type="text" class="jumppage" style="width:30px;float:left;height:22px;border: 1px #ddd solid;text-align:center;" />
+                                    <span class="nowpage">0</span>/
+                                    <span class="totalpage">0</span>页</span>
+                            </li>
+                            <li>
+                                <a href="javascript:;" class="next">下一页</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;" class="last">尾页</a>
+                            </li>
+                        </ul>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-3 part3">
+                <div class="panel">
+                    <div class="panel-heading">
+                        <h3 class="panel-title text-center">
+                            常用功能快捷入口
+                        </h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="col-lg-12 col-md-12 col-sm-4 col-xs-6 imgDiv zhuanjia-shuoming" style="display:none;">
+                            <div onclick="window.open('/app/国家文物局综合行政管理平台_专家用户操作手册V1.1.pdf');" class="widget widget-shadow">
+                                <!-- <div class="widget-content bg-white padding-20"> -->
+                                <button type="button" class="btn btn-floating btn-sm btn-primary">
+                                    <i class="icon wb-book"></i>
+                                </button>
+                                <div class="content-text text-center margin-bottom-0 margin-top-5">
+                                    <span class="font-size-14 font-weight-100">专家用户手册下载</span>
+                                </div>
+                                <!-- </div> -->
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-4 col-xs-6 imgDiv pinggu-shuoming" style="display:none;">
+                            <div onclick="window.open('/app/国家文物局综合行政管理平台_评估机构用户操作手册V1.1.pdf');" class="widget widget-shadow">
+                                <!-- <div class="widget-content bg-white padding-20"> -->
+                                <button type="button" class="btn btn-floating btn-sm btn-primary">
+                                    <i class="icon wb-book"></i>
+                                </button>
+                                <div class="content-text text-center margin-bottom-0 margin-top-5">
+                                    <span class="font-size-14 font-weight-100">评估机构用户手册下载</span>
+                                </div>
+                                <!-- </div> -->
+                            </div>
+                        </div>
+                        <!-- <div class="col-lg-12 col-md-12 col-sm-4 col-xs-6 imgDiv">
+                            <div class="widget widget-shadow">
+                               
+                                <button type="button" class="btn btn-floating btn-sm btn-warning">
+                                    <i class="icon wb-layout"></i>
+                                </button>
+                                <div class="content-text text-center margin-bottom-0 margin-top-5">
+                                    <span class="font-size-14 font-weight-100">评估机构库</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-4 col-xs-6 imgDiv">
+                            <div class="widget widget-shadow">
+                                <button type="button" class="btn btn-floating btn-sm btn-danger">
+                                    <i class="icon wb-order"></i>
+                                </button>
+                                <div class="content-text text-center margin-bottom-0 margin-top-5">
+                                    <span class="font-size-14 font-weight-100">国保单位名录</span>
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-3 part1">
+                <div class="part2">
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">行政审批管理个人工作情况统计 </h3>
+                        </div>
+                        <div class="panel-body">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>待办</th>
+                                        <th>已办</th>
+                                        <!-- <th>本周内需处理业务</th> -->
+                                    </tr>
+                                </thead>
+                                <tbody id="cmx-province-count"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/js/app/f-administrative-platform-protal/inspection-workbench.js"></script>
+<script src="/js/app/f-gover-approval/models/public-model.js"></script>
+<script src="/js/app/f-gover-approval/views/public-view.js"></script>

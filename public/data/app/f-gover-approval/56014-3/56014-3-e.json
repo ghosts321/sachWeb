@@ -1,0 +1,708 @@
+[{
+        "columnname": "cmx-i-0",
+        "columnindex": "cmx-i-0",
+        "serialnumber": "P0000",
+        "type": "separator",
+        "name": "工程类型",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "title": "工程类型",
+            "desc": ""
+        },
+        "extra": {
+            "class": "baseinfo",
+            "func": "",
+            "width": 12,
+            "layout": "",
+            "placeholder": ""
+        }
+    }, {
+        "columnname": "cmx-i-01",
+        "columnindex": "cmx-i-01",
+        "serialnumber": "P00001",
+        "type": "single",
+        "name": "请选择工程类型",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": 1,
+            "remark": [{
+                    "id": "1",
+                    "value": "安防工程"
+                },
+                {
+                    "id": "2",
+                    "value": "消防工程"
+                },
+                {
+                    "id": "3",
+                    "value": "防雷工程"
+                }
+            ]
+        },
+        "extra": {
+            "class": "format",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-1",
+        "columnindex": "cmx-i-1",
+        "serialnumber": "P0001",
+        "type": "separator",
+        "name": "申请文书信息",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "title": "申请文书信息",
+            "desc": ""
+        },
+        "extra": {
+            "class": "margin-bottom-10 baseinfo",
+            "func": "",
+            "width": 12,
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-2",
+        "columnindex": "cmx-i-2",
+        "serialnumber": "P0002",
+        "type": "special",
+        "name": "文件号",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": ""
+        },
+        "extra": {
+            "class": "baseinfo",
+            "func": "cmx_special_1",
+            "width": "6",
+            "layout": "",
+            "placeholder": ""
+        }
+    }, {
+        "columnname": "cmx-i-3",
+        "columnindex": "cmx-i-3",
+        "serialnumber": "P0003",
+        "type": "text",
+        "name": "文件标题",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "short",
+            "max_length": 200
+        },
+        "extra": {
+            "class": "margin-left-0 baseinfo",
+            "func": "",
+            "width": "6",
+            "layout": "",
+            "placeholder": "请输入文件标题"
+        }
+    },
+    {
+        "columnname": "cmx-i-4",
+        "columnindex": "cmx-i-4",
+        "serialnumber": "P0004",
+        "type": "text",
+        "name": "联系人",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "short",
+            "max_length": 15
+        },
+        "extra": {
+            "class": "baseinfo",
+            "func": "",
+            "width": "6",
+            "layout": "",
+            "placeholder": "请输入联系人"
+        }
+    },
+    {
+        "columnname": "cmx-i-5",
+        "columnindex": "cmx-i-5",
+        "serialnumber": "P0005",
+        "type": "text",
+        "name": "联系方式",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "short",
+            "max_length": 20
+        },
+        "extra": {
+            "class": "baseinfo",
+            "func": "",
+            "width": "6",
+            "layout": "",
+            "placeholder": "请输入联系电话"
+        }
+    },
+    {
+        "columnname": "cmx-i-6",
+        "columnindex": "cmx-i-6",
+        "serialnumber": "P0006",
+        "type": "separator",
+        "name": "方案信息",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "title": "方案信息",
+            "desc": ""
+        },
+        "extra": {
+            "class": "margin-bottom-10",
+            "func": "",
+            "width": 12,
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-7",
+        "columnindex": "cmx-i-7",
+        "serialnumber": "P0007",
+        "type": "special",
+        "name": "项目名称",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": ""
+        },
+        "extra": {
+            "class": "format margin-bottom-10",
+            "func": "cmx_special_5",
+            "width": "12",
+            "layout": "",
+            "placeholder": "请点击右侧选择按钮，选择国局已批准的计划"
+        }
+    }, {
+        "columnname": "cmx-i-8",
+        "columnindex": "cmx-i-8",
+        "serialnumber": "P0008",
+        "type": "special",
+        "name": "文博单位",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": "short"
+        },
+        "extra": {
+            "class": "margin-left-0 format margin-bottom-10",
+            "func": "cmx_special_2",
+            "width": "12",
+            "layout": "",
+            "placeholder": "请点击右侧选择按钮，选择文博单位"
+        }
+    },
+    {
+        "columnname": "cmx-i-91",
+        "columnindex": "cmx-i-91",
+        "serialnumber": "P00091",
+        "type": "multi",
+        "name": "工程主要构成",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "remark": [{
+                    "id": 101,
+                    "value": "入侵报警系统"
+                },
+                {
+                    "id": 102,
+                    "value": "视频监控系统"
+                },
+                {
+                    "id": 103,
+                    "value": "出入口控制系统"
+                },
+                {
+                    "id": 104,
+                    "value": "电子巡更与通讯系统"
+                },
+                {
+                    "id": 105,
+                    "value": "防爆安全检查系统"
+                },
+                {
+                    "id": 106,
+                    "value": "实体防护和人员防护"
+                },
+                {
+                    "id": 199,
+                    "value": "其他"
+                }
+            ]
+        },
+        "extra": {
+            "class": "check margin-bottom-10 hidden-div format",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-92",
+        "columnindex": "cmx-i-92",
+        "serialnumber": "P00092",
+        "type": "multi",
+        "name": "工程主要构成",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "remark": [{
+                    "id": 201,
+                    "value": "火灾报警系统"
+                },
+                {
+                    "id": 202,
+                    "value": "给水系统"
+                },
+                {
+                    "id": 203,
+                    "value": "消火栓系统"
+                },
+                {
+                    "id": 204,
+                    "value": "自动灭火系统"
+                },
+                {
+                    "id": 205,
+                    "value": "电气火灾防控系统"
+                },
+                {
+                    "id": 206,
+                    "value": "通讯广播和应急疏散系统"
+                },
+                {
+                    "id": 207,
+                    "value": "灭火设施设备"
+                },
+                {
+                    "id": 299,
+                    "value": "其他"
+                }
+            ]
+        },
+        "extra": {
+            "class": "check hidden-div format",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-93",
+        "columnindex": "cmx-i-93",
+        "serialnumber": "P00093",
+        "type": "multi",
+        "name": "工程主要构成",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "remark": [{
+                    "id": 301,
+                    "value": "接闪器"
+                },
+                {
+                    "id": 302,
+                    "value": "引下线"
+                },
+                {
+                    "id": 303,
+                    "value": "接地装置和其他附助设备"
+                }
+            ]
+        },
+        "extra": {
+            "class": "check margin-bottom-10 hidden-div format",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-10",
+        "columnindex": "cmx-i-10",
+        "serialnumber": "P0010",
+        "type": "text",
+        "name": "工程保护对象及范围",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "long",
+            "max_length": 1000
+        },
+        "extra": {
+            "class": "format margin-bottom-10",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": "请填写工程保护对象及范围，不超过1000个汉字"
+        }
+    },
+    {
+        "columnname": "cmx-i-11",
+        "columnindex": "cmx-i-11",
+        "serialnumber": "P0011",
+        "type": "num",
+        "name": "工程总概算",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": "count",
+            "prefix": 0,
+            "unit": "（万元）",
+            "decimal": 2,
+            "min": 0,
+            "max": 100
+        },
+        "extra": {
+            "class": "format",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": "请填写工程总概算，单位（万元），精确到小数点后两位"
+        }
+    },
+    {
+        "columnname": "cmx-i-12",
+        "columnindex": "cmx-i-12",
+        "serialnumber": "P0012",
+        "type": "dateType",
+        "name": "编制时间",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": "complete",
+            "auto": 0,
+            "update": 0
+        },
+        "extra": {
+            "class": "format",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": "请选择编制时间"
+        }
+    },
+    {
+        "columnname": "cmx-i-13",
+        "columnindex": "cmx-i-13",
+        "serialnumber": "P0013",
+        "type": "text",
+        "name": "申报单位",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": "short",
+            "max_length": 200
+        },
+        "extra": {
+            "class": "format",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": "请填写申报单位名称，不超过200个汉字"
+        }
+    },
+    {
+        "columnname": "cmx-i-14",
+        "columnindex": "cmx-i-14",
+        "serialnumber": "P0014",
+        "type": "special",
+        "name": "设计人(单位)",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "short"
+        },
+        "extra": {
+            "class": "format baseinfo",
+            "func": "cmx_special_4",
+            "width": "12",
+            "layout": "",
+            "placeholder": "设计人（单位），如在名录内请点击右侧选择按钮，不在名录请直接填写"
+        }
+    },
+    {
+        "columnname": "cmx-i-15",
+        "columnindex": "cmx-i-15",
+        "serialnumber": "P0015",
+        "type": "separator",
+        "name": "附件信息",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "title": "附件信息",
+            "desc": ""
+        },
+        "extra": {
+            "class": "margin-bottom-10",
+            "func": "appendDownloadAllFile",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-16",
+        "columnindex": "cmx-i-16",
+        "serialnumber": "P0016",
+        "type": "file",
+        "name": "1&nbsp;&nbsp;&nbsp;设计委托书",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "single": "1"
+        },
+        "extra": {
+            "class": "margin-bottom-10",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-17",
+        "columnindex": "cmx-i-17",
+        "serialnumber": "P0017",
+        "type": "file",
+        "name": "2&nbsp;&nbsp;&nbsp;设计任务书",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "single": "1"
+        },
+        "extra": {
+            "class": "margin-bottom-10",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-18",
+        "columnindex": "cmx-i-18",
+        "serialnumber": "P0018",
+        "type": "file",
+        "name": "3&nbsp;&nbsp;&nbsp;现场勘察报告和现状照片",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "single": "1"
+        },
+        "extra": {
+            "class": "margin-bottom-10",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-19",
+        "columnindex": "cmx-i-19",
+        "serialnumber": "P0019",
+        "type": "file",
+        "name": "4&nbsp;&nbsp;&nbsp;风险评估报告",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "single": "1"
+        },
+        "extra": {
+            "class": "margin-bottom-10",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-20",
+        "columnindex": "cmx-i-20",
+        "serialnumber": "P0020",
+        "type": "file",
+        "name": "5&nbsp;&nbsp;&nbsp;设计说明",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "single": "1"
+        },
+        "extra": {
+            "class": "margin-bottom-10",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-21",
+        "columnindex": "cmx-i-21",
+        "serialnumber": "P0021",
+        "type": "file",
+        "name": "6&nbsp;&nbsp;&nbsp;设计图纸",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "single": "1"
+        },
+        "extra": {
+            "class": "margin-bottom-10",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-22",
+        "columnindex": "cmx-i-22",
+        "serialnumber": "P0022",
+        "type": "file",
+        "name": "7&nbsp;&nbsp;&nbsp;主要设备材料清单",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "single": "1"
+        },
+        "extra": {
+            "class": "margin-bottom-10",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-23",
+        "columnindex": "cmx-i-23",
+        "serialnumber": "P0023",
+        "type": "file",
+        "name": "8&nbsp;&nbsp;&nbsp;主要设备材料的检验报告或者认证证书",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "single": "1"
+        },
+        "extra": {
+            "class": "margin-bottom-10",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-24",
+        "columnindex": "cmx-i-24",
+        "serialnumber": "P0024",
+        "type": "file",
+        "name": "9&nbsp;&nbsp;&nbsp;工程概算书",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "single": "1"
+        },
+        "extra": {
+            "class": "margin-bottom-10",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-25",
+        "columnindex": "cmx-i-25",
+        "serialnumber": "P0025",
+        "type": "file",
+        "name": "10&nbsp;&nbsp;&nbsp;人员培训细则、售后服务承诺和工程验收细则",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "single": "1"
+        },
+        "extra": {
+            "class": "margin-bottom-10",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-26",
+        "columnindex": "cmx-i-26",
+        "serialnumber": "P0026",
+        "type": "file",
+        "name": "11&nbsp;&nbsp;&nbsp;设计人(单位)的资质证明文件",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "single": "1"
+        },
+        "extra": {
+            "class": "margin-bottom-10",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-27",
+        "columnindex": "cmx-i-27",
+        "serialnumber": "P0027",
+        "type": "file",
+        "name": "12&nbsp;&nbsp;&nbsp;其他需要说明的有关材料（修改说明）",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "single": "1"
+        },
+        "extra": {
+            "class": "margin-bottom-10",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-28",
+        "columnindex": "cmx-i-28",
+        "serialnumber": "P0028",
+        "type": "file",
+        "name": "13&nbsp;&nbsp;&nbsp;评审文件（复审方案上传此文件）",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "single": "1"
+        },
+        "extra": {
+            "class": "margin-bottom-10",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    }
+
+]

@@ -1,0 +1,128 @@
+/* 执行模态框 */
+
+#document-uploader{
+    display: none;
+}
+.adapt-uploader {
+    position: fixed;
+    right: 0;
+    top: auto;
+    left: 0;
+    bottom: 0;
+    margin: 0 auto;
+    z-index: 999999;
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid rgba(120, 130, 140, 0.5);
+    border-radius: 0px;
+    box-shadow: 0 3px 14.11px rgba(0, 0, 0, 0.05) !important;
+    -webkit-box-shadow: 0px !important;
+    -moz-box-shadow: 0px !important;
+    padding: 10px 15px 20px 15px;
+    margin-top: 0px;
+    background: white;
+}
+
+.adapt-uploader-alert {
+    font-size: 14.11px;
+    display: none;
+}
+.adapt-uploader.adapt-hide {
+    padding: 10px;
+    margin: 0;
+    left: auto;
+    width: 160px;
+}
+.adapt-document-uploader-hide {
+    float: right;
+    cursor: pointer;
+    color: #54667a;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border: 1px solid transparent;
+}
+
+@keyframes myfirst {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+@-moz-keyframes myfirst
+/* Firefox */
+
+    {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+@-webkit-keyframes myfirst
+/* Safari 和 Chrome */
+
+    {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+@-o-keyframes myfirst
+/* Opera */
+
+    {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+.xuanzhuan {
+    float: left;
+    color: #54667a;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border: 1px solid transparent;
+    animation: myfirst 3s linear infinite;
+    -moz-animation: myfirst 3s linear infinite;
+    /* Firefox */
+    -webkit-animation: myfirst 3s linear infinite;
+    /* Safari 和 Chrome */
+    -o-animation: myfirst 3s linear infinite;
+    /* Opera */
+    
+}
+.state{
+    margin-top: 5px;
+    float:left;
+    width:20%;
+}
+.time{
+    float: right;
+    width: 30%;
+    text-align: right;
+    color: red
+}
+.info{
+    float:left;
+    width:70%;
+    color:black;
+}
+.w100{
+    width:100%;
+    float:left;
+}

@@ -1,0 +1,197 @@
+[{
+        "columnname": "cmx-i-1",
+        "columnindex": "cmx-i-1",
+        "serialnumber": "P0001",
+        "type": "separator",
+        "name": "省文件信息",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "title": "省文件信息",
+            "desc": ""
+        },
+        "extra": {
+            "class": "margin-bottom-10 baseinfo",
+            "func": "",
+            "width": 12,
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-2",
+        "columnindex": "cmx-i-2",
+        "serialnumber": "P0002",
+        "type": "special",
+        "name": "省文件号",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": ""
+        },
+        "extra": {
+            "class": "baseinfo",
+            "func": "cmx_special_1",
+            "width": "6",
+            "layout": "",
+            "placeholder": ""
+        }
+    }, {
+        "columnname": "cmx-i-3",
+        "columnindex": "cmx-i-3",
+        "serialnumber": "P0003",
+        "type": "text",
+        "name": "省文件标题",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "short",
+            "max_length":100
+        },
+        "extra": {
+            "class": "margin-left-0 baseinfo",
+            "func": "",
+            "width": "6",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-4",
+        "columnindex": "cmx-i-4",
+        "serialnumber": "P0004",
+        "type": "text",
+        "name": "联系人",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "short",
+            "max_length":15
+        },
+        "extra": {
+            "class": "baseinfo",
+            "func": "",
+            "width": "6",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-5",
+        "columnindex": "cmx-i-5",
+        "serialnumber": "P0005",
+        "type": "text",
+        "name": "联系方式",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "short",
+            "max_length":20
+        },
+        "extra": {
+            "class": "baseinfo",
+            "func": "",
+            "width": "6",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-6",
+        "columnindex": "cmx-i-6",
+        "serialnumber": "P0006",
+        "type": "separator",
+        "name": "申请单位",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "title": "申请单位",
+            "desc": ""
+        },
+        "extra": {
+            "class": "margin-bottom-10 baseinfo",
+            "func": "",
+            "width": 12,
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-7",
+        "columnindex": "cmx-i-7",
+        "serialnumber": "P0007",
+        "type": "special",
+        "name": "博物馆名称",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": "short"
+        },
+        "extra": {
+            "class": "format baseinfo",
+            "func": "cmx_special_2",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-8",
+        "columnindex": "cmx-i-8",
+        "serialnumber": "P0008",
+        "type": "text",
+        "name": "联系人",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "short",
+            "max_length":15
+        },
+        "extra": {
+            "class": "baseinfo",
+            "func": "",
+            "width": "6",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-9",
+        "columnindex": "cmx-i-9",
+        "serialnumber": "P0009",
+        "type": "text",
+        "name": "联系方式",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "short",
+            "max_length":20
+        },
+        "extra": {
+            "class": "baseinfo",
+            "func": "",
+            "width": "6",
+            "layout": "",
+            "placeholder": ""
+        }
+    }, {
+        "columnname": "cmx-i-10",
+        "columnindex": "cmx-i-10",
+        "serialnumber": "P0010",
+        "type": "separator",
+        "name": "文物复制方案项目列表",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "title": "文物复制方案项目列表",
+            "desc": ""
+        },
+        "extra": {
+            "class": "margin-bottom-10 baseinfo",
+            "func": "",
+            "width": 12,
+            "layout": "",
+            "placeholder": ""
+        }
+    }
+]

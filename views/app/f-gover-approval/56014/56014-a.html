@@ -1,0 +1,409 @@
+<title>全国重点文物保护单位修缮审批</title>
+<script src="/js/app/f-gover-approval/models/public-model.js"></script>
+<script src="/js/app/f-gover-approval/views/public-view.js"></script>
+
+<script src="/js/app/f-gover-approval/56014/56014-a.js"></script>
+<link rel="stylesheet" href="/css/app/f-gover-approval/relicList.css">
+<link rel="stylesheet" href="/css/app/f-gover-approval/apply.css">
+<style>
+    #showJianzhuPlanDetailModal table td {
+        max-width: none !important;
+        text-align: left !important;
+    }
+
+    #showMuzangPlanDetailModal table td {
+        max-width: none !important;
+        text-align: left !important;
+    }
+</style>
+
+<div class="page animation-fade" style="background-color:#fff;">
+    <div class="cmx-header">
+        <div class="padding-top-10 padding-bottom-10 padding-left-20">
+            <span class="cmx-header-title hidden-md hidden-sm hidden-xs">
+                文保修缮计划-填报
+            </span>
+            <div class="cmx-button padding-right-0">
+                <button class="btn btn-primary" style="margin-right:10px;" id="cmx-button-save">保存</button>
+                <button class="btn btn-primary" style="margin-right:10px;" id="cmx-button-send">发送</button>
+                <button class="btn btn-primary" style="margin-right:10px;" id="cmx-qingmaojun-back">返回</button>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <!-- 侧边栏-->
+    <!-- <div class="page-aside">
+        <div class="page-header">
+        </div>
+        <div class="page-aside-switch">
+            <i class="icon wb-chevron-left" aria-hidden="true"></i>
+            <i class="icon wb-chevron-right" aria-hidden="true"></i>
+        </div>
+        <div class="page-aside-inner height-full margin-top-20">
+            <div class="left">
+                <div id="cmx-menu"></div>
+            </div>
+        </div>
+    </div> -->
+    <!-- 内容-->
+    <div class="page-main page-aside-inner margin-top-50">
+        <div class="page-content" style="color:#76838f;">
+            <div class="panel" id="cmx-edit" style="overflow: scroll;">
+                <div class="panel-body container-fluid">
+                    <div id="cmx-form">
+                    </div>
+                    <div class="clearfix"></div>
+                    <div style="margin-bottom:15px;">
+                        <div id="upload-zip" class="inline-block"></div>
+                        <button class="btn btn-primary" style="margin-top: -25px;" id="cmx-export-plan">生成项目计划表</button>
+                        <button class="btn btn-primary" style="margin-top: -25px;" id="cmx-old-build">古建筑模板下载</button>
+                        <button class="btn btn-primary" style="margin-top: -25px;" id="cmx-old-ruins">古遗址模板下载</button>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table table-bordered text-nowrap" id="cmx-copy-table">
+                            <thead>
+                                <tr>
+                                    <th>序号</th>
+                                    <th>操作</th>
+                                    <th>单位类型</th>
+                                    <th>工程对象名称</th>
+                                    <th>所属文物保护单位名称</th>
+                                    <th>保护工程类型</th>
+                                    <th>总经费（万元）</th>
+                                    <th>拟申请补助经费（万元）</th>
+                                </tr>
+                            </thead>
+                            <tbody id="cmx-copy-tbody">
+                                <tr>
+                                    <td colspan="8"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div id="cmx-modalDiv"></div>
+    <div id="cmx-editrelic-modal"></div>
+    <div id="cmx-modalDiv2"></div>
+    <div class="modal fade" id="showJianzhuPlanDetailModal" tabindex="-1" role="dialog" aria-labelledby="showJianzhuPlanDetailModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="showJianzhuPlanDetailModalLabel">详细信息</h4>
+                </div>
+                <div class="modal-body">
+                    <table class="table table-bordered">
+                        <tbody>
+                            <tr>
+                                <td>工程对象名称</td>
+                                <td colspan="3" key="projectName"></td>
+                            </tr>
+                            <tr>
+                                <td>保护工程类型</td>
+                                <td colspan="3" key="projectType"></td>
+                            </tr>
+                            <tr>
+                                <td>所在地</td>
+                                <td colspan="3" id="key-address"></td>
+                            </tr>
+                            <tr>
+                                <td>使用管理单位</td>
+                                <td key="useMngUnit"></td>
+                                <td>上级主管部门</td>
+                                <td key="mngDep"></td>
+                            </tr>
+                            <tr>
+                                <td>文物保护单位名称</td>
+                                <td colspan="3" key="protectUnitName"></td>
+                            </tr>
+                            <tr>
+                                <td>公布批次及编号</td>
+                                <td colspan="3" key="batchNo"></td>
+                            </tr>
+                            <tr>
+                                <td>文物保护单位简介</td>
+                                <td colspan="3" key="unitIntroduce"></td>
+                            </tr>
+                            <tr>
+                                <td colspan="4">
+                                    <p>文物保护单位历次保护修缮及经费补助情况</p>
+                                    <table class="table table-bordered margin-0">
+                                        <thead>
+                                            <tr>
+                                                <th>年份</th>
+                                                <th>工程对象</th>
+                                                <th>维修或考古发掘内容</th>
+                                                <th>经费补助（万元）</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="key-hisList">
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>工程项目内容</td>
+                                <td colspan="3" key="projectContent"></td>
+                            </tr>
+                            <tr>
+                                <td>工程立项的必要性</td>
+                                <td colspan="3" key="approvalNecessity"></td>
+                            </tr>
+                            <tr>
+                                <td>工程项目计划</td>
+                                <td colspan="3" key="projectPlan"></td>
+                            </tr>
+                            <tr>
+                                <td rowspan="3">工程经费估算（万元）</td>
+                                <td>工程经费总估算</td>
+                                <td colspan="2" key="estimateAmount"></td>
+                            </tr>
+                            <tr>
+                                <td>前期勘察设计经费</td>
+                                <td colspan="2" key="earlyAmount"></td>
+                            </tr>
+                            <tr>
+                                <td>工程实施经费</td>
+                                <td colspan="2" key="implAmount"></td>
+                            </tr>
+                            <tr>
+                                <td>附件</td>
+                                <td colspan="3" id="key-file"></td>
+                            </tr>
+                            <tr>
+                                <td>项目计划申报单位</td>
+                                <td colspan="3" key="reportUnitsName"></td>
+                            </tr>
+                            <tr>
+                                <td>联系人</td>
+                                <td colspan="3" key="contactName"></td>
+                            </tr>
+                            <tr>
+                                <td>电话</td>
+                                <td colspan="3" key="contactTel"></td>
+                            </tr>
+                            <tr>
+                                <td>填报时间</td>
+                                <td colspan="3" key="reportDay"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal -->
+    </div>
+    <div class="modal fade" id="showMuzangPlanDetailModal" tabindex="-1" role="dialog" aria-labelledby="showMuzangPlanDetailModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="showMuzangPlanDetailModalLabel">详细信息</h4>
+                </div>
+                <div class="modal-body">
+                    <table class="table table-bordered">
+                        <tbody>
+                            <tr>
+                                <td>工程对象名称</td>
+                                <td colspan="6" key="projectName"></td>
+                            </tr>
+                            <tr>
+                                <td>保护工程类型</td>
+                                <td colspan="6" key="projectType"></td>
+                            </tr>
+                            <tr>
+                                <td>所在地</td>
+                                <td colspan="6" id="key-muzang-address"></td>
+                            </tr>
+                            <tr>
+                                <td>使用管理单位</td>
+                                <td colspan="3" key="useMngUnit"></td>
+                                <td>上级主管部门</td>
+                                <td colspan="2" key="mngDep"></td>
+                            </tr>
+                            <tr>
+                                <td>文物保护单位名称</td>
+                                <td colspan="6" key="protectUnitName"></td>
+                            </tr>
+                            <tr>
+                                <td>公布批次及编号</td>
+                                <td colspan="6" key="batchNo"></td>
+                            </tr>
+                            <tr>
+                                <td rowspan="3">工程依据</td>
+                                <td>是否纳入保护规划</td>
+                                <td key="isPlanning"></td>
+                                <td colspan="4" key="planContent"></td>
+                            </tr>
+                            <tr>
+                                <td>是否开展过考古工作</td>
+                                <td key="isArch"></td>
+                                <td colspan="4" key="archContent"></td>
+                            </tr>
+                            <tr>
+                                <td>是否开展过前期勘察或研究</td>
+                                <td key="isServey"></td>
+                                <td colspan="4" key="serveyContent"></td>
+                            </tr>
+                            <tr>
+                                <td colspan="7">
+                                    <p>以往历次工程实施情况</p>
+                                    <table class="table table-bordered margin-0 text-nowrap">
+                                        <thead>
+                                            <tr>
+                                                <th rowspan="2">工程名称</th>
+                                                <th colspan="2">工程进展情况（含计划）</th>
+                                                <th colspan="3">中央财政补助经费使用情况2</th>
+                                            </tr>
+                                            <tr>
+                                                <th>开工时间（年月）</th>
+                                                <th>竣工时间（年月）</th>
+                                                <th>总经费（万元）</th>
+                                                <th>已使用经费（万元）</th>
+                                                <th>尚未使用经费（万元）</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="key-muzang-hisList">
+                                            <tr>
+                                                <td>sdsd</td>
+                                                <td>sdsd</td>
+                                                <td>sdsd</td>
+                                                <td>sdsd</td>
+                                                <td>sdsd</td>
+                                                <td>sdsd</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td rowspan="3">工程内容</td>
+                                <td>工程范围及规模</td>
+                                <td colspan="5" key="porjectScope"></td>
+                            </tr>
+                            <tr>
+                                <td>工程技术路线</td>
+                                <td colspan="5" key="techRoute"></td>
+                            </tr>
+                            <tr>
+                                <td>展示内容策划构想（限展示工程）</td>
+                                <td colspan="5" key="showContent"></td>
+                            </tr>
+                            <tr>
+                                <td>工程计划</td>
+                                <td>拟实施周期（天）</td>
+                                <td key="implPeriod"></td>
+                                <td>计划竣工时间（年月）</td>
+                                <td key="compDate"></td>
+                                <td>计划对外开放时间（限展示工程）（年月）</td>
+                                <td key="disparkDate"></td>
+                            </tr>
+                            <tr>
+                                <td>工程效果预测及文物影响评估</td>
+                                <td colspan="6" key="resultForecast"></td>
+                            </tr>
+                            <tr>
+                                <td rowspan="4">工程实施范围土地基本情况</td>
+                                <td>土地现状</td>
+                                <td colspan="5" key="landSituation"></td>
+                            </tr>
+                            <tr>
+                                <td>土地权属</td>
+                                <td colspan="2" key="landBelong"></td>
+                                <td>实际管理部门</td>
+                                <td colspan="2" key="realMngUnit"></td>
+                            </tr>
+                            <tr>
+                                <td>土地性质</td>
+                                <td colspan="2" key="landNature"></td>
+                                <td colspan="3" key="landRemark"></td>
+                            </tr>
+                            <tr>
+                                <td>是否具备工程条件</td>
+                                <td colspan="5" key="isProjectCond"></td>
+                            </tr>
+                            <tr>
+                                <td>工程经费估算（万元）</td>
+                                <td>总经费</td>
+                                <td key="estimateAmount"></td>
+                                <td>前期勘察设计经费</td>
+                                <td key="earlyAmount"></td>
+                                <td>工程实施经费</td>
+                                <td key="implAmount"></td>
+                            </tr>
+                            <tr>
+                                <td>资金来源（万元）</td>
+                                <td>拟申请中央财政经费</td>
+                                <td key="countryAmount"></td>
+                                <td>地方财政经费</td>
+                                <td key="localAmount"></td>
+                                <td>其他</td>
+                                <td key="others"></td>
+                            </tr>
+                            <tr>
+                                <td>其他需要说明的情况</td>
+                                <td colspan="6"></td>
+                            </tr>
+                            <tr>
+                                <td>附件</td>
+                                <td colspan="6" id="key-muzang-file"></td>
+                            </tr>
+                            <tr>
+                                <td>项目计划申报单位</td>
+                                <td colspan="6" key="reportUnitsName"></td>
+                            </tr>
+                            <tr>
+                                <td>联系人</td>
+                                <td colspan="6" key="contactName"></td>
+                            </tr>
+                            <tr>
+                                <td>电话</td>
+                                <td colspan="6" key="contactTel"></td>
+                            </tr>
+                            <tr>
+                                <td>填报时间</td>
+                                <td colspan="6" key="reportDay"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal -->
+    </div>
+</div>
+
+<div class="modal fade" id="editJianzhuPlanDetailModal" tabindex="-1" role="dialog" aria-labelledby="editJianzhuPlanDetailModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="editJianzhuPlanDetailModalLabel">编辑信息</h4>
+            </div>
+            <div class="modal-body">
+                <div id="cmx-edit-zip-form"></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-info">保存</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal -->
+</div>

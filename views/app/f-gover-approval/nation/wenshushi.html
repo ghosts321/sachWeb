@@ -1,0 +1,320 @@
+<!-- 文书室处理 -->
+<title>办理信息</title>
+
+<link rel="stylesheet" href="/vendor/jstree/jstree.css">
+<link rel="stylesheet" href="/css/app/f-gover-approval/processing-information.css">
+<link rel="stylesheet" href="/vendor/bootstrap-select/bootstrap-select.css">
+<script src="/vendor/jstree/jstree.min.js"></script>
+<script src="/vendor/bootstrap-select/bootstrap-select.min.js"></script>
+
+<script src="/js/app/f-gover-approval/models/public-model.js"></script>
+<script src="/js/app/f-gover-approval/views/public-view.js"></script>
+
+<script src="/js/app/f-gover-approval/nation/models/model.js"></script>
+<script src="/js/app/f-gover-approval/nation/views/view.js"></script>
+<script src="/js/app/f-gover-approval/nation/wenshushi.js"></script>
+
+<div class="page animation-fade" style="background-color:#fff;">
+    <div class="cmx-header">
+        <div class="padding-top-10 padding-bottom-10 padding-left-20">
+            <span class="cmx-header-title hidden-md hidden-sm hidden-xs">
+
+            </span>
+            <div class="cmx-button padding-right-0">
+                <!-- <button class="btn btn-primary" id="cmx-button-save" style="margin-right:10px;">保存</button> -->
+                <button class="btn btn-primary" id="cmx-button-confirm" style="margin-right:10px;">确定</button>
+                <button class="btn btn-primary" id="cmx-button-return" style="margin-right:10px;">返回</button>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <!-- 内容-->
+    <div class="page-main margin-top-50">
+        <div class="page-content" style="color:#76838f;">
+            <div class="example-wrap">
+                <div class="nav-tabs-horizontal">
+                    <ul class="nav nav-tabs nav-tabs-line" role="tablist">
+                        <li class="active" role="presentation">
+                            <a data-toggle="tab" href="#processTabOne" aria-controls="processTabOne" role="tab" aria-expanded="true">
+                                办理信息
+                            </a>
+                        </li>
+                        <li role="presentation" class="">
+                            <a data-toggle="tab" href="#processTabTwo" aria-controls="processTabTwo" role="tab" aria-expanded="false">
+                                原收文
+                            </a>
+                        </li>
+                        <li role="presentation" class="">
+                            <a data-toggle="tab" href="#processTabThree" aria-controls="processTabThree" role="tab" aria-expanded="false">
+                                流程跟踪
+                            </a>
+                        </li>
+                    </ul>
+
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="processTabOne" role="tabpanel">
+                            <div id="cmx-processing">
+                                <div class="panel-body container-fluid">
+                                    <div class="pull-right" id="cmx-timeLimit">
+                                        <i class="icon wb-time" aria-hidden="true"></i> &nbsp;总限时
+                                        <span class="timeLimit"></span>个工作日，剩余
+                                        <span class="workDay"></span>个工作日。</div>
+                                    <div class="clearfix"></div>
+                                    <!-- table -->
+                                    <div class="example table-responsive">
+                                        <table class="table table-bordered">
+                                            <tbody class="table-matter">
+                                                <tr>
+                                                    <td colspan="1" class="backg text-center">审批事项</td>
+                                                    <td colspan="3" id="approvalItemName"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="1" class="backg text-center">项目名</td>
+                                                    <td colspan="3" id="projectName"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="1" class="backg text-center">文件标题</td>
+                                                    <td colspan="3" id="proFileTitle"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="backg text-center">文件号</td>
+                                                    <td id="proFileNum"></td>
+                                                    <td class="backg text-center">网审号</td>
+                                                    <td id="networkNum"></td>
+                                                    <!-- projectNum -->
+                                                </tr>
+                                                <tr>
+                                                    <td class="backg text-center">保护单位</td>
+                                                    <td id="protectUnitName"></td>
+                                                    <td class="backg text-center">类型</td>
+                                                    <td id="publishTypeName"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="backg text-center">主办人</td>
+                                                    <td id="hostPersonName"></td>
+                                                    <td class="backg text-center">受理时间</td>
+                                                    <td id="acceptTime"></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                    <div class="col-xs-12 n2" style="display:none;">
+                                        <div class="example table-responsive">
+                                            <table class="table table-bordered">
+                                                <tbody>
+                                                    <tr>
+                                                        <td colspan="4" class="backg text-center" style="padding-top:20px">
+                                                            <h1 style="font-weight: bold;">国家文物局行政许可（行政审批）不予受理通知书</h1>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="4" class="text-left" style="text-indent: 2em;padding: 15px;">
+                                                            事项名称：
+                                                            <span class="n2-p0"></span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-center" style="width:25%;font-weight: bold;">申请人</td>
+                                                        <td style="width:25%" class="n2-p1"></td>
+                                                        <td style="width:25%;font-weight: bold;" class="text-center">申请人联系电话</td>
+                                                        <td style="width:25%" class="n2-p2"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="6" style="border-bottom: none;padding: 15px;">
+                                                            <div style="width:100%;float:left; text-align:left;text-indent: 2em;" class="n1-content">
+                                                                <p>经审查，你（单位）提交的申请
+                                                                    <span class="n2-p7"></span>由于：</p>
+                                                                <p class="n2-p3">（ ）根据法律法规和“三定”方案，不属于我局职责范围。</p>
+                                                                <p class="n2-p4">（ ）根据国务院文件，我局已经下放或取消该项许可。</p>
+                                                                <p class="n2-p5">（ ）根据我局行政审批指南，申报材料中有重要因素缺失或错误，具体为：
+                                                                </p>
+                                                                <p class="n2-p6">（ ）其他原因，具体为： 我局不予受理。特此告知！</p>
+                                                                <p class="n2-p10">如有疑义，请致电010-56792137详询。</p>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="2" class="text-right" style="border: none;">
+                                                        </td>
+                                                        <td colspan="2" class="text-center n2-p8" style="border: none;">
+                                                            办公室
+                                                            <br/>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 n3" style="display:none;">
+                                        <div class="example table-responsive">
+                                            <table class="table table-bordered">
+                                                <tbody>
+                                                    <tr>
+                                                        <td colspan="4" class="backg text-center" style="padding-top:20px">
+                                                            <h1 style="font-weight: bold;">国家文物局行政许可（行政审批）一次性补正通知书</h1>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="4" class="text-left" style="text-indent: 2em;padding: 15px;">
+                                                            事项名称：
+                                                            <span class="n3-p0"></span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-center" style="width:25%;font-weight: bold;">申请人</td>
+                                                        <td style="width:25%" class="n3-p1"></td>
+                                                        <td style="width:25%;font-weight: bold;" class="text-center">申请人联系电话</td>
+                                                        <td style="width:25%" class="n3-p2"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="6" style="border-bottom: none;padding: 15px;">
+                                                            <div style="width:100%;float:left; text-align:left;text-indent: 2em;" class="n1-content">
+                                                                <p>经审查，你（单位）提交的申请
+                                                                    <span class="n3-p7"></span>由于：</p>
+                                                                <p class="n3-p3">（ ）申请材料不全，具体为：</p>
+                                                                <p class="n3-p4">（ ）不符合法定形式，具体为：</p>
+                                                                <p>我局无法进行办理，请将上述材料尽快补正提交。特此告知！</p>
+                                                                <p class="n3-p10">如有疑义，请致电010-56792137详询。</p>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="2" class="text-right" style="border: none;">
+                                                        </td>
+                                                        <td colspan="2" class="text-center n3-p8" style="border: none;">
+                                                            国家文物局办公室
+                                                            <br/>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <!-- 受理、退回 -->
+                                    <div class="example-wrap">
+                                        <div class="nav-tabs-horizontal">
+                                            <ul class="nav nav-tabs" role="tablist" id="">
+                                                <li role="presentation" class="backg active" id="cmx-fenpai">
+                                                    <a data-toggle="tab" href="#tabsAcceptance" aria-controls="tabsAcceptance" role="tab" aria-expanded="true">
+                                                        分派
+                                                    </a>
+                                                </li>
+                                                <li role="presentation" class="backg" id="cmx-return">
+                                                    <a data-toggle="tab" href="#tabsReturn" aria-controls="tabsReturn" role="tab" aria-expanded="false">
+                                                        退回
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                            <div class="tab-content padding-top-20" id="div-option">
+                                                <!-- 受理 -->
+                                                <div class="tab-pane active" id="tabsAcceptance" role="tabpanel">
+                                                    <div class="form-horizontal">
+                                                        <div class="form-group">
+                                                            <label class="col-sm-1 control-label">选择司</label>
+                                                            <div class="col-sm-11" id="cmx-department-list"></div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="col-xs-12 col-md-1 control-label">常用语</label>
+                                                            <div class="col-xs-7 col-md-6">
+                                                                <select class="commonwords form-control" style="width:100%;padding: 4px 12px !important;">
+                                                                </select>
+                                                            </div>
+                                                            <div class="col-md-4 col-xs-4">
+                                                                <button class="commonwords-use btn btn-primary margin-left-10">使用此常用语</button>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="col-sm-1 control-label">办理意见</label>
+                                                            <div class="col-sm-11">
+                                                                <textarea id="cmx-fenpai-remark" class="form-control" style="resize: none;" rows="5"></textarea>
+                                                            </div>
+                                                            <div class="clearfix"></div>
+                                                            <div class="input-group" style="width: 100%;text-align: right;margin-top: 10px;">
+                                                                <label class="commonwords-manage">常用语管理，将上句办理意见加入/修改常用语：</label>
+                                                                <br>
+                                                                <button class="commonwords-add btn btn-primary margin-left-10">新增</button>
+                                                                <button class="commonwords-update btn btn-primary margin-left-10">修改</button>
+                                                                <button class="commonwords-remove btn btn-default margin-left-10">删除</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- 退回 -->
+                                                <div class="tab-pane" id="tabsReturn" role="tabpanel">
+                                                    <div class="form-horizontal">
+                                                        <div class="form-group">
+                                                            <label class="col-xs-12 col-md-1 control-label">常用语</label>
+                                                            <div class="col-xs-7 col-md-6">
+                                                                <select class="commonwords form-control" style="width:100%;padding: 4px 12px !important;">
+                                                                </select>
+                                                            </div>
+                                                            <div class="col-md-4 col-xs-4">
+                                                                <button class="commonwords-use btn btn-primary margin-left-10">使用此常用语</button>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="col-sm-1 control-label">办理意见</label>
+                                                            <div class="col-sm-11">
+                                                                <textarea id="cmx-return-remark" class="form-control" style="resize: none;" rows="5"></textarea>
+                                                            </div>
+                                                            <div class="clearfix"></div>
+                                                            <div class="input-group" style="width: 100%;text-align: right;margin-top: 10px;">
+                                                                <label class="commonwords-manage">常用语管理，将上句办理意见加入/修改常用语：</label>
+                                                                <br>
+                                                                <button class="commonwords-add btn btn-primary margin-left-10">新增</button>
+                                                                <button class="commonwords-update btn btn-primary margin-left-10">修改</button>
+                                                                <button class="commonwords-remove btn btn-default margin-left-10">删除</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="processTabTwo" role="tabpanel">
+                            <div class="panel" id="cmx-form-body" style="overflow: scroll;">
+                                <div class="panel-body container-fluid" style="overflow: hidden !important;width: 100%;height: 100%;padding: 0;">
+                                    <iframe id="cmx-form" frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="no" allowtransparency="yes"
+                                        style="width:100%;height:100%;">
+                                    </iframe>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="processTabThree" role="tabpanel">
+                            <div class="panel" id="cmx-record">
+                                <div class="panel-body container-fluid">
+                                    <div class="example table-responsive">
+                                        <table class="table table-bordered text-center">
+                                            <tbody>
+                                                <tr>
+                                                    <td colspan="5" class="handleRecord">流程跟踪</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="backg">序号</td>
+                                                    <td class="backg">办理人</td>
+                                                    <td class="backg">办理情况</td>
+                                                    <td class="backg">办理时间</td>
+                                                    <td class="backg">停留工作日</td>
+                                                </tr>
+                                            </tbody>
+                                            <tbody id="cmx-banli-record">
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div id="cmx-choosemodalDiv"></div>
+</div>

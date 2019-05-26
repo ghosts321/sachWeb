@@ -1,0 +1,344 @@
+[{
+        "columnname": "cmx-i-1",
+        "columnindex": "cmx-i-1",
+        "serialnumber": "P0001",
+        "type": "text",
+        "name": "文物收藏单位",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "short"
+        },
+        "extra": {
+            "class": "margin-left-0",
+            "func": "",
+            "width": "4",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-2",
+        "columnindex": "cmx-i-2",
+        "serialnumber": "P0002",
+        "type": "text",
+        "name": "文物名称",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "short"
+        },
+        "extra": {
+            "class": "margin-left-0",
+            "func": "",
+            "width": "4",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-3",
+        "columnindex": "cmx-i-3",
+        "serialnumber": "P0003",
+        "type": "text",
+        "name": "总登记号",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "short"
+        },
+        "extra": {
+            "class": "margin-left-0",
+            "func": "",
+            "width": "4",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-4",
+        "columnindex": "cmx-i-4",
+        "serialnumber": "P0004",
+        "type": "text",
+        "name": "文物质地",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "short"
+        },
+        "extra": {
+            "class": "margin-left-0",
+            "func": "",
+            "width": "4",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-5",
+        "columnindex": "cmx-i-5",
+        "serialnumber": "P0005",
+        "type": "text",
+        "name": "保存状态",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "short"
+        },
+        "extra": {
+            "class": "margin-left-0",
+            "func": "",
+            "width": "4",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-6",
+        "columnindex": "cmx-i-6",
+        "serialnumber": "P0006",
+        "type": "text",
+        "name": "文物级别",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "short"
+        },
+        "extra": {
+            "class": "margin-left-0",
+            "func": "",
+            "width": "4",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-7",
+        "columnindex": "cmx-i-7",
+        "serialnumber": "P0007",
+        "type": "text",
+        "name": "完残状况",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "short"
+        },
+        "extra": {
+            "class": "margin-left-0",
+            "func": "",
+            "width": "4",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-8",
+        "columnindex": "cmx-i-8",
+        "serialnumber": "P0008",
+        "type": "text",
+        "name": "具体年代",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "short"
+        },
+        "extra": {
+            "class": "margin-left-0",
+            "func": "",
+            "width": "4",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-9",
+        "columnindex": "cmx-i-9",
+        "serialnumber": "P0009",
+        "type": "text",
+        "name": "尺寸",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "short"
+        },
+        "extra": {
+            "class": "margin-left-0",
+            "func": "",
+            "width": "4",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-10",
+        "columnindex": "cmx-i-10",
+        "serialnumber": "P0010",
+        "type": "text",
+        "name": "数量",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "short"
+        },
+        "extra": {
+            "class": "margin-left-0",
+            "func": "",
+            "width": "4",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-11",
+        "columnindex": "cmx-i-11",
+        "serialnumber": "P0011",
+        "type": "text",
+        "name": "收藏时间",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "short"
+        },
+        "extra": {
+            "class": "margin-left-0",
+            "func": "",
+            "width": "4",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-12",
+        "columnindex": "cmx-i-12",
+        "serialnumber": "P0012",
+        "type": "text",
+        "name": "文物类别",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "short"
+        },
+        "extra": {
+            "class": "margin-left-0",
+            "func": "",
+            "width": "4",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-13",
+        "columnindex": "cmx-i-13",
+        "serialnumber": "P0013",
+        "type": "text",
+        "name": "文物来源",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "short"
+        },
+        "extra": {
+            "class": "margin-left-0",
+            "func": "",
+            "width": "4",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+
+    {
+        "columnname": "cmx-i-14",
+        "columnindex": "cmx-i-14",
+        "serialnumber": "P0014",
+        "type": "text",
+        "name": "价值评估",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "long"
+        },
+        "extra": {
+            "class": "margin-left-0",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-15",
+        "columnindex": "cmx-i-15",
+        "serialnumber": "P0015",
+        "type": "text",
+        "name": "拓印缘由",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "long"
+        },
+        "extra": {
+            "class": "margin-left-0",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-16",
+        "columnindex": "cmx-i-16",
+        "serialnumber": "P0016",
+        "type": "text",
+        "name": "拓印具体工艺与步骤",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "long"
+        },
+        "extra": {
+            "class": "margin-left-0",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-17",
+        "columnindex": "cmx-i-17",
+        "serialnumber": "P0017",
+        "type": "text",
+        "name": "风险评估与安全措施",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "long"
+        },
+        "extra": {
+            "class": "margin-left-0",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-9",
+        "columnindex": "cmx-30-files",
+        "serialnumber": "P00030",
+        "type": "handimg",
+        "name": "图片",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "single": "0"
+        },
+        "extra": {
+            "class": "",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    }
+]

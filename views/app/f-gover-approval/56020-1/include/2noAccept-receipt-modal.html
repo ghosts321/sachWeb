@@ -1,0 +1,80 @@
+<link rel="stylesheet" href="/css/app/f-gover-approval/relicList.css">
+<div class="modal fade in" id="cmx-noAccept-receipt" aria-hidden="true" aria-labelledby="" role="dialog" tabindex="-1" style="display: block; padding-right: 19px;">
+    <div class="modal-dialog modal-center" style="width:60%">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span>不接受预约</span>
+                <button type="button" class="close" data-dismiss="modal" aria-label="关闭">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <table class="table table-bordered">
+                    <tbody>
+                        <tr>
+                            <td colspan="4" class="backg text-center" style="">
+                                <h3 id="notice-title">您的预约不能被接受，原因如下：</h3>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="4">
+                                <div class="row noborder changyongyu">
+                                    <div class="col-xs-12 col-md-12 col-lg-12">
+                                        <div class="form-wrap">
+                                            <div class="form-group">
+                                                <label class="col-xs-12 col-md-2 control-label">常用语</label>
+                                                <div class="col-xs-12 col-md-6">
+                                                    <select class="commonwords form-control" style="width:100%;padding: 4px 12px !important;">
+                                                    </select>
+                                                </div>
+                                                <div class="col-md-4 col-xs-12">
+                                                    <button class="commonwords-use btn btn-primary margin-left-10">使用此常用语</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row noborder">
+                                    <div class="col-xs-12 col-md-12 col-lg-12">
+                                        <div class="form-wrap">
+                                            <div class="form-group">
+                                                <div class="input-group" style="width: 100%;">
+                                                    <span class="input-group-addon" style="color:#000;">
+                                                        办理意见
+                                                    </span>
+                                                    <textarea style="width: 100%;height:80px;" class="form-control" id="opinions" placeholder="" autocomplete="off"></textarea>
+                                                </div>
+                                                <div class="clearfix"></div>
+                                                <div class="input-group" style="width: 100%;text-align: right;margin-top: 10px;">
+                                                    <label class="commonwords-manage">常用语管理，将上句办理意见加入/修改常用语：</label>
+                                                    <button class="commonwords-add btn btn-primary margin-left-10">新增</button>
+                                                    <button class="commonwords-update btn btn-primary margin-left-10">修改</button>
+                                                    <button class="commonwords-remove btn btn-default margin-left-10">删除</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="4" style="padding-left:4%" id="notice-foot">如有疑议，请致电010-56792137详细咨询</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <button type="button" id="noAccept-receipt-save" class="btn btn-primary">保存</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">
+                    取消
+                </button>
+
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    //常用语通用模块管理
+    getCommonWordsMulti();
+    refreshCommonWordsMulti();
+</script>

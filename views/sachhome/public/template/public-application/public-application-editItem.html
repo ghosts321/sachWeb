@@ -1,0 +1,40 @@
+<style>
+	.form-control[readonly]{
+		background-color: #fff;
+	}
+	.modal-footer button+button{
+		background-color: #62AAEC;
+	}
+	.modal-footer{
+		padding-top: 25px;
+		padding-bottom: 20px;
+	}
+	.noclicks{
+		pointer-events:none;
+	}
+</style>
+
+<!-- 模态框（Modal） -->
+<div class="modal fade" id="govInfoApplicationForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog" style="width:80%;">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+					&times;
+				</button>
+				<h4 class="modal-title" id="govInfoApplicationTitle">
+					 提交前预览
+				</h4>
+			</div>
+			<div class="modal-body application-form" id="govInfoApplicationContent" style="height:500px;overflow:scroll;">
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">关闭
+				</button>
+				<button type="button" id="confirmSubmit" class="btn btn-primary confirm-submit">
+					确认提交
+				</button>
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal -->
+</div>

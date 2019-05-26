@@ -1,0 +1,236 @@
+@media (min-width: 768px) {
+    .modal-box .modal-dialog {
+        width: 85%;
+        margin: 30px auto;
+    }
+}
+
+// bootstrap 模态框 样式
+.modal-box{
+    .modal-body {
+        padding: 0 15px;
+    }
+    .modal-title {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        color: #0088cc;
+    }
+    .modal-header {
+        padding: 5px 10px;
+        border-bottom: 0 none;
+    }
+    .close {
+        font-size: 40px;
+        font-weight: lighter;
+        outline: none;
+        margin-top: 5px;
+    }
+    .ShowTable {
+        font-size: 14px;
+    }
+    .LabelTitle,.LabelContent {
+        display: inline;
+    }
+    .LabelTitle {
+        vertical-align: middle;
+        font-size: 14px;
+        font-weight: bold;
+        margin-right: 2px;
+    }
+    .LabelContent {
+        vertical-align: middle;
+        font-size: 14px;
+        margin-right: 2px;
+        font-weight: normal;
+    }
+    .table {
+        border-collapse: collapse;
+        width: 100%;
+        tr td {
+            padding: 7px 10px;
+            border: 1px solid #ddd;
+        }
+    }
+}
+
+
+.giant-screen.protection-unit input[type="checkbox"]{
+    min-width: auto;
+}
+.giant-screen .classification .classification-left .second-line{
+    // margin-top: 0;
+}
+.checkbox{
+    height: 34px;
+    line-height: 34px;
+    span{
+        font-weight: bold;
+        // margin-top: 7px;
+        display: inline-block;
+    }
+    margin: 0;
+    .fontweight{
+        font-weight: bold;
+        cursor: auto;
+    }
+    &.range{
+        width: 84%;
+    }
+}
+
+
+
+// 复选框样式
+// .checkbox label:before {
+//     background: #DEDEDE;
+//     border-radius: 3px;
+// }
+// .checkbox label:before {
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     display: inline-block;
+//     width: 20px;
+//     height: 20px;
+//     content: '';
+// }
+
+
+.protection{
+    height: 265px;
+    .range{
+        width: 97%;
+    }
+}
+
+.qualification-unit{
+    height: 350px;
+    label{
+        padding-left: 10px;
+    }
+    .range-1{
+        width: 115%;
+    }
+    .range-2{
+        width: 121.5%;
+        label:nth-child(5){
+            &~label{
+                float: left;
+            }
+        }
+        label:nth-child(6){
+            margin-left: 17px;
+        }
+    }
+}
+
+.ShowTable{
+    th{
+        text-align: center;
+    }
+}
+
+.classification-left{
+    input[type="checkbox"]{
+        display: none;
+    }
+}
+
+
+
+// 响应式
+@media (max-width: 768px){  // 超小屏幕
+    .qualification-unit{
+        height: 450px;
+    }
+    .qualification-unit .range-1,.qualification-unit .range-2{
+        width: 100%;
+    }
+    .range-1 label{
+        float: left;
+        line-height: 25px;        
+    }
+    .range-2 label{
+        float: left;
+        line-height: 25px;
+    }
+    .checkbox{
+        // white-space: nowrap;
+        label{
+            margin-left: 2px;
+            padding-left: 2px;
+            span{
+                margin-right: 2px;
+            }
+        }
+    }
+    .giant-screen .classification .classification-left div+div{
+        margin-top: 12px;
+    }
+    .qualification-unit{
+        height: 500px;
+    }
+    .classification-right{
+        margin-top: 40px;
+    }
+}
+@media (max-width: 615px){
+    .qualification-unit{
+        height: 600px;
+    }
+    .qualification-unit .range-2{
+        margin-top: 70px !important;
+    }
+    .classification-right{
+        margin-top: 100px;
+    }
+}
+@media (min-width: 768px) and (max-width: 992px){
+    .range-1 label{
+        float: left;
+        line-height: 25px;        
+    }
+    .range-2 label{
+        float: left;
+        line-height: 25px;
+    }
+    .checkbox{
+        white-space: nowrap;
+        label{
+            margin-left: 2px;
+            padding-left: 2px;
+            span{
+                margin-right: 2px;
+            }
+        }
+    }
+}
+@media (min-width: 992px) and (max-width: 1200px){
+    .range-1 label{
+        float: left;
+        line-height: 25px;        
+    }
+    .range-2 label{
+        float: left;
+        line-height: 25px;
+    }
+    .checkbox{
+        label{
+            margin-left: 2px;
+            padding-left: 2px;
+            span{
+                margin-right: 3px;
+            }
+        }
+    }
+}
+@media (min-width: 1200px) and (max-width: 1280px){
+    .range-1 label{
+        float: left;
+        line-height: 25px;        
+    }
+    .range-2 label{
+        float: left;
+        line-height: 25px;
+    }
+}

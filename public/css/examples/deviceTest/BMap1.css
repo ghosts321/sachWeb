@@ -1,0 +1,30 @@
+#allmap {
+    height: 250px;
+    width: 140%;
+    margin: 0;
+    font-family: "微软雅黑";
+}
+#allmap label{max-width:none;}
+#control {
+    width: 140%;
+}
+@media screen and (max-width: 960px){   
+    #allmap{
+        width: 100%;
+    }
+}  
+@media screen and (max-width: 768px){  
+    #allmap{
+        width: 100%;
+    }
+}  
+@media screen and (max-width: 550px){  
+    #allmap{
+        width: 100%;
+    }
+}  
+@media screen and (max-width: 320px){  
+    #allmap{
+        width: 100%;
+    }
+} 

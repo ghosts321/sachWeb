@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+	<title>详情页</title>
+	<link href="css/common/ie10-viewport-bug-workaround.css" rel="stylesheet">
+	<!-- Bootstrap -->
+	<link href="css/common/bootstrap.min.css" rel="stylesheet">
+	<link href="css/common/pageSwitch.min.css" rel="stylesheet">
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+			<script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+			<script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	<link href="css/common/common.css" rel="stylesheet">
+	<link href="css/details.css" rel="stylesheet">
+	<style>
+			.onlyoffical {
+				display: none;
+			}
+		
+			.offical .onlyoffical {
+				display: block;
+		
+			}
+		
+			.offical .offical-header {
+				position: fixed;
+				top: 0;
+				width: 100%;
+				background: #fff;
+				z-index: 999;
+			}
+		
+			.offical .offical-header>div {
+				background: url(http://www.sach.gov.cn/picture/0/1406241603206447246.jpg) top repeat-x;
+				padding-left: 4%;
+			}
+		
+			.offical .navbar-fixed-top {
+				top: 110px;
+			}
+			.offical #content-height{
+				margin-top: 120px;
+			}
+		</style>
+</head>
+<body class="offical">
+	<div class="onlyoffical offical-header">
+		<div>
+			<img src="http://www.sach.gov.cn/picture/5/1405101522359844623.png" />
+		</div>
+	</div>
+	<!-- 头部 start -->
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+					aria-controls="navbar">
+					<span class="sr-only">切换导航</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="./index.html">
+					<img class="custom-logo" src="img/custom-logo.png" />
+					<span class="adapt-webtitle visible-lg">国家文物局
+						<br>综合行政管理平台</span>
+				</a>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul id="nav" class="nav navbar-nav custom-navbar">
+					<li>
+						<a href="index.html">首页</a>
+					</li>
+					<li>
+						<a href="approval/admin-approval-manage.html">行政审批管理</a>
+					</li>
+					<li class="active">
+						<a href="public/gov-info-open.html">政府信息公开</a>
+					</li>
+					<li>
+						<a href="industry/integrated-manage.html">行业综合管理</a>
+					</li>
+					<li>
+						<a href="service/public-info-service.html">公共信息服务</a>
+					</li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right custom-navbar-right">
+					<li class="user-info">
+						<img src="img/login.png" alt="">
+						<span class="login-2">登录</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<!-- 头部 end -->
+
+	<!-- 左侧侧边栏 start -->
+	<div class="left-bar hidden-xs">
+		<div>
+			<a href="" class="leftlink">
+
+			</a>
+		</div>
+		<div>
+			<a href="administrative-approval.html">
+
+			</a>
+		</div>
+		<div>
+			<a href="policy-and-regulations.html">
+
+			</a>
+		</div>
+		<div>
+			<a href="download.html">
+
+			</a>
+		</div>
+	</div>
+	<!-- 左侧侧边栏 end -->
+
+	<!-- 右侧侧边栏 start -->
+	<div class="right-bar hidden-xs">
+		<div>
+			<a href="" class="rightlink">
+
+			</a>
+		</div>
+		<div>
+			<a href="complaint-box.html">
+
+			</a>
+		</div>
+	</div>
+	<!-- 右侧侧边栏 end -->
+
+	<div id="content-height">
+		<!-- 当前位置 start -->
+		<div class="position">
+			<div class="container" id="title">
+				<i></i>
+				<span>当前位置 >> </span>
+				<a href="" id="prevLink"></a>
+				<span id="currentLink"></span>
+			</div>
+		</div>
+		<!-- 当前位置 end -->
+
+		<!-- 内容区域 start -->
+		<div class="container substance" id="substance">
+		</div>
+		<!-- 内容区域 end -->
+	</div>
+
+	<!-- 底部 start -->
+	<div class="footer">
+		<div class="container footer-content">
+			<div class="row">
+				<p>
+					<a href="website-statement.html">网站声明</a>
+					<a href="website-statement.html">联系我们</a>
+				</p>
+				<i></i>
+			</div>
+			<b>Copyright © 2017 国家文物局版权所有</b>
+		</div>
+	</div>
+	<!-- 底部 end -->
+
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="js/common/jquery-1.9.1.min.js"></script>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="js/common/bootstrap.min.js"></script>
+	<script src="js/common/ie10-viewport-bug-workaround.js"></script>
+	<script src="js/common/pageSwitch.min.js"></script>
+	<script src="js/common/main.js"></script>
+	<script src="js/common/jquery.jqprint-0.3.js"></script>
+	<script src="js/common/jquery-migrate-1.2.1.min.js"></script>
+	<script src="js/common/common.js"></script>
+	<script src="js/details.js"></script>
+
+	<script id="tContent" type="text/template">
+		<div class="content">
+			<div class="odd-numbers row">
+				<div class="col-lg-6 col-xs-12">
+					<span>索&ensp;引&ensp;号 ：</span>$infoIndex$
+				</div>
+				<div class="col-lg-6 col-xs-12">
+					<span>信息分类 ：</span>$className$
+				</div>
+				<div class="col-lg-6 col-xs-12">
+					<span class="postoffice">发文机构 ：</span><span class="postofficename">$postOffice$</span>
+				</div>
+				<div class="col-lg-6 col-xs-12">
+					<span>成文日期 ：</span>$writtenDate$
+				</div>
+				<div class="col-lg-12 col-xs-12 title">
+					<span class="left">标&ensp;&ensp;&ensp;&ensp;题 ：</span><span class="info">$infoTitle$</span>
+				</div>
+				<div class="col-lg-6 col-xs-12">
+					<span>发文字号 ：</span>$infoNum$
+				</div>
+				<div class="col-lg-6 col-xs-12">
+					<span>发布日期 ：</span>$displayDate$
+				</div>
+			</div>
+			<div class="row">
+				<div class="article col-lg-12">
+					<span class="pull-right">浏览次数: $readNumber$</span>
+					<h3 class="articleTitle text-center">$infoTitle$</h3>
+					<div>$infoContent$</div>
+					<div id="download"></div>
+					<p class="text-right">责任编辑：$editorUserID$</p>
+					<hr>
+					<div class="center-block text-center" id="flip-pages"><button onclick="window.location.href='$previous_infoID$'" id="prev" class="btn btn-default" title="$previous_infoTitle$">上一篇</button>
+					<button onclick="window.location.href='$next_infoID$'" id="next" class="btn btn-default" title="$next_infoTitle$">下一篇</button></div>
+					<div class="pull-right stamp"><button class="btn btn-default hidden-xs" id="print">打印本页</button></div>
+				</div>
+			</div>
+		</div>
+	</script>
+</body>
+</html>

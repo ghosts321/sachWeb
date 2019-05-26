@@ -1,0 +1,46 @@
+<script src="/js/app/f-gover-approval/models/public-model.js">
+</script>
+<script src="/js/app/f-gover-approval/views/public-view.js"></script>
+
+<script src="/js/app/f-gover-approval/inspection/subpage/56015-f-yijian.js"></script>
+<link rel="stylesheet" href="/css/app/f-gover-approval/apply.css">
+
+<div class="page animation-fade" style="background-color:#fff;">
+    <div class="page-main page-aside-inner">
+        <div class="page-content" style="color:#76838f;">
+            <div class="panel" id="cmx-edit">
+                <div class="text-center">
+                    <h2 class="">专家评审意见表</h2>
+                    <p class="cmx-before-work" style="font-size: 16px;color: #f96868;">进行评审前请先确定参加评审或不进行评审，填写评审意见表示同意评审此事项，不可退回</p>
+                </div>
+                <div class="panel-body">
+                    <div style="margin-bottom:10px;text-align: center;" id="cmx-flag2">
+                        <button class="btn btn-primary" style="margin: 0 5px;;" id="cmx-accept-button">填写评审意见</button>
+                        <button class="btn btn-default" style="margin: 0 5px;;" id="cmx-refuse-button">不进行评审</button>
+                        <div id="cmx-refuse-div" style="display:none;">
+                            <div class="form-group" style="margin-top:10px;">
+                                <label class="col-sm-2 control-label">退回原因</label>
+                                <div class="col-sm-10">
+                                    <textarea class="form-control" id="cmx-refuse-textarea" name="" placeholder="" value="" style="resize:none;" rows="5"></textarea>
+                                </div>
+                            </div>
+                            <button class="btn btn-primary pull-right" style="margin-right:10px;margin-top:10px;" id="cmx-refuse-confirm">确定</button>
+                        </div>
+                    </div>
+                    <div id="cmx-form" style="display:none;">
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="padding-top-10 padding-bottom-10 padding-left-20 pull-right" id="cmx-handle-buttons" style="display:none;">
+                        <div class="cmx-button padding-right-0">
+                            <button class="btn btn-primary" style="margin-right:10px;" id="cmx-button-save">保存</button>
+                            <button class="btn btn-primary" style="margin-right:10px;" id="cmx-button-send">发送</button>
+                            <!--<button class="btn btn-primary" style="margin-right:24px;" onclick="window.location.href='/app/f-gover-approval/apply-table.html'">返回</button>-->
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

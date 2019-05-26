@@ -1,0 +1,172 @@
+.position {
+  background-color: #FDFDFA;
+  color: #B0B0AF;
+  line-height: 50px;
+  border-bottom: 1px solid #D7D8D9;
+}
+.position i {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  background: url('../../img/house.png') no-repeat center center;
+  background-size: cover;
+  vertical-align: -3px;
+  margin-right: 5px;
+  margin-left: -3px;
+}
+.position span,
+.position a {
+  color: #B4B4B3;
+  font-size: 14px;
+  vertical-align: middle;
+}
+.position span {
+  max-width: 800px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+}
+.position a {
+  text-decoration: none;
+}
+.substance {
+  min-height: 500px;
+  padding: 0 30px;
+  margin-top: 21px;
+}
+.substance .content {
+  width: 832px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid #D7D8D9;
+  padding: 20px 40px 36px;
+  margin-bottom: 32px;
+}
+.substance .content .odd-numbers {
+  border: 1px solid #979797;
+  line-height: 42px;
+  color: #393939;
+  background-color: #FDFDFA;
+  display: none;
+}
+.substance .content .odd-numbers .title .left {
+  width: 10%;
+  vertical-align: middle;
+  display: inline-block;
+}
+.substance .content .odd-numbers .title .info {
+  margin-left: 0;
+  vertical-align: middle;
+  display: inline-block;
+  word-wrap: break-word;
+  width: 80%;
+  line-height: 20px;
+}
+.substance .content .odd-numbers span {
+  margin-right: 15px;
+  margin-left: 31px;
+}
+.substance .content .odd-numbers span.postoffice {
+  vertical-align: middle;
+}
+.substance .content .odd-numbers span.postofficename {
+  vertical-align: middle;
+  margin-left: 0;
+  display: inline-block;
+  width: 220px;
+  line-height: 20px;
+}
+.substance .content .article {
+  margin-top: 20px;
+  text-align: center;
+}
+.substance .content .article table {
+  width: 100%;
+}
+.substance .content .article h3 {
+  font-size: 23px;
+  padding-top: 15px;
+  line-height: 32px;
+}
+.substance .content .article span {
+  font-size: 14px;
+}
+.substance .content .article span.standardred {
+  color: red;
+  font-size: 16px;
+}
+.substance .content .article p {
+  font-size: 16px;
+  color: #202020;
+  text-align: left;
+  margin-top: 10px;
+  line-height: 25px;
+}
+.substance .content .article hr {
+  border-top-color: #E0E0E0;
+}
+.substance .content .article button {
+  color: #65ABE9;
+  border-radius: 0;
+  border-color: #999999;
+  padding: 8px 18px;
+  font-size: 14px;
+  outline: 0;
+}
+.substance .content .article button:first-of-type {
+  margin-right: 7px;
+}
+.substance .content .article button:last-of-type {
+  margin-left: 7px;
+}
+.substance .content .article button:hover {
+  background-color: #EFF6FD;
+  color: #62AAEC;
+  border-color: #62AAEC;
+}
+.substance .content .article .stamp {
+  margin-top: -38px;
+}
+@media (max-width: 768px) {
+  .substance {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .substance .content {
+    width: 100%;
+  }
+  .substance .content .article h3 {
+    padding-top: 35px;
+  }
+  .substance .content .odd-numbers span {
+    margin-left: auto;
+  }
+  .substance .content .article a {
+    padding: 6px 16px;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .container {
+    width: 100% !important;
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+  .substance .content {
+    width: auto;
+  }
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+  .container {
+    width: 100% !important;
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1280px) {
+  .container {
+    width: 100% !important;
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}

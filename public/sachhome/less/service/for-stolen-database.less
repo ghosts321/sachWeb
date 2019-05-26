@@ -1,0 +1,691 @@
+// 公共信息服务 页面
+
+th{
+    white-space: nowrap;
+}
+
+// 巨幕 全国重点文物保护单位 start
+.giant-screen{
+    &.ii1{
+        height: 300px;
+    }
+    &.ii3{
+        height: 300px;
+    }
+    height: 252px;
+    color: #fff;
+    background-image: linear-gradient(90deg, #79bdf9, #4497e1);
+    h3{
+        // margin: 0;
+        font-weight: bold;
+        margin-bottom: 40px;
+    }
+    p{
+        font-size: 14px;
+        margin-top: 13px;
+    }
+    // 分类 start
+    .classification{
+        .tip{
+            display: inline-block;
+            margin-bottom: 20px;
+            margin-top: -10px;
+            color: #fff;
+        }
+        .classification-left{
+            input,select{
+                border-radius: 0;
+                min-width: 190px;
+                border: 0 none;
+            }
+            input{
+                &.pis2{
+                    min-width: 810px;
+                }
+                &.ii1{
+                    min-width: 325px;
+                }
+                &.ii2{
+                    min-width: 325px;
+                }
+            }
+            select{
+                background: url(../img/option3.png) no-repeat right center;
+                background-color: #fff;
+                background-size: contain;
+                appearance: none;
+                -moz-appearance: none;
+                -webkit-appearance: none;
+                &.pis2{
+                    min-width: 335px;
+                }
+                &.ii1{
+                    min-width: 325px;
+                }
+                &.ii2{
+                    min-width: 325px;
+                }
+            }
+            select::-ms-expand{
+                display: none;
+            }
+            label{
+                min-width: 85px;
+                // text-align: right;
+            }
+            .second-line{
+                margin-top: 12px;
+            }
+        }
+        .classification-right{
+            a{
+                // width: 70px;
+                width: 150px;
+                height: 35px;
+                line-height: 35px;
+                background: #fff;
+                display: inline-block;
+                font-size: 14px;
+                color: #62AAEC;
+                letter-spacing: 0;
+                text-decoration: none;
+                font-weight: bold;
+                &+a{
+                    margin-top: 10px;
+                }
+                &:first-child{
+                    // margin-right: 5px;
+                }
+                &:nth-child(2){
+                    // margin-left: 5px;
+                }
+                &.download{
+                    width: 150px;
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+    // 分类 end
+}
+// 巨幕 全国重点文物保护单位 end
+
+
+// 统计表格1、2 start
+.statistics{
+    min-height: 280px;
+    padding-bottom: 27px;
+    .statistics-table{
+        width: 100%;
+        font-size: 14px;
+        color: #526069;
+        border: 1px solid #62AAEC;
+        margin: 0;
+        margin-bottom: 20px;
+        td+td{
+            border-left: 1px solid #62AAEC;
+        }
+        th{
+            border: 0 none;
+            font-weight: normal;
+        }
+        td{
+            border-color: #62AAEC;
+        }
+        th,td{
+            height: 35px;
+        }
+        color: #526069;
+        .statistics-color{
+            color: #202020;
+            background-color: #DAEEFF;
+            th{
+                position: relative;
+                line-height: 17.5px;
+                &:first-child:before{
+                    border-left: 0 none;
+                }
+                line-height: 35px;
+                &.lh175{
+                    line-height: 17.5px;
+                }
+                &:before{
+                    content: '';
+                    width: 1px;
+                    height: 25px;
+                    display: block;
+                    position: absolute;
+                    border-left: 1px dashed #94A0AB;
+                    top: 9px;
+                    left: 0;
+                }
+            }
+        }
+    }
+}
+.unmovable{
+    position: relative;
+    .modal-box{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left:0;
+        background: rgba(255,255,255,.5);
+        z-index: 10;
+        display: none;
+        img{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+    }
+    .unmovableContent{
+        margin-top: 18px;
+        min-height: 400px;
+        position: relative;
+        padding-bottom: 50px;
+        overflow-x: visible;
+        span{
+            line-height: 20px;
+        }
+        .paging{
+            // position: absolute;
+            // bottom: 10px;
+            width: 100%;
+            margin: 0;
+            text-align: center;
+            .box2{
+                overflow: hidden;
+            }
+            .modal-box{
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%,-50%);
+                background: rgba(255,255,255,.5);
+                z-index: 10;
+                display: none;
+                img{
+                    // position: absolute;
+                    // top: 50%;
+                    // left: 50%;
+                    // transform: translate(-50%,-50%);
+                }
+            }
+        }
+    }
+    table{
+        width: 100%;
+        font-size: 14px;
+        // border: 1px solid #D7D8D9;
+        border: 1px solid #62AAEC;
+        margin: 0;
+        color: #526069;
+        margin-bottom: 20px;
+        span{
+            color: #202020;
+            font-weight: normal;
+            display: inline-block;
+            padding: 3px;
+        }
+        tr{
+            height: 35px;
+            // &:not(:nth-child(-n+3)):hover{
+            //     background-color: #f5f5f5;
+            // }
+        }
+        thead{
+            tr{
+                background-color: #DAEEFF;
+            }
+        }
+        tbody{
+            tr{
+                &:hover{
+                    background-color: #f5f5f5;
+                }
+            }
+        }
+        th,td{
+            white-space: normal;
+            text-align: center;
+            border: 1px solid #62AAEC !important;
+        }
+        th{
+            border-bottom: 0 none !important;
+            &+th{
+                border-left: 1px solid #D7D8D9;
+            }
+        }
+        td{
+            &+td{
+                border-left: 1px solid #D7D8D9;
+            }
+        }
+    }
+}
+.museum{
+    .statistics-table{
+        .statistics-color{
+            th:first-child{
+                line-height: 35px;
+            }
+        }
+    }
+}
+// 统计表格1、2 end
+
+.museum{
+    padding-bottom: 50px;
+    .position{
+        margin: 0;
+        margin-bottom: 12px;
+        i{
+            width: 16px;
+            height: 16px;
+            display: inline-block;
+            background: url(../img/house-2.png) no-repeat center center;
+            background-size: cover;
+            vertical-align: -3px;
+            margin-right: 5px;
+            margin-left: -3px;
+        }
+        span,a{
+            color: #333;
+            font-size: 14px;
+            vertical-align: middle;
+        }
+        a{
+            text-decoration: none;
+        }
+    }
+    .relics{        
+        .list{
+            // font-family: MicrosoftYaHei-Bold;
+            font-size: 28px;
+            color: #353638;
+            letter-spacing: 0;
+            font-weight: bold;
+        }
+        margin-bottom: 20px;
+    }
+    .search-info{
+        .museum-left{
+            .collection{
+                padding-right: 10px;
+                .date{
+                    input{
+                        background: url(../img/calendar.png) no-repeat 98% center #ffffff;
+                        background-size: 20px auto;
+                        appearance: none;
+                        -moz-appearance: none;
+                        -webkit-appearance: none;
+                    }
+                }
+                input,select{
+                    min-width: 190px;
+                    border-radius: 2px;
+                }
+                select{
+                    border-right: 0 none;
+                    background: url(../img/option3.png) no-repeat right center;
+                    background-color: #fff;
+                    background-size: contain;
+                    appearance: none;
+                    -moz-appearance: none;
+                    -webkit-appearance: none;
+                }
+                select::-ms-expand{
+                    display: none;
+                }
+                label{
+                    min-width: 85px;
+                    text-align: right;
+                }
+            }
+            .second-line{
+                margin-top: 12px;
+            }
+            .special{
+                label{
+                    max-width: 85px;
+                }
+                input,select{
+                    min-width: 352px;
+                }
+            }
+        }
+        .museum-right{
+            // margin-left: 25px;
+            text-align: center;
+            a{
+                width: 150px;
+                height: 35px;
+                line-height: 35px;
+                background: #fff;
+                display: inline-block;
+                font-size: 14px;
+                color: #62AAEC;
+                letter-spacing: 0;
+                text-decoration: none;
+                font-weight: bold;
+                &+a{
+                    margin-top: 10px;
+                }
+            }
+            .disabled{
+                pointer-events: none;
+            }
+        }
+    }
+
+
+
+    .museum-search-details{
+        margin-top: 18px;
+        background-color: #F2F9FF;
+        border: 1px dashed #62AAEC;
+        min-height: 400px;
+        position: relative;
+        padding-bottom: 50px;
+        table{
+            border-color: #62AAEC;
+            th{
+                border-bottom: 0 none;
+                line-height: 25px;
+                border-bottom: 1px solid #62AAEC;
+            }
+            td{
+                line-height: 20px;
+                height: 35px;
+                border-top: 0 none;
+                color: #000;
+                &.antiqueId{
+                    padding-left: 25px;
+                }
+            }
+        }
+        .paging{
+            position: absolute;
+            bottom: 10px;
+            width: 100%;
+            margin: 0;
+            text-align: center;
+            .box2{
+                overflow: hidden;
+            }
+            .modal-box{
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                z-index: 10;
+                opacity: 0.5;
+                background-color: #F2F9FF;
+                display: none;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 767px){
+    .giant-screen{
+        height: 465px;
+    }
+    .giant-screen.pis2{
+        height: 350px;
+    }
+    .classification input, .classification select{
+        display: inline-block;
+    }
+    .classification label{
+        // margin-left: 15px;
+        min-width: 0;
+    }
+    .giant-screen .classification .classification-left label{
+        min-width: 0;
+    }
+    .classification .classification-left .sort img{
+        top: 1px;
+        right: 18px;
+    }
+    .classification .classification-left .batch img{
+        top: 1px;
+        right: 18px;
+    }
+    .classification .classification-left input{
+        width: 79%;
+    }
+    .classification .classification-left{
+        border: 0 none;
+    }
+
+    .classification a{
+        &:first-child{
+            margin-right: 10px;
+            &+a{
+                margin-left: 10px;
+            }
+        }
+    }
+
+    .page-contain a {
+        padding: 0px 5px;
+        margin: 0 3px;
+    }
+    .giant-screen .classification .classification-left input, .giant-screen .classification .classification-left select{
+        width: 60%;
+    }
+    .assort{
+        margin-top: 12px;
+    }
+    .province{
+        margin-top: 12px;
+    }
+    .giant-screen .classification .classification-right a{
+        margin-top: 20px;
+    }
+    .giant-screen .classification .classification-right a + a{
+        margin-top: 20px;
+    }
+    .giant-screen .classification .classification-left input.pis2{
+        width: 60%;
+        min-width: 0;
+    }
+    .giant-screen .classification .classification-right a{
+        // width: 31%;
+        width: 110px;
+    }
+    .unmovableContent{
+        // width: 100%;
+        // margin-bottom: 15px;
+        // overflow-y: hidden;
+        // -ms-overflow-style: -ms-autohiding-scrollbar;
+        // border: 1px solid #ddd;
+        // overflow-x: auto;
+    }
+    // 分页
+    .M-box a, .M-box1 a, .M-box2 a, .M-box3 a, .M-box4 a{
+        margin: 0 2px;
+        padding: 3px 9px;
+    }
+    .M-box a, .M-box1 a, .M-box2 a, .M-box3 a, .M-box4 a, .M-box .active, .M-box1 .active, .M-box2 .active, .M-box3 .active, .M-box4 .active{
+        padding: 3px 9px;
+    }
+    .M-box span, .M-box1 span, .M-box2 span, .M-box3 span, .M-box4 span{
+        margin: 0 2px;
+        padding: 3px 9px;
+    }
+    .paging input{
+        height: 28px;
+        width: 45px;
+        margin: 0 2px;
+    }
+    // 名镇
+    .giant-screen .classification .classification-left input.pis2{
+        width: 84%;
+        min-width: 0;
+    }
+    .giant-screen .classification .classification-left select.pis2{
+        width: 84%;
+        min-width: 0;
+    }
+    .giant-screen .classification .classification-left input.ii2{
+        width: 67%;
+        min-width: 0;
+    }
+    .giant-screen .classification .classification-left select.ii2{
+        width: 67%;
+        min-width: 0;
+    }
+    .giant-screen .classification .classification-left label{
+        min-width: 100px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 992px){
+    .giant-screen{
+        height: 300px;
+    }
+    .giant-screen .classification .classification-left input.ii2{
+        min-width: 180px;
+    }
+    .giant-screen .classification .classification-left select.ii2{
+        min-width: 180px;
+    }
+    .giant-screen .classification .classification-right a{
+        width: 100px;
+    }
+    .giant-screen .classification .classification-left input, .giant-screen .classification .classification-left select{
+        min-width: 0;
+        width: 60%;
+    }
+    .giant-screen .classification .classification-left label {
+        min-width: 50px;
+    }
+    .assort{
+        margin-top: 12px;
+    }
+    // 分页
+    .M-box a, .M-box1 a, .M-box2 a, .M-box3 a, .M-box4 a{
+        margin: 0 2px;
+        padding: 3px 9px;
+    }
+    .M-box a, .M-box1 a, .M-box2 a, .M-box3 a, .M-box4 a, .M-box .active, .M-box1 .active, .M-box2 .active, .M-box3 .active, .M-box4 .active{
+        padding: 3px 9px;
+    }
+    .M-box span, .M-box1 span, .M-box2 span, .M-box3 span, .M-box4 span{
+        margin: 0 2px;
+        padding: 3px 9px;
+    }
+    .paging input{
+        height: 28px;
+        width: 45px;
+        margin: 0 2px;
+    }
+    // 名镇
+    .giant-screen .classification .classification-left input.pis2{
+        width: 84%;
+        min-width: 0;
+    }
+    .giant-screen .classification .classification-left select.pis2{
+        width: 67%;
+        min-width: 0;
+    }
+
+    .giant-screen .classification .classification-left input.ii2{
+        width: 67%;
+        min-width: 0;
+    }
+    .giant-screen .classification .classification-left select.ii2{
+        width: 67%;
+        min-width: 0;
+    }
+    .giant-screen .classification .classification-left label{
+        min-width: 70px;
+    }
+    .giant-screen .classification .classification-right a{
+        margin-top: 20px;
+    }
+    .giant-screen .classification .classification-right a + a{
+        margin-top: 0;
+        margin-top: 20px;
+        margin-left: 10px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1200px){
+    .giant-screen{
+        height: 285px;
+    }
+    .giant-screen .classification .classification-left input.ii2{
+        min-width: 215px;
+    }
+    .giant-screen .classification .classification-left select.ii2{
+        min-width: 215px;
+    }
+    .giant-screen .classification .classification-right a{
+        width: 125px;
+    }
+    // .giant-screen .classification .classification-left input, .giant-screen .classification .classification-left select{
+    //     min-width: 145px;
+    // }
+    // .giant-screen .classification .classification-left label{
+    //     min-width: 0;
+    // }
+    .assort{
+        margin-top: 12px;
+    }
+    // 名镇
+    .giant-screen .classification .classification-left input.pis2{
+        width: 84%;
+        min-width: 0;
+    }
+    .giant-screen .classification .classification-left select.pis2{
+        width: 67%;
+        min-width: 0;
+    }
+
+    .giant-screen .classification .classification-left input.ii2{
+        width: 67%;
+        min-width: 0;
+    }
+    .giant-screen .classification .classification-left select.ii2{
+        width: 67%;
+        min-width: 0;
+    }
+    .giant-screen .classification .classification-left label{
+        min-width: 70px;
+    }
+
+}
+
+@media (min-width: 1200px) and (max-width: 1280px){
+    // 名镇
+    .giant-screen .classification .classification-left input.pis2{
+        width: 84%;
+        min-width: 0;
+    }
+    .giant-screen .classification .classification-left select.pis2{
+        width: 67%;
+        min-width: 0;
+    }
+
+
+    .giant-screen .classification .classification-left input.ii2{
+        width: 67%;
+        min-width: 0;
+    }
+    .giant-screen .classification .classification-left select.ii2{
+        width: 67%;
+        min-width: 0;
+    }
+    .giant-screen .classification .classification-left label{
+        min-width: 70px;
+    }
+}
+
+
+

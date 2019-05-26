@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <title>国家文物局综合行政管理平台</title>
+    <script src="/vendor/jquery/jquery.min.js"></script>
+    <script src="/themes/classic/global/js/cmx-route.js"></script>
+    <script src="/themes/classic/global/js/main.js"></script>
+    <script src="/js/app/f-gover-approval/models/public-model.js"></script>
+</head>
+
+<body>
+
+</body>
+<script>
+    var applyId = GetUrlParamString('applyId');
+    var projectNum = GetUrlParamString('projectNum');
+    var from = GetUrlParamString('from');
+    var isUse = GetUrlParamString('isUse');
+    var token = GetUrlParamString('token');
+    var accClass = GetUrlParamString('accClass');
+    var role = GetUrlParamString('role');
+    var status = GetUrlParamString('status');
+    var role2client = [];
+    role2client['11'] = 'nation'; //国家局
+    role2client['12'] = 'province'; //省级
+    role2client['13'] = 'wenwujinchujingshenhe'; //文物进出境
+    role2client['14'] = 'bowuguan'; //博物馆
+    role2client['15'] = 'guobaodanwei'; //国保单位
+    role2client['16'] = 'inspection'; //专业评估机构
+    role2client['17'] = 'inspection'; //专家
+    role2client['18'] = 'paimaijigou'; //拍卖机构
+    role2client['19'] = 'gongzhongyonghu'; //公众用户
+    role2client['1A'] = 'kaogufajuedanwei'; //考古发掘单位
+    role2client['1B'] = 'kaogulingdui'; //考古领队
+    role2client['21'] = 'admin'; //系统管理员
+    role2client['22'] = 'admin'; //系统安全员
+    role2client['23'] = 'admin'; //安全审计员
+    role2client['24'] = 'admin'; //系统操作员
+    putData("role", role2client[accClass]);
+    putData("token", token);
+    if (!IsEmpty(GetUrlParamString('code'))) {
+        putData('socketCode', GetUrlParamString('code'));
+    }
+    new cmx.process()
+        .turn('jumpToApply', {
+            data: [{
+                status: status,
+                applyId: applyId,
+                projectNum: projectNum
+            }],
+            isUse: isUse == '1',
+            index: 0,
+            from: from
+        }).start();
+</script>
+
+</html>

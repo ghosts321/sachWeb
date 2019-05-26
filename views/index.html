@@ -1,0 +1,997 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html class="no-js css-menubar" lang="zh-cn">
+
+<head>
+    <title>主页</title>
+    <%- include('./includes/head.html') %>
+        <!-- 图标 CSS-->
+        <link rel="stylesheet" href="/fonts/font-awesome/font-awesome.css">
+        <link rel="stylesheet" href="/fonts/web-icons/web-icons.css">
+
+
+        <link rel="stylesheet" href="/vendor/webuploder/webuploader.css">
+
+        <link rel="stylesheet" href="/vendor/bootstrap-select/bootstrap-select.css">
+        <link rel="stylesheet" href="/vendor/icheck/icheck.css">
+        <!-- 插件 CSS -->
+        <link rel="stylesheet" href="/vendor/clockpicker/clockpicker.css">
+        <link rel="stylesheet" href="/vendor/bootstrap-colorpicker/colorpicker.css">
+        <link rel="stylesheet" href="/vendor/jstree/jstree.css">
+        <link rel="stylesheet" href="/vendor/animsition/animsition.css">
+        <link rel="stylesheet" href="/vendor/toastr/toastr.css">
+        <link rel="stylesheet" href="/vendor/bootstrap-datepicker/bootstrap-datepicker.css">
+        <link rel="stylesheet" href="/vendor/bootstrap-datetimepicker/bootstrap-datetimepicker.min.css">
+        <link rel="stylesheet" href="/vendor/select2/select2.css">
+        <link rel="stylesheet" href="/vendor/magnific-popup/magnific-popup.css">
+
+        <!-- 插件 -->
+        <script src="/vendor/jquery/jquery.min.js"></script>
+        <script src="/vendor/webuploder/webuploader.js"></script>
+        <script src="/vendor/magnific-popup/jquery.magnific-popup.min.js" data-name="popup"></script>
+        <script src="/vendor/bootstrap-select/bootstrap-select.min.js"></script>
+        <script src="/vendor/select2/select2.min.js" data-name="select2"></script>
+        <script src="/vendor/select2/i18n/zh-CN.min.js" data-deps="select2"></script>
+        <script src="/vendor/icheck/icheck.min.js"></script>
+        <script src="/vendor/bootstrap/bootstrap.min.js"></script>
+        <script src="/vendor/modernizr/modernizr.min.js"></script>
+        <script src="/vendor/breakpoints/breakpoints.min.js"></script>
+        <script src="/vendor/artTemplate/template.min.js"></script>
+        <script src="/vendor/toastr/toastr.min.js"></script>
+        <script src="/vendor/bootbox/bootbox.min.js"></script>
+        <script src="/vendor/clockpicker/bootstrap-clockpicker.min.js"></script>
+        <script src="/vendor/bootstrap-colorpicker/bootstrap-colorpicker.min.js"></script>
+        <script src="/vendor/bootstrap-datepicker/bootstrap-datepicker.js"></script>
+        <script src="/vendor/bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.min.js"></script>
+        <script src="/vendor/bootstrap-tagsinput/bootstrap-tagsinput.min.js"></script>
+        <script type="text/javascript" src="/vendor/resizable-columns/jq.resizableColumns.js"></script>
+
+        <link href="/vendor/jquery-viewer-master/viewer.css" rel="stylesheet">
+        <script src="/vendor/jquery-viewer-master/viewer.js"></script>
+
+        <!-- 核心  -->
+        <script src="/themes/classic/global/js/core.js"></script>
+        <script src="/themes/classic/base/js/site.js"></script>
+        <script src="/themes/classic/global/js/configs/site-configs.js"></script>
+        <script src="/themes/classic/global/js/components.js"></script>
+        <script src="/vendor/jstree/jstree.min.js" data-name="jstree"></script>
+        <script src="/vendor/socket/socket.io.js"></script>
+        <!-- 公共 -->
+        <script src="/themes/classic/global/js/openapi.js"></script>
+
+        <script src="/themes/classic/global/js/cmx-route.js"></script>
+        <script src="/themes/classic/global/js/main.js"></script>
+        <link rel="stylesheet" href="/vendor/bootstrap-slider/bootstrap-slider.css">
+        <link rel="stylesheet" href="/fonts/ionicons/ionicons.css">
+        <link rel="stylesheet" href="/css/examples/components/basic/icon.css">
+        <link rel="stylesheet" href="/fonts/mfglabs/mfglabs.css">
+        <link rel="stylesheet" href="/css/index.css">
+
+
+        <script src="/themes/classic/global/js/struct.js"></script>
+        <script src="/themes/classic/global/js/build-modal-form.js"></script>
+        <script src="/themes/classic/global/js/build-horizonal-form.js"></script>
+        <script src="/themes/classic/global/js/md5.min.js"></script>
+        <script src="/js/index-model.js"></script>
+        <script src="/js/index-view.js"></script>
+        <script src="/js/index.js"></script>
+
+        <script>
+            Breakpoints();
+        </script>
+
+        <style>
+            .label-qian {
+                background-color: #E9967A;
+                border-color: #E9967A;
+                color: white;
+            }
+
+            .site-menubar-fold .navbar-brand {
+                display: none;
+            }
+
+            .cmx-right-bar {
+                height: 100%;
+                width: 40px;
+                position: fixed;
+                top: 0;
+                right: 0;
+                z-index: 1999;
+                display: table;
+                box-shadow: -1px -1px 6px -1px #ccc;
+                background: #fff;
+            }
+
+            .cmx-right-bar .image {
+                width: 40px;
+                height: 40px;
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: center;
+                position: absolute;
+                cursor: pointer;
+            }
+
+            .cmx-right-bar .vertical-align-middle {
+                height: 150px;
+                display: table-cell;
+                vertical-align: middle;
+            }
+
+            .cmx-right-bar .image-0 {
+                background-image: url('/images/right-bar/image-0.png');
+            }
+
+            .cmx-right-bar .image-0:hover {
+                background-image: url('/images/right-bar/image-0-light.png');
+            }
+
+            .cmx-right-bar .image-0:hover+.label-0 {
+                display: block;
+            }
+
+            .cmx-right-bar .image-1 {
+                background-image: url('/images/right-bar/image-1.png');
+            }
+
+            .cmx-right-bar .image-1:hover {
+                background-image: url('/images/right-bar/image-1-light.png');
+            }
+
+            .cmx-right-bar .image-1:hover+.label-1 {
+                display: block;
+            }
+
+            .cmx-right-bar .image-2 {
+                background-image: url('/images/right-bar/image-2.png');
+            }
+
+            .cmx-right-bar .image-2:hover {
+                background-image: url('/images/right-bar/image-2-light.png');
+            }
+
+            .cmx-right-bar .image-2:hover+.label-2 {
+                display: block;
+            }
+
+            .cmx-right-bar .image-3 {
+                background-image: url('/images/right-bar/image-3.png');
+            }
+
+            .cmx-right-bar .image-3:hover {
+                background-image: url('/images/right-bar/image-3-light.png');
+            }
+
+            .cmx-right-bar .image-3:hover+.label-3 {
+                display: block;
+            }
+
+            .cmx-right-bar .image-4 {
+                background-image: url('/images/right-bar/image-4.png');
+            }
+
+            .cmx-right-bar .image-4:hover {
+                background-image: url('/images/right-bar/image-4-light.png');
+            }
+
+            .cmx-right-bar .image-4:hover+.label-4 {
+                display: block;
+            }
+
+            .cmx-right-bar .image-5 {
+                background-image: url('/images/right-bar/image-5.png');
+            }
+
+            .cmx-right-bar .image-5:hover {
+                background-image: url('/images/right-bar/image-5-light.png');
+            }
+
+            .cmx-right-bar .image-5:hover+.label-5 {
+                display: block;
+            }
+
+            .cmx-right-bar .image-6 {
+                background-image: url('/images/right-bar/image-6.png');
+            }
+
+            .cmx-right-bar .image-6:hover {
+                background-image: url('/images/right-bar/image-6-light.png');
+            }
+
+            .cmx-right-bar .image-6:hover+.label-6 {
+                display: block;
+            }
+
+            .cmx-right-bar .image-7 {
+                background-image: url('/images/right-bar/image-7.png');
+            }
+
+            .cmx-right-bar .image-7:hover {
+                background-image: url('/images/right-bar/image-7-light.png');
+            }
+
+            .cmx-right-bar .image-7:hover+.label-7 {
+                display: block;
+            }
+
+            .cmx-right-bar .rightbar-panel {
+                height: 40px;
+                margin: 10px 0px;
+            }
+
+            .cmx-right-bar .labelpanel {
+                cursor: pointer;
+                display: none;
+                position: absolute;
+                height: 40px;
+                padding-left: 10px;
+                line-height: 40px;
+                background: #4b636f;
+                color: #fff;
+                z-index: 0;
+            }
+
+            .cmx-right-bar .labelpanel.label-0 {
+                width: 88px;
+                left: -87px;
+            }
+
+            .cmx-right-bar .labelpanel.label-1 {
+                width: 75px;
+                left: -74px;
+            }
+
+            .cmx-right-bar .labelpanel.label-2 {
+                width: 88px;
+                left: -87px;
+            }
+
+            .cmx-right-bar .labelpanel.label-4 {
+                width: 80px;
+                left: -79px;
+            }
+
+            .cmx-right-bar .labelpanel.label-5 {
+                width: 100px;
+                left: -99px;
+            }
+
+            .cmx-right-bar .labelpanel.label-6 {
+                width: 100px;
+                left: -99px;
+            }
+
+            .cmx-right-bar .labelpanel.label-7 {
+                width: 80px;
+                left: -79px;
+            }
+
+            .cmx-right-bar .labelpanel.label-3 {
+                width: 150px;
+                left: -149px;
+                height: 170px;
+                text-align: center;
+                padding: 10px 0 0 0 !important;
+            }
+
+            .cmx-right-bar .labelpanel.label-3 img {
+                width: 130px;
+                height: 130px;
+            }
+
+            .cmx-right-bar .labelpanel.label-3 p {
+                margin: 0;
+            }
+
+            .login-form-body {
+                width: 100%;
+                height: 100%;
+                position: fixed;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                top: 0;
+                background: rgba(0, 0, 0, 0.5);
+                z-index: 2019;
+            }
+
+            .login-form-body>.row {
+                position: fixed;
+                top: 20%;
+                z-index: 2019;
+                padding: 30px 20px 30px 20px;
+                background: #fff;
+            }
+
+            .login-form-body .row input {
+                height: 42px;
+            }
+
+            .login-form-body button {
+                width: 100px;
+            }
+
+            .onlyapp {
+                display: none;
+            }
+
+            .login-form-body {
+                display: none;
+            }
+
+            html.fromapp .onlyapp {
+                display: block;
+            }
+
+            html.fromapp {
+                overflow: auto !important;
+            }
+
+            html.fromapp body {
+                overflow: auto !important;
+                height: auto !important;
+            }
+
+            html.fromapp .site-menubar {
+                display: none !important;
+            }
+
+            html.fromapp .site-navbar {
+                display: none !important;
+            }
+
+            html.fromapp {
+                padding-top: 0 !important;
+            }
+
+            html.fromapp main.site-page {
+                margin-right: 0 !important;
+            }
+
+            html.fromapp .cmx-header {
+                top: 0 !important;
+            }
+
+            html.fromapp .cmx-header-title {
+                display: none;
+            }
+
+            html.fromapp .page-main {
+                margin-top: 0 !important;
+            }
+
+            html.fromapp .cmx-header>div {
+                padding-left: 0 !important;
+            }
+
+            html.fromapp .cmx-button {
+                text-align: center;
+                padding: 0 !important;
+                float: none;
+            }
+
+            html.fromapp .cmx-form-body {
+                width: 100% !important;
+            }
+
+            html.fromapp #cmx-button-return {
+                display: none !important;
+            }
+
+            html.fromiframe .site-navbar {
+                display: none !important;
+            }
+
+            html.fromiframe {
+                padding-top: 0 !important;
+            }
+
+            html.fromiframe main.site-page {
+                margin-right: 0 !important;
+                transform: none !important;
+                -webkit-transform: none !important;
+                -ms-transform: none !important;
+            }
+
+            html.fromiframe .site-menubar-open .site-contabs,
+            .site-menubar-open .site-page,
+            .site-menubar-open .site-footer {
+                transform: none !important;
+                -webkit-transform: none !important;
+                -ms-transform: none !important;
+            }
+
+            html.fromiframe .cmx-header {
+                top: 0 !important;
+            }
+
+            html.fromiframe .cmx-header-title {
+                display: none;
+            }
+
+            html.fromiframe .cmx-form-body {
+                width: 100% !important;
+            }
+
+            html.fromiframe .cmx-header {
+                display: none !important;
+            }
+
+            html.fromiframe .site-menubar {
+                display: none !important;
+            }
+
+            html.fromiframe .site-page {
+                margin-top: 0;
+                margin-left: 0;
+            }
+
+            html.fromiframe body {
+                padding-top: 0px !important;
+            }
+
+            html.fromiframe .page-header {
+                padding: 0px !important;
+            }
+
+            html.fromiframe .page-main {
+                margin-top: 0px !important;
+            }
+
+            html.fromiframe .cmx-right-bar {
+                display: none !important;
+            }
+
+            html.fromiframe #cmx-edit {
+                overflow: auto !important;
+            }
+
+            .g-file-upload {
+                position: fixed;
+                bottom: 0;
+                right: 0;
+                height: 150px;
+                margin: auto;
+                z-index: 999999;
+                display: none;
+            }
+
+            .g-file-upload .g-file-body {
+                margin: 5px;
+                box-shadow: 0px 1px 9px 1px #cacaca;
+                height: 100%;
+                background: #fff;
+                padding: 20px 5px 5px 5px;
+            }
+
+            .g-file-upload .g-close {
+                position: absolute;
+                right: 27px;
+                top: 7px;
+                font-size: 12px;
+            }
+
+            .g-file-upload .g-file-list {
+                overflow-y: auto;
+                height: 100%;
+            }
+
+            .g-file-upload .g-file-body .g-file-item {
+                margin: 8px 0;
+                border-bottom: 1px solid #ededed;
+            }
+
+            .g-file-upload .g-file-body h5 {
+                margin: 4px 0 4px 0;
+                font-size: 12px;
+            }
+
+            .g-file-upload .g-file-body .progress {
+                margin-bottom: 6px;
+                height: 2px;
+            }
+
+            .cmx-split {
+                height: 20px !important;
+                line-height: 20px !important;
+                color: #999 !important;
+            }
+
+            .contactinfo {
+                line-height: 20px;
+            }
+
+            .birth {
+                background-image: url("/images/sort.png") !important;
+                background-position: right !important;
+                background-repeat: no-repeat !important;
+            }
+
+            .desc {
+                background-image: url("/images/sort-down.png") !important;
+                background-position: right !important;
+                background-repeat: no-repeat !important;
+            }
+
+            .asc {
+                background-image: url("/images/sort-up.png") !important;
+                background-position: right !important;
+                background-repeat: no-repeat !important;
+            }
+        </style>
+</head>
+
+<body class="site-contabs-open">
+
+    <nav class="site-navbar navbar navbar-default navbar-fixed-top navbar-inverse" role="navigation">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle hamburger hamburger-close navbar-toggle-left hided" data-toggle="menubar">
+                <span class="sr-only">切换菜单</span>
+                <span class="hamburger-bar"></span>
+            </button>
+            <button type="button" class="navbar-toggle collapsed" data-target="#admui-navbarCollapse" data-toggle="collapse">
+                <i class="icon wb-more-horizontal" aria-hidden="true"></i>
+            </button>
+            <div class="navbar-brand navbar-brand-center site-gridmenu-toggle" data-toggle="gridmenu">
+                <!-- <img class="navbar-brand-logo visible-lg visible-xs navbar-logo" src="/images/logo-white2.png" title="Insec">
+                <img class="navbar-brand-logo hidden-xs hidden-lg navbar-logo-mini" src="/images/logo-white2.png" title="Insec"> -->
+            </div>
+            <div onclick="window.open('/')" class="navbar-brand navbar-brand-right hidden-xs hidden-sm hidden-md" style="font-weight: normal;padding-left: 0;">
+                <p>国家文物局</p>
+                <p class="cmx-web-title">综合行政管理平台</p>
+            </div>
+        </div>
+        <div class="navbar-container container-fluid">
+            <div class="collapse navbar-collapse navbar-collapse-toolbar" id="admui-navbarCollapse">
+                <ul class="nav navbar-toolbar navbar-left">
+                    <li class="hidden-float">
+                        <a data-toggle="menubar" style="padding: 23px 15px;" class="hidden-float" href="javascript:;" role="button" id="admui-toggleMenubar">
+                            <i class="icon hamburger hamburger-arrow-left">
+                                <span class="sr-only">切换目录</span>
+                                <span class="hamburger-bar"></span>
+                            </i>
+                        </a>
+                    </li>
+                    <li class="navbar-menu nav-tabs-horizontal nav-tabs-animate is-load" id="admui-navMenu">
+                        <ul class="nav navbar-toolbar nav-tabs" role="tablist">
+                            <!-- 动态生成导航栏 -->
+                        </ul>
+                    </li>
+                </ul>
+
+
+                <ul class="nav navbar-toolbar navbar-right navbar-toolbar-right">
+                    <li class="contactinfo margin-top-10">
+                        <p style="color:#FFF">技术平台联系电话
+                            <br>18500430019（刘老师） </p>
+                    </li>
+                    <li data-toggle="tooltip" data-placement="bottom" title="查看系统消息" data-original-title="查看系统消息">
+                        <a href="javascript:void(0);" onclick="showNotifyModal();" role="button">
+                            <i class="icon wb-user"></i>&nbsp;系统消息
+                            <span id="cmx-noread-count" class="badge badge-xs badge-radius badge-warning" style="margin-left: 5px;"></span>
+                        </a>
+                    </li>
+                    <li data-toggle="tooltip" data-placement="bottom" title="常用联系人、常用语、修改密码" data-original-title="常用联系人、常用语、修改密码">
+                        <a href="/app/f-gover-approval/usercenter/index.html" role="button">
+                            <i class="icon wb-user"></i>&nbsp;个人中心
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:logout();" class="msg-btn" role="button">
+                            <i class="icon wb-power" aria-hidden="true"></i> 登出
+                        </a>
+                    </li>
+                    <!--切换角色 logoff(); -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <nav class="site-menubar">
+        <div class="site-menubar-body" style="visibility: hidden;">
+            <div class="tab-content height-full" id="admui-navTabs">
+                <!-- 动态生成菜单栏 -->
+            </div>
+        </div>
+    </nav>
+
+    <div class="modal fade example-modal-md" id="model-notify" aria-hidden="true" aria-labelledby="notifyModalTabs" role="dialog"
+        tabindex="-1" z-index="2000">
+        <div class="modal-dialog operation-list modal-lg">
+            <div class="modal-header" style="background-color:#62a8ea;">
+                <button type="button" class="close" data-dismiss="modal" aria-label="关闭">
+                    <span aria-hidden="true">×</span>
+                </button>
+                <h4 class="modal-title" id="notifyModalTabs" style="color:#FFF;font-weight:500">系统消息</h4>
+            </div>
+            <div class="modal-content">
+                <div class="table-responsive padding-15">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th style="width:5%;">编号</th>
+                                <th style="width: 8%;">状态</th>
+                                <th style="width: 25%">标题</th>
+                                <th style="width: 52%">通知内容</th>
+                                <th class="text-nowrap" style="width: 15%">时间</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+
+                    </table>
+                    <div class="btn-group pull-right">
+                        <button type="button" class="btn btn-outline btn-default notify-prev-btn">上一页</button>
+                        <button type="button" class="btn btn-outline btn-default notify-next-btn">下一页</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <main class="site-page" style="margin-top: 0;margin-right:40px;">
+
+        <div class="page-container" id="admui-pageContent">
+            <%- include(path) %>
+        </div>
+
+        <div class="page-loading vertical-align text-center">
+            <div class="page-loader loader-default loader vertical-align-middle" data-type="default"></div>
+        </div>
+    </main>
+
+
+    <div class="login-form-body" id="login-form-body">
+        <div class="modal" style="display:block;">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button style="width: 26px;font-size: 26px;" type="button" class="close" onclick="$('#login-form-body').hide();" aria-label="关闭">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                        <h4 class="modal-title">快捷登录</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-xs-12 form-group">
+                                <input type="text" class="form-control" id="cmx-username" name="cmx-username" placeholder="用户名">
+                            </div>
+                            <div class="col-xs-12 form-group">
+                                <input type="password" class="form-control" id="cmx-password" name="cmx-password" placeholder="密码">
+                            </div>
+                            <div class="col-xs-5 form-group" style="height:42px;text-align: center;">
+                                <img src="/images/custom/chk-loding.png" id="cmx-chk-image" style="height:42px;width: 100%;" />
+                            </div>
+                            <div class="col-xs-7 form-group padding-left-0">
+                                <input type="text" class="form-control" id="cmx-validCode" name="validCode" placeholder="请输入验证码">
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="col-xs-12 form-group marigin-top-10" style="text-align:center;">
+                            <button class="btn btn-primary" id="cmx-loginBtn" type="button">
+                                登&nbsp;&nbsp;录
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="cmx-right-bar hidden-xs">
+        <div class="vertical-align-middle">
+            <div class="rightbar-panel" id="returnWorkbench">
+                <div class="image image-0">
+                </div>
+                <div class="labelpanel label-0">返回工作台</div>
+            </div>
+            <div id="seeAll" style="display:none" class="rightbar-panel" onclick="window.open('/app/f-gover-approval/nation/country-historicalAll.html')">
+                <div class="image image-7">
+                </div>
+                <div class="labelpanel label-7">查询检索</div>
+            </div>
+            <div class="rightbar-panel" id="remindersList" onclick="showRemindersList();">
+                <div class="image image-4 text-right">
+                    <span class="badge badge-danger" id="cmx-reminderlist-count"> 0</span>
+                </div>
+                <div class="labelpanel label-4">催办通知</div>
+            </div>
+            <!-- <div class="rightbar-panel" onclick="window.open('/sachhome/administrative-approval.html')">
+                <div class="image image-1">
+                </div>
+                <div class="labelpanel label-1">通知公告</div>
+            </div> -->
+            <!-- <div class="rightbar-panel" onclick="window.open('/sachhome/policy-and-regulations.html')">
+                <div class="image image-2">
+                </div>
+                <div class="labelpanel label-2">政策法规库</div>
+            </div> -->
+            <div class="rightbar-panel">
+                <div class="image image-3">
+                </div>
+                <div class="labelpanel label-3">
+                    <img class="qr-code" />
+                    <p>扫码下载APP</p>
+                </div>
+            </div>
+            <div class="rightbar-panel" onclick="window.open('/app/f-administrative-platform-protal/questionnaire.html')">
+                <div class="image image-5">
+                </div>
+                <div class="labelpanel label-5">系统意见反馈</div>
+            </div>
+            <div id="manual-download-btn" class="rightbar-panel" style="display:none">
+                <div class="image image-6">
+                </div>
+                <div class="labelpanel label-6">用户手册下载</div>
+            </div>
+        </div>
+    </div>
+    <div class="g-file-upload col-xs-12 col-sm-12 col-md-3 col-lg-3" style="margin-right:30px;">
+        <div class="g-file-body">
+            <div class="text-right g-close" id="showOrhidetext">
+                <a href="javascript:displayFileUploadBody();" style="font-size: 12px;padding-right:15px;">
+                    收起
+                </a>
+                <a href="javascript:closeFileUploadBody();" style="font-size: 12px;">
+                    关闭
+                </a>
+            </div>
+            <div class="g-file-list">
+
+            </div>
+        </div>
+    </div>
+    <div id="cmx-renameFileModel" class="modal fade" aria-hidden="true" aria-labelledby="cmx-renameFileModel" role="dialog" tabindex="-1">
+        <div class="modal-dialog modal-md">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span>文件重命名</span>
+                    <button class="pull-right close" data-dismiss="modal" aria-label="关闭">关闭</button>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-xs-12 form-group">
+                            <input type="text" id="cmx-renamefile-name" class="form-control" name="cmx-renamefile-name" placeholder="文件名">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button id="cmx-rename-btn" class="btn btn-primary" type="button">保存</button>
+                    <button type="button" class="btn btn-default cmx-cancle-btn" data-dismiss="modal">取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade in modal-primary" id="cmxRemindersListModal" aria-hidden="true" aria-labelledby="cmxRemindersListModal"
+        role="dialog" tabindex="-1">
+        <div class="modal-dialog modal-lg modal-center">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span>催办通知列表</span>
+                    <button class="pull-right close" data-dismiss="modal" aria-label="关闭">关闭</button>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="modal-body">
+                    <div class="form-inline">
+                        <div class="form-group">
+                            <label class="control-label" for="cmx-reminders-sendUserName" style="width: 80px;">催办人姓名</label>
+                            <input type="text" class="form-control" id="cmx-reminders-sendUserName" name="sendUserName">
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label" for="cmx-reminders-projectName">项目名称</label>
+                            <input type="text" class="form-control" id="cmx-reminders-projectName" name="projectName">
+                        </div>
+                        <div class="form-group">
+                            <button type="button" class="btn btn-info" id="cmx-reminders-search-btn">查询</button>
+                            <button type="button" class="btn btn-primary" id="cmx-reminders-search-clear">清除</button>
+                        </div>
+                    </div>
+                    <div class="table-responsive text-nowrap col-xs-12 padding-0" style="min-height:350px;">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>编号</th>
+                                    <th>催办人姓名</th>
+                                    <th>项目名称</th>
+                                    <th>状态</th>
+                                    <th>消息标题</th>
+                                    <th>消息内容</th>
+                                    <th>审批事项名称</th>
+                                    <th>被催办时间</th>
+                                </tr>
+                            </thead>
+                            <tbody id="cmx-reminders-list-tbody">
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="relic-footer col-xs-12 margin-top-10 margin-bottom-10">
+                        <!--  分页 -->
+                        <ul class="pagination" id="cmx-reminders-list-page" style="float:right;">
+                            <li>
+                                <a href="javascript:;" class="first">首页</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;" class="pre">上一页</a>
+                            </li>
+                            <li>
+                                <span>
+                                    <span class="nowpage">0</span>/
+                                    <span class="totalpage">0</span>页</span>
+                            </li>
+                            <li>
+                                <a href="javascript:;" class="next">下一页</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;" class="last">尾页</a>
+                            </li>
+                        </ul>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="loader-body hidden">
+        <div class="la-ball-spin-clockwise-fade la-2x">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <!-- <footer class="site-footer">
+        <div class="site-footer-legal">国家文物局综合行政管理平台
+        </div>
+        <div class="site-footer-right">
+            当前版本：v1.0.0
+        </div>
+    </footer> -->
+
+    <!-- 布局 -->
+    <script src="/themes/classic/base/js/sections/menu.js"></script>
+    <script src="/themes/classic/base/js/sections/media-menu.js"></script>
+    <script src="/themes/classic/base/js/sections/content-tabs.js"></script>
+
+    <!-- 插件 -->
+    <script src="/vendor/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js"></script>
+    <script src="/vendor/jquery-pjax/jquery.pjax.js"></script>
+    <script src="/themes/classic/global/js/plugins/responsive-tabs.js"></script>
+    <script src="/vendor/ashoverscroll/jquery-asHoverScroll.min.js"></script>
+    <script src="/vendor/slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="/vendor/screenfull/screenfull.min.js"></script>
+    <script src="/vendor/bootstrap-datepicker/bootstrap-datepicker.js"></script>
+    <script src="/vendor/bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.min.js"></script>
+
+    <script src="/vendor/bootstrap-datetimepicker/bootstrap-datetimepicker.min.js"></script>
+    <script src="/vendor/bootstrap-datetimepicker/bootstrap-datetimepicker.zh-CN.js"></script>
+
+    <!-- 消息通知 -->
+    <script src="/js/notify-msg.js"></script>
+    <!-- 引入 -->
+    <script src="/themes/classic/global/js/build-menu.js"></script>
+    <script src="/themes/classic/global/js/global-model.js"></script>
+    <script src="/themes/classic/global/js/global-view.js"></script>
+
+    <script>
+        //二维码工作台
+        handleRole();
+
+        function handleRole() {
+            var role = getData('role');
+            var qr_url = '',
+                workbench = '';
+            switch (role) {
+                case 'nation':
+                    workbench =
+                        "window.open('/app/f-administrative-platform-protal/nation-workbench.html?nowid=cmx-nav-012')";
+                    qr_url = '/images/right-bar/nation.png';
+                    break;
+                case 'province':
+                    workbench =
+                        "window.open('/app/f-administrative-platform-protal/province-workbench.html?nowid=cmx-nav-012')";
+                    qr_url = '/images/right-bar/province.png';
+                    break;
+                case 'inspection':
+                    workbench =
+                        "window.open('/app/f-administrative-platform-protal/inspection-workbench.html?nowid=cmx-nav-012')";
+                    qr_url = '/images/right-bar/inspection.png';
+                    break;
+                case 'counterpart':
+                    workbench =
+                        "window.open('/app/f-administrative-platform-protal/counterpart-workbench.html?nowid=cmx-nav-012')";
+                    qr_url = '/images/right-bar/counterpart.png';
+                    break;
+                case 'wenwujinchujingshenhe':
+                    workbench =
+                        "window.open('/app/f-gover-approval/nation/statistic/statistic.html?nowid=0-1')";
+                    qr_url = '/images/right-bar/counterpart.png';
+                    break;
+                case 'gongzhongyonghu':
+                    workbench =
+                        "window.open('/app/f-gover-approval/apply-table.html?nowid=cmx-nav-0111')";
+                    qr_url = '/images/right-bar/counterpart.png';
+                    break;
+                case 'bowuguan':
+                case 'guobaodanwei':
+                case 'paimaijigou':
+                case 'kaogulingdui':
+                case 'kaogufajuedanwei':
+                case 'zizhijigou':
+                    workbench =
+                        "window.open('/app/f-administrative-platform-protal/counterpart-workbench.html?nowid" +
+                        GetUrlParamString('nowid');
+                    qr_url = '/images/right-bar/counterpart.png';
+                    break;
+                default:
+                    workbench =
+                        "window.open('/app/f-administrative-platform-protal/counterpart-workbench.html?nowid" +
+                        GetUrlParamString('nowid');
+                    qr_url = '/images/right-bar/counterpart.png';
+                    break;
+            }
+            $('.cmx-right-bar').find('.rightbar-panel').first().attr('onclick', workbench);
+            $('.cmx-right-bar').find('.qr-code').attr('src', qr_url);
+        }
+
+        function geturgeCount() {
+            new cmx.process()
+                .turn('callajax', {
+                    url: api_ea + '/eaPubUrgedealmsg/urgeCount',
+                    data: JSON.stringify({
+                        token: getData('token')
+                    }),
+                    type: 'POST'
+                })
+                .turn(function (prevModelData, send, abort) {
+                    console.log(prevModelData)
+                    if (prevModelData.state == '200') {
+                        $('#cmx-reminderlist-count').html(prevModelData.data);
+                    }
+                })
+                .start();
+        }
+
+        $('#manual-download-btn').on("click", function () {
+            if (getData('role') == "nation") {
+                window.open('/app/国家文物局综合行政管理平台_国家局用户操作手册V1.1.pdf');
+            }
+            if (getData('role') == "province") {
+                window.open('/app/国家文物局综合行政管理平台_省局用户操作手册V1.1.pdf');
+            }
+            if (getData('role') == "inspection") {
+                if (getData('accClass') == '16') {
+                    window.open('/app/国家文物局综合行政管理平台_评估机构用户操作手册V1.1.pdf');
+                } else {
+                    window.open('/app/国家文物局综合行政管理平台_专家用户操作手册V1.1.pdf');
+                }
+            }
+        })
+
+        if (getData('role') == "nation" || getData('role') == "province" || getData('role') == "inspection") {
+            $('#manual-download-btn').show();
+        }
+
+        if (getData('role') == "nation") {
+            $('#seeAll').show();
+        }
+
+        geturgeCount();
+        //权限配置调用方法
+        control();
+        //常用语通用模块管理
+        getCommonWordsMulti();
+        refreshCommonWordsMulti();
+    </script>
+</body>
+
+</html>

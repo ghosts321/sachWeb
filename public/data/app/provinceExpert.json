@@ -1,0 +1,272 @@
+[
+    {
+        "columnname": "cmx-i-1",
+        "columnindex": "cmx-30-userName",
+        "serialnumber": "P00030",
+        "type": "text",
+        "name": "姓名",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": "short"
+        },
+        "extra": {
+            "class": "margin-bottom-20",
+            "func": "",
+            "width": "3",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-1",
+        "columnindex": "cmx-30-userId",
+        "serialnumber": "P00030",
+        "type": "text",
+        "name": "登录名(请输入6位以上字母和数字)",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": "short"
+        },
+        "extra": {
+            "class": "margin-bottom-20",
+            "func": "",
+            "width": "3",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-5",
+        "columnindex": "cmx-30-sex",
+        "serialnumber": "P00051",
+        "type": "special",
+        "name": "性别",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": ""
+        },
+        "extra": {
+            "class": "margin-bottom-20",
+            "func": "cmx_special_diction",
+            "width": "3",
+            "layout": "",
+            "placeholder": "",
+            "dic":"Sex"
+        }
+    },
+    {
+        "columnname": "cmx-i-2",
+        "columnindex": "cmx-30-dispOrder",
+        "serialnumber": "P00030",
+        "type": "text",
+        "name": "显示顺序(请填写数字从小到大排序)",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": "short"
+        },
+        "extra": {
+            "class": "margin-bottom-20",
+            "func": "",
+            "width": "3",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-1",
+        "columnindex": "cmx-30-strBirthday",
+        "serialnumber": "P000300",
+        "type": "dateType",
+        "name": "出生日期",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "complete"
+        },
+        "extra": {
+            "class": "margin-bottom-20",
+            "func": "",
+            "width": "3",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-1",
+        "columnindex": "cmx-30-idcard",
+        "serialnumber": "P00030",
+        "type": "text",
+        "name": "身份证号",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "short"
+        },
+        "extra": {
+            "class": "margin-bottom-20",
+            "func": "",
+            "width": "3 ",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-1",
+        "columnindex": "cmx-30-telNo",
+        "serialnumber": "P00030",
+        "type": "text",
+        "name": "手机号",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": "short"
+        },
+        "extra": {
+            "class": "margin-bottom-20",
+            "func": "",
+            "width": "3",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-1",
+        "columnindex": "cmx-30-email",
+        "serialnumber": "P00030",
+        "type": "text",
+        "name": "邮箱",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "short"
+        },
+        "extra": {
+            "class": "margin-bottom-20",
+            "func": "",
+            "width": "3",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-5",
+        "columnindex": "cmx-30-bussClass",
+        "serialnumber": "P00053",
+        "type": "special",
+        "name": "业务类型",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": ""
+        },
+        "extra": {
+            "class": "margin-bottom-20",
+            "func": "cmx_special_mutil",
+            "width": "12",
+            "layout": "",
+            "placeholder": "",
+            "dic":"ExpertBussClass"
+        }
+    }, 
+    {
+        "columnname": "cmx-i-5",
+        "columnindex": "cmx-30-profession",
+        "serialnumber": "P00054",
+        "type": "special",
+        "name": "专业特长",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": ""
+        },
+        "extra": {
+            "class": "margin-bottom-20",
+            "func": "cmx_special_mutil",
+            "width": "12",
+            "layout": "",
+            "placeholder": "",
+            "dic":"Profession"
+        }
+    },{
+        "columnname": "cmx-i-1",
+        "columnindex": "cmx-30-unitName",
+        "serialnumber": "P00030",
+        "type": "text",
+        "name": "单位名称",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "short"
+        },
+        "extra": {
+            "class": "margin-bottom-20",
+            "func": "",
+            "width": "4",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-5",
+        "columnindex": "cmx-30-position",
+        "serialnumber": "P00055",
+        "type": "special",
+        "name": "职称",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": ""
+        },
+        "extra": {
+            "class": "margin-bottom-20",
+            "func": "cmx_special_diction",
+            "width": "4",
+            "layout": "",
+            "placeholder": "",
+            "dic":"Position"
+        }
+    },
+    {
+        "columnname": "cmx-i-1",
+        "columnindex": "cmx-30-recomUnit",
+        "serialnumber": "P00030",
+        "type": "text",
+        "name": "推荐部门",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "short"
+        },
+        "extra": {
+            "class": "margin-bottom-20",
+            "func": "",
+            "width": "4",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    
+    {
+        "columnname": "cmx-i-10",
+        "columnindex": "cmx-30-summary",
+        "serialnumber": "P00030",
+        "type": "text",
+        "name": "专家简介",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "long"
+        },
+        "extra": {
+            "class": "margin-bottom-20",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    }
+]

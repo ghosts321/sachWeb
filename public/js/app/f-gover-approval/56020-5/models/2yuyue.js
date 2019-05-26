@@ -1,0 +1,73 @@
+cmx.route.model({
+    index: 'buildDepartApplyTable',
+    handle: function (parameter, prevModelData, send, abort) {
+        var param = prevModelData;
+        // console.log(param);
+        if(!IsNull(param.data)&&param.state=='200'){
+            send.toviewresolve(param).go();
+        }else {
+            send.toviewreject(param.msg).go();
+        }
+    }
+});
+cmx.route.model({
+    index: 'yuyueReturn',
+    handle: function (parameter, prevModelData, send, abort) {
+        var param = prevModelData;
+        console.log(param);
+        if(!IsNull(param.data)&&param.state=='200'){
+            send.toviewresolve(param.data).go();
+        }else {
+            send.toviewreject(param.msg).go();
+        }
+    }
+});
+cmx.route.model({
+    index: 'showYuyueInfo',
+    handle: function (parameter, prevModelData, send, abort) {
+        var param = prevModelData;
+        console.log(param);
+        if (param.state == "200"&&!IsEmpty(param)) {
+            $('#cmx-i-2').val(param.data.applyClassName);
+            $('#cmx-i-4').val(param.data.customsId);
+            $('.destination').css('display','none');
+            // $('#cmx-i-5').val((param.data.applyClassName=='展览')?param.data.destination:param.data.custPurposeName);
+            $('#cmx-i-6').val(param.data.carryUser);
+            $('#cmx-i-7').val(param.data.telNo);
+            $('#cmx-i-8').val(param.data.appUserName);
+            $('#cmx-i-9').val(param.data.appTelNo);
+            $('#cmx-i-10').val(param.data.address);
+        } else {
+            showAlert({
+                type: 'error',
+                content: param.msg
+            });
+        }
+    }
+});
+
+cmx.route.model({
+    index: 'yuyueExamine',
+    handle: function (parameter, prevModelData, send, abort) {
+        var param = prevModelData;
+        console.log(param);
+        if(!IsNull(param.data)&&param.state=='200'){
+            send.toviewresolve(param.data).go();
+        }else {
+            send.toviewreject(param.msg).go();
+        }
+    }
+});
+
+cmx.route.model({
+    index: 'shouliNoExamine',
+    handle: function (parameter, prevModelData, send, abort) {
+        var param=prevModelData;
+        console.log(param);
+        if(!IsNull(param.data)&&param.state=='200'){
+            send.toviewresolve(param.data).go();
+        }else {
+            send.toviewreject(param.msg).go();
+        }
+    }
+});

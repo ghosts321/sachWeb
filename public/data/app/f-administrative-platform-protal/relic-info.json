@@ -1,0 +1,223 @@
+[{
+        "columnname": "cmx-i-1",
+        "columnindex": "cmx-2-RelicName",
+        "serialnumber": "P001",
+        "type": "text",
+        "name": "文物艺术品名称",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": "short"
+        },
+        "extra": {
+            "class": "margin-bottom-40",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-2",
+        "columnindex": "cmx-2-RelicType",
+        "serialnumber": "P002",
+        "type": "single",
+        "name": "类别",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": 1,
+            "remark": [{
+                    "id": 1,
+                    "value": "文物"
+                },
+                {
+                    "id": 2,
+                    "value": "复仿制品"
+                }
+            ]
+        },
+        "extra": {
+            "class": "margin-bottom-40",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+
+    {
+        "columnname": "cmx-i-3",
+        "columnindex": "cmx-2-RelicYear",
+        "serialnumber": "P003",
+        "type": "text",
+        "name": "年代",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": "short"
+        },
+        "extra": {
+            "class": "margin-bottom-40",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-4",
+        "columnindex": "cmx-2-RelicQuality",
+        "serialnumber": "P004",
+        "type": "single",
+        "name": "质地",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": 1,
+            "remark": [{
+                    "id": "01",
+                    "value": "石器"
+                },
+                {
+                    "id": "02",
+                    "value": "玉器"
+                }, {
+                    "id": "03",
+                    "value": "砖瓦"
+                }, {
+                    "id": "04",
+                    "value": "陶器"
+                }
+            ]
+        },
+        "extra": {
+            "class": "margin-bottom-40",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-5",
+        "columnindex": "cmx-2-RelicLevel",
+        "serialnumber": "P005",
+        "type": "single",
+        "name": "级别",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": 1,
+            "remark": [{
+                    "id": 1,
+                    "value": "一级文物"
+                },
+                {
+                    "id": 2,
+                    "value": "二级文物"
+                },
+                {
+                    "id": 3,
+                    "value": "三级文物"
+                },
+                {
+                    "id": 4,
+                    "value": "一般文物"
+                },
+                {
+                    "id": 5,
+                    "value": "未定级文物"
+                }
+            ]
+        },
+        "extra": {
+            "class": "margin-bottom-40",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-6",
+        "columnindex":"cmx-2-RelicNumber",
+        "serialnumber": "P006",
+        "type": "num",
+        "name": "数量",
+        "attribute": {
+          "default": "",
+          "notnull": 1,
+          "stype": "count",
+          "prefix": 0,
+          "unit": "个",
+          "decimal": 1,
+          "min": 0,
+          "max": 100
+        },
+        "extra": {
+          "class":"margin-bottom-40",
+          "func":"",
+          "width":"12",
+          "layout":"",
+          "placeholder":""
+        }
+    },
+    {
+        "columnname": "cmx-i-7",
+        "columnindex": "cmx-2-RelicSize",
+        "serialnumber": "P007",
+        "type": "text",
+        "name": "尺寸（cm）:",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": "short"
+        },
+        "extra": {
+            "class": "margin-bottom-40",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-8",
+        "columnindex": "cmx-2-Remark",
+        "serialnumber": "P008",
+        "type": "text",
+        "name": "备注",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": "long"
+        },
+        "extra": {
+            "class": "margin-bottom-40",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-9",
+        "columnindex": "cmx-2-files",
+        "serialnumber": "P00",
+        "type": "file",
+        "name": "文物图片",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "single": "0"
+        },
+        "extra": {
+            "class": "",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": "sss"
+        }
+    }
+]

@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.fl {
+  float: left;
+}
+.box2 {
+  height: 35px;
+  line-height: 35px;
+  // position: absolute;
+  // left: 50%;
+  // top: 50%;
+  // transform: translate(-50%, -50%);
+  text-align: center;
+  display: inline-block;
+  // min-width: 880px;
+}
+.box2 button {
+  padding: 0 10px;
+  margin: 0 10px;
+  height: 35px;
+  line-height: 35px;
+  float: left;
+  cursor: pointer;
+  // border: 1px solid #ebebeb;
+  background-color: #ffffff;
+
+  border: 1px solid #999999;
+  color: #606060;
+  background-color: #E6E6E6;
+}
+.box2 button[disabled="disabled"]{
+  border: 1px solid #DFDFDF;
+  background-color: #FFF;
+  color: #ddd;
+}
+.box2 .first-page,
+.box2 .last-page {
+  margin: 0;
+}
+.box2 .pageWrap {
+  height: 40px;
+  float: left;
+  overflow: hidden;
+}
+.box2 .pageWrap ul {
+  // width: 100000px;
+  width: 10000000px;
+  height: 40px;
+  float: left;
+}
+.box2 .pageWrap ul li {
+  width: 60px;
+  height: 35px;
+  line-height: 35px;
+  box-sizing: border-box;
+  cursor: pointer;
+  float: left;
+
+    width: 50px;
+    height: 35px;
+    margin-left: 5px;
+    margin-right: 5px;
+
+    border: 1px solid #999999;
+    color: #606060;
+    background-color: #E6E6E6;
+}
+.box2 .pageWrap ul li:hover {
+  color: #568dbd;
+  border-color: #62AAEC;
+  background-color: #D6ECFF;
+}
+.box2 .pageWrap ul .sel-page {
+  // background-color: yellow;
+
+    background: #D6ECFF;
+    color: #568dbd;
+    border-color: #62AAEC;
+}
+.box2 .jump-text {
+  width: 60px;
+  height: 35px;
+  line-height: 35px;
+  box-sizing: border-box;
+  text-align: center;
+  margin: 0 5px;
+  float: left;
+}
+.box2 .jump-button {
+  margin: 0;
+  float: left;
+}
+.box2 .total-pages,
+.box2 .total-count {
+  // margin-left: 10px;
+  color: #606060;
+  margin-left: 10px;
+  float: left;
+  font-size: 14px;
+}

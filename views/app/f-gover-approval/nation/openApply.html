@@ -1,0 +1,385 @@
+<title>依申请公开</title>
+<link rel="stylesheet" href="/vendor/bootstrap-datepicker/bootstrap-datepicker.css">
+
+<style>
+    .backg {
+        background: rgba(218, 232, 238, 0.5);
+    }
+</style>
+
+<div class="page animation-fade page-tables">
+    <div class="page-content">
+        <div class="panel">
+            <div class="panel-heading">
+                <h3 class="panel-title">
+                    依申请公开
+                    <span class="pull-right">
+                        <div class="radio-custom radio-primary radio-inline">
+                            <input type="radio" id="openApplyperson" name="legal" checked onclick="switchingObject('person');">
+                            <label for="openApplyperson">公民</label>
+                        </div>
+                        <div class="radio-custom radio-primary radio-inline">
+                            <input type="radio" id="openApplylegal" name="legal" onclick="switchingObject('legal');">
+                            <label for="openApplylegal">法人代表</label>
+                        </div>
+                    </span>
+                </h3>
+            </div>
+            <div class="panel-body container-fluid">
+                <div class="row row-lg margin-bottom-10">
+                    <div class="col-xs-12 col-md-8 col-lg-8">
+                        <div class="form-wrap">
+                            <div class="form-group">
+                                <div class="input-group margin-bottom-10" style="width: 100%;">
+                                    <input type="text" class="form-control" id="ApplyUserID" name="ApplyUserID" placeholder="" autocomplete="off">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-4 col-lg-4">
+                        <div class="form-wrap">
+                            <div class="form-group">
+                                <button type="button" class="btn btn-primary inputon" id="search-btn">查询</button>
+                                <button type="button" class="btn inputon" id="clear-search-form">清除</button>
+                                <button type="button" id="show-hide-info" class="show-info btn btn-outline btn-primary inputon">更多条件
+                                    <i class="icon wb-chevron-down" style="font-size: 10px;" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row row-lg condition-info" style="display:none;">
+                    <div class="col-xs-12 col-md-4 col-lg-4">
+                        <div class="form-wrap">
+                            <div class="form-group margin-bottom-10">
+                                <div class="input-group">
+                                    <span class="input-group-addon">载体形式</span>
+                                    <select id="CarrierForm" data-dic="CarrierForm" class="form-control">
+
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-4 col-lg-4">
+                        <div class="form-wrap">
+                            <div class="form-group margin-bottom-10">
+                                <div class="input-group">
+                                    <span class="input-group-addon">领取方式</span>
+                                    <select id="GetWay" data-dic="GetWay" class="form-control">
+
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="cmx-tab-person">
+                    <div class="row margin-0">
+                        <div class="table-responsive text-nowrap col-xs-12 padding-0" style="min-height:450px;">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>编号</th>
+                                        <th>操作</th>
+                                        <th>姓名</th>
+                                        <th>工作单位</th>
+                                        <th>证件名称</th>
+                                        <th>证件号码</th>
+                                        <th>联系电话</th>
+                                        <th>传真</th>
+                                        <th>邮政编码</th>
+                                        <th>电子邮件</th>
+                                        <th>联系地址</th>
+                                        <th>载体形式</th>
+                                        <th>领取方式</th>
+                                        <!-- <th>审批人</th>
+                                        <th>审批时间</th>
+                                        <th>审批意见</th> -->
+                                        <th>申请状态</th>
+                                        <th>备注</th>
+                                        <!-- <th>创建人</th>
+                                        <th>创建时间</th>
+                                        <th>修改人</th>
+                                        <th>修改时间</th> -->
+                                    </tr>
+                                </thead>
+                                <tbody id="cmx-ntd-tbody-person">
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="relic-footer col-xs-12 margin-top-10">
+                            <!--  分页 -->
+                            <ul class="pagination" id="cmx-pneedPage-person" style="float:right;">
+                                <li>
+                                    <a href="javascript:;" class="first">首页</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;" class="pre">上一页</a>
+                                </li>
+                                <li>
+                                    <span>
+                                        <input type="text" class="jumppage" style="width:30px;float:left;height:22px;border: 1px #ddd solid;text-align:center;" />
+                                        <span class="nowpage">0</span>/
+                                        <span class="totalpage">0</span>页</span>
+                                </li>
+                                <li>
+                                    <a href="javascript:;" class="next">下一页</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;" class="last">尾页</a>
+                                </li>
+                            </ul>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="cmx-tab-legal" style="display: none">
+                    <div class="row margin-0">
+                        <div class="table-responsive text-nowrap col-xs-12 padding-0" style="min-height:450px;">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>编号</th>
+                                        <th>操作</th>
+                                        <th>名称</th>
+                                        <th>法人代表</th>
+                                        <th>组织机构信息</th>
+                                        <th>联系人信息</th>
+                                        <th>联系人电话</th>
+                                        <th>传真</th>
+                                        <th>邮政编码</th>
+                                        <th>电子邮箱</th>
+                                        <th>联系地址</th>
+                                        <th>载体形式</th>
+                                        <th>领取方式</th>
+                                        <!-- <th>审批人</th>
+                                        <th>审批时间</th>
+                                        <th>审批意见</th> -->
+                                        <th>申请状态</th>
+                                        <th>备注</th>
+                                        <!-- <th>创建人</th>
+                                        <th>创建时间</th>
+                                        <th>修改人</th>
+                                        <th>修改时间</th> -->
+                                    </tr>
+                                </thead>
+                                <tbody id="cmx-ntd-tbody-legal">
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="relic-footer col-xs-12 margin-top-10">
+                            <!--  分页 -->
+                            <ul class="pagination" id="cmx-pneedPage-legal" style="float:right;">
+                                <li>
+                                    <a href="javascript:;" class="first">首页</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;" class="pre">上一页</a>
+                                </li>
+                                <li>
+                                    <span>
+                                        <input type="text" class="jumppage" style="width:30px;float:left;height:22px;border: 1px #ddd solid;text-align:center;" />
+                                        <span class="nowpage">0</span>/
+                                        <span class="totalpage">0</span>页</span>
+                                </li>
+                                <li>
+                                    <a href="javascript:;" class="next">下一页</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;" class="last">尾页</a>
+                                </li>
+                            </ul>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="cmx-table-detail-legal" class="margin-20 padding-20" style="background-color: #fff;display:none">
+        <h3 key="title" class="margin-0"></h3>
+        <button class="btn btn-info pull-right margin-bottom-10 cmx-button-return">返回</button>
+        <div class="clearfix"></div>
+        <div class="table-responsive">
+            <table class="table table-bordered">
+                <tbody class="table-matter">
+                    <tr>
+                        <td class="backg text-center">单位名称</td>
+                        <td colspan="2" key="UnitName"></td>
+                        <td class="backg text-center">法人代表</td>
+                        <td colspan="2" key="CrName"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="1" class="backg text-center">组织机构信息</td>
+                        <td colspan="5" key="OrgCode"></td>
+                    </tr>
+                    <tr>
+                        <td class="backg text-center">联系人</td>
+                        <td colspan="2" key="ContactorName"></td>
+                        <td class="backg text-center">联系电话</td>
+                        <td colspan="2" key="ContactNO"></td>
+                    </tr>
+                    <tr>
+                        <td class="backg text-center">电子邮箱</td>
+                        <td colspan="2" key="Email"></td>
+                        <td class="backg text-center">传真</td>
+                        <td colspan="2" key="Fax"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="1" class="backg text-center">联系地址</td>
+                        <td colspan="5" key="Address"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="1" class="backg text-center">证件扫描件</td>
+                        <td colspan="5" key="IDCardIndex"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="1" class="backg text-center">所需信息标题描述</td>
+                        <td colspan="5" key="InfoTitle"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="1" class="backg text-center">所需信息内容描述</td>
+                        <td colspan="5" key="ContentDesc"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="1" class="backg text-center">所需信息的目的、用途</td>
+                        <td colspan="5" key="InforUse"></td>
+                    </tr>
+                    <tr>
+                        <td class="backg text-center">载体形式</td>
+                        <td colspan="2" key="CarrierForm"></td>
+                        <td class="backg text-center">领取方式</td>
+                        <td colspan="2" key="GetWay">2018-01-29</td>
+                    </tr>
+                    <tr>
+                        <td class="backg text-center">审批人</td>
+                        <td colspan="2" key="ApprUserID"></td>
+                        <td class="backg text-center">审批时间</td>
+                        <td colspan="2" key="ApprovalDate"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="1" class="backg text-center">审批意见</td>
+                        <td colspan="5" key="ApprOpinion"></td>
+                    </tr>
+                    <tr>
+                        <td class="backg text-center">申请状态</td>
+                        <td colspan="2" key="AppStatus"></td>
+                        <td class="backg text-center">备注</td>
+                        <td colspan="2" key="Remark"></td>
+                    </tr>
+                    <tr>
+                        <td class="backg text-center">创建人</td>
+                        <td colspan="2" key="CreateUserID"></td>
+                        <td class="backg text-center">创建时间</td>
+                        <td colspan="2" key="CreateDate"></td>
+                    </tr>
+                    <tr>
+                        <td class="backg text-center">修改人</td>
+                        <td colspan="2" key="UpdUserid"></td>
+                        <td class="backg text-center">修改时间</td>
+                        <td colspan="2" key="UpdDate"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div id="cmx-table-detail-person" class="margin-20 padding-20" style="background-color: #fff;display:none">
+        <h3 key="title" class="margin-0"></h3>
+        <button class="btn btn-info pull-right margin-bottom-10 cmx-button-return">返回</button>
+        <div class="clearfix"></div>
+        <div class="table-responsive">
+            <table class="table table-bordered">
+                <tbody class="table-matter">
+                    <tr>
+                        <td class="backg text-center">姓名</td>
+                        <td colspan="2" key="ApplyUserID"></td>
+                        <td class="backg text-center">工作单位</td>
+                        <td colspan="2" key="WorkUnit"></td>
+                    </tr>
+                    <tr>
+                        <td class="backg text-center">证件名称</td>
+                        <td colspan="2" key="IDCardType"></td>
+                        <td class="backg text-center">证件号码</td>
+                        <td colspan="2" key="IDCardNO"></td>
+                    </tr>
+                    <tr>
+                        <td class="backg text-center">联系电话</td>
+                        <td colspan="2" key="ContactNO"></td>
+                        <td class="backg text-center">传真</td>
+                        <td colspan="2" key="Fax"></td>
+                    </tr>
+                    <tr>
+                        <td class="backg text-center">邮政编码</td>
+                        <td colspan="2" key="PostalCode"></td>
+                        <td class="backg text-center">电子邮箱</td>
+                        <td colspan="2" key="Email"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="1" class="backg text-center">联系地址</td>
+                        <td colspan="5" key="Address"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="1" class="backg text-center">证件扫描件</td>
+                        <td colspan="5" key="IDCardIndex"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="1" class="backg text-center">所需信息标题描述</td>
+                        <td colspan="5" key="InfoTitle"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="1" class="backg text-center">所需信息内容描述</td>
+                        <td colspan="5" key="ContentDesc"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="1" class="backg text-center">所需信息的目的、用途</td>
+                        <td colspan="5" key="InforUse"></td>
+                    </tr>
+                    <tr>
+                        <td class="backg text-center">载体形式</td>
+                        <td colspan="2" key="CarrierForm"></td>
+                        <td class="backg text-center">领取方式</td>
+                        <td colspan="2" key="GetWay">2018-01-29</td>
+                    </tr>
+                    <tr>
+                        <td class="backg text-center">审批人</td>
+                        <td colspan="2" key="ApprUserID"></td>
+                        <td class="backg text-center">审批时间</td>
+                        <td colspan="2" key="ApprovalDate"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="1" class="backg text-center">审批意见</td>
+                        <td colspan="5" key="ApprOpinion"></td>
+                    </tr>
+                    <tr>
+                        <td class="backg text-center">申请状态</td>
+                        <td colspan="2" key="AppStatus"></td>
+                        <td class="backg text-center">备注</td>
+                        <td colspan="2" key="Remark"></td>
+                    </tr>
+                    <tr>
+                        <td class="backg text-center">创建人</td>
+                        <td colspan="2" key="CreateUserID"></td>
+                        <td class="backg text-center">创建时间</td>
+                        <td colspan="2" key="CreateDate"></td>
+                    </tr>
+                    <tr>
+                        <td class="backg text-center">修改人</td>
+                        <td colspan="2" key="UpdUserid"></td>
+                        <td class="backg text-center">修改时间</td>
+                        <td colspan="2" key="UpdDate"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<script src="/vendor/bootstrap-datepicker/bootstrap-datepicker.min.js" data-name="datepicker"></script>
+<script src="/vendor/bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.min.js" data-deps="datepicker"></script>
+
+<script src="/js/app/f-gover-approval/models/public-model.js"></script>
+<script src="/js/app/f-gover-approval/views/public-view.js"></script>
+<script src="/js/app/f-gover-approval/nation/models/openApply-model.js"></script>
+<script src="/js/app/f-gover-approval/nation/views/openApply-view.js"></script>
+<script src="/js/app/f-gover-approval/nation/openApply.js"></script>

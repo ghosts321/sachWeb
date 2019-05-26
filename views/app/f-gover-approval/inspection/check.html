@@ -1,0 +1,103 @@
+<title>办理信息</title>
+
+<link rel="stylesheet" href="/vendor/jstree/jstree.css">
+<link rel="stylesheet" href="/css/app/f-gover-approval/processing-information.css">
+<link rel="stylesheet" href="/vendor/bootstrap-select/bootstrap-select.css">
+<script src="/vendor/jstree/jstree.min.js"></script>
+<script src="/vendor/bootstrap-select/bootstrap-select.min.js"></script>
+
+<script src="/vendor/clipboard/clipboard.min.js"></script>
+
+<script src="/js/app/f-gover-approval/models/public-model.js"></script>
+<script src="/js/app/f-gover-approval/views/public-view.js"></script>
+
+<script src="/js/app/f-gover-approval/inspection/check.js"></script>
+<style>
+    .n1,
+    .n2,
+    .n3 {
+        display: none;
+    }
+</style>
+<div class="page animation-fade" style="background-color:#fff;">
+    <div class="cmx-header">
+        <div class="padding-top-10 padding-bottom-10 padding-left-20">
+            <span class="cmx-header-title hidden-md hidden-sm hidden-xs">
+
+            </span>
+            <div class="cmx-button padding-right-0">
+                <button class="btn btn-primary" id="cmx-button-return" style="margin-right:10px;">返回</button>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <!-- 内容-->
+    <div class="page-main margin-top-50">
+        <div class="page-content" style="color:#76838f;">
+            <div class="example-wrap">
+                <div class="nav-tabs-horizontal">
+                    <ul class="nav nav-tabs nav-tabs-line" role="tablist">
+                        <li role="presentation" class="active" id="daohang-2">
+                            <a data-toggle="tab" href="#processTabTwo" aria-controls="processTabTwo" role="tab" aria-expanded="false">
+                                申请原文
+                            </a>
+                        </li>
+                        <li role="presentation" class="" id="daohang-4">
+                            <a data-toggle="tab" href="#processTabThree" aria-controls="processTabThree" role="tab" aria-expanded="false">
+                                <i class="icon wb-bell" aria-hidden="true"></i>第三方评审
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="processTabTwo" role="tabpanel">
+                            <div class="panel" id="cmx-form-body-inpingshen" style="overflow: scroll;">
+                                <div class="panel-body container-fluid" style="overflow: hidden !important;width: 100%;height: 100%;padding: 0;">
+                                    <iframe id="cmx-form" frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="no" allowtransparency="yes"
+                                        style="width:100%;height:100%;">
+                                    </iframe>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="processTabThree" role="tabpanel">
+                            <div class="panel" id="cmx-form-body-pingshen" style="overflow: scroll;">
+                                <div class="panel-body">
+                                    <div class="example-wrap margin-bottom-20">
+                                        <h4 class="example-title ">意见<span style="color: red">*</span></h4>
+                                        <textarea class="form-control" id="provinceOpinion" rows="6"></textarea>
+                                    </div>
+                                    <div class="example-wrap margin-bottom-20">
+                                        <h4 class="example-title">备注</h4>
+                                        <textarea class="form-control" id="provinceResults" rows="6"></textarea>
+                                    </div>
+                                    <div class="pull-right">
+                                        <button class="btn btn-info" id="cmx-options-save" style="display: none">保存</button>
+                                        <button class="btn btn-info" id="cmx-options-send" style="display: none">发送</button>
+                                        <button class="btn btn-info" id="cmx-options-back" style="display: none">退回</button>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade example-modal-lg" id="pingshen-modal-2" aria-hidden="true" aria-labelledby="pingshen-modal-2" role="dialog"
+    tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="关闭">
+                    <span aria-hidden="true">×</span>
+                </button>
+                <h4 class="modal-title">评审意见</h4>
+            </div>
+            <div class="modal-body">
+                <div id="cmx-form-pingshen-2"></div>
+            </div>
+        </div>
+    </div>
+</div>

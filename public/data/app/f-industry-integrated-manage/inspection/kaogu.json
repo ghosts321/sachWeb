@@ -1,0 +1,232 @@
+[{
+        "columnname": "cmx-i-1",
+        "columnindex": "cmx-i-1",
+        "serialnumber": "P0001",
+        "type": "separator",
+        "name": "综合评价",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "title": "综合评价",
+            "desc": ""
+        },
+        "extra": {
+            "class": "margin-bottom-10 ",
+            "func": "",
+            "width": 12,
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-2",
+        "columnindex": "cmx-i-2",
+        "serialnumber": "P0002",
+        "type": "text",
+        "name": "价值评估",
+        "key":"item1",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": "long",
+            "max_length": 20000
+        },
+        "extra": {
+            "class": "",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-3",
+        "columnindex": "cmx-i-3",
+        "serialnumber": "P0003",
+        "type": "text",
+        "name": "现状评估",
+        "key":"item2",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": "long",
+            "max_length": 20000
+        },
+        "extra": {
+            "class": "",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-4",
+        "columnindex": "cmx-i-4",
+        "serialnumber": "P0004",
+        "type": "text",
+        "name": "保护区划",
+        "key":"item3",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": "long",
+            "max_length": 20000
+        },
+        "extra": {
+            "class": "",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    }, {
+        "columnname": "cmx-i-5",
+        "columnindex": "cmx-i-5",
+        "serialnumber": "P0005",
+        "type": "text",
+        "key":"item4",
+        "name": "保护措施",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": "long",
+            "max_length": 20000
+        },
+        "extra": {
+            "class": "",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    }, {
+        "columnname": "cmx-i-6",
+        "columnindex": "cmx-i-6",
+        "serialnumber": "P0006",
+        "type": "text",
+        "name": "专项规划",
+        "key":"item5",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": "long",
+            "max_length": 20000
+        },
+        "extra": {
+            "class": "",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    }, {
+        "columnname": "cmx-i-7",
+        "columnindex": "cmx-i-7",
+        "serialnumber": "P0007",
+        "type": "text",
+        "key":"item6",
+        "name": "规划图纸",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": "long",
+            "max_length": 20000
+        },
+        "extra": {
+            "class": "",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-8",
+        "columnindex": "cmx-i-8",
+        "serialnumber": "P0008",
+        "type": "separator",
+        "name": "专家评审意见",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "title": "专家评审意见",
+            "desc": ""
+        },
+        "extra": {
+            "class": "margin-bottom-10 ",
+            "func": "",
+            "width": 12,
+            "layout": "",
+            "placeholder": ""
+        }
+    }, {
+        "columnname": "cmx-i-9",
+        "columnindex": "cmx-i-9",
+        "serialnumber": "P0009",
+        "type": "text",
+        "key": "expertOpinion",
+        "name": "意见",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": "long",
+            "max_length": 20000
+        },
+        "extra": {
+            "class": "",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    }, {
+        "columnname": "cmx-i-10",
+        "columnindex": "cmx-i-10",
+        "serialnumber": "P0010",
+        "type": "single",
+        "name": "评审结论",
+        "key": "expertResultsName",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": 2,
+            "remark": [{
+                    "id": 1,
+                    "value": "通过"
+                },
+                {
+                    "id": 2,
+                    "value": "不通过"
+                }
+            ]
+        },
+        "extra": {
+            "class": "",
+            "func": "checkSingle('columnname','columnindex','type')",
+            "width": "",
+            "layout": "",
+            "placeholder": ""
+        }
+    }, {
+        "columnname": "cmx-i-11",
+        "columnindex": "cmx-i-11",
+        "serialnumber": "P0011",
+        "type": "text",
+        "key":"remark",
+        "name": "备注",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "long",
+            "max_length": 20000
+        },
+        "extra": {
+            "class": "",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    }
+]

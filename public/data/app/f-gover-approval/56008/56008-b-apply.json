@@ -1,0 +1,860 @@
+[{
+        "columnname": "cmx-i-44",
+        "columnindex": "cmx-i-44",
+        "serialnumber": "P0044",
+        "type": "separator",
+        "name": "申请人信息",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "title": "申请人信息",
+            "desc": ""
+        },
+        "extra": {
+            "class": "",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-45",
+        "columnindex": "cmx-i-45",
+        "serialnumber": "P0045",
+        "type": "special",
+        "name": "文件号",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": ""
+        },
+        "extra": {
+            "class": "format baseinfo hidden",
+            "func": "cmx_special_1",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-47",
+        "columnindex": "cmx-i-47",
+        "serialnumber": "P0047",
+        "type": "text",
+        "name": "文件标题",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "short",
+            "max_length": 200
+        },
+        "extra": {
+            "class": "format margin-left-0 hidden",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": "请输入文件标题"
+        }
+    }, {
+        "columnname": "cmx-i-46",
+        "columnindex": "cmx-i-46",
+        "serialnumber": "P0046",
+        "type": "text",
+        "name": "考古发掘项目负责人",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "short",
+            "max_length": 15
+        },
+        "extra": {
+            "class": "format",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": "请输入考古发掘项目负责人"
+        }
+    },{
+        "columnname": "cmx-i-48",
+        "columnindex": "cmx-i-48",
+        "serialnumber": "P0048",
+        "type": "text",
+        "name": "联系方式",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "short",
+            "max_length": 20
+        },
+        "extra": {
+            "class": "format baseinfo",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": "请输入联系电话"
+        }
+    },
+    {
+        "columnname": "cmx-i-1",
+        "columnindex": "cmx-i-1",
+        "serialnumber": "P0001",
+        "type": "separator",
+        "name": "发掘项目基本信息",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "title": "发掘项目基本信息",
+            "desc": ""
+        },
+        "extra": {
+            "class": "margin-bottom-10 baseinfo",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-2",
+        "columnindex": "cmx-i-2",
+        "serialnumber": "P0002",
+        "type": "text",
+        "name": "存档编号",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "short",
+            "max_length": 30
+        },
+        "extra": {
+            "class": "baseinfo format",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": "在项目发送到省级文物行政管理部门时自动获取"
+        }
+    },
+    {
+        "columnname": "cmx-i-3",
+        "columnindex": "cmx-i-3",
+        "serialnumber": "P0003",
+        "type": "special",
+        "name": "主申请单位",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": ""
+        },
+        "extra": {
+            "class": "baseinfo format",
+            "func": "cmx_special_2",
+            "width": "12",
+            "layout": "",
+            "placeholder": "请填写主申请单位，如在名录内请点击右侧选择按钮"
+        }
+    },
+    {
+        "columnname": "cmx-i-4",
+        "columnindex": "cmx-i-4",
+        "serialnumber": "P0004",
+        "type": "text",
+        "name": "配合申请单位",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "short",
+            "max_length": 200
+        },
+        "extra": {
+            "class": "margin-left-0 baseinfo format",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": "请填写配合申请单位，不超过50个汉字"
+        }
+    },
+    {
+        "columnname": "cmx-i-5",
+        "columnindex": "cmx-i-5",
+        "serialnumber": "P0005",
+        "type": "text",
+        "name": "主申请单位法定代表人",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": "short",
+            "max_length": 60
+        },
+        "extra": {
+            "class": "margin-left-0 baseinfo format",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": "请填写主申请单位法定代表人，不超过20个汉字"
+        }
+    },
+    {
+        "columnname": "cmx-i-6",
+        "columnindex": "cmx-i-6",
+        "serialnumber": "P0006",
+        "type": "dateType",
+        "name": "申请时间",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "",
+            "max_length": 20
+        },
+        "extra": {
+            "class": "format",
+            "func": "cmx_special_3",
+            "width": "12",
+            "layout": "",
+            "placeholder": "请选择申请时间"
+        }
+    },
+    {
+        "columnname": "cmx-i-7",
+        "columnindex": "cmx-i-7",
+        "serialnumber": "P0007",
+        "type": "text",
+        "name": "发掘单位地址",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": "short",
+            "max_length": 127
+        },
+        "extra": {
+            "class": "margin-left-0 baseinfo format",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": "请填写申请单位地址，不超过50个汉字"
+        }
+    },
+    {
+        "columnname": "cmx-i-8",
+        "columnindex": "cmx-i-8",
+        "serialnumber": "P0008",
+        "type": "separator",
+        "name": "发掘对象信息",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "title": "发掘对象信息",
+            "desc": ""
+        },
+        "extra": {
+            "class": "margin-bottom-10 baseinfo",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-9",
+        "columnindex": "cmx-i-9",
+        "serialnumber": "P0009",
+        "type": "text",
+        "name": "发掘对象名称",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": "short",
+            "max_length": 127
+        },
+        "extra": {
+            "class": "margin-left-0 baseinfo format",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": "请填写发掘对象名称，不超过127个汉字"
+        }
+    },
+    {
+        "columnname": "cmx-i-10",
+        "columnindex": "cmx-i-10",
+        "serialnumber": "P0010",
+        "type": "address-dic",
+        "name": "具体地址",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": "1"
+        },
+        "extra": {
+            "class": "format",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": "请填写具体地址，不超过50个汉字"
+        }
+    },
+    {
+        "columnname": "cmx-i-11",
+        "columnindex": "cmx-i-11",
+        "serialnumber": "P0011",
+        "type": "special",
+        "name": "遗址或墓葬时代",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": ""
+        },
+        "extra": {
+            "class": "baseinfo format",
+            "func": "cmx_special_013",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-12",
+        "columnindex": "cmx-i-12",
+        "serialnumber": "P0012",
+        "type": "text",
+        "name": "历年发掘情况",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": "long",
+            "max_length": 2000
+        },
+        "extra": {
+            "class": "margin-left-0 baseinfo format",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": "请填写历年发掘情况，不超过2000个汉字"
+        }
+    },
+    {
+        "columnname": "cmx-i-13",
+        "columnindex": "cmx-i-13",
+        "serialnumber": "P0013",
+        "type": "special",
+        "name": "文物保护单位级别",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": ""
+        },
+        "extra": {
+            "class": "",
+            "func": "cmx_special_012",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-14",
+        "columnindex": "cmx-i-14",
+        "serialnumber": "P0014",
+        "type": "text",
+        "name": "考古发掘报告、简报整理出版情况",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": "long",
+            "max_length": 1000
+        },
+        "extra": {
+            "class": "margin-left-0 baseinfo format",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": "请填写考古发掘报告、简报整理出版情况，不超过1000个汉字"
+        }
+    },
+    {
+        "columnname": "cmx-i-15",
+        "columnindex": "cmx-i-15",
+        "serialnumber": "P0015",
+        "type": "separator",
+        "name": "发掘地点具体位置",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "title": "发掘地点具体位置",
+            "desc": ""
+        },
+        "extra": {
+            "class": "margin-bottom-10 baseinfo",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-16",
+        "columnindex": "cmx-i-16",
+        "serialnumber": "P0016",
+        "type": "text",
+        "name": "发掘地点具体位置",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": "long",
+            "max_length": 250
+        },
+        "extra": {
+            "class": "margin-left-0 baseinfo format",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": "请填写发掘地点具体位置，不超过250个汉字"
+        }
+    },
+    {
+        "columnname": "cmx-i-17",
+        "columnindex": "cmx-i-17",
+        "serialnumber": "P0017",
+        "type": "handimg",
+        "name": "附图",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "single": "0"
+        },
+        "extra": {
+            "class": "format",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-19",
+        "columnindex": "cmx-i-19",
+        "serialnumber": "P0019",
+        "type": "separator",
+        "name": "地图标注",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "title": "地图标注",
+            "desc": ""
+        },
+        "extra": {
+            "class": "margin-bottom-10 baseinfo",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-20",
+        "columnindex": "cmx-i-20",
+        "serialnumber": "P0020",
+        "type": "num",
+        "name": "发掘地点经度",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "prefix": 0,
+            "unit": "度",
+            "decimal": 2,
+            "min": 0,
+            "max_length": 20
+        },
+        "extra": {
+            "class": "baseinfo",
+            "func": "",
+            "width": "6",
+            "layout": "",
+            "placeholder": "自动获取发掘地点经度"
+        }
+    },
+    {
+        "columnname": "cmx-i-21",
+        "columnindex": "cmx-i-21",
+        "serialnumber": "P0021",
+        "type": "num",
+        "name": "发掘地点纬度",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "prefix": 0,
+            "unit": "度",
+            "decimal": 2,
+            "min": 0,
+            "max_length": 20
+        },
+        "extra": {
+            "class": "baseinfo",
+            "func": "",
+            "width": "6",
+            "layout": "",
+            "placeholder": "自动获取发掘地点纬度"
+        }
+    },
+    {
+        "columnname": "cmx-i-22",
+        "columnindex": "cmx-i-22",
+        "serialnumber": "P0022",
+        "type": "special",
+        "name": "地图标注",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": ""
+        },
+        "extra": {
+            "class": "cmx-map",
+            "func": "cmx_special_4",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-23",
+        "columnindex": "cmx-i-23",
+        "serialnumber": "P0023",
+        "type": "separator",
+        "name": "发掘计划及有关情况",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "title": "发掘计划及有关情况",
+            "desc": ""
+        },
+        "extra": {
+            "class": "margin-bottom-10 baseinfo",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-24",
+        "columnindex": "cmx-i-24",
+        "serialnumber": "P0024",
+        "type": "special",
+        "name": "发掘类别",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": ""
+        },
+        "extra": {
+            "class": "",
+            "func": "cmx_special_010",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-18",
+        "columnindex": "cmx-i-18",
+        "serialnumber": "P0018",
+        "type": "file",
+        "name": "批文工作方案",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "single": "0"
+        },
+        "extra": {
+            "class": "baseinfo format",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-25",
+        "columnindex": "cmx-i-25",
+        "serialnumber": "P0025",
+        "type": "text",
+        "name": "发掘目的及工作方案",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": "long",
+            "max_length": 2000
+        },
+        "extra": {
+            "class": "margin-left-0 baseinfo format",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": "请填写发掘目的及工作方案，不超过2000个汉字"
+        }
+    },
+    {
+        "columnname": "cmx-i-26",
+        "columnindex": "cmx-i-26",
+        "serialnumber": "P0026",
+        "type": "special",
+        "name": "发掘时间",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": ""
+        },
+        "extra": {
+            "class": "format",
+            "func": "cmx_special_5",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-27",
+        "columnindex": "cmx-i-27",
+        "serialnumber": "P0027",
+        "type": "num",
+        "name": "发掘面积",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "prefix": 0,
+            "unit": "平方米",
+            "decimal": 2,
+            "min": 0,
+            "max_length": 20
+        },
+        "extra": {
+            "class": "format",
+            "func": "",
+            "width": "",
+            "layout": "",
+            "placeholder": "请填写发掘面积"
+        }
+    },
+    {
+        "columnname": "cmx-i-28",
+        "columnindex": "cmx-i-28",
+        "serialnumber": "P0028",
+        "type": "num",
+        "name": "墓葬",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "prefix": 0,
+            "unit": "座",
+            "decimal": 2,
+            "min": 0,
+            "max_length": 10
+        },
+        "extra": {
+            "class": "format",
+            "func": "",
+            "width": "",
+            "layout": "",
+            "placeholder": "请填写有多少座墓葬"
+        }
+    },
+    {
+        "columnname": "cmx-i-29",
+        "columnindex": "cmx-i-29",
+        "serialnumber": "P0029",
+        "type": "special",
+        "name": "经费来源",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": ""
+        },
+        "extra": {
+            "class": "",
+            "func": "cmx_special_011",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-30",
+        "columnindex": "cmx-i-30",
+        "serialnumber": "P0030",
+        "type": "num",
+        "name": "金额总计",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "prefix": 0,
+            "unit": "单位（万元）",
+            "decimal": 2,
+            "min": 0,
+            "max": 99999999999999999999
+        },
+        "extra": {
+            "class": "format",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": "请输入总计金额，单位为（万元），精确到小数点后2位"
+        }
+    },
+    {
+        "columnname": "cmx-i-31",
+        "columnindex": "cmx-i-31",
+        "serialnumber": "P0031",
+        "type": "separator",
+        "name": "保护技术准备",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "title": "保护技术准备",
+            "desc": ""
+        },
+        "extra": {
+            "class": "margin-bottom-10 baseinfo",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-32",
+        "columnindex": "cmx-i-32",
+        "serialnumber": "P0032",
+        "type": "text",
+        "name": "保护技术准备",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": "long",
+            "max_length": 2000
+        },
+        "extra": {
+            "class": "margin-left-0 baseinfo format",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": "请填写保护技术准备，不超过2000个汉字"
+        }
+    },
+    {
+        "columnname": "cmx-i-33",
+        "columnindex": "cmx-i-33",
+        "serialnumber": "P0033",
+        "type": "separator",
+        "name": "考古发掘项目领队、主要业务人员构成",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "title": "考古发掘项目领队、主要业务人员构成",
+            "desc": ""
+        },
+        "extra": {
+            "class": "margin-bottom-10 baseinfo",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-34",
+        "columnindex": "cmx-i-34",
+        "serialnumber": "P0034",
+        "type": "expand",
+        "name": "领队信息",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": ""
+        },
+        "extra": {
+            "class": "format",
+            "func": "cmx_special_6",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-35",
+        "columnindex": "cmx-i-35",
+        "serialnumber": "P0035",
+        "type": "separator",
+        "name": "主要业务人员清单",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "title": "主要业务人员清单",
+            "desc": ""
+        },
+        "extra": {
+            "class": "margin-bottom-10 baseinfo",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    }, {
+        "columnname": "cmx-i-36",
+        "columnindex": "cmx-i-36",
+        "serialnumber": "P0036",
+        "type": "expand",
+        "name": "",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": ""
+        },
+        "extra": {
+            "class": "",
+            "func": "func_special_personList",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-42",
+        "columnindex": "cmx-i-42",
+        "serialnumber": "P0042",
+        "type": "separator",
+        "name": "附属信息",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "title": "附属信息",
+            "desc": ""
+        },
+        "extra": {
+            "class": "margin-bottom-10 baseinfo",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-43",
+        "columnindex": "cmx-i-43",
+        "serialnumber": "P0043",
+        "type": "text",
+        "name": "",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "",
+            "max_length": 2000
+        },
+        "extra": {
+            "class": "",
+            "func": "addExtra",
+            "width": "12",
+            "layout": "",
+            "placeholder": "请填写附属信息，不超过2000个汉字"
+        }
+    }
+]

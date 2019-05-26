@@ -1,0 +1,143 @@
+<!-- 专家列表 -->
+<style>
+    .searchDiv {
+        margin-bottom: 15px;
+    }
+
+    .tableDiv {
+        height: 300px;
+        overflow: scroll;
+    }
+</style>
+
+<div class="modal fade in modal-primary" id="cmx-expert-List" aria-hidden="true" aria-labelledby="cmx-expert-List" role="dialog"
+    tabindex="-1">
+    <div class="modal-dialog modal-lg modal-center">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span>选择专家—已选专家</span>
+                <button class="pull-right close" data-dismiss="modal" aria-label="关闭">关闭</button>
+                <div class="clearfix"></div>
+            </div>
+            <div class="modal-body">
+                <div class="row margin-bottom-10">
+                    <div class="col-xs-6 col-md-4 col-lg-4">
+                        <div class="form-wrap">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+                                        姓名
+                                    </span>
+                                    <input type="text" class="form-control" id="cmx-national-protect-name" name="name" placeholder="" autocomplete="off">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-md-4 col-lg-4">
+                        <div class="form-wrap">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+                                        专业特长
+                                    </span>
+                                    <input type="text" class="form-control" id="cmx-major" name="name" placeholder="" autocomplete="off">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-4 col-lg-4">
+                        <div class="form-wrap">
+                            <div class="form-group">
+                                <button type="button" class="btn btn-primary inputon" id="cmx-expert-search">查询</button>
+                                <button type="button" class="btn inputon" id="cmx-expert-delete">清除</button>
+                                <button type="button" id="show-hide-info" class="pull-right show-info btn btn-outline btn-primary inputon">更多条件
+                                    <i class="icon wb-chevron-down" style="font-size: 10px;" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row margin-bottom-10 condition-info" style="display:none">
+                    <div class="col-xs-6 col-md-4 col-lg-4 ">
+                        <div class="form-wrap">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+                                        工作单位
+                                    </span>
+                                    <input type="text" class="form-control" id="cmx-unit-name" name="name" placeholder="" autocomplete="off">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-md-4 col-lg-4">
+                        <div class="form-wrap">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+                                        业务范围
+                                    </span>
+                                    <select data-dic="ExpertBussClass" class="form-control" id="yewufanwei" name="requiredSelect" data-fv-notempty="true" data-fv-field="requiredSelect">
+                                        <option value=""></option>
+                                       
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tableDiv table-responsive text-nowrap">
+                    <table class="table table-bordered table-hover margin-bottom-0">
+                        <thead>
+                            <tr>
+                                <th>操作</th>
+                                <th>序号</th>
+                                <th>姓名</th>
+                                <th>待办数量</th>
+                                <th>已办数量</th>
+                                <th>专业特长</th>
+                                <th>工作单位</th>
+                                <th>联系电话</th>
+                                <th>邮件地址</th>
+                            </tr>
+                        </thead>
+                        <tbody id="cmx-experts-list">
+
+                        </tbody>
+                    </table>
+                </div>
+                <div class="relic-footer pull-right margin-top-10">
+                    <ul class="pagination" id="zhuanjia-page">
+                        <li>
+                            <a href="javascript:;" class="first">首页</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" class="pre">上一页</a>
+                        </li>
+                        <li>
+                            <span>
+                                <span class="nowpage"></span>/
+                                <span class="totalpage"></span>页</span>
+                        </li>
+                        <li>
+                            <a href="javascript:;" class="next">下一页</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" class="last">尾页</a>
+                        </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="clearfix"></div>
+                <p>已选的评审专家</p>
+                <div class="already-choose-export" style="border: 1px solid #eee;min-height: 50px;">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" id="cmx-export-confirm" type="button">确认选择上述专家进行评审</button>
+                <button type="button " class="btn btn-default cmx-cancle-btn" data-dismiss="modal">取消</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,97 @@
+<!-- 专家列表 -->
+<style>
+    .searchDiv {
+        margin-bottom: 15px;
+    }
+
+    .tableDiv {
+        height: 300px;
+        overflow: scroll;
+    }
+</style>
+
+<div class="modal fade in modal-primary" id="cmx-institution-Listmodal" aria-hidden="true" aria-labelledby="cmx-institution-Listmodal"
+    role="dialog" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-center">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span>选择评估机构</span>
+                <button class="pull-right close" data-dismiss="modal" aria-label="关闭">关闭</button>
+                <div class="clearfix"></div>
+            </div>
+            <div class="modal-body">
+                <div class="row margin-bottom-10 hidden">
+                    <div class="col-xs-6 col-md-4 col-lg-4">
+                        <div class="form-wrap">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+                                        机构名称
+                                    </span>
+                                    <input type="text" class="form-control" id="cmx-pinggu-name" name="name" placeholder="" autocomplete="off">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-md-4 col-lg-4">
+                        <div class="form-wrap">
+                            <div class="form-group">
+                                <button type="button" class="btn btn-primary inputon" id="cmx-pinggu-search">查询</button>
+                                <button type="button" class="btn inputon" id="cmx-pinggu-delete">清除</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tableDiv table-responsive text-nowrap">
+                    <table class="table table-bordered table-hover">
+                        <thead>
+                            <tr>
+                                <!-- <th>操作</th> -->
+                                <th>序号</th>
+                                <th>机构名称</th>
+                                <th>待办数</th>
+                                <th>已办数</th>
+                                <th>法人代表</th>
+                                <th>联系人</th>
+                                <th>联系电话</th>
+                            </tr>
+                        </thead>
+                        <tbody id="cmx-institution-list">
+
+                        </tbody>
+                    </table>
+                </div>
+                <div class="relic-footer pull-right margin-top-10">
+                    <ul class="pagination" id="pinggu-page">
+                        <li>
+                            <a href="javascript:;" class="first">首页</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" class="pre">上一页</a>
+                        </li>
+                        <li>
+                            <span>
+                                <span class="nowpage"></span>/
+                                <span class="totalpage"></span>页</span>
+                        </li>
+                        <li>
+                            <a href="javascript:;" class="next">下一页</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" class="last">尾页</a>
+                        </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="clearfix"></div>
+                <p>已选的第三方评估机构</p>
+                <div class="already-choose-institution" style="border: 1px solid #eee;min-height: 50px;">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" id="cmx-institution-confirm" type="button">确认选择上述第三方评估机构进行评审</button>
+                <button type="button " class="btn btn-default cmx-cancle-btn" data-dismiss="modal">取消</button>
+            </div>
+        </div>
+    </div>
+</div>

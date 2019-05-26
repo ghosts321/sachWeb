@@ -1,0 +1,326 @@
+// 政策法规库 页面
+
+select,input,a{
+    border-radius: 0 !important;
+}
+
+// 当前位置 政府信息公开 政策法规库 start
+.regulations{
+    background-color: #FDFDFA;
+    color: #B0B0AF;
+    // min-height: 325px;
+    line-height: 50px;
+    border-bottom: 1px solid #D7D8D9;
+    i.house{
+        width: 16px;
+        height: 16px;
+        display: inline-block;
+        background: url(../img/house.png) no-repeat center center;
+        background-size: cover;
+        vertical-align: -3px;
+        margin-right: 5px;
+        margin-left: -3px;
+    }
+    .menu{
+        margin-top: 12px;
+        margin-bottom: 17px;
+        .item{
+            text-align: center;
+            span{
+                min-width: 124px;
+                // margin-right: 10px;
+                text-align: center;
+                display: inline-block;
+                height: 30px;
+                line-height: 30px;
+                color: #202020;
+                cursor: pointer;
+                background-color: #EDF7FF;
+                border: 1px solid #62AAEC;
+                border-radius: 2px;
+                &.on{
+                    color: #fff;
+                    background-color: #62AAEC;
+                    border-color: #62AAEC;
+                }
+            }
+        }
+    }
+    b{
+        width: 16px;
+        height: 16px;
+        display: inline-block;
+        background: url('../img/house.png') no-repeat center center;
+        background-size: cover;
+        vertical-align: -3px;
+        margin-right: 5px;
+        margin-left: -3px;
+    }
+    span,a{
+        color: #B4B4B3;
+        font-size: 14px;
+        vertical-align: middle;
+    }
+    a{
+        text-decoration: none;
+    }
+    .regulations-left{
+        // min-height: 203px;
+        label{
+            white-space: nowrap;
+            // min-width: 75px;
+            // min-width: 40px;
+        }
+        select,input{
+            min-width: 76%;
+        }
+        select{
+            color: #B0B0AF;
+        }
+        .import{
+            // min-height: 203px;
+            margin-left: 70px;
+            margin-right: 50px;
+            .pick{
+                select{
+                    border-right: 0 none;
+                    background:url('../img/option.png') no-repeat right center;
+                    background-color: #fff;
+                    // background-size: contain;
+                    background-size: 34px 34px;
+                    appearance:none;
+                    -moz-appearance:none;
+                    -webkit-appearance:none;
+                    &::-ms-expand{
+                        display: none;
+                    }
+                }
+            }
+            select{
+                &.num{
+                    background-color: #fff;
+                    min-width: 63%;
+                    &.num1{
+                        min-width: 73%;
+                    }
+                    &.num2{
+                        min-width: 78%;
+                    }
+                }
+            }
+            input{
+                &.num3{
+                    width: 80%;
+                }
+            }
+            
+            input{
+                color: #B0B0AF;
+            }
+            .opinion{
+                width: 88%;
+            }
+            .date{
+                .calendar{
+                    height: 34px;
+                    padding-top: 6px;
+                    padding-bottom: 6px;
+                    border-top-width: 1px;
+                    border-bottom-width: 1px;
+                    padding-left: 12px;
+                    padding-right: 12px;
+                    border-left-width: 1px;
+                    border-right-width: 1px;
+                    border-radius: 4px;
+                    outline: none;
+                    border: 1px solid #ccc;
+                    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+                    background:url('../img/calendar.png') no-repeat 98% center;
+                    background-color: #fff;
+                }
+            }
+        }
+
+    }
+    .retrieve{
+        // min-height: 203px;
+        border-left: 1px dashed #CACAC9;
+        .retrieve-right{
+            // min-height: 203px;
+            margin-left: 15px;
+            a{
+                margin-top: 50px;
+                display: inline-block;
+                min-width: 160px;
+                padding: 8px 35px;
+                border: 1px solid #D7D8D9;
+                color: #657179;
+                &:hover{
+                    background-color: #62AAEC;
+                    border-color: #D7D8D9;
+                    color: #fff;
+                }
+                // &:focus{
+                //     background-color: #fff;
+                //     color: #657179;
+                // }
+            }
+            .reset{
+                margin-top: 26px;
+            }
+        }
+    }
+    form{
+        label{
+            color: #2F2F2F;
+            font-weight: normal;
+        }
+        input{
+            border-radius: 0;
+        }
+        .word-left{
+            // text-align: right;
+        }
+        .search{
+            border-radius: 0;
+            border: 0 none;
+            background-color: #62AAEC;
+            color: #fff;
+            padding-left: 60px;
+            padding-right: 60px;
+        }
+        .resetting{
+            text-decoration: underline;
+            color: #2F2F2F;
+            margin-left: 20px;
+        }
+    }
+}
+
+// 最新 start
+.up-to-date{
+    margin-bottom: 40px;
+    // min-height: 230px;
+    .up-to-date-left{
+        // margin-right: 15px;
+        margin-top: 25px;
+        a{
+            margin-top: 12px;
+        }
+        td{
+            a{
+                color: #526069;
+                &:hover{
+                    text-decoration: underline;
+                    color: #62AAEC;
+                }
+            }
+        }
+        // td[class~="text-justify"]{
+        //     cursor: pointer;
+        //     &:hover{
+        //         text-decoration: underline;
+        //         color: #62AAEC;
+        //     }
+        // }
+    }
+    .up-to-date-right{
+        margin-left: 15px;
+        .up-to-date-right-content{
+            margin-left: 0;
+            margin-top: 20px;
+            div{
+                background-color: #65ABE9;
+                color: #fff;
+                height: 60px;
+                line-height: 60px;
+                position: relative;
+                border-radius: 2px;
+                strong{
+                    height: 60px;
+                    width: 1px;
+                    border-left: 1px dashed #fff;
+                    position: absolute;
+                    left: 54px;
+                }
+                a{
+                    text-decoration: none;
+                    display: block;
+                    height: 100%;
+                    img{
+                        width: 30px;
+                        height: 30px;
+                        margin-right: 18px;
+                    }
+                    em{
+                        color: #fff;
+                        font-size: 14px;
+                        color: #FFFFFF;
+                        letter-spacing: 0;
+                        font-style: normal;
+                    }
+                }
+                &+div{
+                    margin-top: 20px;
+                }
+            }
+        }
+        h3{
+            border-bottom: 2px solid #CCCCCC;
+            padding-bottom: 20px;
+        }
+    }
+    .up-to-date-table{
+        width: 100%;
+        font-size: 14px;
+        color: #526069;
+        border: 1px solid #D7D8D9;
+        margin: 0;
+        td+td{
+            border-left: 1px solid #D7D8D9;
+        }
+        th{
+            font-weight: normal;
+        }
+        th,td{
+            height: 36px;
+        }
+        color: #526069;
+        .provide-color{
+            color: #fff;
+            background-image: linear-gradient(-180deg, #65ABE9 0%, #257DCB 100%);
+            th{
+                line-height: 30px;
+                position: relative;
+                // border-right: 1px dashed #D3D3D3;
+                &:first-child:before{
+                    border-left: 0 none;
+                }
+                &:before{
+                    content: '';
+                    width: 1px;
+                    height: 20px;
+                    display: block;
+                    position: absolute;
+                    // background-color: #91C9FB;
+                    border-left: 1px dashed #91C9FB;
+                    top: 9px;
+                    left: 0;
+                }
+            }
+        }
+        span{
+            height: 2.5%;
+            line-height: 19px;
+            border: 1px solid #eee;
+            border-top: 2px solid #eee;
+            padding: 0.3% 2.1% 0.7% 2%;
+            text-align: center;
+            font-size: 14px;
+            height: 35px;
+            line-height: 30px;
+        }
+    }
+}
+// 最新 end
+

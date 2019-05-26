@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+		<title>行政审批管理</title>
+		<link href="../css/common/ie10-viewport-bug-workaround.css" rel="stylesheet">
+		<!-- Bootstrap -->
+		<link href="../css/common/bootstrap.min.css" rel="stylesheet">
+		<link href="../css/common/pageSwitch.min.css" rel="stylesheet">
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+			<script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+		<link href="../css/common/common.css" rel="stylesheet">
+		<link href="../css/approval/admin-approval-manage.css" rel="stylesheet">
+		<style>
+			.onlyoffical {
+				display: none;
+			}
+		
+			.offical .onlyoffical {
+				display: block;
+		
+			}
+		
+			.offical .offical-header {
+				position: fixed;
+				top: 0;
+				width: 100%;
+				background: #fff;
+				z-index: 999;
+			}
+		
+			.offical .offical-header>div {
+				background: url(http://www.sach.gov.cn/picture/0/1406241603206447246.jpg) top repeat-x;
+				padding-left: 4%;
+			}
+		
+			.offical .navbar-fixed-top {
+				top: 110px;
+			}
+		
+			.offical .container.management {
+				margin-top: 130px;
+			}
+		
+			.offical .container.bsdt {
+				margin-top: 110px;
+			}
+		
+		</style>
+	</head>
+<body class="offical-none">
+	<div class="onlyoffical offical-header">
+		<div>
+			<img src="http://www.sach.gov.cn/picture/5/1405101522359844623.png" />
+		</div>
+	</div>
+<!-- 头部 start -->
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+	<div class="container">
+		<div class="navbar-header">
+		<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+			aria-controls="navbar">
+			<span class="sr-only">切换导航</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</button>
+		<a class="navbar-brand" href="../index.html"><img class="custom-logo" src="../img/custom-logo.png"/><span class="adapt-webtitle visible-lg">国家文物局<br>综合行政管理平台</span></a>
+		</div>
+		<div id="navbar" class="collapse navbar-collapse">
+		<ul class="nav navbar-nav custom-navbar">
+			<li><a href="../index.html">首页</a></li>
+			<li class="active"><a href="admin-approval-manage.html">行政审批管理</a></li>
+			<li><a href="../public/gov-info-open.html">政府信息公开</a></li>
+			<li><a href="../industry/integrated-manage.html">行业综合管理</a></li>
+			<li>
+			<a href="../service/public-info-service.html">公共信息服务</a>
+			</li>
+		</ul>
+		<ul class="nav navbar-nav navbar-right custom-navbar-right">
+			<li class="user-info">
+			<img src="../img/login.png" alt="">
+			<span class="login-2">登录</span>
+			</li>
+		</ul>
+		</div>
+	</div>
+	</nav>
+<!-- 头部 end -->
+
+<!-- 左侧侧边栏 start -->
+	<div class="left-bar hidden-xs">
+	<div>
+		<a href="" class="leftlink">
+
+		</a>
+	</div>
+	<div>
+		<a href="../administrative-approval.html">
+
+		</a>
+	</div>
+	<div>
+		<a href="../policy-and-regulations.html">
+
+		</a>
+	</div>
+	<div>
+		<a href="../download.html">
+
+		</a>
+	</div>
+	</div>
+<!-- 左侧侧边栏 end -->
+
+<!-- 右侧侧边栏 start -->
+	<div class="right-bar hidden-xs">
+	<div>
+		<a href="" class="rightlink">
+
+		</a>
+	</div>
+	<div>
+		<a href="../complaint-box.html">
+
+		</a>
+	</div>
+	</div>
+<!-- 右侧侧边栏 end -->
+
+
+<!-- 国家文物局在线办事大厅 start -->
+	<div class="container bsdt">
+		<div class="business-hall">
+		<h4><i></i>国家文物局在线办事大厅</h4>
+		</div>
+		<div class="tal">
+		<div class="container business-hall-links">         
+			<div class="row" id="tal">                   
+			<a href="" class="on">不可移动文物保护行政管理
+				<i></i>
+			</a>
+			<a href="">考古发掘管理
+				<i></i>
+			</a>
+			<a href="">博物馆和可移动文物综合管理
+				<i></i>
+			</a>
+			<a href="">文物安全防护
+				<i></i>
+			</a>
+			<a href="">文物进出境审核管理
+				<i></i>
+			</a>
+			</div>               
+		</div>
+		</div>
+	</div>
+	<div class="container header">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 bs-l table-responsive">
+			<table class="table tab-l table-condensed">
+			<tr class="row">
+				<td class="col-lg-4 col-md-4 col-sm-4 col-xs-4 on hov" data-id="0" data-projectNum="56004">
+				<a href="../manage.html">
+					<p class="title">全国重点文物保护单位原址保护措施审批</p>
+				</a>
+				</td>
+				<td class="col-lg-4 col-md-4 col-sm-4 col-xs-4 hov" data-id="1" data-projectNum="56005">
+				<a href="../manage.html">
+					<p class="title">省级和全国重点文物保护单位保护范围内其他建设工程或者爆破、钻探、挖掘等作业审批</p>
+				</a>
+				</td>
+				<td class="col-lg-4 col-md-4 col-sm-4 col-xs-4 hov" data-id="2" data-projectNum="56010">
+				<a href="../manage.html">
+					<p class="title">省级文物保护单位的迁移或拆除审批</p>
+				</a>
+				</td>
+			</tr>
+			<tr class="row">
+				<td class="col-lg-4 col-md-4 col-sm-4 col-xs-4 hov" data-id="3" data-projectNum="56011">
+				<a href="../manage.html">
+					<p class="title">文物保护工程（勘察设计甲级、施工一级、监理甲级）资质审批</p>
+				</a>
+				</td>
+				<td class="col-lg-4 col-md-4 col-sm-4 col-xs-4 hov" data-id="4" data-projectNum="56012">
+				<a href="../manage.html">
+					<p class="title">全国重点文物保护单位建设控制地带内建设工程设计方案审批</p>
+				</a>
+				</td>
+				<td class="col-lg-4 col-md-4 col-sm-4 col-xs-4 hov" data-id="5" data-projectNum="56014">
+				<a href="../manage.html">
+					<p class="title">全国重点文物保护单位修缮审批</p>
+				</a>
+				</td>
+			</tr>
+			</table>
+
+
+			<table class="table tab-l table-condensed">
+			<tr class="row">
+				<td class="col-lg-4 col-md-4 col-sm-4 col-xs-4 hov" data-id="0" data-projectNum="56003">
+				<a href="../manage.html">
+					<p class="title">外国人或者外国团体在中国境内考古调查、勘探、发掘许可</p>
+				</a>
+				</td>
+				<td class="col-lg-4 col-md-4 col-sm-4 col-xs-4 hov" data-id="1" data-projectNum="56006">
+				<a href="../manage.html">
+					<p class="title">考古发掘资质许可</p>
+				</a>
+				</td>
+				<td class="col-lg-4 col-md-4 col-sm-4 col-xs-4 hov" data-id="2" data-projectNum="56008">
+				<a href="../manage.html">
+					<p class="title">考古发掘计划许可</p>
+				</a>
+				</td>
+			</tr>
+			<tr class="row">
+				<td class="col-lg-4 col-md-4 col-sm-4 col-xs-4 hov" data-id="3" data-projectNum="56009">
+				<a href="../manage.html">
+					<p class="title">水下文物的考古勘探和发掘活动许可</p>
+				</a>
+				</td>
+				<td class="col-lg-4 col-md-4 col-sm-4 col-xs-4 hov" data-id="4" data-projectNum="56013">
+				<a href="../manage.html">
+					<p class="title">国际合作考古调查、勘探、发掘的文物或自然标本送到境外进行分析化验或技术鉴定许可</p>
+				</a>
+				</td>
+				<td class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+
+				</td>
+			</tr>
+			</table>
+
+
+			<table class="table tab-l table-condensed">
+			<tr class="row">
+				<td class="col-lg-4 col-md-4 col-sm-4 col-xs-4 hov" data-id="0" data-projectNum="56015">
+				<a href="../manage.html">
+					<p class="title">馆藏一级文物的修复、复制、拓印许可</p>
+				</a>
+				</td>
+				<td class="col-lg-4 col-md-4 col-sm-4 col-xs-4 hov" data-id="1" data-projectNum="56016">
+				<a href="../manage.html">
+					<p class="title">文物出境展览许可</p>
+				</a>
+				</td>
+				<td class="col-lg-4 col-md-4 col-sm-4 col-xs-4 hov" data-id="2" data-projectNum="56019">
+				<a href="../manage.html">
+					<p class="title">博物馆一级藏品取样分析许可</p>
+				</a>
+				</td>
+			</tr>
+			<tr class="row">
+				<td class="col-lg-4 col-md-4 col-sm-4 col-xs-4 hov" data-id="3" data-projectNum="56017">
+				<a href="../manage.html">
+					<p class="title">非国有文物收藏单位和其他单位借用国有馆藏一级文物许可</p>
+				</a>
+				</td>
+				<td class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+
+				</td>
+				<td class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+
+				</td>
+			</tr>
+			</table>
+
+
+			<table class="table tab-l table-condensed">
+			<tr class="row">
+				<td class="col-lg-4 col-md-4 col-sm-4 col-xs-4 hov"  data-id="0" data-projectNum="56014-3_a">
+				<a href="../manage.html">
+					<p class="title">全国重点文物保护单位安全防护工程项目审批</p>
+				</a>
+				</td>
+				<td class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+
+				</td>
+				<td class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+
+				</td>
+			</tr>
+			</table>
+
+
+			<table class="table tab-l table-condensed">
+			<tr class="row">
+				<td class="col-lg-4 col-md-4 col-sm-4 col-xs-4 hov" data-id="0" data-projectNum="56020">
+				<a href="../manage.html">
+					<p class="title">文物出境许可</p>
+				</a>
+				</td>
+				<td class="col-lg-4 col-md-4 col-sm-4 col-xs-4 hov" data-id="1" data-projectNum="56020_c">
+				<a href="../manage.html">
+					<p class="title">文物临时进境复出境</p>
+				</a>
+				</td>
+				<td class="col-lg-4 col-md-4 col-sm-4 col-xs-4 hov" data-id="2" data-projectNum="56020_e">
+				<a href="../manage.html">
+					<p class="title">文物临时出境复进境</p>
+				</a>
+				</td>
+			</tr>
+			</table>
+		</div>
+	</div>
+<!-- 国家文物局在线办事大厅 end -->
+
+<!-- 内容区域 start -->
+	<div class="content">
+	<div class="container">
+		<div class="row">
+		<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+			<div class="protection-law" style="">
+			<div class="row">
+				<div class="col-lg-1 col-md-1 col-sm-1 col-xs-2 according-to">
+				<div><span>办<br>理<br>依<br>据</span></div>
+				</div>
+				<div class="col-lg-11 col-md-11 col-sm-11 col-xs-10 law">
+				<div>
+					<i id="handle-basis">《中华人民共和国文物保护法》第二十条：“建设工程选址，应当尽可能避开不可移动文物；因特殊情况不能避开的，对文物保护单位应当尽可能实施原址保护。实施原址保护的，建设单位应当事先确定保护措施，根据文物保护单位的级别报相应的文物行政部门批准，并将保护措施列入可行性研究报告或者设计任务书……”。</i>
+				</div>
+				</div>
+			</div>
+			</div>
+		</div>
+		<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 approval">
+			<div class="box" id="immediately">
+			<div class="row btn-group center-block fastener" id="fastener">
+				<a id="projectNum" href="" class="btn btn-default btn-group-lg btn-block">立即办理</a><a href="../article/online-help/56004.html" target="_blank" class="btn btn-default btn-group-lg btn-block">常见问题</a>
+			</div>
+			</div>
+<!--           <div class="box" id="immediately">
+			<div class="row btn-group center-block fastener" id="fastener">
+				<a id="projectNum" href="" class="btn btn-default btn-group-lg btn-block">立即办理</a><a href="article/online_help/56004.html" target="_blank" class="two left btn btn-default btn-group-lg btn-block">资料下载</a><a href="article/online_help/56004.html" target="_blank" class="two btn btn-default btn-group-lg btn-block">常见问题</a>
+			</div>
+			</div> -->
+		</div>
+		</div>
+
+		<div class="work" id="work">
+		<div class="process">
+			<div class="row flow">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center"> 
+				<img src="../img/bsjblc.png" alt="" class="lc">
+			</div>
+			<div class="text-center">
+			 <strong id="time-limit"><b>办理时限</b>：20个工作日（委托评估、专家评审时间除外）</strong>
+			</div>
+			</div>
+			<div class="row pic" id="pic">
+			<img src="../img/lc.png" alt="" width="100%">
+			</div>
+		</div>
+		</div>
+
+		<div class="row charge">
+		<div class="clearfix" id="item">
+			<div class="parameter clearfix">
+				<div class="col-lg-3 col-md-12 require">
+					<p><span>受理机构</span><b id="req-1"><i>国家文物局</i></b></p>
+					<p><span>决定机构</span><b id="req-2"><i>国家文物局</i></b></p>
+					<p><span>审查类型</span><b id="req-3"><i>前审后批</i></b></p>
+					<p><span>数量限制</span><b id="req-4"><i>无数量限制</i></b></p>
+					<p><span>适用范围</span><b id="req-5"><i>全国重点文物保护单位</i></b></p>
+					<p><span>禁止性要求</span><b id="req-6"><i>无</i></b></p>
+				</div>
+				<div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
+					<div class="">
+						<p><strong>收费情况</strong><i class="cost" id="req-7">不收取费用</i><strong>办理进程和结果查询</strong><i id="req-8">国家文物局文物保护与考古司；010-56792152</i></p>
+						<p><strong>审批结果及送达方式</strong><i class="cost" id="req-9">许可决定，邮寄送达</i><strong>监督投诉渠道</strong><i id="req-10">国家文物局办公室：010-56792211</i></p>
+						<p><em class="line">办公时间、联系人、咨询电话、地点及乘车路线</em></p>
+						<p id="req-11">
+						<em>工作日上午8：30-11：30；下午13：30-17：00</em>
+						<em>国家文物局文物保护与考古司；010-56792152</em>
+						<em>北京市东城区北河沿大街83号；邮编：100009</em>
+						<em>地铁8号线南锣鼓巷站向南1200米；公交车82路、60路、112路沙滩路口北站向北100米</em>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+
+	<!-- 申请条件和材料目录 start -->
+		<div class="row application" id="">
+		<div class="clearfix" id="conditions">
+			<div class="material">
+			<div class="col-lg-12">
+				<div class="row">
+				<div class="col-lg-1 col-md-1 col-sm-1 col-xs-2 list">
+					<span>申<br>请<br>条<br>件<br>和<br>材<br>料<br>目<br>录</span>
+				</div>
+				<div class="col-lg-11 col-md-11 col-sm-11 col-xs-10" id="application">
+					<p>（一）申请书，内容包括：建设单位名称及法人登记证明；建设工程名称、地点、规模；文物名称；保护措施名称、理由及主要内容。</p>
+					<p>（二）建设工程选址批准文件。</p>
+					<p>（三）有关保护措施的具体方案，包括文字说明、图纸、专家论证意见；保护措施具体方案中涉及文物保护工程的，并附我局或省级文物行政部门批准该工程方案的文件。</p>
+					<p>（四）省级文物行政部门的意见。</p>
+				</div>
+				</div>
+			</div>
+
+			</div>  
+		</div>
+		</div>
+	<!-- 申请条件和材料目录 end -->
+
+	</div>
+	</div>
+<!-- 内容区域 end -->
+
+<!-- 底部 start -->
+	<div class="footer">
+	<div class="container footer-content">
+		<div class="row">
+		<p><a href="../website-statement.html">网站声明</a><a href="../website-statement.html">联系我们</a></p>
+		<i></i>
+		</div>
+		<b>Copyright © 2017 国家文物局版权所有</b>
+	</div>
+	</div>
+<!-- 底部 end -->
+
+<!-- 模态框 start -->
+	<div id="modal">
+		<div class="modal-bg"></div>
+		<div id="modalBox" class="modal-box modal-small">
+			<div class="modal-title">
+				<i>禁止性要求</i>
+				<span class="modal-close">&times;</span>
+			</div>
+			<div class="m-content">
+				<p class="modal-ctx">
+					test
+				</p>
+				<p class="modal-sure" style="display: none;"><em>确认</em></p>
+			</div>
+		</div>
+	</div>
+<!-- 模态框 end -->
+
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="../js/common/jquery-1.9.1.min.js"></script> 
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="../js/common/bootstrap.min.js"></script>
+	<script src="../js/common/ie10-viewport-bug-workaround.js"></script>
+	<script src="../js/common/pageSwitch.min.js"></script>
+	<script src="../js/common/main.js"></script>
+	<script src="../js/common/common.js"></script>
+	<script src="../js/approval/admin-approval-manage.js"></script>
+	</body>
+</html>

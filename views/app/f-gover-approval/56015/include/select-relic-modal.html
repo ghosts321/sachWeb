@@ -1,0 +1,562 @@
+<link rel="stylesheet" href="/css/app/f-gover-approval/56015/select-relic-modal.css">
+
+
+
+
+<div class="modal fade in" id="cmx-select-relic" aria-hidden="true" aria-labelledby="relicList" role="dialog" tabindex="-1">
+    <div class="modal-dialog ">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span>文物基本情况-选择</span>
+                <button class="pull-right close" data-dismiss="modal" aria-label="关闭">关闭</button>
+                <div class="clearfix"></div>
+            </div>
+            <div class="modal-body">
+                <div class="panel">
+                    <div class="panel-body">
+                        <div class="cmx-prompt">
+                            <p class="margin-bottom-0">信息提示：</p>
+                            <ol>
+                                <li>文物数据来自一普平台,如存在查询不到的文物，请先去一普平台进行确认</li>
+                                <li>登记号和文物名称支持批量查询，批量查询：支持拷贝excel或word的一列数据到输入框进行查询</li>
+                                <li>单个登记号或文物名称支持模糊查询</li>
+                                <li>表格不支持翻页跨页多选，请在一页选择确认后再翻页选择</li>
+                                <li>馆藏一级文物修复只能选择级别为一级的文物</li>
+                                <li>馆藏二级、三级、一般、未定级文物修复不能选择级别为一级的文物</li>
+                            </ol>
+                        </div>
+                        <hr>
+                        <div class="nav-tabs-horizontal">
+                            <ul class="nav nav-tabs cmx-relicNav" role="tablist">
+                                <li class="active" role="presentation">
+                                    <a data-toggle="tab" href="#cmx-ancient-book" aria-controls="cmx-ancient-book" role="tab" aria-expanded="true">文物古籍数据</a>
+                                </li>
+                                <li role="presentation" class="">
+                                    <a data-toggle="tab" href="#cmx-fossil-specimen" aria-controls="cmx-fossil-specimen" role="tab" aria-expanded="false">标本化石数据</a>
+                                </li>
+                            </ul>
+                            <div class="tab-content relic-content">
+                                <div class="tab-pane active" id="cmx-ancient-book" role="tabpanel">
+                                    <div class="queryTerm">
+                                        <form action="" class="form-horizontal">
+                                            <label for="cmx-ancient-book-number">登记号</label>
+                                            <input type="text" id="cmx-ancient-book-number">
+                                            <label for="cmx-ancient-book-name">文物名称</label>
+                                            <input type="text" id="cmx-ancient-book-name">
+                                            <div class="right-part">
+                                                <button type="button" class="btn btn-primary">查询</button>
+                                                <button type="button" class="btn btn-primary">清除</button>
+                                                <button type="button" class="btn btn-primary cmx-more-research">更多查询条件</button>
+                                                <button type="button" class="btn btn-primary cmx-pack-up">收起更多条件</button>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                            <div class="cmx-more-search-div row">
+                                                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 form-group">
+                                                    <label for="cmx-relic-level" class="col-sm-3">文物级别</label>
+                                                    <div class="col-sm-9">
+                                                        <select class="form-control" id="cmx-relic-level">
+                                                            <option value=""></option>
+                                                            <option>一级</option>
+                                                            <option>二级</option>
+                                                            <option>三级</option>
+                                                            <option>一般</option>
+                                                            <option>未定级</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 form-group">
+                                                    <label for="cmx-relic-type" class="col-sm-3">文物类别</label>
+                                                    <div class="col-sm-9">
+                                                        <select name="" id="cmx-relic-type" class="form-control">
+                                                            <option value=""></option>
+                                                            <option value="01">玉石器、宝石</option>
+                                                            <option value="02">陶器</option>
+                                                            <option value="03">瓷器</option>
+                                                            <option value="04">铜器</option>
+                                                            <option value="05">金银器</option>
+                                                            <option value="06">铁器、其他金属器</option>
+                                                            <option value="07">漆器</option>
+                                                            <option value="08">雕塑、造像</option>
+                                                            <option value="09">石器、石刻、砖瓦</option>
+                                                            <option value="10">书法、绘画</option>
+                                                            <option value="11">文具</option>
+                                                            <option value="12">甲骨</option>
+                                                            <option value="13">玺印符牌</option>
+                                                            <option value="14">钱币</option>
+                                                            <option value="15">牙骨角器</option>
+                                                            <option value="16">竹木雕</option>
+                                                            <option value="17">家具</option>
+                                                            <option value="18">珐琅器</option>
+                                                            <option value="19">织绣</option>
+                                                            <option value="20">古籍图书</option>
+                                                            <option value="21">碑帖拓本</option>
+                                                            <option value="22">武器</option>
+                                                            <option value="23">邮品</option>
+                                                            <option value="24">文件、宣传品</option>
+                                                            <option value="25">档案文书</option>
+                                                            <option value="26">名人遗物</option>
+                                                            <option value="27">玻璃器</option>
+                                                            <option value="28">乐器、法器</option>
+                                                            <option value="29">皮革</option>
+                                                            <option value="30">音像制品</option>
+                                                            <option value="31">票据</option>
+                                                            <option value="32">交通、运输工具</option>
+                                                            <option value="33">度量衡器</option>
+                                                            <option value="34">标本、化石</option>
+                                                            <option value="35">其他</option>
+                                                        </select>
+                                                    </div>
+
+                                                </div>
+
+                                                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 form-group">
+                                                    <label for="cmx-incomplete-degree" class="col-sm-3">完残程度</label>
+                                                    <div class="col-sm-9">
+                                                        <select name="" id="cmx-incomplete-degree" class="form-control">
+                                                            <option value=""></option>
+                                                            <option value="">完整</option>
+                                                            <option value="">基本完整</option>
+                                                            <option value="">残缺</option>
+                                                            <option value="">严重残缺（ 含缺失部件）</option>
+                                                        </select>
+                                                    </div>
+
+                                                </div>
+
+                                                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 form-group">
+                                                    <label for="cmx-relic-time" class="col-sm-3">年代</label>
+                                                    <div class="col-sm-9">
+                                                        <select name="" id="cmx-relic-time" class="form-control">
+                                                            <option value=""></option>
+                                                            <option value=""></option>
+                                                            <option value="417000">公元前6世纪</option>
+                                                            <option value="418000">公元前5世纪</option>
+                                                            <option value="419000">公元前4世纪</option>
+                                                            <option value="111300">古近纪</option>
+                                                            <option value="112000">中生代</option>
+                                                            <option value="112100">白垩纪</option>
+                                                            <option value="112200">侏罗纪</option>
+                                                            <option value="112300">三叠纪</option>
+                                                            <option value="113000">古生代</option>
+                                                            <option value="113100">二叠纪</option>
+                                                            <option value="113200">石炭纪</option>
+                                                            <option value="113300">泥盆纪</option>
+                                                            <option value="113400">志留纪</option>
+                                                            <option value="113500">奥陶纪</option>
+                                                            <option value="113600">寒武纪</option>
+                                                            <option value="120000">元古宙</option>
+                                                            <option value="121000">新元古代</option>
+                                                            <option value="100000">地质年代</option>
+                                                            <option value="121100">埃迪卡拉纪</option>
+                                                            <option value="121200">成冰纪</option>
+                                                            <option value="121300">拉伸纪</option>
+                                                            <option value="122000">中元古代</option>
+                                                            <option value="122100">狭带纪</option>
+                                                            <option value="122200">延展纪</option>
+                                                            <option value="122300">盖层纪</option>
+                                                            <option value="123000">古元古代</option>
+                                                            <option value="123100">固结纪</option>
+                                                            <option value="123200">造山纪</option>
+                                                            <option value="123300">层侵纪</option>
+                                                            <option value="123400">成铁纪</option>
+                                                            <option value="130000">太古宙</option>
+                                                            <option value="131000">新太古代</option>
+                                                            <option value="132000">中太古代</option>
+                                                            <option value="133000">古太古代</option>
+                                                            <option value="134000">始太古代</option>
+                                                            <option value="140000">冥古宙</option>
+                                                            <option value="141000">雨海代</option>
+                                                            <option value="142000">酒神代</option>
+                                                            <option value="143000">原生代</option>
+                                                            <option value="144000">隐生代</option>
+                                                            <option value="200000">考古学年代</option>
+                                                            <option value="210000">旧石器时代</option>
+                                                            <option value="220000">新石器时代</option>
+                                                            <option value="300000">中国历史学年代</option>
+                                                            <option value="301000">夏(约前2070~前1600)</option>
+                                                            <option value="302000">商(前1600~前1046)</option>
+                                                            <option value="303000">周</option>
+                                                            <option value="303100">西周(前1046~前771)</option>
+                                                            <option value="303200">东周(前770~前256)</option>
+                                                            <option value="303300">春秋时代(前770~前476)</option>
+                                                            <option value="303400">战国时代(前475~前221)</option>
+                                                            <option value="304000">秦(前221~前206)</option>
+                                                            <option value="305000">汉</option>
+                                                            <option value="305100">西汉(前206~公元25)</option>
+                                                            <option value="305200">东汉(25~220)</option>
+                                                            <option value="306000">三国</option>
+                                                            <option value="306100">三国·魏(220~265)</option>
+                                                            <option value="306200">三国·蜀(221~263)</option>
+                                                            <option value="306300">三国·吴(222~280)</option>
+                                                            <option value="307000">西晋(265~317)</option>
+                                                            <option value="308000">东晋十六国</option>
+                                                            <option value="308100">东晋(317~420)</option>
+                                                            <option value="308200">十六国(304~439)</option>
+                                                            <option value="309000">南北朝</option>
+                                                            <option value="309100">南朝</option>
+                                                            <option value="309110">南朝·宋(420~479)</option>
+                                                            <option value="309120">南朝·齐(479~502)</option>
+                                                            <option value="309130">南朝·梁(502~557)</option>
+                                                            <option value="309140">南朝·陈(557~589)</option>
+                                                            <option value="309200">北朝</option>
+                                                            <option value="309210">北魏(386~534)</option>
+                                                            <option value="309220">东魏(534~550)</option>
+                                                            <option value="309230">北齐(550~577)</option>
+                                                            <option value="309240">西魏(535~556)</option>
+                                                            <option value="309250">北周(557~581)</option>
+                                                            <option value="310000">隋(581~618)</option>
+                                                            <option value="311000">唐(618~907)</option>
+                                                            <option value="312000">五代十国</option>
+                                                            <option value="312100">五代·后梁(907~923)</option>
+                                                            <option value="312200">五代·后唐(923~936)</option>
+                                                            <option value="312300">五代·后晋(936~947)</option>
+                                                            <option value="312400">五代·后汉(947~950)</option>
+                                                            <option value="312500">五代·后周(951~960)</option>
+                                                            <option value="312600">十国(902~979)</option>
+                                                            <option value="313000">宋</option>
+                                                            <option value="313100">北宋(960~1127)</option>
+                                                            <option value="313200">南宋(1127~1279)</option>
+                                                            <option value="314000">辽(907~1125)</option>
+                                                            <option value="315000">西夏(1038~1227)</option>
+                                                            <option value="316000">金(1115~1234)</option>
+                                                            <option value="317000">元(1206~1368)</option>
+                                                            <option value="318000">明(1368~1644)</option>
+                                                            <option value="319000">清(1616~1911)</option>
+                                                            <option value="320000">中华民国(1912~1949)</option>
+                                                            <option value="321000">中华人民共和国(1949年10月1日成立)</option>
+                                                            <option value="400000">公历纪年</option>
+                                                            <option value="401000">200万年以前</option>
+                                                            <option value="402000">200万年至公元前21世纪</option>
+                                                            <option value="403000">公元前20世纪</option>
+                                                            <option value="404000">公元前19世纪</option>
+                                                            <option value="405000">公元前18世纪</option>
+                                                            <option value="406000">公元前17世纪</option>
+                                                            <option value="407000">公元前16世纪</option>
+                                                            <option value="408000">公元前15世纪</option>
+                                                            <option value="409000">公元前14世纪</option>
+                                                            <option value="410000">公元前13世纪</option>
+                                                            <option value="411000">公元前12世纪</option>
+                                                            <option value="412000">公元前11世纪</option>
+                                                            <option value="413000">公元前10世纪</option>
+                                                            <option value="414000">公元前9世纪</option>
+                                                            <option value="415000">公元前8世纪</option>
+                                                            <option value="416000">公元前7世纪</option>
+                                                            <option value="420000">公元前3世纪</option>
+                                                            <option value="421000">公元前2世纪</option>
+                                                            <option value="431000">公元前1世纪</option>
+                                                            <option value="432000">公元1世纪</option>
+                                                            <option value="433000">公元2世纪</option>
+                                                            <option value="434000">公元3世纪</option>
+                                                            <option value="435000">公元4世纪</option>
+                                                            <option value="436000">公元5世纪</option>
+                                                            <option value="437000">公元6世纪</option>
+                                                            <option value="438000">公元7世纪</option>
+                                                            <option value="439000">公元8世纪</option>
+                                                            <option value="441000">公元9世纪</option>
+                                                            <option value="442000">公元10世纪</option>
+                                                            <option value="443000">公元11世纪</option>
+                                                            <option value="444000">公元12世纪</option>
+                                                            <option value="445000">公元13世纪</option>
+                                                            <option value="446000">公元14世纪</option>
+                                                            <option value="447000">公元15世纪</option>
+                                                            <option value="448000">公元16世纪</option>
+                                                            <option value="449000">公元17世纪</option>
+                                                            <option value="450000">公元18世纪</option>
+                                                            <option value="451000">公元19世纪</option>
+                                                            <option value="452000">公元20世纪</option>
+                                                            <option value="453000">公元21世纪</option>
+                                                            <option value="500000">其他</option>
+                                                            <option value="600000">年代不详</option>
+                                                            <option value="111200">新近纪</option>
+                                                            <option value="111100">第四纪</option>
+                                                            <option value="111000">新生代</option>
+                                                            <option value="110000">显生宙</option>
+                                                        </select>
+                                                    </div>
+
+                                                </div>
+
+                                                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 form-group">
+                                                    <label for="cmx-collection-institution" class="col-sm-3">收藏单位</label>
+                                                    <div class="col-sm-9">
+                                                        <select name="" id="cmx-collection-institution" class="form-control">
+                                                            <option value="">--默认本单位--</option>
+                                                            <option value=""></option>
+                                                            <option value=""></option>
+                                                            <option value=""></option>
+                                                            <option value=""></option>
+                                                            <option value=""></option>
+                                                        </select>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </form>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                    <div class="tableDiv row">
+                                        <table class="table table-hover table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th></th>
+                                                    <th></th>
+                                                    <th>文物编号</th>
+                                                    <th>人文编号类型</th>
+                                                    <th>编号</th>
+                                                    <th>文物名称</th>
+                                                    <th>原名</th>
+                                                    <th>所属年代</th>
+                                                    <th>具体年代</th>
+                                                    <th>文物类别</th>
+                                                    <th>质地类别</th>
+                                                    <th>数量</th>
+                                                    <th>通长</th>
+                                                    <th>通宽</th>
+                                                    <th>通高</th>
+                                                    <th>具体尺寸</th>
+                                                    <th>具体质量</th>
+                                                    <th>文物级别</th>
+                                                    <th>来源方式</th>
+                                                    <th>完残程度</th>
+                                                    <th>完残状况</th>
+                                                    <th>保存状态</th>
+                                                    <th>入藏年度</th>
+                                                    <th>著者</th>
+                                                    <th>版本</th>
+                                                    <th>备注</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <td></td>
+                                                <td>
+                                                    <input type="checkbox">
+                                                </td>
+                                                <td>1111111</td>
+                                                <td>文物古籍</td>
+                                                <td>gj111</td>
+                                                <td>春秋鼎</td>
+                                                <td>111</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                    <div class="relic-footer">
+
+                                        <!--  分页 -->
+                                        <ul class="pagination">
+                                            <li>
+                                                <a href="javascript:;">首页</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">上一页</a>
+                                            </li>
+                                            <li>
+                                                <span>第
+                                                    <input type="text" value="1" />/15页</span>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">下一页</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">尾页</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="tab-pane" id="cmx-fossil-specimen" role="tabpanel">
+                                    <div class="queryTerm">
+                                        <label for="cmx-fossil-specimen-number">登记号</label>
+                                        <input type="text" id="cmx-fossil-specimen-number">
+                                        <label for="cmx-fossil-specimen-name">文物名称</label>
+                                        <input type="text" id="cmx-fossil-specimen-name">
+                                        <div class="right-part">
+                                            <button class="btn btn-primary">查询</button>
+                                            <button class="btn btn-primary">清除</button>
+                                            <button type="button" class="btn btn-primary cmx-more-research">更多查询条件</button>
+                                            <button type="button" class="btn btn-primary cmx-pack-up">收起更多条件</button>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                        <div class="cmx-more-search-div row">
+                                            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 form-group">
+                                                <label for="cmx-relic-level" class="col-sm-3">文物级别</label>
+                                                <div class="col-sm-9">
+                                                    <select class="form-control" id="cmx-specimen-level">
+                                                        <option value=""></option>
+                                                        <option>珍贵</option>
+                                                        <option>一般</option>
+                                                        <option>其他</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 form-group">
+                                                <label for="cmx-relic-time" class="col-sm-3">年代</label>
+                                                <div class="col-sm-9">
+                                                    <select name="" id="cmx-specimen-time" class="form-control">
+                                                        <option value=""></option>
+                                                        <option value="100000">地质年代</option>
+                                                        <option value="110000">显生宙</option>
+                                                        <option value="111000">新生代</option>
+                                                        <option value="111100">第四纪</option>
+                                                        <option value="111200">新近纪</option>
+                                                        <option value="111300">古近纪</option>
+                                                        <option value="112000">中生代</option>
+                                                        <option value="112100">白垩纪</option>
+                                                        <option value="112200">侏罗纪</option>
+                                                        <option value="112300">三叠纪</option>
+                                                        <option value="113000">古生代</option>
+                                                        <option value="113100">二叠纪</option>
+                                                        <option value="113200">石炭纪</option>
+                                                        <option value="113300">泥盆纪</option>
+                                                        <option value="113400">志留纪</option>
+                                                        <option value="113500">奥陶纪</option>
+                                                        <option value="113600">寒武纪</option>
+                                                        <option value="120000">元古宙</option>
+                                                        <option value="121100">埃迪卡拉纪</option>
+                                                        <option value="121200">成冰纪</option>
+                                                        <option value="121300">拉伸纪</option>
+                                                        <option value="121000">新元古代</option>
+                                                        <option value="122000">中元古代</option>
+                                                        <option value="122100">狭带纪</option>
+                                                        <option value="122200">延展纪</option>
+                                                        <option value="122300">盖层纪</option>
+                                                        <option value="123000">古元古代</option>
+                                                        <option value="123100">固结纪</option>
+                                                        <option value="123200">造山纪</option>
+                                                        <option value="123300">层侵纪</option>
+                                                        <option value="123400">成铁纪</option>
+                                                        <option value="130000">太古宙</option>
+                                                        <option value="131000">新太古代</option>
+                                                        <option value="132000">中太古代</option>
+                                                        <option value="133000">古太古代</option>
+                                                        <option value="134000">始太古代</option>
+                                                        <option value="140000">冥古宙</option>
+                                                        <option value="141000">雨海代</option>
+                                                        <option value="142000">酒神代</option>
+                                                        <option value="143000">原生代</option>
+                                                        <option value="144000">隐生代</option>
+                                                        <option value="900000">年代不详</option>
+                                                    </select>
+                                                </div>
+
+                                            </div>
+                                            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 form-group">
+                                                <label for="cmx-collection-institution" class="col-sm-3">收藏单位</label>
+                                                <div class="col-sm-9">
+                                                    <select name="" id="cmx-specimen-institution" class="form-control">
+                                                        <option value="">--默认本单位--</option>
+                                                        <option value=""></option>
+                                                        <option value=""></option>
+                                                        <option value=""></option>
+                                                        <option value=""></option>
+                                                        <option value=""></option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tableDiv">
+                                        <table class="table table-hover table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <td>文物编号</td>
+                                                    <td>自然编号类型</td>
+                                                    <td>编号</td>
+                                                    <td>文物名称</td>
+                                                    <td>英文名称</td>
+                                                    <td>自然类别</td>
+                                                    <td>自然级别</td>
+                                                    <td>所属年代</td>
+                                                    <td>具体年代</td>
+                                                    <td>采集地</td>
+                                                    <td>通长</td>
+                                                    <td>通宽</td>
+                                                    <td>通高</td>
+                                                    <td>保存方式</td>
+                                                    <td>来源方式</td>
+                                                    <td>数量</td>
+                                                    <td>入藏时间范围</td>
+                                                    <td>入藏年度</td>
+                                                    <td>描述</td>
+                                                    <td>备注</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="relic-footer">
+
+                                        <ul class="pagination">
+                                            <li>
+                                                <a href="javascript:;">首页</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">上一页</a>
+                                            </li>
+                                            <li>
+                                                <span>第
+                                                    <input type="text" value="1" />/15页</span>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">下一页</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">尾页</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" type="button">确认</button>
+                <button type="button" class="btn btn-default cmx-cancle-btn" data-dismiss="modal">关闭</button>
+            </div>
+        </div>
+    </div>
+</div>

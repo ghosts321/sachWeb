@@ -1,0 +1,338 @@
+[{
+        "columnname": "cmx-j-1",
+        "columnindex": "cmx-j-1",
+        "serialnumber": "S0001",
+        "type": "text",
+        "name": "编号",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "short"
+        },
+        "extra": {
+            "class": "margin-left-0",
+            "func": "",
+            "width": "4",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-j-2",
+        "columnindex": "cmx-j-2",
+        "serialnumber": "S0002",
+        "type": "special",
+        "name": "文物名称",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "short"
+        },
+        "extra": {
+            "class": "format baseinfo",
+            "func": "cmx_choose_relicFunc",
+            "width": "8",
+            "layout": "",
+            "placeholder": "如是馆藏一级文物请点击右侧选择按钮，不是请直接填写"
+        }
+    },
+    {
+        "columnname": "cmx-j-3",
+        "columnindex": "cmx-j-3",
+        "serialnumber": "S0003",
+        "type": "text",
+        "name": "出土地点",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "short",
+            "max_length": 50
+        },
+        "extra": {
+            "class": "",
+            "func": "",
+            "width": "4",
+            "layout": "",
+            "placeholder": "请填写出土地点"
+        }
+    },
+    {
+        "columnname": "cmx-j-4",
+        "columnindex": "cmx-j-4",
+        "serialnumber": "S0004",
+        "type": "dateType",
+        "name": "出土时间",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "dateType"
+        },
+        "extra": {
+            "class": "chutu",
+            "func": "",
+            "width": "4",
+            "layout": "",
+            "placeholder": "请选择出土时间"
+        }
+    },
+    {
+        "columnname": "cmx-j-5",
+        "columnindex": "cmx-j-5",
+        "serialnumber": "S0005",
+        "type": "text",
+        "name": "具体年代",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "short",
+            "max_length": 50
+        },
+        "extra": {
+            "class": "margin-left-0",
+            "func": "",
+            "width": "4",
+            "layout": "",
+            "placeholder": "请填写具体年代"
+        }
+    },
+    {
+        "columnname": "cmx-j-6",
+        "columnindex": "cmx-j-6",
+        "serialnumber": "S0006",
+        "type": "text",
+        "name": "尺寸",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "short",
+            "max_length": 100
+        },
+        "extra": {
+            "class": "margin-left-0",
+            "func": "",
+            "width": "4",
+            "layout": "",
+            "placeholder": "请填写尺寸"
+        }
+    },
+    {
+        "columnname": "cmx-j-7",
+        "columnindex": "cmx-j-7",
+        "serialnumber": "S0007",
+        "type": "text",
+        "name": "文物级别",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "short",
+            "max_length": 5
+        },
+        "extra": {
+            "class": "margin-left-0",
+            "func": "",
+            "width": "4",
+            "layout": "",
+            "placeholder": "请填写文物级别"
+        }
+    },
+    {
+        "columnname": "cmx-j-8",
+        "columnindex": "cmx-j-8",
+        "serialnumber": "S0008",
+        "type": "text",
+        "name": "文物质地",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "short",
+            "max_length": 15
+        },
+        "extra": {
+            "class": "margin-left-0",
+            "func": "",
+            "width": "4",
+            "layout": "",
+            "placeholder": "请填写文物质地"
+        }
+    },
+    {
+        "columnname": "cmx-j-9",
+        "columnindex": "cmx-j-9",
+        "serialnumber": "S0009",
+        "type": "text",
+        "name": "数量",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "short"
+        },
+        "extra": {
+            "class": "margin-left-0",
+            "func": "",
+            "width": "4",
+            "layout": "",
+            "placeholder": "请填写文物数量"
+        }
+    },
+    {
+        "columnname": "cmx-j-10",
+        "columnindex": "cmx-j-10",
+        "serialnumber": "S0010",
+        "type": "text",
+        "name": "总登记号",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "short",
+            "max_length": 30
+        },
+        "extra": {
+            "class": "margin-left-0",
+            "func": "",
+            "width": "4",
+            "layout": "",
+            "placeholder": "请填写总登记号"
+        }
+    },
+    {
+        "columnname": "cmx-j-11",
+        "columnindex": "cmx-j-11",
+        "serialnumber": "S0011",
+        "type": "text",
+        "name": "文物收藏单位",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "short",
+            "max_length": 200
+        },
+        "extra": {
+            "class": "margin-left-0",
+            "func": "",
+            "width": "4",
+            "layout": "",
+            "placeholder": "请填写文物收藏单位"
+        }
+    },
+    {
+        "columnname": "cmx-j-12",
+        "columnindex": "cmx-j-12",
+        "serialnumber": "S0012",
+        "type": "text",
+        "name": "发表书刊",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "short",
+            "max_length": 200
+        },
+        "extra": {
+            "class": "margin-left-0",
+            "func": "",
+            "width": "4",
+            "layout": "",
+            "placeholder": "请填写发表书刊"
+        }
+    },
+    {
+        "columnname": "cmx-j-13",
+        "columnindex": "cmx-j-13",
+        "serialnumber": "S0013",
+        "type": "dateType",
+        "name": "发表时间",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "",
+            "max_length": 10
+        },
+        "extra": {
+            "class": "margin-left-0",
+            "func": "",
+            "width": "4",
+            "layout": "",
+            "placeholder": "请选择发表时间"
+        }
+    },
+    {
+        "columnname": "cmx-j-14",
+        "columnindex": "cmx-j-14",
+        "serialnumber": "S0014",
+        "type": "num",
+        "name": "保险估价",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "prefix": 0,
+            "unit": "万元",
+            "decimal": 2,
+            "min": 0,
+            "max_length": 18
+        },
+        "extra": {
+            "class": "margin-left-0",
+            "func": "",
+            "width": "4",
+            "layout": "",
+            "placeholder": "请填写保险估价"
+        }
+    },
+    {
+        "columnname": "cmx-j-15",
+        "columnindex": "cmx-j-15",
+        "serialnumber": "S0015",
+        "type": "special",
+        "name": "外展历史",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "long"
+        },
+        "extra": {
+            "class": "margin-left-0",
+            "func": "cmx_exhibitionHistoryFunc",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-j-16",
+        "columnindex": "cmx-j-16",
+        "serialnumber": "S0016",
+        "type": "text",
+        "name": "简要说明",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "long",
+            "max_length": 1000
+        },
+        "extra": {
+            "class": "margin-left-0 picture",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": "请填写简要说明，不超过1000个汉字"
+        }
+    }, {
+        "columnname": "image",
+        "columnindex": "fieldsign-columnname",
+        "serialnumber": "S0017",
+        "type": "handimg",
+        "name": "图片",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "single": "1"
+        },
+        "extra": {
+            "class": "",
+            "func": "",
+            "width": "",
+            "layout": "",
+            "placeholder": ""
+        }
+    }
+
+]

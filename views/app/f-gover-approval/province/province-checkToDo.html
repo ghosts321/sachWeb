@@ -1,0 +1,132 @@
+<title>文保资质单位资格检查 </title>
+
+<link rel="stylesheet" href="/css/app/f-gover-approval/needToDo.css" />
+<link rel="stylesheet" href="/vendor/bootstrap-datepicker/bootstrap-datepicker.css">
+
+
+<div class="page animation-fade page-tables">
+    <div class="page-content">
+        <div class="panel">
+            <div class="panel-heading">
+                <h3 class="panel-title"></h3>
+            </div>
+            <div class="panel-body container-fluid">
+                <div class="row row-lg">
+                    <div class="col-xs-12 col-md-4 col-lg-4">
+                        <div class="form-wrap">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+                                        文件标题
+                                    </span>
+                                    <input type="text" class="form-control" id="proFileTitle" name="name" placeholder="" autocomplete="off">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-md-4 col-lg-4">
+                        <div class="form-wrap">
+                            <div class="form-group">
+                                <button type="button" class="btn btn-primary inputon" id="search-btn">查询</button>
+                                <button type="button" class="btn inputon" id="clear-search-form">清除</button>
+                                <button type="button" id="show-hide-info" class="pull-right show-info btn btn-outline btn-primary inputon">更多条件
+                                    <i class="icon wb-chevron-down" style="font-size: 10px;" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row row-lg condition-info" style="display:none;">
+                    <div class="col-xs-12 col-md-4 col-lg-4">
+                        <div class="form-wrap">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+                                        省别
+                                    </span>
+                                    <select id="provinces" data-dic="Province" class="form-control" style="width:100%;">
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-8 col-lg-8">
+                        <div class="form-wrap">
+                            <div class="form-group start">
+                                <div class="input-daterange inputon" data-plugin="datepicker" data-language="zh-CN">
+                                    <div class="input-group">
+                                        <span class="input-group-addon  padding-top-0 padding-bottom-0">
+                                            <i class="icon wb-calendar" aria-hidden="true"></i>
+                                            收到时间
+                                        </span>
+                                        <input type="text" id="arriveDateBeg" class="form-control" name="start">
+                                    </div>
+                                    <div class="input-group">
+                                        <span class="input-group-addon padding-top-0 padding-bottom-0"> 至 </span>
+                                        <input type="text" id="arriveDateEnd" class="form-control" name="end">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row margin-0">
+                    <div class="table-responsive text-nowrap col-xs-12 padding-0" style="min-height:450px;">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr id="th-head">
+                                    <th style="width: 45px">编号</th>
+                                    <th style="width: 65px">省别</th>
+                                    <th style="width: 200px">文件标题</th>
+                                    <th style="width: 250px">事项类型</th>
+                                    <th style="width: 100px">状态</th>
+                                    <th style="width: 155px">收到时间</th>
+                                    <th style="width: 90px">停留时间</th>
+                                    <th style="width: 165px">网审号</th>
+                                </tr>
+                            </thead>
+                            <tbody id="cmx-ntd-tbody">
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="relic-footer col-xs-12 margin-top-10">
+                        <!--  分页 -->
+                        <ul class="pagination" id="cmx-pneedPage" style="float:right;">
+                            <li>
+                                <a href="javascript:;" class="first">首页</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;" class="pre">上一页</a>
+                            </li>
+                            <li>
+                                <span>
+                                    <input type="text" class="jumppage" style="width:30px;float:left;height:22px;border: 1px #ddd solid;text-align:center;" />
+                                    <span class="nowpage">0</span>/
+                                    <span class="totalpage">0</span>页</span>
+                            </li>
+                            <li>
+                                <a href="javascript:;" class="next">下一页</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;" class="last">尾页</a>
+                            </li>
+                        </ul>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="/vendor/bootstrap-datepicker/bootstrap-datepicker.min.js" data-name="datepicker"></script>
+<script src="/vendor/bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.min.js" data-deps="datepicker"></script>
+
+<script src="/js/app/f-gover-approval/models/public-model.js"></script>
+<script src="/js/app/f-gover-approval/views/public-view.js"></script>
+<script src="/js/app/f-gover-approval/province/models/province-checkToDo-model.js"></script>
+<script src="/js/app/f-gover-approval/province/views/province-checkToDo-view.js"></script>
+<script src="/js/app/f-gover-approval/province/province-checkToDo.js"></script>

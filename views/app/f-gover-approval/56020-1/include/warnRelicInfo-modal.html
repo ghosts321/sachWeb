@@ -1,0 +1,162 @@
+<style>
+    #warnRelicList tr td {
+        width: 25%;
+    }
+</style>
+<div class="modal fade in" id="warnRelicInfo-modal" aria-hidden="true" aria-labelledby="addrelicinfo" role="dialog" tabindex="-1">
+    <div class="modal-dialog modal-center" style="width:85%;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span id="modalTitle">文物报警信息对比</span>
+                <button class="pull-right close closed" data-dismiss="modal" aria-label="关闭">关闭</button>
+                <div class="clearfix"></div>
+            </div>
+            <div class="modal-body " style="height:500px;overflow:scroll;">
+                <div class="col-md-12 col-lg-12" id="warnRelicInfo-div">
+                    <div class="example table-responsive">
+                        <table class="table table-bordered table-hover">
+                            <tbody id="warnRelicList">
+                                <tr>
+                                    <th colspan="2" class="text-middle">文物照片</th>
+                                    <td id="warnIndex">
+                                        <ul class="file-upload-list margin-0 padding-0" id="filelist-P00030S">
+                                        </ul>
+                                    </td>
+                                    <td id="index">
+                                        <ul class="file-upload-list margin-0 padding-0" id="filelist-P00030">
+                                            <!-- <img style="max-height: 200px; opacity: 1;" class="img-responsive" alt="..." src="http://192.168.209.220:4040/DmFileInfoController/downloadFile?fileIndex=8A36B228-B90E-42F3-80CF-DD3DE9545C09"> -->
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>相似文物数</th>
+                                    <td id="similarRelics"></td>
+                                    <td>相似度</td>
+                                    <td id="similar"></td>
+                                </tr>
+                                <!-- <tr>
+                                    <th rowspan="6" class="text-middle">照片属性</th>
+                                    <td>拍摄角度</td>
+                                    <td id=""></td>
+                                    <td id=""></td>
+                                </tr>
+                                <tr>
+                                    <td>部位</td>
+                                    <td id=""></td>
+                                    <td id=""></td>
+                                </tr>
+                                <tr>
+                                    <td>清晰度</td>
+                                    <td id=""></td>
+                                    <td id=""></td>
+                                </tr>
+                                <tr>
+                                    <td>存储格式</td>
+                                    <td id="warnFormat"></td>
+                                    <td id="format"></td>
+                                </tr>
+                                <tr>
+                                    <td>宽度</td>
+                                    <td id=""></td>
+                                    <td id=""></td>
+                                </tr>
+                                <tr>
+                                    <td>高度</td>
+                                    <td id=""></td>
+                                    <td id=""></td>
+                                </tr> -->
+                                <tr>
+                                    <th rowspan="11" class="text-middle">文物信息</th>
+                                    <td>文物名称</td>
+                                    <td id="warnRelicName"></td>
+                                    <td id="relicName"></td>
+                                </tr>
+                                <tr>
+
+                                    <td>文物年代</td>
+                                    <td id="warnRelicYear"></td>
+                                    <td id="relicYear"></td>
+                                </tr>
+                                <tr>
+                                    <td>文物质地</td>
+                                    <td id="warnRelicQuality"></td>
+                                    <td id="relicQuality"></td>
+                                </tr>
+                                <tr>
+                                    <td>文物级别</td>
+                                    <td id="warnRelicLevel"></td>
+                                    <td id="relicLevel"></td>
+                                </tr>
+                                <tr>
+                                    <td>文物尺寸</td>
+                                    <td id="warnRelicSize"></td>
+                                    <td id="relicSize"></td>
+                                </tr>
+                                <tr>
+                                    <td>长</td>
+                                    <td id="warnRelicLength"></td>
+                                    <td id="relicLength"></td>
+                                </tr>
+                                <tr>
+                                    <td>宽</td>
+                                    <td id="warnRelicWidth"></td>
+                                    <td id="relicWidth"></td>
+                                </tr>
+                                <tr>
+                                    <td>高</td>
+                                    <td id="warnRelicWidth"></td>
+                                    <td id="relicHeight"></td>
+                                </tr>
+                                <tr>
+                                    <td>口径</td>
+                                    <td id="warnRelicWidth"></td>
+                                    <td id="relicCaliber"></td>
+                                </tr>
+                                <tr>
+                                    <td>腹径</td>
+                                    <td id="warnRelicWidth"></td>
+                                    <td id="relicMicro"></td>
+                                </tr>
+                                <tr>
+                                    <td>底径</td>
+                                    <td id="warnRelicWidth"></td>
+                                    <td id="relicBottom"></td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <ul id="goToWarnInfo" style="visibility:hidden" class="pagination" style="float:right;width:175px">
+                <li>
+                    <a id="warn-first" href="javascript:;">
+                        <i class="icon font-size-14 orange-800 fa-fast-backward"></i>
+                    </a>
+                </li>
+                <li>
+                    <a id="warn-prev" href="javascript:;">
+                        <i class="icon font-size-14 fa-toggle-left"></i>
+                    </a>
+                </li>
+                <li>
+                    <a id="warn-next" href="javascript:;">
+                        <i class="icon font-size-14 fa-toggle-right"></i>
+                    </a>
+                </li>
+                <li>
+                    <a id="warn-last" href="javascript:;">
+                        <i class="icon font-size-14 orange-800 fa-fast-forward"></i>
+                    </a>
+                </li>
+            </ul>
+            <div class="clearfix"></div>
+            <div class="modal-footer text-center">
+                <button type="button" class="btn btn-info cmx-cancle-btn" data-dismiss="modal" style="margin-right:10px;">关闭</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+
+</script>

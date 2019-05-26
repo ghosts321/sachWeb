@@ -1,0 +1,128 @@
+<div class="modal fade in" id="cmx-editrelicinfo" aria-hidden="true" aria-labelledby="addrelicinfo" role="dialog" tabindex="-1">
+    <div class="modal-dialog modal-center" style="width:95%;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span id="modalTitle">当前列表文物信息</span>
+                <button class="pull-right close closed" data-dismiss="modal" aria-label="关闭">关闭</button>
+                <div class="clearfix"></div>
+            </div>
+            <div class="modal-body " style="height:500px;overflow:scroll;">
+                
+                
+                <div class="col-sm-5 col-xs-5 col-md-5 col-lg-5" id="cmx-relicList-left" style="height:500px;overflow:scroll;">
+
+                </div>
+                <div class="col-sm-7 col-xs-7 col-md-7 col-lg-7" id="cmx-addrelicinfor-1">
+                    <div class="cmx-form-body col-sm-6 col-xs-6 col-md-6 col-lg-6">
+                        <div class="form-group margin-bottom-20" cmx-tag="cmx" cmx-lib="P00030" cmx-index="cmx-30-RelicName" cmx-column="cmx-i-30"
+                            cmx-type="text" cmx-require="true" cmx-stype="short" max-length="20">
+                            <label class="control-label col-sm-3" for="cmx-30-RelicName">文物艺术品名称</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control old-val-tag" id="cmx-30-RelicName" name="cmx-30-RelicName" placeholder="" value=""
+                                    disabled="disabled">
+                                <p class="p-val-tag p-val-hidden"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cmx-form-body col-sm-6 col-xs-6 col-md-6 col-lg-6">
+                        <div class="form-group margin-bottom-40" cmx-tag="cmx" cmx-lib="P0002" cmx-index="cmx-30-RelicType" cmx-column="cmx-i-2"
+                            cmx-type="single" cmx-require="false" cmx-stype="1">
+                            <label class="control-label col-sm-3">类别</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control old-val-tag" id="cmx-30-RelicType" name="cmx-30-RelicType" disabled="disabled">
+                                <p class="p-val-tag p-val-hidden"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cmx-form-body col-sm-6 col-xs-6 col-md-6 col-lg-6">
+                        <div class="form-group margin-bottom-20" cmx-tag="cmx" cmx-lib="P00030" cmx-index="cmx-30-RelicYear" cmx-column="cmx-i-3"
+                            cmx-type="text" cmx-require="false" cmx-stype="short" max-length="25">
+                            <label class="control-label col-sm-3" for="cmx-30-RelicYear">年代</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control old-val-tag" id="cmx-30-RelicYear" name="cmx-30-RelicYear" placeholder="" value=""
+                                    disabled="disabled">
+                                <p class="p-val-tag p-val-hidden"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cmx-form-body col-sm-6 col-xs-6 col-md-6 col-lg-6">
+                        <div class="form-group margin-bottom-20" cmx-tag="cmx" cmx-lib="P000301" cmx-index="cmx-30-RelicQuality" cmx-column="cmx-i-4"
+                            cmx-type="special" cmx-require="true">
+                            <label class="control-label col-sm-3" for="cmx-30-RelicQuality">
+                                质地</label>
+                            <div class="col-sm-9" id="cmx-special-P000301">
+                                <div class="cmx-form-body col-sm-12 col-xs-12 col-md-12 col-lg-12" style="margin:0;padding:0" id="">
+                                    <input type="text" class="form-control" id="cmx-30-ScrRelicQuality" name="" disabled="disabled">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cmx-form-body col-sm-6 col-xs-6 col-md-6 col-lg-6">
+                        <div class="form-group margin-bottom-20" cmx-tag="cmx" cmx-lib="P00031" cmx-index="cmx-30-RelicLevel" cmx-column="cmx-i-5"
+                            cmx-type="special" cmx-require="false">
+                            <label class="control-label col-sm-3" for="cmx-30-RelicLevel">级别</label>
+                            <div class="col-sm-9" id="cmx-special-P00031">
+                                <div class="cmx-form-body col-sm-12 col-xs-12 col-md-12 col-lg-12" style="margin:0;padding:0" id="">
+                                    <input type="text" class="form-control" id="cmx-30-RelicLevel" name="" disabled="disabled">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cmx-form-body col-sm-6 col-xs-6 col-md-6 col-lg-6">
+                        <div class="form-group margin-bottom-20" cmx-tag="cmx" cmx-lib="P00030" cmx-index="cmx-30-RelicNumber" cmx-column="cmx-i-6"
+                            cmx-type="special" cmx-require="false">
+                            <label class="control-label col-sm-3" for="cmx-30-RelicNumber">数量</label>
+                            <div class="col-sm-9" id="cmx-special-P00030">
+                                <div class="cmx-form-body col-sm-8 col-xs-8 col-md-8 col-lg-8" style="margin:0;padding:0" id="">
+                                    <input type="text" min="0" id="cmx-30-RelicNumberInput" class="form-control" placeholder="" disabled="disabled">
+                                </div>
+                                <div class="cmx-form-body col-sm-4 col-xs-4 col-md-4 col-lg-4" style="margin:0;padding:0" id="">
+                                    <input type="text" id="cmx-30-RelicNumberSelect" class="form-control" disabled="disabled">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cmx-form-body col-sm-6 col-xs-6 col-md-6 col-lg-6">
+                        <div class="form-group margin-bottom-20" cmx-tag="cmx" cmx-lib="P00030" cmx-index="cmx-30-RelicSize" cmx-column="cmx-i-7"
+                            cmx-type="text" cmx-require="true" cmx-stype="short" max-length="50">
+                            <label class="control-label col-sm-3" for="cmx-30-RelicSize">
+                                尺寸:</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control old-val-tag" id="cmx-30-RelicSize" name="cmx-30-RelicSize" placeholder="" value=""
+                                    disabled="disabled">
+                                <p class="p-val-tag p-val-hidden"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cmx-form-body col-sm-6 col-xs-6 col-md-6 col-lg-6">
+                        <div class="form-group margin-bottom-20" cmx-tag="cmx" cmx-lib="P00030" cmx-index="cmx-30-Remark" cmx-column="cmx-i-8" cmx-type="text"
+                            cmx-require="false" cmx-stype="long" max-length="500">
+                            <label class="control-label col-sm-3" for="cmx-30-Remark">备注</label>
+                            <div class="col-sm-9">
+                                <textarea class="form-control old-val-tag" id="cmx-30-Remark" name="cmx-30-Remark" placeholder="" value="" disabled="disabled"></textarea>
+                                <p class="p-val-tag p-val-hidden"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cmx-form-body col-sm-12 col-xs-12 col-md-12 col-lg-12">
+                        <div class="form-group " cmx-tag="cmx" cmx-lib="P00030" cmx-index="cmx-30-files" cmx-column="cmx-i-9" cmx-type="handimg56020"
+                            cmx-require="true">
+                            <label class="control-label col-sm-2" for="cmx-30-files">
+                                文物图片</label>
+                            <div class="col-sm-10 padding-0">
+                                <ul class="file-upload-list margin-0 padding-0" id="filelist-P00030">
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer " id="modal-foot">
+                <button type="button " class="pull-right btn-sm btn btn-default cmx-cancle-btn closed " data-dismiss="modal" style="margin-right:10px; ">关闭</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+
+</script>

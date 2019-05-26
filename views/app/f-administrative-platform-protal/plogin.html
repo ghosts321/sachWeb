@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <title>登录到 国家文物局综合行政管理平台</title>
+    <%- include('../../includes/head.html') %>
+        <!-- 自定义 -->
+        <link rel="stylesheet" href="/css/login.css">
+        <!-- 插件 -->
+        <link rel="stylesheet" href="/vendor/animsition/animsition.css">
+        <!-- 图标 -->
+        <link rel="stylesheet" href="/fonts/web-icons/web-icons.css">
+        <!-- 插件 -->
+        <link rel="stylesheet" href="/vendor/formvalidation/formValidation.css">
+        <script src="/themes/classic/global/js/cmx-route.js"></script>
+        <script src="/themes/classic/global/js/main.js"></script>
+        <script src="/themes/classic/global/js/openapi.js"></script>
+        <script src="/themes/classic/global/js/md5.min.js"></script>
+
+        <script src="/js/app/f-administrative-platform-protal/models/login-model.js"></script>
+        <script src="/js/app/f-administrative-platform-protal/views/login-view.js"></script>
+        <style>
+            .welcome-text {
+                color: white;
+                font-size: 36px;
+                font-weight: bolder;
+                letter-spacing: 3px;
+            }
+            
+            .msg {
+                color: #76838f;
+                font-size: 14px;
+            }
+        </style>
+</head>
+
+<body class="page-login layout-full page-dark">
+
+    <div class="page height-full">
+        <div class="page-content height-full">
+            <div class="page-brand-info vertical-align animation-slide-left hidden-xs">
+                <div class="page-brand vertical-align-middle">
+                    <div class="brand">
+                        <img class="brand-img" src="/images/logo.png" height="100" alt="国家文物局综合行政管理平台">
+                    </div>
+                    <h1 class="hidden-sm welcome-text">欢迎登录</h1>
+                    <h2 class="hidden-sm welcome-info-text">国家文物局综合行政管理平台</h2>
+                </div>
+            </div>
+            <div class="page-login-main animation-fade">
+                <!--<div class="alert alert-danger alert-dismissible" role="alert">-->
+                <!--用户名或密码错误！-->
+                <!--</div>-->
+                <div class="vertical-align">
+                    <div class="vertical-align-middle">
+                        <div class="brand visible-xs text-center">
+                            <img class="brand-img" style="width: 100%;" src="/images/logo2.png" alt="国家文物局综合行政管理平台">
+                        </div>
+                        <h3 class="hidden-xs margin-top-0 margin-bottom-30">登录 国家文物局综合行政管理平台</h3>
+                        <div class="nav-tabs-horizontal">
+                            <ul class="nav nav-tabs nav-tabs-line" role="tablist">
+                                <li class="active" role="presentation">
+                                    <a data-toggle="tab" href="#loginTypeOne" aria-controls="loginTypeOne" role="tab">
+                                        账号密码登录
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="tab-content">
+                                <div class="tab-pane active" id="loginTypeOne" role="tabpanel">
+                                    <form class="login-form" onsubmit="return checkLogin();" method="post" id="loginForm">
+                                        <div class="form-group">
+                                            <label class="sr-only" for="username">用户名</label>
+                                            <input type="text" class="form-control" id="username" name="username" placeholder="请输入用户名">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="sr-only" for="password">密码</label>
+                                            <input type="password" class="form-control" id="password" name="password" placeholder="请输入密码">
+                                        </div>
+                                        <div class="form-group row">
+                                            <div class="col-xs-5 padding-right-0" style="height:42px;text-align: center;">
+                                                <img src="/images/custom/chk-loding.png" id="cmx-chk-image" style="width: 100%;height:42px;" />
+                                            </div>
+                                            <div class="col-xs-7 padding-left-0">
+                                                <input type="text" class="form-control" id="validCode" name="validCode" placeholder="请输入验证码">
+                                            </div>
+                                        </div>
+                                        <div class="form-group clearfix">
+                                            <div class="checkbox-custom checkbox-inline checkbox-primary pull-left">
+                                                <input type="checkbox" id="remember" name="remember">
+                                                <label for="remember">记住我</label>
+                                            </div>
+                                            <a class="pull-right cmx-regist" style="display: none;" href="http://gl.sach.gov.cn/register.html">没有账号？立即注册</a>
+                                            <a class="pull-right cmx-rePassword" href="http://gl.sach.gov.cn/retrieve-password.html">忘记密码</a>
+                                            <a class="pull-right cmx-resetPwd" style="margin-right:20px;" href="http://gl.sach.gov.cn/reset-password.html">专家重置密码</a>
+                                        </div>
+                                        <button type="submit" id="login-btn" class="btn btn-primary btn-block margin-top-30">立即登录</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <footer class="page-copyright">
+                    <p>国家文物局综合行政管理平台 &copy;
+                        <a href="http://gl.sach.gov.cn">gl.sach.gov.cn</a>
+                    </p>
+                    <p class="red-500">技术平台联系电话：18500430019（刘老师） </p>
+                </footer>
+            </div>
+        </div>
+    </div>
+
+    <!-- JS -->
+    <script src="/vendor/jquery/jquery.min.js"></script>
+    <script src="/vendor/bootstrap/bootstrap.min.js"></script>
+    <script src="/vendor/formvalidation/formValidation.min.js" data-name="formValidation"></script>
+    <script src="/vendor/formvalidation/framework/bootstrap.min.js" data-deps="formValidation"></script>
+    <script src="/js/app/f-administrative-platform-protal/login.js"></script>
+</body>
+
+</html>

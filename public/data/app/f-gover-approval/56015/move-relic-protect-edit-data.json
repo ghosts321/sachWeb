@@ -1,0 +1,430 @@
+[{
+    "columnname": "cmx-i-1",
+    "columnindex": "cmx-i-1",
+    "serialnumber": "P0001",
+    "type": "separator",
+    "name": "文物基本情况",
+    "attribute": {
+        "default": "",
+        "notnull": 1,
+        "title": "文物基本情况",
+        "desc": ""
+    },
+    "extra": {
+        "class": "margin-bottom-10",
+        "func": "",
+        "width": 12,
+        "layout": "",
+        "placeholder": ""
+    }
+},
+{
+    "columnname": "cmx-i-2",
+    "columnindex": "cmx-i-2",
+    "serialnumber": "P0002",
+    "type": "text",
+    "name": "名称",
+    "attribute": {
+        "default": "",
+        "notnull": 1,
+        "stype": "short"
+    },
+    "extra": {
+        "class": "margin-bottom-40",
+        "func": "",
+        "width": "6",
+        "layout": "",
+        "placeholder": ""
+    }
+},
+{
+    "columnname": "cmx-i-3",
+    "columnindex": "cmx-i-3",
+    "serialnumber": "P0003",
+    "type": "text",
+    "name": "总登记号",
+    "attribute": {
+        "default": "",
+        "notnull": 1,
+        "stype": "short"
+    },
+    "extra": {
+        "class": "margin-bottom-40",
+        "func": "",
+        "width": "6",
+        "layout": "",
+        "placeholder": ""
+    }
+},
+{
+    "columnname": "cmx-i-4",
+    "columnindex": "cmx-i-4",
+    "serialnumber": "P0004",
+    "type": "text",
+    "name": "具体年代",
+    "attribute": {
+        "default": "",
+        "notnull": 1,
+        "stype": "short"
+    },
+    "extra": {
+        "class": "margin-bottom-40",
+        "func": "",
+        "width": "6",
+        "layout": "",
+        "placeholder": ""
+    }
+},
+{
+    "columnname": "cmx-i-5",
+    "columnindex": "cmx-i-5",
+    "serialnumber": "P0005",
+    "type": "single",
+    "name": "文物级别",
+    "attribute": {
+        "default": "",
+        "notnull": 0,
+        "stype": 1,
+        "remark": [{
+                "id": 0,
+                "value": "一级"
+            },
+            {
+                "id": 1,
+                "value": "二级"
+            }
+        ]
+    },
+    "extra": {
+        "class": "margin-bottom-40",
+        "func": "",
+        "width": "6",
+        "layout": "",
+        "placeholder": ""
+    }
+},
+{
+    "columnname": "cmx-i-6",
+    "columnindex": "cmx-i-6",
+    "serialnumber": "P0006",
+    "type": "text",
+    "name": "出土时间",
+    "attribute": {
+        "default": "",
+        "notnull": 1,
+        "stype": "short"
+    },
+    "extra": {
+        "class": "margin-bottom-40",
+        "func": "",
+        "width": "6",
+        "layout": "",
+        "placeholder": ""
+    }
+},
+{
+    "columnname": "cmx-i-7",
+    "columnindex": "cmx-i-7",
+    "serialnumber": "P0007",
+    "type": "text",
+    "name": "出土地点",
+    "attribute": {
+        "default": "",
+        "notnull": 1,
+        "stype": "short"
+    },
+    "extra": {
+        "class": "margin-bottom-40",
+        "func": "",
+        "width": "6",
+        "layout": "",
+        "placeholder": ""
+    }
+},
+{
+    "columnname": "cmx-i-8",
+    "columnindex": "cmx-i-8",
+    "serialnumber": "P0008",
+    "type": "text",
+    "name": "尺寸",
+    "attribute": {
+        "default": "",
+        "notnull": 1,
+        "stype": "short"
+    },
+    "extra": {
+        "class": "margin-bottom-40",
+        "func": "",
+        "width": "6",
+        "layout": "",
+        "placeholder": ""
+    }
+},
+{
+    "columnname": "cmx-i-9",
+    "columnindex": "cmx-i-9",
+    "serialnumber": "P0009",
+    "type": "text",
+    "name": "数量",
+    "attribute": {
+        "default": "",
+        "notnull": 1,
+        "stype": "short"
+    },
+    "extra": {
+        "class": "margin-bottom-40",
+        "func": "",
+        "width": "6",
+        "layout": "",
+        "placeholder": ""
+    }
+},
+{
+    "columnname": "cmx-i-10",
+    "columnindex": "cmx-i-10",
+    "serialnumber": "P0010",
+    "type": "text",
+    "name": "文物类别",
+    "attribute": {
+        "default": "",
+        "notnull": 1,
+        "stype": "short"
+    },
+    "extra": {
+        "class": "margin-bottom-40",
+        "func": "",
+        "width": "6",
+        "layout": "",
+        "placeholder": ""
+    }
+},
+{
+    "columnname": "cmx-i-11",
+    "columnindex": "cmx-i-11",
+    "serialnumber": "P0011",
+    "type": "text",
+    "name": "质地",
+    "attribute": {
+        "default": "",
+        "notnull": 1,
+        "stype": "short"
+    },
+    "extra": {
+        "class": "margin-bottom-40",
+        "func": "",
+        "width": "6",
+        "layout": "",
+        "placeholder": ""
+    }
+},
+{
+    "columnname": "cmx-i-12",
+    "columnindex": "cmx-i-12",
+    "serialnumber": "P0012",
+    "type": "text",
+    "name": "收藏单位",
+    "attribute": {
+        "default": "",
+        "notnull": 1,
+        "stype": "short"
+    },
+    "extra": {
+        "class": "margin-bottom-40",
+        "func": "",
+        "width": "6",
+        "layout": "",
+        "placeholder": ""
+    }
+},
+{
+    "columnname": "cmx-i-13",
+    "columnindex": "cmx-i-13",
+    "serialnumber": "P0013",
+    "type": "text",
+    "name": "收藏时间",
+    "attribute": {
+        "default": "",
+        "notnull": 1,
+        "stype": "short"
+    },
+    "extra": {
+        "class": "margin-bottom-40",
+        "func": "",
+        "width": "6",
+        "layout": "",
+        "placeholder": ""
+    }
+},
+{
+    "columnname": "cmx-i-14",
+    "columnindex": "cmx-i-14",
+    "serialnumber": "P0014",
+    "type": "text",
+    "name": "保存状态",
+    "attribute": {
+        "default": "",
+        "notnull": 1,
+        "stype": "short"
+    },
+    "extra": {
+        "class": "margin-bottom-40",
+        "func": "",
+        "width": "12",
+        "layout": "",
+        "placeholder": ""
+    }
+},
+{
+    "columnname": "cmx-i-15",
+    "columnindex": "cmx-i-15",
+    "serialnumber": "P0015",
+    "type": "special",
+    "name": "所有病害类型",
+    "attribute": {
+        "default": "",
+        "notnull": 1,
+        "stype": ""
+    },
+    "extra": {
+        "class": "margin-bottom-40",
+        "func": "cmx_special_1",
+        "width": "12",
+        "layout": "",
+        "placeholder": ""
+    }
+},
+
+{
+    "columnname": "cmx-i-16",
+    "columnindex": "cmx-i-16",
+    "serialnumber": "P0016",
+    "type": "special",
+    "name": "已选择的病害类型",
+    "attribute": {
+        "default": "",
+        "notnull": 1,
+        "stype": ""
+    },
+    "extra": {
+        "class": "margin-bottom-40",
+        "func": "cmx_special_2",
+        "width": "12",
+        "layout": "",
+        "placeholder": ""
+    }
+},
+{
+    "columnname": "cmx-i-17",
+    "columnindex": "cmx-i-17",
+    "serialnumber": "P0017",
+    "type": "text",
+    "name": "病害描述",
+    "attribute": {
+        "default": "",
+        "notnull": 1,
+        "stype": "long"
+    },
+    "extra": {
+        "class": "margin-bottom-40",
+        "func": "",
+        "width": "12",
+        "layout": "",
+        "placeholder": ""
+    }
+},
+{
+    "columnname": "cmx-i-18",
+    "columnindex": "cmx-i-18",
+    "serialnumber": "P0018",
+    "type": "handimg",
+    "name": "文物照片",
+    "attribute": {
+        "default": "",
+        "notnull": 1,
+        "single": "1"
+    },
+    "extra": {
+        "class": "",
+        "func": "",
+        "width": "6",
+        "layout": "",
+        "placeholder": ""
+    }
+},
+{
+    "columnname": "cmx-i-19",
+    "columnindex": "cmx-i-19",
+    "serialnumber": "P0019",
+    "type": "handimg",
+    "name": "病害照片",
+    "attribute": {
+        "default": "",
+        "notnull": 1,
+        "single": "1"
+    },
+    "extra": {
+        "class": "",
+        "func": "",
+        "width": "6",
+        "layout": "",
+        "placeholder": ""
+    }
+},
+{
+    "columnname": "cmx-i-20",
+    "columnindex": "cmx-i-20",
+    "serialnumber": "P0020",
+    "type": "handimg",
+    "name": "病害图",
+    "attribute": {
+        "default": "",
+        "notnull": 1,
+        "single": "1"
+    },
+    "extra": {
+        "class": "",
+        "func": "",
+        "width": "12",
+        "layout": "",
+        "placeholder": ""
+    }
+},
+{
+    "columnname": "cmx-i-21",
+    "columnindex": "cmx-i-21",
+    "serialnumber": "P0021",
+    "type": "handimg",
+    "name": "分析检测照片",
+    "attribute": {
+        "default": "",
+        "notnull": 1,
+        "single": "1"
+    },
+    "extra": {
+        "class": "",
+        "func": "",
+        "width": "6",
+        "layout": "",
+        "placeholder": ""
+    }
+},
+{
+    "columnname": "cmx-i-22",
+    "columnindex": "cmx-i-22",
+    "serialnumber": "P0022",
+    "type": "handimg",
+    "name": "其他",
+    "attribute": {
+        "default": "",
+        "notnull": 1,
+        "single": "1"
+    },
+    "extra": {
+        "class": "",
+        "func": "",
+        "width": "12",
+        "layout": "",
+        "placeholder": ""
+    }
+}
+]

@@ -1,0 +1,788 @@
+[{
+        "columnname": "cmx-i-1",
+        "columnindex": "cmx-i-1",
+        "serialnumber": "P0001",
+        "type": "separator",
+        "name": "申请单位信息",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "title": "申请单位信息",
+            "desc": ""
+        },
+        "extra": {
+            "class": "margin-bottom-10 baseinfo",
+            "func": "",
+            "width": 12,
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-37",
+        "columnindex": "cmx-i-37",
+        "serialnumber": "P00037",
+        "type": "special",
+        "name": "申请文件字号",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": ""
+        },
+        "extra": {
+            "class": "baseinfo",
+            "func": "cmx_special_1",
+            "width": "6",
+            "layout": "",
+            "placeholder": ""
+        }
+    }, {
+        "columnname": "cmx-i-38",
+        "columnindex": "cmx-i-38",
+        "serialnumber": "P00038",
+        "type": "text",
+        "name": "申请文件标题",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": "short",
+            "max_length": 200
+        },
+        "extra": {
+            "class": "baseinfo",
+            "func": "",
+            "width": "6",
+            "layout": "",
+            "placeholder": "请输入申请文件标题"
+        }
+    },
+    {
+        "columnname": "cmx-i-2",
+        "columnindex": "cmx-i-2",
+        "serialnumber": "P0002",
+        "type": "text",
+        "name": "单位名称",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": "short",
+            "max_length": 100
+        },
+        "extra": {
+            "class": "baseinfo",
+            "func": "",
+            "width": "6",
+            "layout": "",
+            "placeholder": "请输入单位名称"
+        }
+    },
+    {
+        "columnname": "cmx-i-3",
+        "columnindex": "cmx-i-3",
+        "serialnumber": "P0003",
+        "type": "text",
+        "name": "详细地址",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": "short",
+            "max_length": 100
+        },
+        "extra": {
+            "class": "baseinfo",
+            "func": "",
+            "width": "6",
+            "layout": "",
+            "placeholder": "请输入详细地址"
+        }
+    },
+    {
+        "columnname": "cmx-i-4",
+        "columnindex": "cmx-i-4",
+        "serialnumber": "P0004",
+        "type": "text",
+        "name": "经济性质",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": "short",
+            "max_length": 100
+        },
+        "extra": {
+            "class": "baseinfo",
+            "func": "",
+            "width": "6",
+            "layout": "",
+            "placeholder": "请输入经济性质"
+        }
+    },
+    {
+        "columnname": "cmx-i-5",
+        "columnindex": "cmx-i-5",
+        "serialnumber": "P0005",
+        "type": "text",
+        "name": "联系电话",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": "short",
+            "max_length": 20
+        },
+        "extra": {
+            "class": "baseinfo",
+            "func": "",
+            "width": "6",
+            "layout": "",
+            "placeholder": "请输入联系电话"
+        }
+    },
+    {
+        "columnname": "cmx-i-6",
+        "columnindex": "cmx-i-6",
+        "serialnumber": "P0006",
+        "type": "num",
+        "name": "注册资金",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": "count",
+            "prefix": 0,
+            "unit": "万元",
+            "decimal": 1,
+            "min": 0,
+            "max": 10000000000000000
+        },
+        "extra": {
+            "class": "money baseinfo",
+            "func": "",
+            "width": "6",
+            "layout": "",
+            "placeholder": "请填写注册资金，单位（万元）"
+        }
+    },
+    {
+        "columnname": "cmx-i-7",
+        "columnindex": "cmx-i-7",
+        "serialnumber": "P0007",
+        "type": "num",
+        "name": "邮政编码",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": "count",
+            "prefix": 0,
+            "unit": "",
+            "decimal": 1,
+            "min": 0,
+            "max": 999999
+        },
+        "extra": {
+            "class": "margin-bottom-40",
+            "func": "",
+            "width": "6",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-8",
+        "columnindex": "cmx-i-8",
+        "serialnumber": "P0008",
+        "type": "special",
+        "name": "从业时间",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": "short"
+        },
+        "extra": {
+            "class": "format baseinfo",
+            "func": "cmx_special_2",
+            "width": "12",
+            "layout": "",
+            "placeholder": "从业时间"
+        }
+    },
+    {
+        "columnname": "cmx-i-9",
+        "columnindex": "cmx-i-9",
+        "serialnumber": "P0009",
+        "type": "text",
+        "name": "批准部门及文号",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "short",
+            "max_length": 25
+        },
+        "extra": {
+            "class": "baseinfo",
+            "func": "",
+            "width": "6",
+            "layout": "",
+            "placeholder": "请输入批准部门及文号"
+        }
+    },
+    {
+        "columnname": "cmx-i-10",
+        "columnindex": "cmx-i-10",
+        "serialnumber": "P00010",
+        "type": "text",
+        "name": "原有资质等级",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "short",
+            "max_length": 5
+        },
+        "extra": {
+            "class": "baseinfo",
+            "func": "",
+            "width": "6",
+            "layout": "",
+            "placeholder": "请输入原有资质等级"
+        }
+    },
+    {
+        "columnname": "cmx-i-11",
+        "columnindex": "cmx-i-11",
+        "serialnumber": "P00011",
+        "type": "text",
+        "name": "主管部门",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": "short",
+            "max_length": 100
+        },
+        "extra": {
+            "class": "baseinfo",
+            "func": "",
+            "width": "6",
+            "layout": "",
+            "placeholder": "请输入主管部门"
+        }
+    },
+    {
+        "columnname": "cmx-i-12",
+        "columnindex": "cmx-i-12",
+        "serialnumber": "P00012",
+        "type": "special",
+        "name": "资质类型",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": "short"
+        },
+        "extra": {
+            "class": "format baseinfo",
+            "func": "cmx_special_3",
+            "width": "12",
+            "layout": "",
+            "placeholder": "请选择资质类型"
+        }
+    },
+    {
+        "columnname": "cmx-i-13",
+        "columnindex": "cmx-i-13",
+        "serialnumber": "P00013",
+        "type": "special",
+        "name": "申请资质等级及业务范围",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": "short"
+        },
+        "extra": {
+            "class": "format baseinfo",
+            "func": "cmx_special_4",
+            "width": "12",
+            "layout": "",
+            "placeholder": "请选择申请资质等级及业务范围"
+        }
+    },
+    {
+        "columnname": "cmx-i-39",
+        "columnindex": "cmx-i-39",
+        "serialnumber": "P00039",
+        "type": "file",
+        "name": "申请文件",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "single": "0"
+        },
+        "extra": {
+            "class": "baseinfo",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-14",
+        "columnindex": "cmx-i-14",
+        "serialnumber": "P00014",
+        "type": "separator",
+        "name": "附件",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "title": "附件",
+            "desc": ""
+        },
+        "extra": {
+            "class": "baseinfo",
+            "func": "appendDownloadAllFile",
+            "width": 12,
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-15",
+        "columnindex": "cmx-i-15",
+        "serialnumber": "P00015",
+        "type": "file",
+        "name": "企业法人营业执照附件本（或事业单位主管机关颁发的单位法人证书或文件）",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "single": "0"
+        },
+        "extra": {
+            "class": "baseinfo",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    }, {
+        "columnname": "cmx-i-16",
+        "columnindex": "cmx-i-16",
+        "serialnumber": "P00016",
+        "type": "file",
+        "name": "企业章程文件（含签字或盖章页）",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "single": "0"
+        },
+        "extra": {
+            "class": "cmx-border-bottom-split baseinfo",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    }, {
+        "columnname": "cmx-i-17",
+        "columnindex": "cmx-i-17",
+        "serialnumber": "P00017",
+        "type": "file",
+        "name": "本单位工程项目业绩证明材料（合同、批文、验收材料等）",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "single": "0"
+        },
+        "extra": {
+            "class": "baseinfo",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    }, {
+        "columnname": "cmx-i-18",
+        "columnindex": "cmx-i-18",
+        "serialnumber": "P00018",
+        "type": "file",
+        "name": "获奖情况",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "single": "0"
+        },
+        "extra": {
+            "class": "baseinfo",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    }, {
+        "columnname": "cmx-i-19",
+        "columnindex": "cmx-i-19",
+        "serialnumber": "P00019",
+        "type": "file",
+        "name": "施工单位应附主要设备发票扫描件",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "single": "0"
+        },
+        "extra": {
+            "class": "baseinfo",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    },{
+        "columnname": "cmx-i-20",
+        "columnindex": "cmx-i-20",
+        "serialnumber": "P00020",
+        "type": "separator",
+        "name": "申请单位法人代表信息",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "title": "申请单位法人代表信息",
+            "desc": ""
+        },
+        "extra": {
+            "class": "baseinfo",
+            "func": "",
+            "width": 12,
+            "layout": "",
+            "placeholder": ""
+        }
+    },{
+        "columnname": "cmx-i-21",
+        "columnindex": "cmx-i-21",
+        "serialnumber": "P00021",
+        "type": "text",
+        "name": "姓名",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": "short",
+            "max_length": 60
+        },
+        "extra": {
+            "class": "baseinfo",
+            "func": "",
+            "width": "6",
+            "layout": "",
+            "placeholder": "请输入姓名"
+        }
+    },{
+        "columnname": "cmx-i-36",
+        "columnindex": "cmx-i-36",
+        "serialnumber": "P00036",
+        "type": "special",
+        "name": "学历",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": "short"
+        },
+        "extra": {
+            "class": "baseinfo",
+            "func": "cmx_special_5",
+            "width": "6",
+            "layout": "",
+            "placeholder": "请选择学历"
+        }
+    },{
+        "columnname": "cmx-i-22",
+        "columnindex": "cmx-i-22",
+        "serialnumber": "P00022",
+        "type": "text",
+        "name": "身份证号码",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": "short",
+            "max_length": 18
+        },
+        "extra": {
+            "class": "baseinfo",
+            "func": "",
+            "width": "6",
+            "layout": "",
+            "placeholder": "请输入身份证号码"
+        }
+    },{
+        "columnname": "cmx-i-23",
+        "columnindex": "cmx-i-23",
+        "serialnumber": "P00023",
+        "type": "text",
+        "name": "专业技术职称",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": "short",
+            "max_length": 100
+        },
+        "extra": {
+            "class": "baseinfo",
+            "func": "",
+            "width": "6",
+            "layout": "",
+            "placeholder": "请输入专业技术职称"
+        }
+    },{
+        "columnname": "cmx-i-24",
+        "columnindex": "cmx-i-24",
+        "serialnumber": "P00024",
+        "type": "text",
+        "name": "工作简历",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": "long",
+            "max_length": 1000
+        },
+        "extra": {
+            "class": "format baseinfo",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": "请输入工作简历"
+        }
+    },{
+        "columnname": "cmx-i-25",
+        "columnindex": "cmx-i-25",
+        "serialnumber": "P00025",
+        "type": "separator",
+        "name": "申请单位技术人员构成",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "title": "申请单位技术人员构成",
+            "desc": ""
+        },
+        "extra": {
+            "class": "baseinfo",
+            "func": "",
+            "width": 12,
+            "layout": "",
+            "placeholder": ""
+        }
+    },{
+        "columnname": "cmx-i-26",
+        "columnindex": "cmx-i-26",
+        "serialnumber": "P00026",
+        "type": "num",
+        "name": "人员总数",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": "count",
+            "prefix": 0,
+            "unit": "人",
+            "decimal": 1,
+            "min": 0,
+            "max": 100000000
+        },
+        "extra": {
+            "class": "baseinfo",
+            "func": "",
+            "width": "6",
+            "layout": "",
+            "placeholder": ""
+        }
+    },{
+        "columnname": "cmx-i-27",
+        "columnindex": "cmx-i-27",
+        "serialnumber": "P00027",
+        "type": "num",
+        "name": "责任设计师人数",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": "count",
+            "prefix": 0,
+            "unit": "人",
+            "decimal": 1,
+            "min": 0,
+            "max": 100000000
+        },
+        "extra": {
+            "class": "baseinfo",
+            "func": "",
+            "width": "6",
+            "layout": "",
+            "placeholder": ""
+        }
+    },{
+        "columnname": "cmx-i-28",
+        "columnindex": "cmx-i-28",
+        "serialnumber": "P00028",
+        "type": "num",
+        "name": "其他专业技术骨干人数",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": "count",
+            "prefix": 0,
+            "unit": "人",
+            "decimal": 1,
+            "min": 0,
+            "max": 100000000
+        },
+        "extra": {
+            "class": "baseinfo",
+            "func": "",
+            "width": "6",
+            "layout": "",
+            "placeholder": ""
+        }
+    },{
+        "columnname": "cmx-i-29",
+        "columnindex": "cmx-i-29",
+        "serialnumber": "P00029",
+        "type": "num",
+        "name": "返聘的离退休专业技术骨干人数",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": "count",
+            "prefix": 0,
+            "unit": "人",
+            "decimal": 1,
+            "min": 0,
+            "max": 100000000
+        },
+        "extra": {
+            "class": "baseinfo",
+            "func": "",
+            "width": "6",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-30",
+        "columnindex": "cmx-i-30",
+        "serialnumber": "P00030",
+        "type": "separator",
+        "name": "附件",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "title": "附件",
+            "desc": ""
+        },
+        "extra": {
+            "class": "baseinfo",
+            "func": "",
+            "width": 12,
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-31",
+        "columnindex": "cmx-i-31",
+        "serialnumber": "P00031",
+        "type": "file",
+        "name": "法定代表人任职文件",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "single": "0"
+        },
+        "extra": {
+            "class": "baseinfo",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    }, {
+        "columnname": "cmx-i-32",
+        "columnindex": "cmx-i-32",
+        "serialnumber": "P00032",
+        "type": "file",
+        "name": "技术人员的职称证书和身份证（技术人员数量应与表单中填写数量一致",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "single": "0"
+        },
+        "extra": {
+            "class": "cmx-border-bottom-split baseinfo",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    }, {
+        "columnname": "cmx-i-33",
+        "columnindex": "cmx-i-33",
+        "serialnumber": "P00033",
+        "type": "file",
+        "name": "文物保护工程专业人员证书",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "single": "0"
+        },
+        "extra": {
+            "class": "baseinfo",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    }, {
+        "columnname": "cmx-i-34",
+        "columnindex": "cmx-i-34",
+        "serialnumber": "P00034",
+        "type": "file",
+        "name": "现申报单位的劳动合同（六个月内新聘用人员需提供原聘用单位的解聘证明或认识关系证明复印件）",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "single": "0"
+        },
+        "extra": {
+            "class": "baseinfo",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    }, {
+        "columnname": "cmx-i-35",
+        "columnindex": "cmx-i-35",
+        "serialnumber": "P00035",
+        "type": "file",
+        "name": "近六个月现申报单位社保证明（军队或高校的主要专业技术人员可不提供社保证明，但需提供所在单位人事主管部门的人事证明材料）",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "single": "0"
+        },
+        "extra": {
+            "class": "baseinfo",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    }, {
+        "columnname": "cmx-i-40",
+        "columnindex": "cmx-i-40",
+        "serialnumber": "P0040",
+        "type": "separator",
+        "name": "独立承担并且已完成的文物保护工程勘察设计项目",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "title": "独立承担并且已完成的文物保护工程勘察设计项目",
+            "desc": ""
+        },
+        "extra": {
+            "class": "baseinfo",
+            "func": "",
+            "width": 12,
+            "layout": "",
+            "placeholder": ""
+        }
+    }
+]

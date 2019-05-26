@@ -1,0 +1,126 @@
+<style>
+    #registLabelList tr td:nth-child(even) {
+        width: 23%;
+    }
+</style>
+<div class="modal fade in" id="cmx-registLabel" aria-hidden="true" aria-labelledby="addrelicinfo" role="dialog" tabindex="-1">
+    <div class="modal-dialog modal-center" style="width:85%;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span id="modalTitle">电子标签登记</span>
+                <button class="pull-right close closed" data-dismiss="modal" aria-label="关闭">关闭</button>
+                <div class="clearfix"></div>
+            </div>
+            <div class="modal-body " style="height:500px;overflow:scroll;">
+                <div class="col-md-12 col-lg-12" id="">
+                    <div class="example table-responsive">
+                        <table class="table table-bordered table-hover">
+                            <tbody id="registLabelList">
+                                <tr>
+                                    <th rowspan="4" class="text-middle">申请信息</th>
+                                    <td>审核机构</td>
+                                    <td id="reviewInstName"></td>
+                                    <td>出境海关</td>
+                                    <td id="customsId"></td>
+                                </tr>
+                                <tr>
+                                    <td>申报单位</td>
+                                    <td id="applyUnit"></td>
+                                    <td>主管单位</td>
+                                    <td id="manageUnit"></td>
+                                </tr>
+                                <tr>
+                                    <td>住所</td>
+                                    <td id="address"></td>
+                                    <td>负责人</td>
+                                    <td id="leader"></td>
+                                </tr>
+                                <tr>
+                                    <td>携运人</td>
+                                    <td id="carryUser"></td>
+                                    <td>电话</td>
+                                    <td id="telNo"></td>
+                                </tr>
+                                <tr>
+                                    <th rowspan="9" class="text-middle">文物信息</th>
+                                    <td>文物名称</td>
+                                    <td id="relicName"></td>
+                                    <td>年代</td>
+                                    <td id="relicYear"></td>
+                                </tr>
+                                <tr>
+                                    <td>质地</td>
+                                    <td id="relicQualityName"></td>
+                                    <td>级别</td>
+                                    <td id="relicLevelName"></td>
+                                </tr>
+                                <tr>
+                                    <td>尺寸</td>
+                                    <td id="relicSize"></td>
+                                    <td>数量</td>
+                                    <td id="relicNumber"></td>
+                                </tr>
+                                <tr>
+                                    <td>收藏单位</td>
+                                    <td id="cultureCollec"></td>
+                                    <td>宽度</td>
+                                    <td id="relicWidth"></td>
+                                </tr>
+                                <tr>
+                                    <td>长度</td>
+                                    <td id="relicHeight"></td>
+                                    <td>口径</td>
+                                    <td id="relicCaliber"></td>
+                                </tr>
+                                <tr>
+                                    <td>高度</td>
+                                    <td id="relicHeight"></td>
+                                    <td>底径</td>
+                                    <td id="relicBottom"></td>
+                                </tr>
+                                <tr>
+                                    <td>腹径</td>
+                                    <td id="relicMicro"></td>
+                                    <td>电子标签</td>
+                                    <td id="">
+                                        <div class="margin-0 text-left form-group">
+                                            <input  type="text" value="0" size="1" readonly="readonly" id="readrfidnum"> 个
+                                            <span id="operatorButton">
+                                                    <button type="button" class="readbt btn btn-sm btn-warning">读取标签</button>
+                                            </span>
+                                        </div>
+                                        <input type="hidden" label="临时进境编号" name="culMsgRegistrationForm.culTempCINo" value="" size="20" maxlength="40">
+                                        <input type="hidden" value="" name="culMsgRegistrationForm.rfId">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>是否是文物</td>
+                                    <td id="isRelicName"></td>
+                                    <td>允许出境</td>
+                                    <td id="isAllowName"></td>
+                                </tr>
+                                <tr>
+                                    <td>备注</td>
+                                    <td colspan="3" id="remark"></td>
+                                </tr>
+                                <tr>
+                                    <th class="text-middle">文物照片</th>
+                                    <td colspan="4" id="index">
+                                        <ul class="file-upload-list margin-0 padding-0" id="filelist-P00030">
+                                            <!-- <img style="max-height: 200px; opacity: 1;" class="img-responsive" alt="..." src="http://192.168.209.220:4040/DmFileInfoController/downloadFile?fileIndex=8A36B228-B90E-42F3-80CF-DD3DE9545C09"> -->
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="modal-footer text-center">
+                <button type="button" id="registLabelSave" class="btn btn-info" style="margin-right:10px;">保存</button>
+                <button type="button" class="btn btn-info cmx-cancle-btn" data-dismiss="modal" style="margin-right:10px;">关闭</button>
+            </div>
+        </div>
+    </div>
+</div>

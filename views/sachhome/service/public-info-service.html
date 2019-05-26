@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+	<title>公共信息服务</title>
+	<link href="../css/common/ie10-viewport-bug-workaround.css" rel="stylesheet">
+	<!-- Bootstrap -->
+	<link href="../css/common/bootstrap.min.css" rel="stylesheet">
+	<link href="../css/common/pageSwitch.min.css" rel="stylesheet">
+	<link href="../css/common/paging.css" rel="stylesheet">
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+		<script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+		<script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+	<link href="../css/common/common.css" rel="stylesheet">
+	<link href="../css/service/public-info-service.css" rel="stylesheet">
+	<style>
+		.onlyoffical {
+			display: none;
+		}
+	
+		.offical .onlyoffical {
+			display: block;
+	
+		}
+	
+		.offical .offical-header {
+			position: fixed;
+			top: 0;
+			width: 100%;
+			background: #fff;
+			z-index: 999;
+		}
+	
+		.offical .offical-header>div {
+			background: url(http://www.sach.gov.cn/picture/0/1406241603206447246.jpg) top repeat-x;
+			padding-left: 4%;
+		}
+	
+		.offical .navbar-fixed-top {
+			top: 110px;
+		}
+		.offical #content-height{
+			margin-top: 120px;
+		}
+	</style>
+</head>
+<body class="offical-none">
+	<div class="onlyoffical offical-header">
+		<div>
+			<img src="http://www.sach.gov.cn/picture/5/1405101522359844623.png" />
+		</div>
+	</div>
+<!-- 头部 start -->
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+					aria-controls="navbar">
+					<span class="sr-only">切换导航</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="../index.html"><img class="custom-logo" src="../img/custom-logo.png"/><span class="adapt-webtitle visible-lg">国家文物局<br>综合行政管理平台</span></a>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav custom-navbar">
+					<li><a href="../index.html">首页</a></li>
+					<li><a href="../approval/admin-approval-manage.html">行政审批管理</a></li>
+					<li><a href="../public/gov-info-open.html">政府信息公开</a></li>
+					<li><a href="../industry/integrated-manage.html">行业综合管理</a></li>
+					<li class="active"><a href="../service/public-info-service.html">公共信息服务</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right custom-navbar-right">
+					<li class="user-info">
+						<img src="../img/login.png" alt="">
+						<span class="login-2">登录</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+<!-- 头部 end -->
+
+<!-- 左侧侧边栏 start -->
+	<div class="left-bar hidden-xs">
+		<div>
+			<a href="" class="leftlink">
+
+			</a>
+		</div>
+		<div>
+			<a href="../administrative-approval.html">
+
+			</a>
+		</div>
+		<div>
+			<a href="../policy-and-regulations.html">
+
+			</a>
+		</div>
+		<div>
+			<a href="download.html">
+
+			</a>
+		</div>
+	</div>
+<!-- 左侧侧边栏 end -->
+
+<!-- 右侧侧边栏 start -->
+	<div class="right-bar hidden-xs">
+		<div>
+			<a href="" class="rightlink">
+
+			</a>
+		</div>
+		<div>
+			<a href="../complaint-box.html">
+
+			</a>
+		</div>
+	</div>
+<!-- 右侧侧边栏 end -->
+
+	<div id="content-height">
+
+	</div>
+
+<!-- 底部 start -->
+	<div class="footer">
+		<div class="container footer-content">
+			<div class="row">
+				<p><a href="../website-statement.html">网站声明</a><a href="../website-statement.html">联系我们</a></p>
+				<i></i>
+			</div>
+			<b>Copyright © 2017 国家文物局版权所有</b>
+		</div>
+	</div>
+<!-- 底部 end -->
+
+<!-- 模态框 start -->
+	<div id="modal">
+		<div class="modal-bg"></div>
+		<div id="modalBox" class="modal-box-2 modal-small">
+			<div class="modal-title">
+				<i>禁止性要求</i>
+				<span class="modal-close">&times;</span>
+			</div>
+			<div class="m-content">
+				<p class="modal-ctx">
+					test
+				</p>
+				<p class="modal-sure" style=""><em>确认</em></p>
+			</div>
+		</div>
+	</div>
+<!-- 模态框 end -->
+
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="../js/common/jquery-1.9.1.min.js"></script> 
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="../js/common/bootstrap.min.js"></script>
+	<script src="../js/common/ie10-viewport-bug-workaround.js"></script>
+	<script src="../js/common/pageSwitch.min.js"></script>
+	<script src="../js/common/pagination.js"></script>
+	<script src="../js/common/main.js"></script>
+	<script src="../js/common/common.js"></script>
+	<script src="../js/service/public-info-service.js"></script>
+
+	<script src="../js/common/paging.js"></script>
+	<script src="../js/common/jquery.pagination.js"></script>
+
+	<!-- 模板 start -->
+	<script id="tCulturalCity" type="text/template">
+		<tr class="row text-center">
+			<td class="col-lg-4 col-md-4 col-sm-4 col-xs-4">$areaName$</td>
+			<td class="col-lg-4 col-md-4 col-sm-4 col-xs-4">$provinceName$</td>
+			<td class="col-lg-4 col-md-4 col-sm-4 col-xs-4">$publishBatchName$</td>
+		</tr>
+	</script>
+	<script id="tNaSecurityUnit" type="text/template"> <!-- 全国重点文物保护单位 -->
+		<tr class="row text-center">
+			<td class="col-lg-2 col-md-2 col-sm-2 col-xs-2">$instId$</td>
+			<td class="col-lg-2 col-md-2 col-sm-2 col-xs-2" title="$remark1$">$instName$</td>
+			<td class="col-lg-1 col-md-1 col-sm-1 col-xs-1">$publishYear$</td>
+			<td class="col-lg-2 col-md-2 col-sm-2 col-xs-2">$address$</td>
+			<td class="col-lg-2 col-md-2 col-sm-2 col-xs-2">$provinceName$</td>
+			<td class="col-lg-2 col-md-2 col-sm-2 col-xs-2">$belongTypeName$</td>
+			<td class="col-lg-1 col-md-1 col-sm-1 col-xs-1">$publishBatchName$</td>
+		</tr>
+	</script>
+	<script id="tnaMuseumInfo" type="text/template"> <!-- 全国博物馆名录 -->
+		<tr class="row text-center">
+			<td width="30%" class="click-model" data-instName=$instName$ data-openTime="$openTime$" data-trafficInfo="$trafficInfo$" data-summary="$summary$">$instName$  <img src="../img/show-model.png" alt="" width="15" style="cursor: pointer;"></td>
+			<td width="10%">$provinceName$</td>
+			<td width="7%">$museumPropertyName$</td>
+			<td width="7%">$qualityLevelName$</td>
+			<td width="6%">$isFreeName$</td>
+			<td width="15%">$orderTelNo$</td>
+			<!-- <td width="20%">$address$</td> -->
+			<td width="25%">$webSite$</td>
+		</tr>
+	</script>
+	<script id="tColCulturalRelics" type="text/template"> <!-- 全国馆藏文物信息 -->
+		<tr class="row text-center">
+			<td class="col-lg-1 col-md-1 col-sm-1 col-xs-1 antiqueId">$antiqueId$</td>
+			<td class="col-lg-4 col-md-4 col-sm-4 col-xs-4">$antiqueName$</td>
+			<td class="col-lg-2 col-md-2 col-sm-2 col-xs-2">$culturalClassName$</td>
+			<td class="col-lg-2 col-md-2 col-sm-2 col-xs-2">$ageName$</td>
+			<td class="col-lg-2 col-md-2 col-sm-2 col-xs-2">$museumName$</td>
+			<td class="col-lg-1 col-md-1 col-sm-1 col-xs-1">$provinceName$</td>
+		</tr>
+	</script>
+	<script id="tForStolenDatabase" type="text/template">
+		<tr class="row text-center">
+			<td class="col-lg-2 col-md-2 col-sm-2 col-xs-2" width="">$publishBatch$</td>
+			<td class="col-lg-4 col-md-4 col-sm-4 col-xs-4" width="">$noticeTime$</td>
+			<td class="col-lg-2 col-md-2 col-sm-2 col-xs-2" width="">$noticeCountry$</td>
+			<td class="col-lg-2 col-md-2 col-sm-2 col-xs-2" width="">$noticeRelicNum$</td>
+			<td class="col-lg-2 col-md-2 col-sm-2 col-xs-2" width="">$remark$</td>
+		</tr>
+	</script>
+	<script id="shuanglinsiwenzi" type="text/template"><!-- 平遥·双林寺彩塑壁画 -->
+		<div class="row">
+			<div class="col-sm-1 col-md-1 col-lg-1"></div>
+			<div class="col-sm-10 col-md-10 col-lg-10">
+				<div class="row">
+					<div class="col-sm-6 col-md-4 col-lg-4">
+						<div class="thumbnail viewpoint">
+							<span class="sls sls1"></span>
+							<div class="caption">
+								<h4>渡海观音悬塑墙 三维模型</h4>
+								<p>渡海观音彩塑位于释迦殿倒座影壁墙北侧。观音两手抱左膝曲起、右肩微微前探，正由一片莲瓣托举着从汹涌的波涛中显身而出，身后飘带随风翻飞，在十大圆觉像的簇拥下，更突出造像灵动飘逸和端庄秀美的气质。</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-6 col-md-4 col-lg-4">
+						<div class="thumbnail viewpoint">
+							<span class="sls sls2"></span>
+							<div class="caption">
+								<h4>韦陀彩塑三维模型</h4>
+								<p>韦陀胁侍彩塑位于千佛殿明间，神情衣饰细致生动，以左腿着力、头颈带动胸腹上身向右侧反向扭转，呈现出夸张的“S”造型，巧妙模拟人体动态。同时两臂括挺、衣带当风，体现出刚中带柔、亦静亦动、威而不悍的气势，被业内专家学者誉为“全国韦陀之冠”。</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-6 col-md-4 col-lg-4">
+						<div class="thumbnail viewpoint">
+							<span class="sls sls3"></span>            
+							<div class="caption">
+								<h4>精细化病害勘察记录</h4>
+								<p>通过细致的现场调研和系统的病害勘察记录，结合正射光/侧射光数字化高清影像、三维模型以及红外热波等无损检测技术，绘制精细化病害图，对彩塑壁画文物本体的病害展开量化分析，明确主要问题和活动性病害，并对整体保存状况进行科学的评估。</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-6 col-md-4 col-lg-4">
+						<div class="thumbnail viewpoint">
+							<span class="sls sls4"></span>            
+							<div class="caption">
+								<h4>千手观音彩塑三维模型</h4>
+								<p>千手观音彩塑为菩萨殿主尊，面容丰腴、姿态优雅，26只手臂从身躯两侧层叠伸出，或持法器珍宝、或做各式手印，塑造细致而不烦琐。各手臂通 过高低位置和曲折角度的不同，营造出协调统一、张弛有度之感，是明代彩塑的杰出作品之一。</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-6 col-md-4 col-lg-4">
+						<div class="thumbnail viewpoint">
+							<span class="sls sls5"></span>            
+							<div class="caption">
+								<h4>光环境勘察</h4>
+								<p>现场调研过程中，发现双林寺彩塑壁画褪色变色现象明显。而彩绘层中的胶结物质和某些颜料/染料可能对光照十分敏感。因此在项目中开展了对彩塑壁画的光环境进行勘察研究，发现太阳直射光和天空漫反射光照射时间长、照度高，直接影响前檐壁画的保存；而殿内彩塑的褪色程度与采光系数强度存在较明显的对应关系。</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-6 col-md-4 col-lg-4">
+						<div class="thumbnail viewpoint">
+							<span class="sls sls6"></span>            
+							<div class="caption">
+								<h4>佛传故事悬塑三维模型</h4>
+								<p>释迦殿内四壁运用圆雕、深/浅浮雕手法，采取分层组合、连环壁塑形式，表现了佛教创始人释迦牟尼从投胎降生到涅槃成佛以及四方传经普渡众生 的佛传故事。二百多尊人物形象身份不同，神态各异，活动于建筑、山石之间，构思构图绝妙，令人叹为观止，颇富有我国民间艺术的传统特色。</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-6 col-md-4 col-lg-4">
+						<div class="thumbnail viewpoint mb0">
+							<span class="sls sls7"></span>            
+							<div class="caption">
+								<h4>结构性病害致因分析</h4>
+								<p>在文物建筑三维激光扫描点云模型基础上，提取出高程信息绘制相对高程彩虹图，结合现场勘察发现的贯穿性裂缝、壁画三维形变、悬塑墙支撑木 骨架变形脱离等结构性病害，对病害的致因展开深入分析。</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-6 col-md-4 col-lg-4">
+						<div class="thumbnail viewpoint mb0">
+							<span class="sls sls8"></span>            
+							<div class="caption">
+								<h4>彩塑壁画制作材料的分析检测</h4>
+								<p>利用便携式XRF、剖面显微分析、Raman、SEM-EDS等分析手段，研究彩塑壁画的制作材料，一方面从内因角度对病害做出解释，另一方面为山西地方彩塑壁画的工艺特点、材料选择，明代艺术史等相关研究积累素材，提供必要的基础。</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-6 col-md-4 col-lg-4">
+						<div class="thumbnail viewpoint mb0">
+							<span class="sls sls9"></span>            
+							<div class="caption">
+								<h4>壁画虚拟清晰化</h4>
+								<p>双林寺现存壁画集中于千佛殿、菩萨殿前檐外壁，历经四百余年风吹日晒多数已斑驳不清，画面内容难以辨识。工作组在高清正射影像基础上，经过一系列计算机图像处理，提高了画面清晰度和色彩效果，使对壁画的欣赏和解读成为可能。</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-1 col-md-1 col-lg-1"></div>
+		</div>
+	</script>
+	<!-- 模板 end -->
+</body>
+</html>

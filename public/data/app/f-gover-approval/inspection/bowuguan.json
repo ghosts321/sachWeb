@@ -1,0 +1,320 @@
+[{
+        "columnname": "cmx-i-1",
+        "columnindex": "cmx-i-1",
+        "serialnumber": "P0001",
+        "type": "separator",
+        "name": "展览内容设计",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "title": "展览内容设计",
+            "desc": ""
+        },
+        "extra": {
+            "class": "margin-bottom-10 baseinfo",
+            "func": "",
+            "width": 12,
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-2",
+        "columnindex": "cmx-i-2",
+        "serialnumber": "P0002",
+        "type": "text",
+        "name": "展览与展品信息是否表达完善与准确",
+        "key": "item1",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": "long"
+        },
+        "extra": {
+            "class": "margin-left-0 baseinfo",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-3",
+        "columnindex": "cmx-i-3",
+        "serialnumber": "P0003",
+        "type": "text",
+        "name": "展品是否支持展览主题",
+        "key": "item2",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": "long"
+        },
+        "extra": {
+            "class": "margin-left-0 baseinfo",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-4",
+        "columnindex": "cmx-i-4",
+        "serialnumber": "P0004",
+        "type": "separator",
+        "name": "文物安全",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "title": "文物安全",
+            "desc": ""
+        },
+        "extra": {
+            "class": "margin-bottom-10 baseinfo",
+            "func": "",
+            "width": 12,
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-5",
+        "columnindex": "cmx-i-5",
+        "serialnumber": "P0005",
+        "type": "text",
+        "name": "文物保存状况是否适宜移动",
+        "key": "item3",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": "long"
+        },
+        "extra": {
+            "class": "margin-left-0 baseinfo",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-6",
+        "columnindex": "cmx-i-6",
+        "serialnumber": "P0006",
+        "type": "special",
+        "name": "文物是否依法出展",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": ""
+        },
+        "extra": {
+            "class": "baseinfo",
+            "func": "func_special_exhibition",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-7",
+        "columnindex": "cmx-i-7",
+        "serialnumber": "P0007",
+        "type": "separator",
+        "name": "文物出展环境与安防",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "title": "文物出展环境与安防",
+            "desc": ""
+        },
+        "extra": {
+            "class": "margin-bottom-10 baseinfo",
+            "func": "",
+            "width": 12,
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-8",
+        "columnindex": "cmx-i-8",
+        "serialnumber": "P0008",
+        "type": "text",
+        "name": "本次出展文物的一般要求",
+        "key": "item4",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": "long"
+        },
+        "extra": {
+            "class": "margin-left-0 baseinfo",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-9",
+        "columnindex": "cmx-i-9",
+        "serialnumber": "P0009",
+        "type": "text",
+        "name": "拟展场地是否已达到上述要求",
+        "key": "item5",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": "long"
+        },
+        "extra": {
+            "class": "margin-left-0 baseinfo",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-10",
+        "columnindex": "cmx-i-10",
+        "serialnumber": "P0010",
+        "type": "text",
+        "name": "本次出展文物的特殊要求",
+        "key": "item6",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": "long"
+        },
+        "extra": {
+            "class": "margin-left-0 baseinfo",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-11",
+        "columnindex": "cmx-i-11",
+        "serialnumber": "P0011",
+        "type": "text",
+        "name": "拟展场地是否能满足上述要求",
+        "key": "item7",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": "long"
+        },
+        "extra": {
+            "class": "margin-left-0 baseinfo",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-12",
+        "columnindex": "cmx-i-12",
+        "serialnumber": "P0012",
+        "type": "separator",
+        "name": "展览涉及费用",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "title": "展览涉及费用",
+            "desc": ""
+        },
+        "extra": {
+            "class": "margin-bottom-10 baseinfo",
+            "func": "",
+            "width": 12,
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-13",
+        "columnindex": "cmx-i-13",
+        "serialnumber": "P0013",
+        "type": "text",
+        "name": "展品保险估价是否合理",
+        "key": "item8",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": "long"
+        },
+        "extra": {
+            "class": "margin-left-0 baseinfo",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-14",
+        "columnindex": "cmx-i-14",
+        "serialnumber": "P0014",
+        "type": "text",
+        "name": "展览费用是否合理",
+        "key": "item9",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": "long"
+        },
+        "extra": {
+            "class": "margin-left-0 baseinfo",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-15",
+        "columnindex": "cmx-i-15",
+        "serialnumber": "P0015",
+        "type": "separator",
+        "name": "展览协议",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "title": "展览协议",
+            "desc": ""
+        },
+        "extra": {
+            "class": "margin-bottom-10 baseinfo",
+            "func": "",
+            "width": 12,
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-16",
+        "columnindex": "cmx-i-16",
+        "serialnumber": "P0016",
+        "type": "text",
+        "name": "展览协议的审核与评估",
+        "key": "item10",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": "long"
+        },
+        "extra": {
+            "class": "margin-left-0 baseinfo",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    }
+]

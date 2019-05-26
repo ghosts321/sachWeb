@@ -1,0 +1,218 @@
+[
+    {
+        "columnname": "cmx-i-30",
+        "columnindex": "cmx-30-RelicName",
+        "serialnumber": "P00030",
+        "type": "text",
+        "name": "文物艺术品名称",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": "short",
+            "max_length": 20
+        },
+        "extra": {
+            "class": "margin-bottom-20",
+            "func": "",
+            "width": "6",
+            "layout": "",
+            "placeholder": ""
+           
+        }
+    },
+    {
+        "columnname": "cmx-i-2",
+        "columnindex": "cmx-30-RelicType",
+        "serialnumber": "P0002",
+        "type": "single",
+        "name": "类别",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": 1,
+            "remark": [
+                {
+                    "id": 1,
+                    "value": "文物",
+                    "selected": ""
+                },
+                {
+                    "id": 2,
+                    "value": "复仿制品",
+                    "selected": ""
+                }
+            ]
+        },
+        "extra": {
+            "class": "margin-bottom-40",
+            "func": "",
+            "width": "6",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-3",
+        "columnindex": "cmx-30-RelicYear",
+        "serialnumber": "P00030",
+        "type": "text",
+        "name": "年代",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "short",
+            "max_length": 25
+        },
+        "extra": {
+            "class": "margin-bottom-20",
+            "func": "",
+            "width": "6",
+            "layout": "",
+            "placeholder": ""
+            
+        }
+    },
+    {
+        "columnname": "cmx-i-4",
+        "columnindex": "cmx-30-RelicQuality",
+        "serialnumber": "P000301",
+        "type": "special",
+        "name": "质地",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": ""
+        },
+        "extra": {
+            "class": "margin-bottom-20",
+            "func": "cmx_special_ScrRelicQuality",
+            "width": "6",
+            "layout": "",
+            "placeholder": ""
+            
+        }
+    },
+    {
+        "columnname": "cmx-i-5",
+        "columnindex": "cmx-30-RelicLevel",
+        "serialnumber": "P00031",
+        "type": "special",
+        "name": "级别",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": ""
+        },
+        "extra": {
+            "class": "margin-bottom-20",
+            "func": "cmx_special_RelicLevel",
+            "width": "6",
+            "layout": "",
+            "placeholder": ""
+            
+        }
+    },
+    {
+        "columnname": "cmx-i-6",
+        "columnindex": "cmx-30-RelicNumber",
+        "serialnumber": "P00030",
+        "type": "special",
+        "name": "数量",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": ""
+        },
+        "extra": {
+            "class": "margin-bottom-20",
+            "func": "cmx_special_RelicUnits",
+            "width": "6",
+            "layout": "",
+            "placeholder": ""
+            
+        }
+    },
+    {
+        "columnname": "cmx-i-7",
+        "columnindex": "cmx-30-RelicSize",
+        "serialnumber": "P00030",
+        "type": "text",
+        "name": "尺寸:",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": "short",
+            "max_length": 50
+            
+        },
+        "extra": {
+            "class": "margin-bottom-20",
+            "func": "",
+            "width": 6,
+            "layout": "",
+            "placeholder": ""
+           
+        }
+    },
+    {
+        "columnname": "cmx-i-8",
+        "columnindex": "cmx-30-Remark",
+        "serialnumber": "P00030",
+        "type": "text",
+        "name": "备注",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "long",
+            "max_length": 500
+        },
+        "extra": {
+            "class": "margin-bottom-20",
+            "func": "",
+            "width": "6",
+            "layout": "",
+            "placeholder": ""
+           
+        }
+    },
+    {
+        "columnname": "cmx-i-10",
+        "columnindex": "cmx-i-ImageInfo",
+        "serialnumber": "ImageInfo10",
+        "type": "special",
+        "name": "图片要求",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": ""
+
+        },
+        "extra": {
+            "class": "margin-bottom-40",
+            "func": "cmx_special_ImageInfo",
+            "width": "6",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-9",
+        "columnindex": "cmx-30-files",
+        "serialnumber": "P00030",
+        "type": "handimg56020",
+        "name": "文物图片",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "single": "0"
+        },
+        "extra": {
+            "class": "",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": "sss"
+            
+        }
+    }
+]

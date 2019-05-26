@@ -1,0 +1,148 @@
+<style></style>
+<div class="modal fade in" id="cmx-applyForExhibition-info" aria-hidden="true" aria-labelledby="" role="dialog" tabindex="-1">
+    <div class="modal-dialog modal-center" style="width:85%;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span>维护展览进出境申请信息</span>
+                <button class="pull-right close" data-dismiss="modal" aria-label="关闭">关闭</button>
+                <div class="clearfix"></div>
+            </div>
+            <div class="modal-body" style="height: 400px;overflow: scroll">
+                <div class="col-md-12 col-lg-12" id="cmx-applyForExhibition-div"></div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary cmx-save-btn" style="margin-right:10px;" id="applyForExhibitionSave">保存</button>
+                <button type="button" class="btn btn-default cmx-cancle-btn" data-dismiss="modal" style="margin-right:10px;">取消</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    //自动获取表单
+    function get_autoForm(url) {
+        $.ajax({
+            url: url,
+            type: "GET",
+            async: false,
+            success: function (result) {
+                var data = result;
+                for (var i = 0; i < data.length; i++) {
+                    var type = data[i].type;
+                    var width = data[i].extra.width;
+                    var notnull = (data[i].attribute.notnull == 1) ? true : false;
+                    var attrstring = 'cmx-tag="cmx" cmx-lib="' + data[i].serialnumber + '" cmx-index="' +
+                        data[i].columnindex +
+                        '" cmx-column="' + data[i].columnname + '" cmx-type="' + data[i].type +
+                        '" cmx-require="' +
+                        notnull + '"';
+                    if (data[i].extra.width == "") {
+                        width = 12;
+                    }
+                    if (type == 'text' || type == 'single' || type == 'extra') {
+                        attrstring = attrstring + 'cmx-stype="' + data[i].attribute.stype + '"';
+                    }
+                    new cmx.process()
+                        .turn('automated-form-' + type, {
+                            "element": "#cmx-applyForExhibition-div",
+                            "data": data[i],
+                            "width": width,
+                            "notnull": notnull,
+                            "attrstring": attrstring
+                        })
+                        .ccatch(function (msg) {
+                            console.log('异常终止了 ' + msg);
+                        })
+                        .cfinally(function () {
+                            try {
+                                eval(data[i].extra.func + '(' + JSON.stringify(data[i]) + ')');
+                            } catch (exception) {
+                                console.log(exception)
+                            }
+                        }).start();
+                }
+            }
+        });
+    }
+    // 数字字典加载证件类型
+    function cmx_special_IDCardType(data) {
+        var html = [
+            '<div class="cmx-form-body col-sm-12 col-xs-12 col-md-12 col-lg-12" style="margin:0;padding:0" id="">',
+            '<select class="form-control"  data-dic="IDCardType" id="cmx-1-IDCardType" name="" style="display:inline-block">',
+            '<select>',
+            '</div>'
+        ].join('');
+        $("#cmx-special-" + data.serialnumber).append(html);
+        new cmx.process()
+            .turn('buildDataDic', {
+                element: $('#cmx-1-IDCardType')
+            }).cfinally(function () {}).start();
+        $('#cmx-1-IDCardType').change(function () {
+            if ($(this).val() == 'X') {
+                var html2 = [
+                    '<input maxlength="40" type="text"  id="otherCard" class="form-control" placeholder="请填写证件名称" value="" style="display:inline-block;width:50%">'
+                ].join('');
+                $(this).css('width', '50%').parent().append(html2);
+            } else {
+                $('#otherCard').remove();
+                $(this).css('width', '100%');
+            }
+        })
+    }
+    // 数字字典加载国籍类型
+    function cmx_special_Nationality(data) {
+        var html = [
+            '<div class="cmx-form-body col-sm-12 col-xs-12 col-md-12 col-lg-12" style="margin:0;padding:0" id="">',
+            '<select class="form-control" data-live-search="true" data-dic="Country"  id="cmx-1-Nationality" name="">',
+            '<select>',
+            '</div>'
+        ].join('');
+        $("#cmx-special-" + data.serialnumber).append(html);
+        new cmx.process()
+            .turn('buildDataDic', {
+                element: $('#cmx-1-Nationality'),
+                defaultValue: 'CHN',
+                hasAll: false
+            }).cfinally(function () {
+
+            }).start();
+    }
+    //加载审核机构类型
+    function cmx_special_ReviewInst(data) {
+        var option = '';
+        new cmx.process()
+            .turn('callajax', {
+                url: api_aa + '/inst/aaSachinst/getEntityListByJC',
+                data: {
+                    token: getData("token")
+                },
+                jsonheader: false
+            })
+            .turn(function (prevModelData, send, abort) {
+                if (prevModelData.state == "200" && !IsEmpty(prevModelData)) {
+                    var ReviewInst = prevModelData.data;
+                    for (var i in ReviewInst) {
+                        option += '<option value="' + ReviewInst[i].instId + '">' + ReviewInst[i].instName +
+                            '</option>';
+                    }
+                    var html = [
+                        '<div class="cmx-form-body col-sm-12 col-xs-12 col-md-12 col-lg-12" style="margin:0;padding:0" id="">',
+                        '<select class="form-control"  id="cmx-1-ReviewInst" name="">',
+                        option,
+                        '<select>',
+                        '</div>'
+                    ].join('');
+                    $("#cmx-special-" + data.serialnumber).append(html);
+                    // $('#cmx-1-ReviewInst').selectpicker({
+                    //     style: 'btn-transparent'
+                    // });
+
+                } else {
+                    showAlert({
+                        type: 'error',
+                        content: prevModelData.msg
+                    })
+                }
+            })
+            .start();
+    }
+</script>

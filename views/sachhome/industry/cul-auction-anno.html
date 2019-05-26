@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+  <title>文物拍卖标的审核备案收文公告</title>
+  <link href="../css/common/ie10-viewport-bug-workaround.css" rel="stylesheet">
+  <!-- Bootstrap -->
+  <link href="../css/common/bootstrap.min.css" rel="stylesheet">
+  <link href="../css/common/pageSwitch.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../css/common/pagination.css">
+  <link href="../css/common/jquery.cxcalendar.css" rel="stylesheet">
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  <link href="../css/common/common.css" rel="stylesheet">
+  <link href="../css/industry/cul-auction-anno.css" rel="stylesheet">
+</head>
+<body>
+<!-- 头部 start -->
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+          aria-controls="navbar">
+          <span class="sr-only">切换导航</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html"><img class="custom-logo" src="../img/custom-logo.png"/><span class="adapt-webtitle visible-lg">国家文物局<br>综合行政管理平台</span></a>
+      </div>
+      <div id="navbar" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav custom-navbar">
+          <li><a href="../index.html">首页</a></li>
+          <li><a href="../approval/admin-approval-manage.html">行政审批管理</a></li>
+          <li><a href="../public/gov-info-open.html">政府信息公开</a></li>
+          <li class="active"><a href="../industry/integrated-manage.html">行业综合管理</a></li>
+          <li><a href="../service/public-info-service.html">公共信息服务</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right custom-navbar-right">
+          <li class="user-info">
+            <img src="../img/login.png" alt="">
+            <span class="login-2">登录</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+<!-- 头部 end -->
+
+<!-- 左侧侧边栏 start -->
+  <div class="left-bar hidden-xs">
+    <div>
+        <a href="" class="leftlink">
+
+        </a>
+    </div>
+    <div>
+        <a href="../administrative-approval.html">
+
+        </a>
+    </div>
+    <div>
+        <a href="../policy-and-regulations.html">
+
+        </a>
+    </div>
+    <div>
+        <a href="download.html">
+
+        </a>
+    </div>
+  </div>
+<!-- 左侧侧边栏 end -->
+
+<!-- 右侧侧边栏 start -->
+  <div class="right-bar hidden-xs">
+    <div>
+      <a href="" class="rightlink">
+
+      </a>
+    </div>
+    <div>
+      <a href="../complaint-box.html">
+
+      </a>
+    </div>
+  </div>
+<!-- 右侧侧边栏 end -->
+
+<!-- 巨幕 全国重点文物保护单位 start -->
+  <div class="giant-screen ii3 jumbotron text-center">
+    <h3 class="" id="title">文物拍卖标的审核备案收文公告（2017.7.28更新）</h3>
+    <div class="container museum" id="list">
+      <div class="search-info">
+        <div class="row" id="classification">
+          <div class="col-lg-10 museum-left" style="">
+            <div class="collection" id="collection">
+                <div class="row">
+                  <div class="col-lg-4 form-inline">
+                    <label for="">拍卖会名称：</label>
+                    <input type="text" class="form-control" id="auctionName">
+                  </div>
+                  <div class="col-lg-4 form-inline">
+                    <label for="">拍卖会时间：</label>
+                    <input type="text" class="form-control" id="auctionTime">
+                  </div>
+                  <div class="col-lg-4 form-inline">
+                    <label for="">拍卖会地点：</label>
+                    <input type="text" class="form-control" id="auctionAddress">
+                  </div>
+                  <div class="col-lg-6 form-inline second-line date special">
+                    <label for="">收文时间：</label>        
+                      <input type="text" class="form-control" id="receivedTime" readonly>
+                  </div>
+                  <div class="col-lg-6 second-line form-inline special">
+                    <label for="">省别：</label>
+                    <select class="form-control" id="province">
+                    </select>
+                  </div>
+                  <div class="col-lg-6 second-line form-inline special">
+                    <!-- <label for="" style="">文号（或审批编号）：</label> -->
+                    <label for="" style="">文号（或审批编号）：</label>
+                      <input type="text" class="form-control" id="applyId" style="vertical-align: top;">
+                  </div>
+                  <div class="col-lg-6 form-inline second-line special">
+                      <label for="date_a">报审企业：</label>
+                      <input type="text" class="form-control" id="instSname">
+                  </div>
+                </div>
+            </div>
+          </div>
+          <div class="col-lg-2 museum-right" style="">
+            <a style="" href="collection-of-cultural-relics-details.html" target="_blank" class="" id="search">检索</a>            
+            <a href="" id="reset">重置</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- 巨幕 全国重点文物保护单位 end -->
+
+<!-- 统计表格1 start -->
+  <div class="statistics unmovable">
+    <div class="container unmovableContent">    
+      <table>
+        <thead>    
+          <tr>
+            <th rowspan="2"><span>收文时间</span></th>
+            <th rowspan="2"><span>来文单位</span></th>
+            <th rowspan="2"><span>文号（或审批编号）</span></th>
+            <th rowspan="2"><span>报审企业</span></th>
+            <th colspan="4"><span>拍卖会信息</span></th>
+            <th rowspan="2"><span>省级文物行政部门审核意见</span></th>
+          </tr>
+          <tr>
+            <th><span>名称</span></th>
+            <th><span>时间</span></th>
+            <th><span>地点</span></th>
+            <th><span>报审标的数</span></th>
+          </tr>
+        </thead>
+        <tbody id="receiptNotice">
+          <tr>
+            <td colspan="9">加载中...</td>
+          </tr>
+        </tbody>
+<!--         <tr>
+          <td width="89"><span>2017年6月23日</span></td>
+          <td width="85"><span>上海市文物局</span></td>
+          <td width="77"><span>备案编号80</span></td>
+          <td width="109"><span>上海申之江拍卖有限公司</span></td>
+          <td width="125"><span>申之江2017年夏季艺术品拍卖会</span></td>
+          <td width="125"><span>2017年7月11日</span></td>
+          <td width="109"><span>上海市黄浦区云南北路30号五楼</span></td>
+          <td width="73"><span>678件</span></td>
+          <td width="85"><span>无撤拍</span></td>
+        </tr> -->
+      </table>
+      <!-- 分页 -->
+      <div class="row paging">
+        <div class="M-box4"></div>
+      </div>
+    </div>
+  </div>
+<!-- 统计表格1 end -->
+
+<!-- 底部 start -->
+    <div class="footer">
+      <div class="container footer-content">
+        <div class="row">
+            <p><a href="../website-statement.html">网站声明</a><a href="../website-statement.html">联系我们</a></p>
+            <i></i>
+        </div>
+      <b>Copyright © 2017 国家文物局版权所有</b>
+      </div>
+    </div>
+<!-- 底部 end -->
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="../js/common/jquery-1.9.1.min.js"></script> 
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="../js/common/bootstrap.min.js"></script>
+  <script src="../js/common/ie10-viewport-bug-workaround.js"></script>
+  <script src="../js/common/pageSwitch.min.js"></script>
+  <script src="../js/common/pagination.js"></script>
+  <script src="../js/common/jquery.cxcalendar.min.js"></script>
+  <script src="../js/common/jquery.cxcalendar.languages.js"></script>
+  <script src="../js/common/main.js"></script>
+  <script src="../js/common/common.js"></script>
+  
+  <script src="../js/common/paging.js"></script>
+  <script src="../js/common/jquery.pagination.js"></script>
+  <script src="../js/industry/cul-auction-anno.js"></script>
+
+ <!-- 模板 start -->
+  <script id="tReceiptNotice" type="text/template">
+    <tr>
+      <td width="10%"><span>$receivedTime$</span></td>
+      <td width="10%"><span>$instName$</span></td>
+      <td width="10%"><span>$applyId$</span></td>
+      <td width="15%"><span>$instSname$</span></td>
+      <td width="15%"><span>$auctionName$</span></td>
+      <td width="10%"><span>$auctionTime$</span></td>
+      <td width="10%"><span>$auctionAddress$</span></td>
+      <td width="10%"><span>$auctionNumber$</span></td>
+      <td width="10%"><span>$apprOpinion$</span></td>
+    </tr>
+  </script>
+  <!-- 模板 end -->
+</body>
+</html>

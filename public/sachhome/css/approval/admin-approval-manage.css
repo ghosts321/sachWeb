@@ -1,0 +1,890 @@
+body {
+  position: relative !important;
+}
+a {
+  text-decoration: none !important;
+}
+.bsdt h4 {
+  margin: 20px 0;
+}
+.business-hall i {
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  background: #1E7FD9;
+  border: 1px solid #1E7FD9;
+  border-radius: 100px;
+  margin-right: 0.6%;
+}
+.business-hall ul li {
+  margin-right: 40px;
+  color: red;
+}
+.tal {
+  text-align: left;
+  line-height: 40px;
+  background-color: #65ABE9;
+}
+.tal a {
+  position: relative;
+  color: #fff;
+  font-size: 14px;
+  display: inline-block;
+  white-space: nowrap;
+}
+.tal a:hover,
+.tal a:focus {
+  text-decoration: none;
+}
+.tal a:first-child {
+  margin-left: 21px;
+}
+.tal a + a {
+  margin-left: 40px;
+}
+.tal a.on i {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -1px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #D6ECFF;
+  z-index: 990;
+}
+.header h4 {
+  margin: 20px 0;
+}
+.header .bs-l {
+  padding: 0;
+}
+.header .bs-l .tab-l {
+  margin-bottom: 0;
+}
+.header .bs-l .tab-l + .tab-l {
+  display: none;
+}
+.header .bs-l .tab-l tr td:last-child {
+  border-right-color: transparent;
+}
+.header .bs-l .tab-l tr:last-child td {
+  border-bottom-color: transparent;
+}
+.header .bs-l .tab-l td {
+  height: 70px !important;
+  border: 1px dashed transparent;
+  border-right: 1px dashed #c7c7c7;
+  border-bottom: 1px dashed #c7c7c7;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.header .bs-l .tab-l td.hov {
+  cursor: pointer;
+}
+.header .bs-l .tab-l td.hov:hover {
+  background: #D6ECFF;
+  border: 1px solid #62AAEC;
+}
+.header .bs-l .tab-l td.on p {
+  color: #4497e1;
+}
+.header .bs-l .tab-l p {
+  font-size: 14px;
+  color: #202020;
+  line-height: 19px;
+  margin-left: 27px;
+}
+.header .bs-l .tab-l p.title {
+  transform: translateY(8px);
+}
+.header .bs-l .tab-l p.description {
+  font-size: 14px;
+  margin-bottom: 1px;
+}
+.header .bs-l .tab-l p.description-small {
+  font-size: 14px;
+}
+.header .bs-l .tab-l:nth-child(4) td {
+  border-right: 0 none;
+}
+.header .table-1 tr {
+  border: 1px dashed #C7C7C7 !important;
+}
+.header .rtb {
+  background: #fff;
+  padding: 0;
+  text-align: center;
+  overflow: hidden;
+  border-left: 1px dashed #C7C7C7;
+  border-right: 1px dashed #C7C7C7;
+}
+.header .rtb > div {
+  background-color: #F9F9F9;
+}
+.header .rtb > div a {
+  display: block;
+  padding: 15px 0;
+}
+.header .rtb > div > div {
+  width: 50%;
+  height: 129.5px;
+  border-left: 1px dashed #C7C7C7;
+  border: 1px dashed #C7C7C7;
+}
+.header .rtb > div > div img[src="img/bzzj.png"] + p {
+  transform: translateY(3px);
+}
+.header .rtb > div > div:hover {
+  background: #D6ECFF;
+  border: 1px solid #62AAEC;
+}
+.header .rtb > div p {
+  color: #202020 !important;
+  text-align: center;
+  transform: translateY(10px);
+}
+.header .rtb img {
+  width: 64px;
+  height: 64px;
+}
+.content {
+  background-color: #F5F5F5;
+  padding-top: 20px;
+  padding-bottom: 45px;
+}
+.content .protection-law {
+  margin-right: -15px;
+  margin-left: 15px;
+}
+.content .protection-law .according-to {
+  width: 40px;
+  min-height: 174px;
+  background-color: #65ABE9;
+  text-align: center;
+}
+.content .protection-law .according-to span {
+  color: #FFFFFF;
+  font-size: 14px;
+  margin-top: 43px;
+  display: block;
+}
+.content .protection-law .according-to + div {
+  padding-left: 0;
+}
+.content .protection-law .according-to + div > div {
+  background-color: #fff;
+  min-height: 174px;
+  font-size: 14px;
+  color: #202020;
+  padding: 0 10px;
+}
+.content .protection-law .according-to + div > div i {
+  font-style: normal;
+  display: block;
+  padding-top: 20px;
+  padding-left: 5px;
+  height: 140px;
+  overflow-y: auto;
+}
+.content .protection-law .law > div + div {
+  display: none;
+}
+.content .approval {
+  min-height: 174px;
+  padding-right: 0;
+  position: relative;
+  background-color: #fff;
+  margin-left: -15px;
+  text-align: center;
+}
+.content .approval > div {
+  background-color: #fff;
+  margin-left: -15px;
+}
+.content .approval .box {
+  width: 205px;
+  line-height: 58px;
+  display: inline-block;
+}
+.content .approval .box .fastener {
+  text-align: center;
+  margin-top: 37px;
+}
+.content .approval .box .fastener + .fastener {
+  display: none;
+}
+.content .approval .box .fastener a {
+  width: 100%;
+  height: 45px;
+  line-height: 45px;
+  padding: 0;
+  margin: 0;
+  border-radius: 5px !important;
+  border: 0 none;
+  background-color: #56A5EC;
+  color: #fff;
+}
+.content .approval .box .fastener a.two {
+  width: 49%;
+}
+.content .approval .box .fastener a.two.left {
+  margin-right: 1%;
+}
+.content .approval .box .fastener a.two.left + .two {
+  margin-left: 1%;
+}
+.content .approval .box .fastener a.only {
+  padding: 10px 20px;
+}
+.content .approval .box .fastener a:hover {
+  outline: 0;
+}
+.content .approval .box .fastener a:focus {
+  border-color: transparent;
+  outline: 0;
+}
+.content .approval .box .fastener a b {
+  width: 28px;
+  height: 28px;
+  position: absolute;
+  left: 15px;
+  top: 8px;
+  background: url('../../img/ljbl.png') no-repeat center center;
+  background-size: cover;
+}
+.content .approval .box .fastener a i {
+  width: 1px;
+  height: 45px;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 56px;
+  border-right: 1px dashed #fff;
+}
+.content .approval .box .fastener a + a {
+  margin-top: 10px;
+}
+.content .approval .box .fastener.immediately {
+  margin-top: 20px;
+}
+.content .approval .box .fastener.immediately span {
+  display: block;
+}
+.content .approval .box .fastener.immediately span:before {
+  content: '';
+  display: inline-block;
+  vertical-align: -5px;
+  margin-right: 3px;
+  width: 20px;
+  height: 20px;
+  background: url('../../img/hook-2.png') no-repeat center center;
+}
+.content .approval .box .fastener.immediately a {
+  display: inline-block;
+}
+.content .approval .box .fastener.immediately a.two {
+  width: 49%;
+  margin-top: 15px;
+}
+.content .approval .box .fastener.immediately a.question {
+  margin-right: 0;
+}
+.content .approval .beforehand {
+  height: 58px;
+}
+.content .approval .beforehand + div {
+  height: 58px;
+  background-color: blue;
+}
+.content .work {
+  min-height: 216px;
+  background-color: #fff;
+}
+.content .work .process + .process {
+  display: none;
+}
+.content .work .flow {
+  background-color: #fff;
+  margin-top: 20px;
+  position: relative;
+  margin-right: 0;
+  margin-left: 0;
+}
+.content .work .flow .lc {
+  margin-top: 10px;
+}
+.content .work .flow span {
+  background: url('../../img/lck.png') no-repeat center center;
+  width: 425px;
+  height: 39px;
+  position: absolute;
+  left: 50%;
+  top: 10px;
+  transform: translateX(-50%);
+}
+.content .work .flow span i {
+  font-size: 18px;
+  color: #65ABE9;
+  font-weight: bold;
+  font-style: normal;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.content .work .flow strong {
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #62AAEC;
+}
+.content .work .flow strong b {
+  color: #62AAEC;
+}
+.content .work .flow strong img {
+  cursor: pointer;
+}
+.content .work .pic {
+  background-color: #fff;
+  padding: 30px 10px 20px;
+  margin-left: 0;
+  margin-right: 0;
+  text-align: center;
+}
+.content .work .pic strong {
+  display: inline-block;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  color: #62AAEC;
+}
+.content .work .pic strong b {
+  color: #62AAEC;
+}
+.content .charge {
+  margin-top: 20px;
+  margin-left: 0;
+  margin-right: 0;
+}
+.content .charge .parameter + .parameter {
+  display: none;
+}
+.content .charge .require {
+  padding: 0;
+  text-align: center;
+  border: 1px solid #E1E1E1;
+}
+.content .charge .require p {
+  margin: 0;
+  background-color: #fff;
+}
+.content .charge .require p:last-child {
+  height: 58px;
+}
+.content .charge .require p:last-child b,
+.content .charge .require p:last-child span {
+  height: 58px;
+  border-bottom: 0 none;
+}
+.content .charge .require p b {
+  margin: 0;
+  font-size: 14px;
+  color: #202020;
+  letter-spacing: 0;
+  line-height: 39px;
+  display: inline-block;
+  width: 70%;
+  font-weight: normal;
+  border-bottom: 1px dashed #C7E0F6;
+}
+.content .charge .require p b i {
+  font-style: normal;
+}
+.content .charge .require p b .see-more {
+  cursor: pointer;
+  vertical-align: -4px;
+}
+.content .charge .require p span {
+  background-color: #65ABE9;
+  font-size: 14px;
+  color: #FFFFFF;
+  display: inline-block;
+  letter-spacing: 0;
+  line-height: 39px;
+  width: 30%;
+  border-bottom: 1px solid #fff;
+}
+.content .charge .require + div {
+  padding-right: 0;
+  padding-left: 20px;
+}
+.content .charge .require + div .see-more {
+  cursor: pointer;
+  vertical-align: -4px;
+}
+.content .charge .require + div > div {
+  border: 1px solid #62AAEC;
+  background-color: #fff;
+}
+.content .charge .require + div p {
+  margin: 0;
+  border-bottom: 1px solid #70B1ED;
+}
+.content .charge .require + div p:last-child {
+  height: 136px;
+  overflow: scroll;
+  border-bottom: 0 none;
+}
+.content .charge .require + div p:last-child em {
+  text-indent: 21px;
+  height: auto;
+  line-height: 24px;
+  display: block;
+  color: #202020;
+}
+.content .charge .require + div p:last-child em:first-child {
+  padding-top: 19px;
+}
+.content .charge .require + div p strong,
+.content .charge .require + div p i,
+.content .charge .require + div p em,
+.content .charge .require + div p span {
+  font-weight: normal;
+  font-style: normal;
+  font-size: 14px;
+  height: 38px;
+  line-height: 38px;
+}
+.content .charge .require + div p strong {
+  background-color: #E0EEFB;
+  display: inline-block;
+  width: 17%;
+  text-indent: 10px;
+  color: #526069;
+}
+.content .charge .require + div p i {
+  display: inline-block;
+}
+.content .charge .require + div p i.cost {
+  width: 21.5%;
+  text-indent: 17px;
+  border-left: 1px solid #71B2ED;
+  border-right: 1px solid #71B2ED;
+}
+.content .charge .require + div p i.cost ~ i {
+  text-indent: 20px;
+  border-left: 1px solid #71B2ED;
+}
+.content .charge .require + div p .line {
+  display: inline-block;
+  width: 100%;
+  text-indent: 10px;
+  background-color: #E0EEFB;
+}
+.content .application {
+  padding-top: 20px;
+  margin-left: 0;
+  margin-right: 0;
+}
+.content .application .material + .material {
+  display: none;
+}
+.content .application .list {
+  width: 3.5%;
+  height: 253px;
+  background-color: #65ABE9;
+  text-align: center;
+}
+.content .application .list span {
+  color: #FFFFFF;
+  font-size: 14px;
+  margin-top: 23px;
+  display: inline-block;
+}
+.content .application .list + div {
+  width: 96.5%;
+  background-color: #fff;
+  height: 253px;
+  overflow-y: auto;
+  padding: 10px 0;
+}
+.content .application .list + div p {
+  font-size: 14px;
+  color: #202020;
+  line-height: 22px;
+  margin-left: 10px;
+}
+.content .application .list + div i {
+  width: 19px;
+  height: 19px;
+  border-radius: 50%;
+  text-align: center;
+  font-style: normal;
+  font-size: 13px;
+  display: inline-block;
+  margin-top: 20px;
+  color: #fff;
+  background-color: #F4A753;
+  margin-right: 16px;
+}
+.content .application .related {
+  padding-right: 0;
+  padding-left: 19px;
+  height: 253px;
+}
+.content .application .related > div {
+  background-color: #fff;
+  border: 1px solid #E3E3E3;
+}
+.content .application .related p {
+  margin: 0;
+  height: 39px;
+  line-height: 39px;
+  border-bottom: 1px solid #DCDCDC;
+}
+.content .application .related span,
+.content .application .related b,
+.content .application .related em {
+  font-style: normal;
+  font-weight: normal;
+}
+.content .application .related i {
+  width: 6px;
+  height: 18px;
+  display: inline-block;
+  background: url('../../img/group.png') no-repeat center center;
+  background-size: cover;
+  margin-right: 10px;
+  position: relative;
+  top: 3px;
+  margin-left: 19px;
+}
+.content .application .related span {
+  font-size: 16px;
+  color: #202020;
+  margin-right: 25px;
+}
+.content .application .related b {
+  font-size: 14px;
+  color: #666666;
+}
+.content .application .related a {
+  font-size: 14px;
+  color: #666666;
+  margin-right: 18px;
+  text-decoration: none;
+}
+.content .application .related a.pull-right {
+  display: none;
+}
+.content .application .related ul {
+  padding-left: 19px;
+}
+.content .application .related ul li {
+  list-style: none;
+  font-size: 14px;
+  color: #0E0E0E;
+}
+.content .application .related ul li:before {
+  content: '';
+  width: 4px;
+  height: 4px;
+  display: inline-block;
+  border-radius: 50%;
+  background-color: #0B0B0B;
+  position: relative;
+  top: -3px;
+  margin-right: 15px;
+}
+.content .application .related ul li:first-child {
+  margin-top: 15px;
+}
+.content .application .related ul li + li {
+  margin-top: 19px;
+}
+.content .application .related ul li span {
+  font-family: ArialMT;
+  font-size: 16px;
+  color: #A4A4A4;
+  float: right;
+}
+#modal {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: none;
+  font-size: 14px;
+  color: #333;
+  z-index: 10000000000;
+}
+#modal .modal-bg {
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0.6;
+  filter: alpha(opacity=60);
+}
+#modal .modal-box {
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: auto;
+  padding: 15px;
+  background: #fff;
+}
+#modal .modal-box.modal-big {
+  width: 800px;
+  height: 600px;
+}
+#modal .modal-box .modal-title {
+  padding-bottom: 5px;
+  border-bottom: 1px solid #e5e5e5;
+}
+#modal .modal-box .modal-title i {
+  font-style: normal;
+}
+#modal .modal-box .modal-title .modal-close {
+  float: right;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1;
+  text-shadow: 0 1px 0 #fff;
+  filter: alpha(opacity=20);
+  opacity: .2;
+  display: inline-block;
+  position: absolute;
+  color: #000;
+  top: 2px;
+  right: 10px;
+  cursor: pointer;
+}
+#modal .modal-box .m-content .modal-ctx {
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+#modal .modal-box .m-content .modal-sure {
+  text-align: center;
+  margin-bottom: 0;
+}
+#modal .modal-box .m-content .modal-sure em {
+  background-color: #E2EAEC;
+  border: 1px solid #E2EAEC;
+  padding: 5px 20px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-style: normal;
+}
+#modal .modal-small {
+  width: 700px;
+  max-height: 600px;
+  overflow-y: auto;
+}
+@media (max-width: 768px) {
+  .tal > div > div > div {
+    padding: 0;
+  }
+  .tal a + a {
+    margin-left: 20px;
+  }
+  .tal a:first-child {
+    margin-left: 20px;
+  }
+  .header .bs-l .tab-l p {
+    margin-left: 0;
+  }
+  .header .bs-l .tab-l td.big .title {
+    margin-top: -5px;
+  }
+  .header .bs-l .tab-l td.big p {
+    margin-bottom: 10px;
+  }
+  .header .bs-l .tab-l td.big p {
+    margin-left: auto;
+  }
+  .content .according-to + div {
+    padding-right: 0;
+  }
+  .content .approval {
+    padding-left: 0;
+  }
+  .content .approval .box .fastener button {
+    width: 100%;
+    display: block;
+    outline: none;
+  }
+  .content .approval .box .fastener button:first-child {
+    margin-top: -10px;
+  }
+  .content .approval .box .fastener button + button {
+    margin: auto;
+    margin-top: 20px;
+  }
+  .work {
+    padding-top: 20px;
+  }
+  .content .work .flow span {
+    position: static;
+    white-space: nowrap;
+    display: inline-block;
+    margin-top: 12px;
+    font-size: 17px;
+  }
+  .content .work .flow span i {
+    left: -113px;
+    top: 5px;
+  }
+  .content .work .flow strong {
+    margin-left: auto;
+    margin-top: 10px;
+  }
+  .content .work .flow span i {
+    display: none;
+  }
+  .content .work .flow strong {
+    white-space: normal;
+  }
+  .content .work .pic {
+    padding: 30px 0 20px;
+  }
+  .content .charge .require + div {
+    padding-left: 0;
+    margin-top: 20px;
+  }
+  .content .application .related {
+    padding-left: 0;
+    padding-top: 20px;
+  }
+  .content .application .list + div i {
+    margin-top: 7px;
+  }
+  .content .application .list + div p {
+    line-height: 20px;
+    margin-left: 5px;
+  }
+  .content .approval {
+    margin-top: 20px;
+  }
+  .content .work {
+    margin-top: 20px;
+  }
+  .content .work .flow {
+    margin-top: 0;
+  }
+  .content .work .flow .lc {
+    width: 100%;
+    margin-top: 0;
+  }
+  .content .approval {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  .content .charge .require + div p strong {
+    width: 100%;
+  }
+  .content .charge .require + div p i.cost {
+    width: 100%;
+    border: 0 none;
+    text-indent: 10px;
+  }
+  .content .charge .require + div p i.cost ~ i {
+    border: 0 none;
+    text-indent: 10px;
+  }
+  .content .charge .require + div p:last-child em:first-child {
+    padding-top: 0;
+  }
+  .content .charge .require + div p:last-child em {
+    text-indent: 10px;
+  }
+  .content .application .list {
+    width: 9%;
+  }
+  .content .application .list + div {
+    width: 91%;
+  }
+  #modal .modal-small {
+    width: 80%;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .tal a + a {
+    margin-left: 20px;
+  }
+  .business-hall-links {
+    padding: 0 15px;
+  }
+  .content .approval .box {
+    width: 150px;
+  }
+  .content .approval .box .fastener a {
+    height: 40px;
+    line-height: 40px;
+  }
+  .content .charge .require + div p strong {
+    width: 30%;
+    text-indent: 5px;
+  }
+  .content .charge .require + div p i.cost {
+    width: 70%;
+    border-right: 0 none;
+  }
+  .content .charge .require + div {
+    padding-left: 0;
+    margin-top: 20px;
+  }
+  .content .application .list {
+    width: 7%;
+  }
+  .content .application .list + div {
+    width: 93%;
+  }
+  .content .protection-law .according-to + div > div i {
+    padding-left: 0;
+  }
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+  .business-hall-links {
+    padding: 0 15px;
+  }
+  .content .approval .box {
+    width: 150px;
+  }
+  .content .charge .require + div {
+    padding-left: 0;
+    margin-top: 20px;
+  }
+  .content .application .list {
+    width: 5%;
+  }
+  .content .application .list + div {
+    width: 95%;
+  }
+}
+@media (width: 1200px) {
+  .content .charge .require + div {
+    margin-top: 0;
+    padding-left: 20px;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1280px) {
+  .business-hall-links {
+    padding: 0 15px;
+  }
+  .content .charge .require + div p strong {
+    text-indent: 3px;
+    white-space: nowrap;
+  }
+  .content .charge .require + div p i.cost {
+    text-indent: 5px;
+  }
+  .content .charge .require + div p i.cost ~ i {
+    text-indent: 5px;
+  }
+  .content .charge .require p b {
+    white-space: nowrap;
+  }
+}

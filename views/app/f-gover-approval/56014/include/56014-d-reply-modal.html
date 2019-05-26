@@ -1,0 +1,105 @@
+<!-- 批复文件列表 -->
+<div class="modal fade in" id="cmx-reply-modal" aria-hidden="true" aria-labelledby="replyfiles" role="dialog" tabindex="-1">
+    <div class="modal-dialog  modal-lg modal-center">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span>立项批复</span>
+                <button class="pull-right close" data-dismiss="modal" aria-label="关闭">关闭</button>
+                <div class="clearfix"></div>
+            </div>
+            <div class="modal-body">
+                <div class="panel">
+                    <div class="panel-body">
+                        <div class="nav-tabs-horizontal">
+                            <div class="tab-content relic-content">
+                                <div class="tab-pane active" id="" role="tabpanel">
+                                    <div class="queryTerm">
+                                        <div class="form-horizontal ">
+                                            <div class="row">
+                                                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                                                    <label for="cmx-reply-number" class="col-sm-3">批复文号</label>
+                                                    <div class="col-sm-9">
+                                                        <input type="text" id="cmx-reply-number" class="form-control">
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                                                    <label for="cmx-reply-name" class="col-sm-3">项目名称</label>
+                                                    <div class="col-sm-9">
+                                                        <input type="text" id="cmx-pro-name" class="form-control">
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                                                    <div class="right-part">
+                                                        <button type="button" class="btn btn-primary" id="cmx-reply-search">查询</button>
+                                                        <button type="button" class="btn btn-primary" id="cmx-reply-delete">清除</button>
+                                                        <button type="button" class="btn btn-primary cmx-more-research">更多</button>
+                                                        <button type="button" class="btn btn-primary cmx-pack-up" style="display:none;">收起</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="cmx-more-search-div row" style="display:none;">
+
+                                                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                                                    <label for="cmx-pro-num" class="col-sm-3">批复文号</label>
+                                                    <div class="col-sm-9">
+                                                        <input type="text" id="cmx-reply-title" class="form-control">
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tableDiv table-responsive text-nowrap">
+                                        <table class="table table-hover table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th class="num"></th>
+                                                    <th class="">批复文号</th>
+                                                    <th class="">项目名称</th>
+                                                    <th class="">文物保护单位</th>
+                                                    <th class="">年份</th>
+                                                    <th class="">批复标题</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="cmx-reply-tbody">
+                                                <tr>
+
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="relic-footer">
+                                        <!--  分页 -->
+                                        <ul class="pagination" id="cmx-reply-Pagination">
+                                            <li>
+                                                <a href="javascript:;" class="first">首页</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;" class="pre">上一页</a>
+                                            </li>
+                                            <li>
+                                                <span><span class="nowpage">0</span>/
+                                                <span class="totalpage">0</span>页</span>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;" class="next">下一页</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;" class="last">尾页</a>
+                                            </li>
+                                        </ul>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" type="button" id="cmx-reply-confirm-btn">确认</button>
+                <button type="button" class="btn btn-default cmx-cancle-btn" data-dismiss="modal">取消</button>
+            </div>
+        </div>
+    </div>
+</div>

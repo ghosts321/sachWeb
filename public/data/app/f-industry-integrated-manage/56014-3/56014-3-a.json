@@ -1,0 +1,135 @@
+[{
+    "columnname": "cmx-i-1",
+    "columnindex": "cmx-i-1",
+    "serialnumber": "P0001",
+    "type": "separator",
+    "name": "省文件信息",
+    "attribute": {
+        "default": "",
+        "notnull": 1,
+        "title": "省文件信息",
+        "desc": ""
+    },
+    "extra": {
+        "class": "margin-bottom-10 baseinfo",
+        "func": "",
+        "width": 12,
+        "layout": "",
+        "placeholder": ""
+    }
+},
+{
+    "columnname": "cmx-i-2",
+    "columnindex": "cmx-i-2",
+    "serialnumber": "P0002",
+    "type": "special",
+    "name": "省文件号",
+    "attribute": {
+        "default": "",
+        "notnull": 1,
+        "stype": ""
+    },
+    "extra": {
+        "class": "format baseinfo",
+        "func": "cmx_special_1",
+        "width": "12",
+        "layout": "",
+        "placeholder": ""
+    }
+}, {
+    "columnname": "cmx-i-3",
+    "columnindex": "cmx-i-3",
+    "serialnumber": "P0003",
+    "type": "text",
+    "name": "省文件标题",
+    "attribute": {
+        "default": "",
+        "notnull": 1,
+        "stype": "short",
+        "max_length": 200
+    },
+    "extra": {
+        "class": "margin-left-0 format baseinfo",
+        "func": "",
+        "width": "12",
+        "layout": "",
+        "placeholder": ""
+    }
+},
+{
+    "columnname": "cmx-i-4",
+    "columnindex": "cmx-i-4",
+    "serialnumber": "P0004",
+    "type": "text",
+    "name": "项目名称",
+    "attribute": {
+        "default": "",
+        "notnull": 1,
+        "stype": "short",
+        "max_length": 200
+    },
+    "extra": {
+        "class": "format baseinfo",
+        "func": "",
+        "width": "12",
+        "layout": "",
+        "placeholder": "请填写本申报事项项目名称，不超过200个汉字"
+    }
+},
+{
+    "columnname": "cmx-i-7",
+    "columnindex": "cmx-i-7",
+    "serialnumber": "P0007",
+    "type": "separator",
+    "name": "附件信息",
+    "attribute": {
+        "default": "",
+        "notnull": 0,
+        "title": "附件信息",
+        "desc": ""
+    },
+    "extra": {
+        "class": "margin-bottom-10 baseinfo",
+        "func": "appendDownloadAllFile",
+        "width": 12,
+        "layout": "",
+        "placeholder": ""
+    }
+}, {
+    "columnname": "cmx-i-8",
+    "columnindex": "cmx-i-8",
+    "serialnumber": "P0008",
+    "type": "file",
+    "name": "请示文件",
+    "attribute": {
+        "default": "",
+        "notnull": 1,
+        "single": "0"
+    },
+    "extra": {
+        "class": "baseinfo",
+        "func": "",
+        "width": "12",
+        "layout": "",
+        "placeholder": ""
+    }
+}, {
+    "columnname": "cmx-i-9",
+    "columnindex": "cmx-i-9",
+    "serialnumber": "P0009",
+    "type": "file",
+    "name": "项目计划清单",
+    "attribute": {
+        "default": "",
+        "notnull": 1,
+        "single": "0"
+    },
+    "extra": {
+        "class": "baseinfo",
+        "func": "",
+        "width": "12",
+        "layout": "",
+        "placeholder": ""
+    }
+}
+]

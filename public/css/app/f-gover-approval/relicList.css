@@ -1,0 +1,228 @@
+ .modal-dialog {}
+
+ .panel-body {
+     padding: 5px 15px;
+ }
+ .input-group-addon.impor {
+    padding: 4px 12px !important;
+    font-size: 14px !important;
+    font-weight: normal !important;
+    line-height: 1 !important;
+    color: #76838f !important;
+    text-align: center !important;
+    background-color: #f3f7f9 !important;
+    border: 1px solid #e4eaec !important;
+    border-radius: 3px !important;
+    width: 1% !important;
+}
+ .modal-header {
+     background-color: #4397e6;
+     color: white;
+     padding: 10px 20px;
+ }
+
+ .modal-header button.close {
+     border: none;
+     color: white;
+     font-size: 14px;
+     opacity: 1;
+     margin-top: 3px;
+ }
+
+ .cmx-relicNav {
+     width: 100%;
+ }
+
+ .cmx-relicNav>li>a {
+     padding: 8px 16px;
+ }
+
+ .tab-content.relic-content {
+     background-color: white;
+     padding: 0;
+     padding-top: 5px;
+ }
+
+ .tab-content .right-part {
+     float: right;
+ }
+
+ .relic-content .queryTerm {
+     margin-bottom: 5px;
+     margin-left: 10px;
+     margin-right: 20px;
+ }
+
+ .relic-content .queryTerm input {
+     border: 1px solid #D7D8D9;
+     margin-right: 40px;
+ }
+
+ .relic-content button {
+     padding: 2px 18px;
+     border-radius: 25px;
+ }
+
+ .tableDiv {
+     height: 280px;
+     overflow: auto;
+ }
+
+ .modal-body .table {
+     table-layout: auto;
+ }
+
+ .modal-body .table thead th:nth-child(1) {
+     width: 5%;
+ }
+
+ .modal-body .table thead th:nth-child(2) {
+     width: 10%;
+ }
+
+ .modal-body .table thead th:nth-child(3) {
+     width: 25%;
+ }
+
+ .modal-body .table thead th:nth-child(4) {
+     width: 10%;
+ }
+
+ .modal-body .table thead th:nth-child(5) {
+     width: 10%;
+ }
+
+ .modal-body .table thead th:last-child {
+     width: 10%;
+ }
+
+ .modal-body .table tr {
+     height: 27px;
+ }
+
+ .modal-body .table td:nth-child(1) {
+     text-align: center;
+ }
+
+ .modal-body .table td:nth-child(2) {
+     text-align: center;
+ }
+
+ .modal-body .table td:nth-child(4) {
+     text-align: center;
+ }
+
+ .modal-body .table td:nth-child(5) {
+     text-align: center;
+ }
+
+ .modal-body .table td:nth-child(6) {
+     text-align: center;
+ }
+
+ .modal-body .table td:nth-child(7) {
+     text-align: center;
+ }
+
+ .modal-body .table td:nth-child(8) {
+     text-align: center;
+ }
+
+ .modal-body .table td:last-child {
+     text-align: center;
+ }
+
+ .relic-footer {
+     background-color: #4397e6;
+     color: white;
+ }
+
+ .relic-footer .btn-group {
+     background-color: white;
+     margin-left: 10px;
+     display: inline-block;
+ }
+
+ .relic-footer .paging {
+     margin-top: 5px;
+     display: inline-block;
+ }
+
+ .relic-footer .paging li {
+     display: inline-block;
+     list-style: none;
+     margin-right: 10px;
+ }
+
+ .relic-footer .paging li i {
+     color: white;
+ }
+
+ .relic-footer .paging input {
+     text-align: center;
+     width: 40px;
+     height: 26px;
+     color: black;
+ }
+
+ .relic-footer .paging span {
+     margin-right: 10px;
+ }
+
+ .relic-footer .pagination {
+     margin-left: 20px;
+     margin-top: 7px;
+     margin-bottom: 7px;
+     vertical-align: middle;
+ }
+
+ tbody tr.active td {
+     background-color: #95BECB;
+ }
+
+ .relic-footer .pagination li a,
+ .relic-footer .pagination li span {
+     font-size: 14px;
+     color: white;
+     padding-top: 2px;
+     padding-bottom: 2px;
+ }
+
+ .relic-footer .pagination li span input {
+     color: #76838f;
+ }
+
+ .relic-footer .pagination li a:hover,
+ .relic-footer .pagination li span:hover {
+     color: white;
+     opacity: 0.8;
+     background-color: #62a8ea;
+ }
+
+ .relic-footer .pagination li a:focus,
+ .relic-footer .pagination li span:focus {
+     background-color: #62a8ea;
+ }
+
+ .relic-footer .countInfo {
+     float: right;
+     margin-top: 10px;
+     margin-right: 10px;
+ }
+
+ .relic-footer button {
+     border-radius: 0;
+     padding: 2px 10px;
+     background-color: white;
+ }
+
+ .pagination li input {
+     width: 20px;
+     border: none;
+     padding: 0;
+ }
+
+ .modal-footer {
+     padding-top: 5px;
+     padding-bottom: 10px;
+ }

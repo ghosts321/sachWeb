@@ -1,0 +1,99 @@
+<div class="modal fade in" id="cmx-560222-modal" aria-hidden="true" aria-labelledby="relicList" role="dialog" tabindex="-1">
+    <div class="modal-dialog modal-center">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span>立项批复</span>
+                <button class="pull-right close" data-dismiss="modal" aria-label="关闭">关闭</button>
+                <div class="clearfix"></div>
+            </div>
+            <div class="modal-body">
+                <div class="panel">
+                    <div class="panel-body">
+                        <div class="nav-tabs-horizontal">
+                            <ul class="nav nav-tabs cmx-relicNav" role="tablist">
+                                <li class="active" role="presentation">
+                                    <a data-toggle="tab" href="#relicTabOne" aria-controls="relicTabOne" role="tab" aria-expanded="true">规划立项</a>
+                                </li>
+                            </ul>
+                            <div class="tab-content relic-content">
+                                <div class="tab-pane active" id="cmx-project" role="tabpanel">
+                                    <div class="queryTerm">
+                                        <label for="cmx-project-num">编号</label>
+                                        <input type="text" id="cmx-project-num">
+                                        <label for="cmx-project-name">项目名称</label>
+                                        <input type="text" id="cmx-project-name">
+                                        <div class="right-part">
+                                            <span>更多查询条件</span>
+                                            <button class="btn btn-primary" id="cmx-project-search">查询</button>
+                                            <button class="btn btn-primary" id="cmx-project-delete">清除</button>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                    <div class="tableDiv">
+                                        <table class="table table-hover table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th></th>
+                                                    <th>编号</th>
+                                                    <th>项目名称</th>
+                                                    <th>编制单位</th>
+                                                    <th>省别</th>
+                                                    <th>批复文号</th>
+                                                    <th>省文件号</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="cmx-tbody-1">
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                    <div class="relic-footer">
+
+                                        <!--  分页 -->
+                                        <ul class="pagination">
+                                            <li>
+                                                <a href="javascript:;">首页</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">上一页</a>
+                                            </li>
+                                            <li>
+                                                <span>第
+                                                        <input type="text" value="1" />/15页</span>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">下一页</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">尾页</a>
+                                            </li>
+                                        </ul>
+                                        <span class="countInfo">1-15 共128条</span>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" type="button">确认</button>
+                <button type="button" class="btn btn-default cmx-cancle-btn" data-dismiss="modal">取消</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $("#newly").click(function() {
+        var modalId = getData("modalId");
+        console.log(modalId);
+        switch (modalId) {
+            case "560222":
+                window.location.href = "project-plan.html";
+                break;
+        }
+    })
+</script>

@@ -1,0 +1,207 @@
+<div class="modal fade in" id="getDetails-modal" aria-hidden="true" aria-labelledby="" role="dialog" tabindex="-1">
+    <div class="modal-dialog modal-center" style="width:85%;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span>列表详情</span>
+                <button class="pull-right close" data-dismiss="modal" aria-label="关闭">关闭</button>
+                <div class="clearfix"></div>
+            </div>
+            <div class="modal-body" style="height:450px;overflow:scroll">
+                <div class="col-md-12 col-lg-12" id="cmx-getDetails-div"></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default cmx-cancle-btn" data-dismiss="modal" style="margin-right:10px;">取消</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    //获取列表详情
+    function getDetails(url, applyId) {
+        $.ajax({
+            url: url,
+            type: "GET",
+            async: false,
+            success: function (result) {
+                var data = result;
+                for (var i = 0; i < data.length; i++) {
+                    var type = data[i].type;
+                    var width = data[i].extra.width;
+                    var notnull = (data[i].attribute.notnull == 1) ? true : false;
+                    var attrstring = 'cmx-tag="cmx" cmx-lib="' + data[i].serialnumber + '" cmx-index="' + data[i].columnindex +
+                        '" cmx-column="' + data[i].columnname + '" cmx-type="' + data[i].type + '" cmx-require="' +
+                        notnull + '"';
+                    if (data[i].extra.width == "") {
+                        width = 12;
+                    }
+                    if (type == 'text' || type == 'single' || type == 'extra') {
+                        attrstring = attrstring + 'cmx-stype="' + data[i].attribute.stype + '"';
+                    }
+                    new cmx.process()
+                        .turn('automated-form-' + type, {
+                            "element": "#cmx-getDetails-div",
+                            "data": data[i],
+                            "width": width,
+                            "notnull": notnull,
+                            "attrstring": attrstring
+                        })
+                        .ccatch(function (msg) {
+                            console.log('异常终止了 ' + msg);
+                        })
+                        .cfinally(function () {
+                            try {
+                                eval(data[i].extra.func + '(' + JSON.stringify(data[i]) + ')');
+                            } catch (exception) {
+                                console.log(exception)
+                            }
+                        }).start();
+                }
+            }
+        });
+        //加载文物列表
+        function cmx_special_relicInfo(data) {
+            var List = '';
+            $.ajax({
+                url: api_ea + '/eaScrRelicInfo/selectRelicListByApplyId',
+                type: "POST",
+                header: {
+                    "Content-Type": "application/json;charset=UTF-8"
+                },
+                beforeSend: function (request) {
+                    request.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+                },
+                async: false,
+                data: JSON.stringify({
+                    token: getData('token'),
+                    applyId: applyId,
+                    pageNumber: 1,
+                    pageSize: 1000
+                }),
+                success: function (result) {
+                    if (result.state == "200") {
+                        var relicInfo = result.data.dataList;
+                        if (relicInfo) {
+                            for (var i = 0; i < relicInfo.length; i++) {
+                                var isAllow = relicInfo[i].isAllow;
+                                var isRelic = relicInfo[i].isRelic;
+                                if (IsEmpty(isAllow)) {
+                                    isAllow = '';
+                                } else if (isAllow == 1) {
+                                    isAllow = '同意';
+                                } else {
+                                    isAllow = '禁止';
+                                }
+                                if (IsEmpty(isRelic)) {
+                                    isRelic = '';
+                                } else if (isRelic == 1) {
+                                    isRelic = '文物';
+                                } else {
+                                    isRelic = '复仿制品';
+                                }
+                                List += ['<tr data-id="'+relicInfo[i].relicId+'" class="relicTurnColor">',
+                                    '<td>',
+                                    '0' + (i + 1) + '',
+                                    '</td>',
+                                    '<td  data-id="' + relicInfo[i].relicId + '" class="detail cursorPointer">' + relicInfo[i].relicName + '</td>',
+                                    // '<td>' + relicInfo[i].relicType + '</td>',
+                                    '<td>' + relicInfo[i].relicYear + '</td>',
+                                    '<td>' + relicInfo[i].relicQualityName + '</td>',
+                                    '<td>' + relicInfo[i].relicLevelName + '</td>',
+                                    '<td>' + relicInfo[i].relicNumber + '件</td>',
+                                    '<td>' + relicInfo[i].relicSize + '</td>',
+                                    // '<td>' + relicInfo[i].remark + '</td>',
+                                    '<td>' + isRelic + '</td>',
+                                    '<td>' + isAllow + '</td>',
+                                    '</tr>'].join('');
+                            }
+                        }
+
+                        var html = ['<div id="relicListDiv" class="cmx-form-body col-sm-12 col-xs-12 col-md-12 col-lg-12" style="margin:0;padding:0;width:250%;" id="">',
+                            '<div class="example table-responsive">',
+                            '<table class="table table-bordered">',
+                            '<thead>',
+                            '<th>序号</th>',
+                            '<th>文物名称</th>',
+                            // '<th>类别</th>',
+                            '<th>年代</th>',
+                            '<th>质地</th>',
+                            '<th>级别</th>',
+                            '<th>数量</th>',
+                            '<th>尺寸</th>',
+                            // '<th>备注</th>',
+                            '<th>是否文物</th>',
+                            '<th>是否同意出境</th>',
+                            '</thead>',
+                            '<tbody>',
+                            List.length > 0 ? List : '',
+                            '</tbody>',
+                            '</table>',
+                            '</div>',
+                            '</div>'].join('');
+                        $("#cmx-special-" + data.serialnumber).append(html);
+                        relicTurnColor(0);
+                        relicListDetails(0);
+                    } else {
+                        alert(result.msg);
+                    }
+                }
+            });
+        }
+        //加载trace
+        function cmx_special_trace(data) {
+            var List = '';
+            $.ajax({
+                url: api_ea + '/eaScrQuery/getApplyTrace',
+                type: "POST",
+                header: {
+                    "Content-Type": "application/json;charset=UTF-8"
+                },
+                beforeSend: function (request) {
+                    request.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+                },
+                async: false,
+                data: JSON.stringify({
+                    token: getData('token'),
+                    applyId: applyId,
+                    pageNumber: 1,
+                    pageSize: 1000
+                }),
+                success: function (result) {
+                    if (result.state == "200") {
+                        var Info = result.data.dataList;
+                        if (Info) {
+                            for (var i = 0; i < Info.length; i++) {
+                                List += ['<tr>',
+                                    '<td>' + Info[i].applyClass + '</td>',
+                                    '<td>' + Info[i].dealUserName + '</td>',
+                                    '<td>' + Info[i].dealDate + '</td>',
+                                    '<td>' + Info[i].flowType + '</td>',
+                                    '</tr>'].join('');
+                            }
+                        }
+
+                        var html = ['<div class="col-sm-12 col-xs-12 col-md-12 col-lg-12" style="margin:0;padding:0;" id="">',
+                            '<div class="example table-responsive" style="margin:0;padding:0;">',
+                            '<table class="table table-bordered">',
+                            '<thead>',
+                            '<tr>',
+                            '<th>节点</th>',
+                            '<th>处理人</th>',
+                            '<th>处理时间</th>',
+                            '<th>状态</th>',
+                            List.length > 0 ? List : '<tr><td>暂无</td><td>暂无</td><td>暂无</td><td>暂无</td></tr>',
+                            '</tbody>',
+                            '</table>',
+                            '</div>',
+                            '</div>'].join('');
+                        $("#cmx-special-" + data.serialnumber).append(html);
+                    } else {
+                        alert(result.msg);
+                    }
+                }
+            });
+        }
+    }
+
+
+</script>

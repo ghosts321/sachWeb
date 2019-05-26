@@ -1,0 +1,279 @@
+select,
+input,
+a {
+  border-radius: 0 !important;
+}
+.regulations {
+  background-color: #FDFDFA;
+  color: #B0B0AF;
+  line-height: 50px;
+  border-bottom: 1px solid #D7D8D9;
+}
+.regulations i.house {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  background: url(../img/house.png) no-repeat center center;
+  background-size: cover;
+  vertical-align: -3px;
+  margin-right: 5px;
+  margin-left: -3px;
+}
+.regulations .menu {
+  margin-top: 12px;
+  margin-bottom: 17px;
+}
+.regulations .menu .item {
+  text-align: center;
+}
+.regulations .menu .item span {
+  min-width: 124px;
+  text-align: center;
+  display: inline-block;
+  height: 30px;
+  line-height: 30px;
+  color: #202020;
+  cursor: pointer;
+  background-color: #EDF7FF;
+  border: 1px solid #62AAEC;
+  border-radius: 2px;
+}
+.regulations .menu .item span.on {
+  color: #fff;
+  background-color: #62AAEC;
+  border-color: #62AAEC;
+}
+.regulations b {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  background: url('../img/house.png') no-repeat center center;
+  background-size: cover;
+  vertical-align: -3px;
+  margin-right: 5px;
+  margin-left: -3px;
+}
+.regulations span,
+.regulations a {
+  color: #B4B4B3;
+  font-size: 14px;
+  vertical-align: middle;
+}
+.regulations a {
+  text-decoration: none;
+}
+.regulations .regulations-left label {
+  white-space: nowrap;
+}
+.regulations .regulations-left select,
+.regulations .regulations-left input {
+  min-width: 76%;
+}
+.regulations .regulations-left select {
+  color: #B0B0AF;
+}
+.regulations .regulations-left .import {
+  margin-left: 70px;
+  margin-right: 50px;
+}
+.regulations .regulations-left .import .pick select {
+  border-right: 0 none;
+  background: url('../img/option.png') no-repeat right center;
+  background-color: #fff;
+  background-size: 34px 34px;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+.regulations .regulations-left .import .pick select::-ms-expand {
+  display: none;
+}
+.regulations .regulations-left .import select.num {
+  background-color: #fff;
+  min-width: 63%;
+}
+.regulations .regulations-left .import select.num.num1 {
+  min-width: 73%;
+}
+.regulations .regulations-left .import select.num.num2 {
+  min-width: 78%;
+}
+.regulations .regulations-left .import input.num3 {
+  width: 80%;
+}
+.regulations .regulations-left .import input {
+  color: #B0B0AF;
+}
+.regulations .regulations-left .import .opinion {
+  width: 88%;
+}
+.regulations .regulations-left .import .date .calendar {
+  height: 34px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+  padding-left: 12px;
+  padding-right: 12px;
+  border-left-width: 1px;
+  border-right-width: 1px;
+  border-radius: 4px;
+  outline: none;
+  border: 1px solid #ccc;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  background: url('../img/calendar.png') no-repeat 98% center;
+  background-color: #fff;
+}
+.regulations .retrieve {
+  border-left: 1px dashed #CACAC9;
+}
+.regulations .retrieve .retrieve-right {
+  margin-left: 15px;
+}
+.regulations .retrieve .retrieve-right a {
+  margin-top: 50px;
+  display: inline-block;
+  min-width: 160px;
+  padding: 8px 35px;
+  border: 1px solid #D7D8D9;
+  color: #657179;
+}
+.regulations .retrieve .retrieve-right a:hover {
+  background-color: #62AAEC;
+  border-color: #D7D8D9;
+  color: #fff;
+}
+.regulations .retrieve .retrieve-right .reset {
+  margin-top: 26px;
+}
+.regulations form label {
+  color: #2F2F2F;
+  font-weight: normal;
+}
+.regulations form input {
+  border-radius: 0;
+}
+.regulations form .search {
+  border-radius: 0;
+  border: 0 none;
+  background-color: #62AAEC;
+  color: #fff;
+  padding-left: 60px;
+  padding-right: 60px;
+}
+.regulations form .resetting {
+  text-decoration: underline;
+  color: #2F2F2F;
+  margin-left: 20px;
+}
+.up-to-date {
+  margin-bottom: 40px;
+}
+.up-to-date .up-to-date-left {
+  margin-top: 25px;
+}
+.up-to-date .up-to-date-left a {
+  margin-top: 12px;
+}
+.up-to-date .up-to-date-left td a {
+  color: #526069;
+}
+.up-to-date .up-to-date-left td a:hover {
+  text-decoration: underline;
+  color: #62AAEC;
+}
+.up-to-date .up-to-date-right {
+  margin-left: 15px;
+}
+.up-to-date .up-to-date-right .up-to-date-right-content {
+  margin-left: 0;
+  margin-top: 20px;
+}
+.up-to-date .up-to-date-right .up-to-date-right-content div {
+  background-color: #65ABE9;
+  color: #fff;
+  height: 60px;
+  line-height: 60px;
+  position: relative;
+  border-radius: 2px;
+}
+.up-to-date .up-to-date-right .up-to-date-right-content div strong {
+  height: 60px;
+  width: 1px;
+  border-left: 1px dashed #fff;
+  position: absolute;
+  left: 54px;
+}
+.up-to-date .up-to-date-right .up-to-date-right-content div a {
+  text-decoration: none;
+  display: block;
+  height: 100%;
+}
+.up-to-date .up-to-date-right .up-to-date-right-content div a img {
+  width: 30px;
+  height: 30px;
+  margin-right: 18px;
+}
+.up-to-date .up-to-date-right .up-to-date-right-content div a em {
+  color: #fff;
+  font-size: 14px;
+  color: #FFFFFF;
+  letter-spacing: 0;
+  font-style: normal;
+}
+.up-to-date .up-to-date-right .up-to-date-right-content div + div {
+  margin-top: 20px;
+}
+.up-to-date .up-to-date-right h3 {
+  border-bottom: 2px solid #CCCCCC;
+  padding-bottom: 20px;
+}
+.up-to-date .up-to-date-table {
+  width: 100%;
+  font-size: 14px;
+  border: 1px solid #D7D8D9;
+  margin: 0;
+  color: #526069;
+}
+.up-to-date .up-to-date-table td + td {
+  border-left: 1px solid #D7D8D9;
+}
+.up-to-date .up-to-date-table th {
+  font-weight: normal;
+}
+.up-to-date .up-to-date-table th,
+.up-to-date .up-to-date-table td {
+  height: 36px;
+}
+.up-to-date .up-to-date-table .provide-color {
+  color: #fff;
+  background-image: linear-gradient(-180deg, #65abe9 0%, #257dcb 100%);
+}
+.up-to-date .up-to-date-table .provide-color th {
+  line-height: 30px;
+  position: relative;
+}
+.up-to-date .up-to-date-table .provide-color th:first-child:before {
+  border-left: 0 none;
+}
+.up-to-date .up-to-date-table .provide-color th:before {
+  content: '';
+  width: 1px;
+  height: 20px;
+  display: block;
+  position: absolute;
+  border-left: 1px dashed #91C9FB;
+  top: 9px;
+  left: 0;
+}
+.up-to-date .up-to-date-table span {
+  height: 2.5%;
+  line-height: 19px;
+  border: 1px solid #eee;
+  border-top: 2px solid #eee;
+  padding: 0.3% 2.1% 0.7% 2%;
+  text-align: center;
+  font-size: 14px;
+  height: 35px;
+  line-height: 30px;
+}

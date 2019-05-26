@@ -1,0 +1,210 @@
+[{
+    "columnname": "cmx-i-24",
+    "columnindex": "cmx-i-24",
+    "serialnumber": "P0024",
+    "type": "expand",
+    "name": "价值评估",
+    "attribute": {
+        "default": "",
+        "notnull": 1,
+        "stype": "",
+        "id": "4"
+    },
+    "extra": {
+        "class": "margin-bottom-40",
+        "func": "addExtra",
+        "width": "12",
+        "layout": "",
+        "placeholder": ""
+    }
+}, {
+    "columnname": "cmx-i-25",
+    "columnindex": "cmx-i-25",
+    "serialnumber": "P0025",
+    "type": "expand",
+    "name": "保存现状调查",
+    "attribute": {
+        "default": "",
+        "notnull": 1,
+        "stype": "",
+        "id": "5-1"
+    },
+    "extra": {
+        "class": "margin-bottom-40",
+        "func": "addExtra",
+        "width": "12",
+        "layout": "",
+        "placeholder": ""
+    }
+}, {
+    "columnname": "cmx-i-26",
+    "columnindex": "cmx-i-26",
+    "serialnumber": "P0026",
+    "type": "expand",
+    "name": "工作目标",
+    "attribute": {
+        "default": "",
+        "notnull": 1,
+        "stype": "",
+        "id": "6"
+    },
+    "extra": {
+        "class": "margin-bottom-40",
+        "func": "addExtra",
+        "width": "12",
+        "layout": "",
+        "placeholder": ""
+    }
+}, {
+    "columnname": "cmx-i-27",
+    "columnindex": "cmx-i-27",
+    "serialnumber": "P0027",
+    "type": "expand",
+    "name": "病毒评测",
+    "attribute": {
+        "default": "",
+        "notnull": 1,
+        "stype": "",
+        "id": "7-1"
+    },
+    "extra": {
+        "class": "margin-bottom-40",
+        "func": "addExtra",
+        "width": "12",
+        "layout": "",
+        "placeholder": ""
+    }
+}, {
+    "columnname": "cmx-i-29",
+    "columnindex": "cmx-i-29",
+    "serialnumber": "P0029",
+    "type": "expand",
+    "name": "修复技术及材料筛选",
+    "attribute": {
+        "default": "",
+        "notnull": 1,
+        "stype": "",
+        "id": "8-1"
+    },
+    "extra": {
+        "class": "margin-bottom-40",
+        "func": "addExtra",
+        "width": "12",
+        "layout": "",
+        "placeholder": ""
+    }
+}, {
+    "columnname": "cmx-i-30",
+    "columnindex": "cmx-i-30",
+    "serialnumber": "P0030",
+    "type": "expand",
+    "name": "保护修复步骤",
+    "attribute": {
+        "default": "",
+        "notnull": 1,
+        "stype": "",
+        "id": "9"
+    },
+    "extra": {
+        "class": "margin-bottom-40",
+        "func": "addExtra",
+        "width": "12",
+        "layout": "",
+        "placeholder": ""
+    }
+}, {
+    "columnname": "cmx-i-31",
+    "columnindex": "cmx-i-31",
+    "serialnumber": "P0031",
+    "type": "expand",
+    "name": "保护条件措施或建议",
+    "attribute": {
+        "default": "",
+        "notnull": 1,
+        "stype": "",
+        "id": "10-1"
+    },
+    "extra": {
+        "class": "margin-bottom-40",
+        "func": "addExtra",
+        "width": "12",
+        "layout": "",
+        "placeholder": ""
+    }
+}, {
+    "columnname": "cmx-i-32",
+    "columnindex": "cmx-i-32",
+    "serialnumber": "P0032",
+    "type": "expand",
+    "name": "风险评估",
+    "attribute": {
+        "default": "",
+        "notnull": 1,
+        "stype": "",
+        "id": "11"
+    },
+    "extra": {
+        "class": "margin-bottom-40",
+        "func": "addExtra",
+        "width": "12",
+        "layout": "",
+        "placeholder": ""
+    }
+}, {
+    "columnname": "cmx-i-33",
+    "columnindex": "cmx-i-33",
+    "serialnumber": "P0033",
+    "type": "expand",
+    "name": "保护修复进度量及工作安排",
+    "attribute": {
+        "default": "",
+        "notnull": 1,
+        "stype": "",
+        "id": "12-1"
+    },
+    "extra": {
+        "class": "margin-bottom-40",
+        "func": "addExtra",
+        "width": "12",
+        "layout": "",
+        "placeholder": ""
+    }
+}, {
+    "columnname": "cmx-i-34",
+    "columnindex": "cmx-i-34",
+    "serialnumber": "P0034",
+    "type": "expand",
+    "name": "安全措施",
+    "attribute": {
+        "default": "",
+        "notnull": 1,
+        "stype": "",
+        "id": "13"
+    },
+    "extra": {
+        "class": "margin-bottom-40",
+        "func": "addExtra",
+        "width": "12",
+        "layout": "",
+        "placeholder": ""
+    }
+}, {
+    "columnname": "cmx-i-35",
+    "columnindex": "cmx-i-35",
+    "serialnumber": "P0035",
+    "type": "expand",
+    "name": "经费预算说明",
+    "attribute": {
+        "default": "",
+        "notnull": 1,
+        "stype": "",
+        "id": "14-4"
+    },
+    "extra": {
+        "class": "margin-bottom-40",
+        "func": "addExtra",
+        "width": "12",
+        "layout": "",
+        "placeholder": ""
+    }
+}]

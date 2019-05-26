@@ -1,0 +1,193 @@
+// 详情页
+
+//当前位置 start
+.position{
+    background-color: #FDFDFA;
+    color: #B0B0AF;
+    line-height: 50px;
+    border-bottom: 1px solid #D7D8D9;
+    i{
+        width: 16px;
+        height: 16px;
+        display: inline-block;
+        background: url('../img/house.png') no-repeat center center;
+        background-size: cover;
+        vertical-align: -3px;
+        margin-right: 5px;
+        margin-left: -3px;
+    }
+    span,a{
+        color: #B4B4B3;
+        font-size: 14px;
+        vertical-align: middle;
+    }
+    span{
+        max-width: 800px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        display: inline-block;
+    }
+    a{
+        text-decoration: none;
+    }
+}
+//当前位置 end
+
+// 内容区域 start
+.substance{
+    min-height: 500px;
+    padding: 0 30px;
+    margin-top: 21px;
+    .content{
+        width: 832px;
+        // width: 75%;
+        margin-left: auto;
+        margin-right: auto;
+        border: 1px solid #D7D8D9;
+        padding: 20px 40px 36px;
+        margin-bottom: 32px;
+        .odd-numbers{
+            border: 1px solid #979797;
+            line-height: 42px;
+            color: #393939;
+            background-color: #FDFDFA;
+            display: none;
+            .title{
+                .left{
+                    width: 10%;
+                    vertical-align: middle;
+                    display: inline-block;
+                }
+                .info{
+                    margin-left: 0;
+                    vertical-align: middle;
+                    display: inline-block;
+                    word-wrap:break-word;
+                    width: 80%;
+                    line-height: 20px;
+                }
+            }
+            span{
+                margin-right: 15px;
+                margin-left: 31px;
+                &.postoffice{
+                    vertical-align: middle;
+                }
+                &.postofficename{
+                    vertical-align: middle;
+                    margin-left: 0;
+                    display: inline-block;
+                    width: 220px;
+                    line-height: 20px;
+                }
+            }
+        }
+        .article{
+            margin-top: 20px;
+            // text-align: center;
+            table{
+                width: 100%;
+            }
+            .articleTitle{
+                font-size: 23px;
+                padding-top: 15px;
+                line-height: 32px;
+                word-break: break-all;
+            }
+            span{
+                // color: #C0C0C0;
+                font-size: 14px;
+                &.standardred{
+                    color: red;
+                    font-size: 16px;
+                }
+            }
+            p{
+                font-size: 16px;
+                color: #202020;
+                // text-align: center;
+                margin-top: 10px;
+                line-height: 25px;
+                // &:not(:first-of-type){
+                //     text-indent: 2em;
+                // }
+                // &:nth-last-of-type(-n+4){
+                //     text-align: right;
+                // }
+            }
+            hr{
+                border-top-color: #E0E0E0;
+            }
+            button{
+                color: #65ABE9;
+                border-radius: 0;
+                border-color: #999999;
+                padding: 8px 18px;
+                font-size: 14px;
+                outline: 0;
+                &:first-of-type{
+                    margin-right: 7px;
+                }
+                &:last-of-type{
+                    margin-left: 7px;
+                }
+                &:hover{
+                    background-color: #EFF6FD;
+                    color: #62AAEC;
+                    border-color: #62AAEC;
+                }
+            }
+            .stamp{
+                margin-top: -38px;
+            }
+        }
+    }
+}
+// 内容区域 end
+
+
+// 响应式
+@media (max-width: 768px){  // 超小屏幕
+    .substance{
+        padding-left: 10px;
+        padding-right: 10px;
+        .content{
+            width: 100%;
+        }
+    }
+    .substance .content .article h3{
+        padding-top: 35px;
+    }
+    .substance .content .odd-numbers span{
+        margin-left: auto;
+    }
+    .substance .content .article a{
+        padding: 6px 16px;
+    }
+}
+@media (min-width: 768px) and (max-width: 992px){
+    .container{
+        width: 100% !important;
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+    .substance .content{
+        width: auto;
+    }
+}
+@media (min-width: 992px) and (max-width: 1200px){
+    .container{
+        width: 100% !important;
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+}
+@media (min-width: 1200px) and (max-width: 1280px){
+    .container{
+        width: 100% !important;
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 移动设备 viewport -->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui">
+    <meta name="author" content="sach">
+    <!-- 360浏览器默认使用Webkit内核 -->
+    <meta name="renderer" content="webkit">
+    <!-- 禁止搜索引擎抓取 -->
+    <meta name="robots" content="nofollow">
+    <!-- 禁止百度SiteAPP转码 -->
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <!-- Chrome浏览器添加桌面快捷方式（安卓） -->
+    <link rel="icon" type="image/png" href="/images/favicon.png">
+    <meta name="mobile-web-app-capable" content="yes">
+    <!-- Safari浏览器添加到主屏幕（IOS） -->
+    <link rel="icon" sizes="192x192" href="/images/apple-touch-icon.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Admui">
+    <!-- Win8标题栏及ICON图标 -->
+    <link rel="apple-touch-icon-precomposed" href="/images/apple-touch-icon.png">
+    <meta name="msapplication-TileImage" content="/images/app-icon72x72@2x.png">
+    <meta name="msapplication-TileColor" content="#62a8ea">
+    <!--[if lte IE 9]>
+        <meta http-equiv="refresh" content="0; url='http://gl.sach.gov.cn/browser.html'" />
+        <![endif]-->
+    <!--[if lt IE 10]>
+        <script src="/vendor/media-match/media.match.min.js"></script>
+        <script src="/vendor/respond/respond.min.js"></script>
+        <![endif]-->
+    <title>登录中</title>
+    <script src="/vendor/jquery/jquery.min.js"></script>
+    <script src="/themes/classic/global/js/cmx-route.js"></script>
+    <script src="/themes/classic/global/js/openapi.js"></script>
+    <script src="/themes/classic/global/js/md5.min.js"></script>
+    <script src="/themes/classic/global/js/main.js"></script>
+</head>
+
+<body>
+    <script>
+        var access_token = GetUrlParamString('access_token');
+        var key = GetUrlParamString('key');
+        var token = GetUrlParamString('token');
+        var lastlogintime = GetUrlParamString('lastlogintime');
+        clearData('roleId');
+        if (!IsEmpty(token)) {
+            putData('token', token);
+            putData('lastlogintime', lastlogintime);
+            location.href = "/index.html?token=" + token +
+                '&lastlogintime=' + lastlogintime;
+            showAlert({
+                type: 'success',
+                content: '登录成功'
+            });
+        } else if (!IsEmpty(access_token)) {
+            new cmx.process()
+                .turn('callajax', {
+                    url: api_loginCa,
+                    data: {
+                        catoken: access_token,
+                        deviceid: getData('deviceId'),
+                        devicetype: 'pc-web'
+                    },
+                    type: 'GET',
+                    jsonheader: false
+                })
+                .turn(function (prevModelData2, send2, abort2) {
+                    if (!IsNull(prevModelData2) && prevModelData2.state == '200' && !IsEmpty(prevModelData2.data) &&
+                        prevModelData2.data != 'null') {
+                        putData('token', prevModelData2.data.token);
+                        putData('lastlogintime', prevModelData2.data.lastlogintime);
+
+                        location.href = "/index.html?token=" + prevModelData2.data.token +
+                            '&lastlogintime=' + prevModelData2.data.lastlogintime;
+                        showAlert({
+                            type: 'success',
+                            content: 'CA登录成功'
+                        });
+                    }
+                })
+                .start();
+        } else {
+            location.href = "/";
+        }
+    </script>
+</body>
+
+</html>

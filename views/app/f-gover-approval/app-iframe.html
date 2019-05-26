@@ -1,0 +1,35 @@
+<script src="/themes/classic/global/js/api.js"></script>
+<div class="panel-body container-fluid" style="overflow: hidden !important;width: 100%;height: 100%;padding: 0;">
+    <iframe id="cmx-form" frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="no" allowtransparency="yes"
+        style="width:100%;height:100%;">
+    </iframe>
+</div>
+<script> 
+    $(function () {
+        var aaa = {
+            '2': '2yuyue',
+            '3': '3shouli',
+            '4': '4fenban',
+            '5': '5dengji',
+            '6': '6jianding',
+            '8': '7shenpi'
+        }
+        var _applyId = GetUrlParamString('applyId'),
+            _projectNum = aaa[GetUrlParamString('projectNum')],
+            _token = GetUrlParamString('token'),
+            _status = GetUrlParamString('status'),
+            _code = GetUrlParamString('code');
+        // alert(_api);
+        // var popup = "downfilecontinue('sfdsfdf','测试下载','pdf')";
+        // api.execScript({ script: popup });
+
+        var paramStr = '?from=iframe&status=56020-' + _status + '&applyId=' + _applyId + '&projectNum=' + _projectNum + '&token=' + _token;
+        var _url = '/app/f-gover-approval/56020-' + _status + '/' + _projectNum + '.html';
+        console.log(_url);
+        $('#cmx-form').attr("src", IsEmpty(_url) ? '/error.html' : (_url + paramStr));
+        $('#cmx-form').load(function () {
+            $('#cmx-form').css('height', '1000');
+        })
+    });
+
+</script>

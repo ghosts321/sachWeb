@@ -1,0 +1,77 @@
+<!-- 文物规划立项列表 -->
+<div class="modal fade in" id="cmx-projectList" aria-hidden="true" aria-labelledby="projectList" role="dialog" tabindex="-1">
+    <div class="modal-dialog modal-center">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span>文物规划立项列表</span>
+                <button class="pull-right close" data-dismiss="modal" aria-label="关闭">关闭</button>
+                <div class="clearfix"></div>
+            </div>
+            <div class="modal-body">
+                <div class="panel">
+                    <div class="panel-body">
+                        <div class="nav-tabs-horizontal">
+                            <div class="tab-content relic-content">
+                                <div class="tab-pane active" id="" role="tabpanel">
+                                    <div class="queryTerm">
+                                        <label for="cmx-unit-list-name">编号</label>
+                                        <input type="text" id="cmx-unit-list-id">
+                                        <label for="cmx-unit-list-name">项目名称</label>
+                                        <input type="text" id="cmx-unit-list-name">
+                                        <div class="right-part">
+                                            <button class="btn btn-primary">查询</button>
+                                            <button class="btn btn-primary">清除</button>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                    <div class="tableDiv">
+                                        <table class="table table-hover table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th class="num"></th>
+                                                    <th class="id">编号</th>
+                                                    <th class="uName">项目名称</th>
+                                                    <th class="uType">编制单位</th>
+                                                    <th class="uUnit">省别</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="cmx-tbody-unit-list">
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="relic-footer">
+                                        <!--  分页 -->
+                                        <ul class="pagination">
+                                            <li>
+                                                <a href="javascript:;">首页</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">上一页</a>
+                                            </li>
+                                            <li>
+                                                <span>第
+                                                    <input type="text" value="1" />/15页</span>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">下一页</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">尾页</a>
+                                            </li>
+                                        </ul>
+                                        <span class="countInfo">1-15 共128条</span>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" type="button">确认</button>
+                <button type="button" class="btn btn-default cmx-cancle-btn" data-dismiss="modal">取消</button>
+            </div>
+        </div>
+    </div>
+</div>

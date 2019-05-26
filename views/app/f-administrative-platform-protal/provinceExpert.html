@@ -1,0 +1,213 @@
+<title>省局专家管理</title>
+<link rel="stylesheet" href="/vendor/jstree/jstree.css">
+<link rel="stylesheet" href="/css/app/b-authorization-audit/suggest.css" />
+<link rel="stylesheet" href="/vendor/bootstrap-datepicker/bootstrap-datepicker.css">
+
+<script src="/vendor/bootstrap-datepicker/bootstrap-datepicker.js"></script>
+<script src="/vendor/bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.min.js"></script>
+<script src="/themes/classic/base/js/app.js" data-name="app"></script>
+<script src="/js/app/f-gover-approval/provinceExpert/basicview.js"></script>
+<script src="/js/app/f-gover-approval/provinceExpert/build-modal-form2.js"></script>
+<script src="/js/app/f-gover-approval/provinceExpert/provinceExpert.js" data-deps="jstree"></script>
+<script src="/js/app/f-gover-approval/provinceExpert/public-model.js"></script>
+<script src="/js/app/f-gover-approval/provinceExpert/provinceExpert-view.js"></script>
+
+<div class="page page-full animation-fade">
+
+    <div class="page-main">
+        <div class="page-content">
+            <div class="panel">
+                <div class="panel-heading">
+                    <h3 class="panel-title">专家信息</h3>
+                </div>
+                <div class="panel-body container-fluid">
+                    <div class="row row-lg">
+                        <div class="col-xs-6 col-md-4 col-lg-4">
+                            <div class="form-wrap">
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <span class="input-group-addon">专家名称</span>
+                                        <input type="text" class="form-control" id="instName" name="" placeholder="" autocomplete="off">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-6 col-md-4 col-lg-4 zhuanjia">
+                            <div class="form-wrap">
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <span class="input-group-addon">所属机构</span>
+                                        <input type="text" class="form-control" id="select-applynum-input1" name="" placeholder="" autocomplete="off">
+                                        <input type="hidden" id="belong" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12 col-md-4 col-lg-4">
+                            <div class="form-wrap">
+                                <div class="form-group" id="add-wrap">
+                                    <button type="button" class="btn btn-primary inputon pull-left margin-right-3 margin-top-3" id="search">查询</button>
+                                    <button type="button" class="btn inputon pull-left margin-right-3 margin-top-3" id="clear-search-form">清除</button>
+                                    <button type="button" id="show-info" class="show-info btn btn-outline btn-primary inputon pull-left margin-right-5 margin-top-3">更多条件
+                                        <i class="icon wb-chevron-down" aria-hidden="true"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row row-lg condition-info" style="display:none;">
+                        <div class="col-xs-6 col-md-4 col-lg-4">
+                            <div class="form-wrap">
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <span class="input-group-addon">业务类型</span>
+                                        <select id="bussClass" data-dic="ExpertBussClass" class="form-control">
+                                            <option value="" selected=""></option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-md-4 col-lg-4">
+                            <div class="form-wrap">
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <span class="input-group-addon">专业特长</span>
+                                        <select id="profession" data-dic="Profession" class="form-control">
+                                            <option value="" selected=""></option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="table-responsive text-nowrap col-xs-12 padding-0" style="min-height: 350px;">
+                        <div id="tableWrap"></div>
+
+
+                    </div>
+                    <div class="relic-footer col-xs-12 margin-top-10">
+                        <!--  分页 -->
+                        <ul class="pagination" id="cmx-pneedPage" style="float:right;">
+                            <li>
+                                <select id="pageSize" autocomplete="off" data-plugin="selectpicker">
+                                    <option value="10">10条/页</option>
+                                    <option value="20">20条/页</option>
+                                    <option value="30">30条/页</option>
+                                    <option value="50">50条/页</option>
+                                    <option value="100">100条/页</option>
+                                </select>
+                            </li>
+                            <li>
+                                <a href="javascript:;" class="first">首页</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;" class="pre">上一页</a>
+                            </li>
+                            <li>
+                                <span>
+                                    <input type="text" class="jumppage" style="width:30px;float:left;height:22px;border: 1px #ddd solid;text-align:center;" /> /
+                                    <span class="totalpage">0</span>页</span>
+                            </li>
+                            <li>
+                                <a href="javascript:;" class="next">下一页</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;" class="last">尾页</a>
+                            </li>
+                        </ul>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="info-modal"></div>
+
+<div class="modal fade in" id="expertModal" aria-hidden="true" aria-labelledby="addrelicinfo" role="dialog" tabindex="-1">
+    <div class="modal-dialog modal-center" style="width:45%;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span id="modalTitle">1.请输入要新增的专家姓名</span>
+                <button class="pull-right close closed" data-dismiss="modal" aria-label="关闭">&times;</button>
+                <div class="clearfix"></div>
+            </div>
+            <div class="modal-body " style="height:200px;overflow:scroll;">
+                <div class="col-md-12 col-lg-12">
+                    <div class="col-sm-6 col-xs-6 col-md-6 col-lg-6">
+                        <div class="form-group margin-bottom-20">
+                            <label class="control-label">
+                                专家姓名</label>
+                            <input type="text" class="form-control" id="expertName">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button id="searchOld" class="btn btn-primary" style="margin-right:10px;">下一步</button>
+                <button type="button" class="btn btn-default cmx-cancle-btn closed" data-dismiss="modal" style="margin-right:10px;">取消</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade in" id="expertTabModal" aria-hidden="true" aria-labelledby="addrelicinfo" role="dialog" tabindex="-1">
+    <div class="modal-dialog modal-center" style="width:85%;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span id="modalTitle">2.请根据提示操作</span>
+                <button class="pull-right close closed" data-dismiss="modal" aria-label="关闭">&times;</button>
+                <div class="clearfix"></div>
+            </div>
+            <div class="modal-body " style="height:480px;overflow:scroll;">
+
+                <div class="col-md-12 col-lg-12">
+                    <p style="font-size: 16px;color:#ff0000;line-height: 40px;">为您匹配到以下专家信息，请根据提示操作：</p>
+                    <div class="form-group margin-bottom-20" cmx-tag="cmx" cmx-lib="P00030" cmx-index="cmx-30-userName" cmx-column="cmx-i-1"
+                        cmx-type="text" cmx-require="true" cmx-stype="short">
+                        <div class="table-responsive text-nowrap col-xs-12 padding-0" style="height: 200px;">
+                            <table class="table table-striped table-hover">
+                                <thead>
+                                    <tr id="th-head">
+                                        <th></th>
+                                        <th>专家姓名</th>
+                                        <th>登录名</th>
+                                        <th>邮箱</th>
+                                        <th>联系电话</th>
+                                        <th>出生年月</th>
+                                        <th>用户状态</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="expertTable">
+
+                                </tbody>
+                            </table>
+                        </div>
+
+
+                    </div>
+                    <div>
+                        <div class="col-md-12 col-lg-12" style="margin: 10px 0">
+                            <span>1、如果您要新增的专家是以上某个专家，请在列表中选择要新增的专家，点击</span>
+                            <button id="savePerson" class="btn btn-primary btn-sm" style="margin-right:10px;">使用该专家</button>
+                        </div>
+                        <div class="col-md-12 col-lg-12" style="margin: 10px 0">
+                            <span>2、如果以上列表中没有您要新增的专家，请点击</span>
+                            <button id="newPerson" class="btn btn-primary btn-sm" style="margin-right:10px;">跳过</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default cmx-cancle-btn closed" data-dismiss="modal" style="margin-right:10px;">取消</button>
+            </div>
+        </div>
+    </div>
+</div>

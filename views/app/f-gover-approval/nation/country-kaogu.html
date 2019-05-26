@@ -1,0 +1,459 @@
+<!-- 考古发掘一般事项列表-->
+<title>考古发掘一般事项</title>
+<link rel="stylesheet" href="/css/app/f-gover-approval/haveToDo.css" />
+<link rel="stylesheet" href="/vendor/bootstrap-datepicker/bootstrap-datepicker.css">
+<script src="/js/app/f-gover-approval/models/public-model.js"></script>
+<script src="/js/app/f-gover-approval/views/public-view.js"></script>
+<script src="/js/app/f-gover-approval/nation/models/country-kaogu-model.js"></script>
+<script src="/js/app/f-gover-approval/nation/views/country-kaogu-view.js"></script>
+<script src="/js/app/f-gover-approval/nation/country-kaogu.js"></script>
+<style>
+    #cmx-report-form .control-label.col-sm-3 {
+        width: 25%;
+    }
+    #cmx-report-form .cmx-form-body{
+        margin-bottom: 10px;
+    }
+</style>
+<div class="page animation-fade page-tables">
+    <div class="page-content">
+        <div class="panel">
+            <div class="panel-heading">
+                <h3 class="panel-title">考古发掘一般事项</h3>
+            </div>
+            <div class="panel-body container-fluid">
+                <div class="row row-lg">
+                    <div class="col-xs-6 col-md-4 col-lg-4">
+                        <div class="form-wrap">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+                                        省份
+                                    </span>
+                                    <select id="provinces" data-dic="Province" class="form-control" style="width:100%;">
+
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-md-4 col-lg-4">
+                        <div class="form-wrap">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+                                        年份
+                                    </span>
+                                    <select id="year" data-dic="Year" class="form-control" style="width:100%;">
+
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-4 col-lg-4">
+                        <div class="form-wrap">
+                            <div class="form-group">
+                                <button type="button" class="btn btn-primary inputon" id="search-btn">查询</button>
+                                <button type="button" class="btn inputon" id="clear-search-form">清除</button>
+                                <button type="button" id="show-hide-info" class="pull-right show-info btn btn-outline btn-primary inputon">更多条件
+                                    <i class="icon wb-chevron-down" style="font-size: 10px;" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row row-lg condition-info" style="display:none;">
+                    <div class="col-xs-6 col-md-4 col-lg-4">
+                        <div class="form-wrap">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+                                        项目申报状态
+                                    </span>
+                                    <select id="status" data-dic="" class="form-control" style="width:100%;">
+                                        <option value="-1">全部</option>
+                                        <option value="401">领队填报项目</option>
+                                        <option value="701">发掘单位核报</option>
+                                        <option value="702">省局处理中</option>
+                                        <option value="201499">待接收项目</option>
+                                        <option value="201">国家局初审中</option>
+                                        <option value="205">专家受理中</option>
+                                        <option value="499">国家局受理中</option>
+                                        <option value="210">同意发掘</option>
+                                        <option value="999">不同意发掘</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-md-4 col-lg-4">
+                        <div class="form-wrap">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+                                        项目名称
+                                    </span>
+                                    <input type="text" id="projectName" class="form-control" name="name" placeholder="" autocomplete="off">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-md-4 col-lg-4">
+                        <div class="form-wrap">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+                                        主申请单位
+                                    </span>
+                                    <input type="text" id="applyUnitName" class="form-control" name="fileNumBack" placeholder="" autocomplete="off">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-md-4 col-lg-4">
+                        <div class="form-wrap">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+                                        配合申请单位
+                                    </span>
+                                    <input type="text" id="leUnitName" class="form-control" name="name" placeholder="" autocomplete="off">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-md-4 col-lg-4">
+                        <div class="form-wrap">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+                                        存档编号
+                                    </span>
+                                    <input type="text" id="archNumber" class="form-control" name="name" placeholder="" autocomplete="off">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-md-4 col-lg-4">
+                        <div class="form-wrap">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    发掘单位地址
+                                </span>
+                                <input type="text" id="unitAddress" class="form-control" name="name" placeholder="" autocomplete="off">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-md-4 col-lg-4">
+                        <div class="form-wrap">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+                                        发掘省份
+                                    </span>
+                                    <select id="objProvince" data-dic="Province" class="form-control" style="width:100%;">
+
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-md-4 col-lg-4">
+                        <div class="form-wrap">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+                                        遗址或墓葬时代
+                                    </span>
+                                    <select id="archAeological" data-dic="ArchaeologyYear" class="form-control" style="width:100%;">
+
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-md-4 col-lg-4">
+                        <div class="form-wrap">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+                                        文物保护单位级别
+                                    </span>
+                                    <select id="relicUnitRank" data-dic="AEPortectLevel" class="form-control" style="width:100%;">
+
+                                    </select>
+                                    <!-- <input type="text" id="relicUnitRank" class="form-control" name="name" placeholder="" autocomplete="off"> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-md-4 col-lg-4">
+                        <div class="form-wrap">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+                                        考古领队编号
+                                    </span>
+                                    <input type="text" id="appLeaderID" class="form-control" name="name" placeholder="" autocomplete="off">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-md-4 col-lg-4">
+                        <div class="form-wrap">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+                                        考古领队姓名
+                                    </span>
+                                    <input type="text" id="appLeader" class="form-control" name="name" placeholder="" autocomplete="off">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-md-4 col-lg-4">
+                        <div class="form-wrap">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+                                        报备状态
+                                    </span>
+                                    <select id="reportState" data-dic="EndReportFlag" class="form-control" style="width:100%;">
+                                    </select>
+                                    <!-- <select id="reportState" class="form-control" style="width:100%;">
+                                        <option value="">全部</option>
+                                        <option value="1">已报备</option>
+                                        <option value="2">未报备</option>
+                                    </select> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row margin-0">
+                    <div class="table-responsive text-nowrap col-xs-12 padding-0" style="min-height:450px;">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr id="th-head">
+                                    <th style="width: 45px">编号</th>
+                                    <th style="width: 50px">
+                                        <div class="checkbox-custom checkbox-primary">
+                                            <input type="checkbox" id="kaogu-select-all">
+                                            <label for="kaogu-select-all"></label>
+                                        </div>
+                                    </th>
+                                    <th style="width: 90px;">报备</th> 
+                                    <th style="width: 60px;">证照</th>                                    
+                                    <th>发掘对象名称</th>
+                                    <th>审核状态</th>
+                                    <th>申请时间</th>
+                                    <th>存档编号</th>
+                                    <th style="width: 90px;">剩余工作日</th>
+                                    <th style="width: 80px;">发掘省份</th>
+                                    <th>保护单位级别</th>
+                                    <th>领队姓名</th>
+                                    <th>受理</th>
+                                </tr>
+                            </thead>
+                            <tbody id="cmx-htd-tbody">
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="relic-footer col-xs-12 margin-top-10">
+                        <button type="button" class="btn btn-primary margin-right-5" id="cmx-excel">导出Excel</button>
+                        <button type="button" class="btn btn-primary" id="cmx-huiqian" style="display: none">批量审批</button>
+                        <!--  分页 -->
+
+                        <ul class="pagination" id="cmx-phavePage" style="float:right;">
+                            <li>
+                                <span>
+                                    <select class="pagesize" onchange="changePageSize();" style="width: 50px;float: left;height: 22px;border: none;">
+                                        <option value="15">15</option>
+                                        <option value="50">50</option>
+                                        <option value="100">100</option>
+                                        <option value="200">200</option>
+                                    </select>
+                                </span>
+                            </li>
+                            <li>
+                                <a href="javascript:;" class="first">首页</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;" class="pre">上一页</a>
+                            </li>
+                            <li>
+                                <span>
+                                    <input type="text" class="jumppage" style="width:30px;float:left;height:22px;border: 1px #ddd solid;text-align:center;" />
+                                    <span class="nowpage">0</span>/
+                                    <span class="totalpage">0</span>页</span>
+                            </li>
+                            <li>
+                                <a href="javascript:;" class="next">下一页</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;" class="last">尾页</a>
+                            </li>
+                        </ul>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 列表里受理意见模态框 -->
+<div class="modal fade in modal-primary" id="cmx-record-List" aria-hidden="true" aria-labelledby="cmx-record-List" role="dialog"
+    tabindex="-1">
+    <div class="modal-dialog modal-lg modal-center">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span>受理意见</span>
+                <button class="pull-right close" data-dismiss="modal" aria-label="关闭">关闭</button>
+                <div class="clearfix"></div>
+            </div>
+            <div class="modal-body">
+                <div class="tableDiv table-responsive text-nowrap" style="height: 300px;overflow: scroll;">
+                    <table class="table table-bordered table-hover">
+                        <thead>
+                            <tr>
+                                <th>单位名称</th>
+                                <th>审核意见</th>
+                                <th>审核人</th>
+                                <th>审核时间</th>
+                            </tr>
+                        </thead>
+                        <tbody id="cmx-record">
+                        </tbody>
+                    </table>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- 列表里受理模态框，国家局初审状态，未选专家 -->
+<!-- <div class="modal fade in modal-primary" id="cmx-chuli-987" aria-hidden="true" aria-labelledby="cmx-record-List" role="dialog"
+    tabindex="-1">
+    <div class="modal-dialog modal-lg modal-center">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span>受理意见</span>
+                <button class="pull-right close" data-dismiss="modal" aria-label="关闭">关闭</button>
+                <div class="clearfix"></div>
+            </div>
+            <div class="modal-body" style="height:400px;overflow:scroll;">
+                <div class="example-wrap">
+                    <div class="nav-tabs-horizontal">
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li role="presentation" class="backg active" id="cmx-acceptanceTabs">
+                                <a data-toggle="tab" href="#tabsAcceptance" aria-controls="tabsAcceptance" role="tab" aria-expanded="true">
+                                    受理
+                                </a>
+                            </li>
+                            <li role="presentation" class="backg" id="cmx-backTabs">
+                                <a data-toggle="tab" href="#tabsReturn" aria-controls="tabsReturn" role="tab" aria-expanded="false">
+                                    退回
+                                </a>
+                            </li>
+                            <li role="presentation" class="backg" id="cmx-branchTabs">
+                                <a data-toggle="tab" href="#tabsBranch" aria-controls="tabsBranch" role="tab" aria-expanded="false">
+                                    转办
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="tab-content padding-top-20" id="div-option">
+                           
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" id="cmx-kaogu-confirm" type="button">确定</button>
+                <button type="button" class="btn btn-default cmx-cancle-btn" data-dismiss="modal">取消</button>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<!-- 列表里查看模态框，发函完毕显示，查看发出去的执照 -->
+<div class="modal fade in modal-primary" id="cmx-check-licence" aria-hidden="true" aria-labelledby="cmx-check-licence" role="dialog"
+    tabindex="-1">
+    <div class="modal-dialog modal-md modal-center">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span>查看考古发掘证书</span>
+                <button class="pull-right close" data-dismiss="modal" aria-label="关闭">关闭</button>
+                <div class="clearfix"></div>
+            </div>
+            <div class="modal-body" style="font-size:18px;">
+                <p class="text-center" style="font-weight:bold;font-size:24px;">中华人民共和国考古发掘证照</p>
+                <div class="text-center">考
+                    <span id="cmx-licence-type">执</span>字（
+                    <span id="cmx-licence-year"></span> ）第（
+                    <span id="cmx-licence-num"></span> ）号</div>
+                <div>
+                    <ul>
+                        <li>
+                            发掘单位：
+                            <span class="cmx-excavate-unit"></span>
+                        </li>
+                        <li>
+                            发掘地点：
+                            <span class="cmx-excavate-address"></span>
+                        </li>
+                        <li>
+                            发掘面积：
+                            <span class="cmx-excavate-area"></span>
+                        </li>
+                        <li>
+                            发掘时间：
+                            <span class="cmx-excavate-time"></span>
+                        </li>
+                        <li>
+                            发掘领队：
+                            <span class="cmx-excavate-leader"></span>
+                        </li>
+                        <li>
+                            发证时间：
+                            <span class="cmx-card-time"></span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div id="cmx-person-modal">
+
+</div>
+
+<div class="modal fade" id="completeReportModal" tabindex="-1" role="dialog" aria-labelledby="completeReportModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="completeReportModalLabel">报备</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row" id="cmx-report-form"></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-info" id="cmx-report-form-btn">保存</button>
+                <button type="button" class="btn btn-info" id="cmx-report-form-send">发送</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal -->
+</div>
+
+<script src="/vendor/bootstrap-datepicker/bootstrap-datepicker.min.js" data-name="datepicker"></script>
+<script src="/vendor/bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.min.js" data-deps="datepicker"></script>

@@ -1,0 +1,33 @@
+[
+    {
+        "columnname": "cmx-i-2",
+        "columnindex": "cmx-30-sort",
+        "serialnumber": "P0002",
+        "type": "single",
+        "name": "排序方式",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": 1,
+            "remark": [
+                {
+                    "id": 1,
+                    "value": "顺序打印",
+                    "selected": ""
+                },
+                {
+                    "id": 2,
+                    "value": "交叉打印",
+                    "selected": ""
+                }
+            ]
+        },
+        "extra": {
+            "class": "margin-bottom-40",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    }
+]

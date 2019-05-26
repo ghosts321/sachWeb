@@ -1,0 +1,16 @@
+node_modules/
+npm-debug.log
+public/app/
+c#/SachCaLoginHelper/SachCaLoginHelper/bin/
+c#/Cosmix-Library-Projects/Cosmix-Website-Helper/bin/
+c#/SachCaLoginHelper/SachCaLoginHelper/Assets/Exes/
+c#/SachCaLoginHelper/.vs/
+c#/Cosmix-Library-Projects/.vs/
+c#/SachCaLoginHelper/SachCaLoginHelper/obj/
+c#/Cosmix-Library-Projects/Cosmix-Website-Helper/obj/
+c#/SachCaLoginHelper/SachCaLoginHelper/Resources/exes.zip
+npm-debug.log.4175791929
+c#/exes.zip
+c#/exes/
+public/data/app/f-gover-approval/bowuguan.json
+public/iWebOffice2015.cab

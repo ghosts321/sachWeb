@@ -1,0 +1,126 @@
+<link rel="stylesheet" href="/css/app/f-gover-approval/56015/institution-list-modal.css">
+
+<div class="modal fade in" id="cmx-unitList-modal" aria-hidden="true" aria-labelledby="institutionList" role="dialog" tabindex="-1">
+    <div class="modal-dialog modal-center" style="width:85%;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span>单位列表</span>
+                <button class="pull-right close" data-dismiss="modal" aria-label="关闭">关闭</button>
+                <div class="clearfix"></div>
+            </div>
+            <div class="modal-body" style="padding:10px;">
+                <div class="queryTerm">
+                    <div class="row">
+                        <!-- <label for="cmx-institution-province">省别</label>
+                    <input type="text" id="cmx-institution-province"> -->
+                        <!-- <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 form-group"> -->
+                        <!-- <label for="cmx-province" class="col-sm-4">省份</label>
+                            <div class="col-sm-8">
+                                <select class="form-control" id="cmx-province">
+                                    <option value="北京">北京市</option>
+                                    <option value="浙江省">浙江省</option>
+                                    <option value="天津市">天津市</option>
+                                    <option value="安徽省">安徽省</option>
+                                    <option value="上海市">上海市</option>
+                                    <option value="福建省">福建省</option>
+                                    <option value="重庆市">重庆市</option>
+                                    <option value="江西省">江西省</option>
+                                    <option value="山东省">山东省</option>
+                                    <option value="河南省">河南省</option>
+                                    <option value="湖北省">湖北省</option>
+                                    <option value="湖南省">湖南省</option>
+                                    <option value="广东省">广东省</option>
+                                    <option value="海南省">海南省</option>
+                                    <option value="山西省">山西省</option>
+                                    <option value="青海省">青海省</option>
+                                    <option value="江苏省">江苏省</option>
+                                    <option value="辽宁省">辽宁省</option>
+                                    <option value="吉林省">吉林省</option>
+                                    <option value="台湾省">台湾省</option>
+                                    <option value="河北省">河北省</option>
+                                    <option value="贵州省">贵州省</option>
+                                    <option value="四川省">四川省</option>
+                                    <option value="云南省">云南省</option>
+                                    <option value="陕西省">陕西省</option>
+                                    <option value="甘肃省">甘肃省</option>
+                                    <option value="黑龙江省">黑龙江省</option>
+                                    <option value="香港特别行政区">香港特别行政区</option>
+                                    <option value="澳门特别行政区">澳门特别行政区</option>
+                                    <option value="广西壮族自治区">广西壮族自治区</option>
+                                    <option value="宁夏回族自治区">宁夏回族自治区</option>
+                                    <option value="新疆维吾尔自治区">新疆维吾尔自治区</option>
+                                    <option value="内蒙古自治区">内蒙古自治区</option>
+                                    <option value="西藏自治区">西藏自治区</option>
+                                </select>
+                            </div> -->
+                        <!-- </div> -->
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 form-group">
+                            <label for="cmx-unit-name" class="col-sm-4">名称</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" name="" id="cmx-unit-name">
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 form-group">
+                            <label for="cmx-range" class="col-sm-4">业务范围</label>
+                            <div class="col-sm-8">
+                                <input type="text" name="" class="form-control" id="cmx-range">
+                            </div>
+                        </div>
+                        <div class="right-part">
+                            <button class="btn btn-primary" id="cmx-unit-search">查询</button>
+                            <button class="btn btn-primary" id="cmx-unit-delete">清除</button>
+                            <!-- <button type="button" class="btn btn-primary cmx-more-research">更多查询条件</button> -->
+                            <!-- <button type="button" class="btn btn-primary cmx-pack-up">收起更多条件</button> -->
+                        </div>
+
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="tableDiv">
+                    <table class="table table-hover table-bordered">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>省别</th>
+                                <th>名称</th>
+                                <th>业务范围</th>
+                                <th>联系人</th>
+                                <th>联系电话</th>
+                            </tr>
+                        </thead>
+                        <tbody id="cmx-unit-tbody">
+                        </tbody>
+                    </table>
+                </div>
+                <div class="relic-footer">
+                    <!--  分页 -->
+                    <ul class="pagination" id="cmx-unit-Pagination">
+                        <li>
+                            <a href="javascript:;" class="first">首页</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" class="pre">上一页</a>
+                        </li>
+                        <li>
+                            <span>
+                                <span class="nowpage">0</span>/
+                                <span class="totalpage">0</span>页</span>
+                        </li>
+                        <li>
+                            <a href="javascript:;" class="next">下一页</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" class="last">尾页</a>
+                        </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" type="button" id="cmx-unit-confirm-btn">确认</button>
+                <button class="btn btn-primary" data-dismiss="modal">关闭</button>
+            </div>
+        </div>
+    </div>
+</div>

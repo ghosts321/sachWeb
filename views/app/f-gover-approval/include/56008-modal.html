@@ -1,0 +1,110 @@
+<div class="modal fade in" id="cmx-relicList-08" aria-hidden="true" aria-labelledby="relicList" role="dialog" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-center">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span>文保保护单位列表</span>
+                <button class="pull-right close" data-dismiss="modal" aria-label="关闭">关闭</button>
+                <div class="clearfix"></div>
+            </div>
+            <div class="modal-body">
+                <div class="panel">
+                    <div class="panel-body">
+                        <div class="nav-tabs-horizontal">
+                            <div class="tab-content relic-content">
+                                <div class="tab-pane active" id="relicTabOne" role="tabpanel">
+                                    <div class="queryTerm">
+                                        <label for="selectunit">单位类型</label>
+                                        <select name="selectunit" id="selectunit">
+                                            <option value="国保单位">国保单位</option>
+                                            <option value="世界遗产">世界遗产</option>
+                                            <option value="传统村落">传统村落</option>
+                                            <option value="其他">其他</option>
+                                        </select>
+                                        <label for="cmx-national-protect-name">名称</label>
+                                        <input type="text" id="cmx-national-protect-name">
+                                        <div class="right-part">
+                                            <span>更多查询条件</span>
+                                            <button class="btn btn-primary">查询</button>
+                                            <button class="btn btn-primary">清除</button>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                    <div class="tableDiv table-responsive">
+                                        <table class="table table-hover table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th class="num"></th>
+                                                    <th class="relicType">单位类型</th>
+                                                    <th class="relicName">名称</th>
+                                                    <th class="batchNum">批次</th>
+                                                    <th class="relicClass">类别</th>
+                                                    <th class="relicTimes">时代</th>
+                                                    <th class="relicProvince">省别</th>
+                                                    <th class="relicAddr">地址</th>
+                                                    <th class="relicCity">所在市</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="cmx-tbody-1">
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                    <div class="relic-footer">
+
+                                        <!--  分页 -->
+                                        <ul class="pagination">
+                                            <li>
+                                                <a href="javascript:;">首页</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">上一页</a>
+                                            </li>
+                                            <li>
+                                                <span>第
+                                                    <input type="text" value="1" />/15页</span>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">下一页</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">尾页</a>
+                                            </li>
+                                        </ul>
+                                        <span class="countInfo">1-15 共128条</span>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" type="button">确认</button>
+                <button id="newly" class="btn btn-primary" type="button">非国保单位</button>
+                <button type="button" class="btn btn-default cmx-cancle-btn" data-dismiss="modal">取消</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- onclick="{location.href='no-nation-protect.html'}" -->
+<script>
+    $("#newly").click(function () {
+        var modalId = getData("modalId");
+        console.log(modalId);
+        switch (modalId) {
+            // case "56004":
+            //     window.location.href = "no-nation-protect.html";
+            //     break;
+            // case "560221":
+            //     window.location.href = "new-project.html";
+            //     break;
+            case "56008":
+                window.location.href = "56008-form.html";
+                break;
+            default:
+                window.location.href = "56008-form.html";
+
+        }
+    })
+</script>

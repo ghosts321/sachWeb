@@ -1,0 +1,63 @@
+.control-label {
+    padding-right: 0;
+}
+
+.cmx-special-provincefile {
+    padding: 0;
+    margin: 0;
+}
+
+.cmx-build-form-notnull {
+    color: red;
+    padding: 0 3px;
+    vertical-align: middle;
+}
+
+.title-1 {
+    color: #57c7d4;
+}
+
+.star {
+    color: red;
+    padding-right: 5px;
+}
+
+.page-content {
+    padding: 0;
+}
+
+.cmx-li {
+    word-wrap: break-word;
+}
+
+.cmx-form-body {
+    margin-bottom: 20px;
+}
+
+.cmx-form-body textarea {
+    resize: none;
+    min-height: 150px;
+}
+
+div[cmx-type="separator"] label {
+    font-size: 16px;
+    color: #62a8ea;
+    font-weight: bold;
+}
+
+/* Ace */
+
+.backg {
+    background: rgba(218, 232, 238, 0.5);
+}
+
+.table-matter tr td {
+    width: 16.6666%;
+}
+
+
+.handleRecord{
+    font-size: 15px;
+    color: #fff; 
+    background: #4397e6;
+}

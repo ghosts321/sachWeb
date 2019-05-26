@@ -1,0 +1,265 @@
+<div class="modal fade in" id="cmx-readLabel" aria-hidden="true" role="dialog" tabindex="-1">
+    <div class="modal-dialog modal-center" style="width:40%;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span id="modalTitle">读取RFID</span>
+                <button class="pull-right close closed" data-dismiss="modal" aria-label="关闭">关闭</button>
+                <div class="clearfix"></div>
+            </div>
+            <div class="modal-body " style="height:250px;overflow:scroll;">
+                <div class="panel-heading">
+                    <object id="bbb" name='reader' width=0 height=0 classid="clsid:32684280-C64A-4BC9-8629-8B37E2DCDEFA"></object>
+                    <select style='width:20%;display:none' name="TextPort" id="TextPort">
+                        <option value="" selected></option>
+                    </select>
+                    <button type="button" onclick="GetACard();" id="readLabelButton" class="btn btn-sm btn-warning">读取标签</button>
+                    <button type="button" onclick='OpenBuzzer();' class="btn btn-sm btn-warning">打开声音</button>
+                    <button type="button" onclick="CloseBuzzer();" class="btn btn-sm btn-warning">关闭声音</button>
+                    <div>
+                        <input style="border:none;height:28px;" class="margin-top-10" type="text" name="TextStaus" id="TextStaus"
+                            value="" style="width:100%">
+                    </div>
+
+                </div>
+                <div class="example table-responsive">
+                    <table class="table table-bordered table-hover">
+                        <tbody>
+                            <thead>
+                                <tr>
+                                    <th>序号</th>
+                                    <th>标签ID</th>
+                                    <th>操作</th>
+                                </tr>
+                            </thead>
+                            <tbody id="readLabelList">
+                                <tr>
+                                    <td>1</td>
+                                    <td>
+                                        <textarea style='width:100%; height:28px' name="TextGetACard" id="TextGetACard" type="text"></textarea>
+                                    </td>
+                                    <td>
+                                        <button id="readLabelClear" type="button" class="btn btn-sm btn-primary">清空</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="modal-footer text-center">
+                <button type="button" class="btn btn-info" id="readLabelSave" style="margin-right:10px;">保存</button>
+                <button type="button" class="btn btn-info cmx-cancle-btn" data-dismiss="modal" style="margin-right:10px;">关闭</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    ClosePort();
+    EnumeratePort();
+    setTimeout(function () {
+        OpenPort();
+        setInterval(function () {
+            GetACard();
+        }, 1000)
+    }, 1000)
+    /**
+    枚举可用的端口
+    */
+    function EnumeratePort() {
+        TextStaus.value = "正在枚举串口！";
+        var selObj = document.getElementById("TextPort");
+        reader.EnumeratePort(30);
+        var result = reader.Text;
+        //alert(1);
+        var array_result = result.split(",");
+        var i = 1;
+        //alert(2);
+        var flag = false;
+        var selected = " selected ";
+        if (array_result.length == 2) {
+            flag = true;
+        }
+        for (i = 0; i < array_result.length; i++) {
+            if (array_result[i] != "") {
+                var Option = document.createElement("OPTION");
+                Option.value = "COM" + array_result[i];
+                Option.text = "COM" + array_result[i];
+                selObj.options.add(Option);
+                if (flag) {
+                    selected = "COM" + array_result[i];
+                }
+            }
+        }
+        if (flag) {
+            selObj.value = selected;
+        }
+        TextStaus.value = "成功枚举串口！";
+    }
+
+    /**
+    打开端口
+    */
+    function OpenPort() {
+        TextStaus.value = "";
+        reader.OpenPort(TextPort.value);
+        var i = reader.Text;
+        if (i == 0) {
+            TextStaus.value = "打开串口成功!";
+        } else {
+            TextStaus.value = "打开串口失败!";
+        }
+        TextGetACard.value = "";
+    }
+
+    /**
+    关闭端口
+    */
+    function ClosePort() {
+        TextStaus.value = "";
+        reader.ClosePort(TextPort.value);
+        var i = reader.Text;
+        if (i == 0) {
+            TextStaus.value = "关闭串口成功,如需继续操作请重新打开端口!";
+        } else {
+            TextStaus.value = "关闭串口失败!";
+        }
+    }
+
+    /**
+    读取电子标签卡号
+    */
+    function GetACard() {
+        TextStaus.value = "";
+        var myresult = 0;
+        reader.GetACard();
+        var myresult = reader.Text.toLowerCase();
+        if (myresult == -1) {
+            TextStaus.value = "读卡号失败!";
+        } else {
+            TextGetACard.value = myresult;
+            TextStaus.value = "读卡号成功!";
+        }
+    }
+
+
+    /**
+    写用户存储区
+    */
+    function WriteUserBlock() {
+        TextStaus.value = "";
+        var myresult = 0;
+        var strWrite = WriteTextUserMem.value;
+        var nLength = 0;
+        if (strWrite == "") {
+            alert("写入用户区的数据不能为空！");
+            return;
+        }
+        nLength = strWrite.length;
+        if (nLength > 1 && nLength <= 64 & (nLength % 2 == 0)) {
+            //alert(1);
+            reader.WriteUserBlock(strWrite, nLength);
+            var myresult = reader.Text;
+            //alert(myresult);
+            //返回结果：整型，非0表示写入失败，0表示成功
+            if (myresult == 0) {
+                TextStaus.value = "写入用户区成功!";
+            } else {
+                TextStaus.value = "写入用户区失败!";
+            }
+        } else {
+            alert("写入用户区的数据长度不对，长度范围为【2-64】,必须为偶数！");
+        }
+    }
+
+
+    /**
+    读取用户存储区
+    */
+    function ReadUserBlock() {
+        var myresult = 0;
+        var strCardID = TextGetACard.value;
+        var strLength = TextUserMemLength.value;
+        var nLength = 0;
+        TextStaus.value = "";
+        if (strLength == "") {
+            alert("读取用户区的数据长度为空，长度范围为【2-64】,必须为偶数！");
+        } else {
+            nLength = parseInt(strLength);
+            if (nLength > 1 && nLength <= 64 & (nLength % 2 == 0)) {
+                reader.ReadUserBlock(nLength);
+                var sResult = reader.Text;
+                if (sResult == "-1") {
+                    TextStaus.value = "读取用户区的数据失败!";
+                } else {
+                    /***
+                    字符转ascii码：用charCodeAt();
+                    ascii码砖字符：用fromCharCode();
+                    */
+                    //字符串型，是16进制数
+                    ReadTextUserMem.value = Ascii2Char(sResult);
+                    TextStaus.value = "读取用户区的数据成功!";
+                }
+            } else {
+                alert("读取用户区的数据长度不对，长度范围为【2-64】,必须为偶数！");
+            }
+        }
+    }
+
+    /**
+    锁定用户存储区
+    */
+    function LockUserBlock() {
+        if (confirm("确定要锁定用户区吗？锁定用户区后不能再写入！")) {
+            reader.LockTag();
+            var sResult = reader.Text;
+            if (sResult == "0") {
+                TextStaus.value = "成功锁定用户区!";
+            } else {
+                TextStaus.value = "锁定用户区失败!";
+            }
+        }
+    }
+
+    //关闭蜂鸣声音
+    function CloseBuzzer() {
+        reader.CloseBuzzer();
+        var sResult = reader.Text;
+        if (sResult == "-1") {
+            TextStaus.value = "关闭蜂鸣声音失败!";
+        } else {
+            TextStaus.value = "关闭蜂鸣声音成功!";
+        }
+
+    }
+
+
+    //打开蜂鸣声音
+    function OpenBuzzer() {
+        reader.OpenBuzzer();
+        var sResult = reader.Text;
+        if (sResult == "-1") {
+            TextStaus.value = "打开蜂鸣声音失败!";
+        } else {
+            TextStaus.value = "打开蜂鸣声音成功!";
+        }
+    }
+
+    /**
+    Ascii转换为字符，每两位进行转换
+    */
+    function Ascii2Char(AsciiStr) {
+        var chars = "";
+        var sResult = "";
+        for (i = 0; i < AsciiStr.length; i = i + 2) {
+            chars = AsciiStr.substring(i, i + 2);
+            sResult = sResult + String.fromCharCode("0x" + chars);
+        }
+        return sResult;
+    }
+
+    function refeshTextLength() {
+        var strWrite = WriteTextUserMem.value;
+        TextUserMemLength.value = strWrite.length;
+    }
+</script>

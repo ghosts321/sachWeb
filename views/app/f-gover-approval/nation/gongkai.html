@@ -1,0 +1,195 @@
+<title>行政审批公开</title>
+
+<link rel="stylesheet" href="/css/app/f-gover-approval/nation/gongshigongkai.css">
+<script src="/js/app/f-gover-approval/models/public-model.js"></script>
+<script src="/js/app/f-gover-approval/views/public-view.js"></script>
+
+<script src="/js/app/f-gover-approval/nation/models/model.js"></script>
+<script src="/js/app/f-gover-approval/nation/views/view.js"></script>
+<script src="/js/app/f-gover-approval/nation/gongkai.js"></script>
+<div class="page animation-fade page-serch">
+    <div class="page-content">
+        <div class="panel">
+            <div class="panel-body">
+                <h3>行政审批公开</h3>
+                <div class="example-wrap margin-lg-0">
+                    <div class="nav-tabs-horizontal">
+                        <ul class="nav nav-tabs nav-tabs-line" role="tablist">
+                            <li class="active" role="presentation">
+                                <a data-toggle="tab" href="#cmxProactiveDisclosure" aria-controls="cmxProactiveDisclosure" role="tab">
+                                    主动公开
+                                </a>
+                            </li>
+                            <li role="presentation">
+                                <a data-toggle="tab" href="#cmxNotPublic" aria-controls="cmxNotPublic" role="tab">
+                                    依申请公开
+                                </a>
+                            </li>
+                            <li role="presentation">
+                                <a data-toggle="tab" href="#cmxApplyPublic" aria-controls="cmxApplyPublic" role="tab">
+                                    不公开                                    
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="tab-content padding-top-20">
+                            <div class="tab-pane active" id="cmxProactiveDisclosure" role="tabpanel">
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>文号</th>
+                                            <th>拟稿单位</th>
+                                            <th>标题</th>
+                                            <th>内容分类</th>
+                                            <th>形式代码</th>
+                                            <th>签发时间</th>
+                                            <th>公示时间</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody></tbody>
+                                </table>
+                                <ul class="pagination" id="cmx-phavePage2" style="float:right;">
+                                    <li>
+                                        <a href="javascript:;" class="first">首页</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;" class="pre">上一页</a>
+                                    </li>
+                                    <li>
+                                        <span>
+                                            <input type="text" class="jumppage" style="width:30px;float:left;height:22px;border: 1px #ddd solid;text-align:center;" />
+                                            <span class="nowpage">0</span>/
+                                            <span class="totalpage">0</span>页</span>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;" class="next">下一页</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;" class="last">尾页</a>
+                                    </li>
+                                </ul>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="tab-pane" id="cmxNotPublic" role="tabpanel">
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>文号</th>
+                                            <th>拟稿单位</th>
+                                            <th>标题</th>
+                                            <th>内容分类</th>
+                                            <th>形式代码</th>
+                                            <th>签发时间</th>
+                                            <th>公示时间</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody></tbody>
+                                </table>
+                                <ul class="pagination" id="cmx-phavePage3" style="float:right;">
+                                    <li>
+                                        <a href="javascript:;" class="first">首页</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;" class="pre">上一页</a>
+                                    </li>
+                                    <li>
+                                        <span>
+                                            <input type="text" class="jumppage" style="width:30px;float:left;height:22px;border: 1px #ddd solid;text-align:center;" />
+                                            <span class="nowpage">0</span>/
+                                            <span class="totalpage">0</span>页</span>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;" class="next">下一页</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;" class="last">尾页</a>
+                                    </li>
+                                </ul>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="tab-pane" id="cmxApplyPublic" role="tabpanel">
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>文号</th>
+                                            <th>拟稿单位</th>
+                                            <th>标题</th>
+                                            <th>内容分类</th>
+                                            <th>形式代码</th>
+                                            <th>签发时间</th>
+                                            <th>公示时间</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody></tbody>
+                                </table>
+                                <ul class="pagination" id="cmx-phavePage4" style="float:right;">
+                                    <li>
+                                        <a href="javascript:;" class="first">首页</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;" class="pre">上一页</a>
+                                    </li>
+                                    <li>
+                                        <span>
+                                            <input type="text" class="jumppage" style="width:30px;float:left;height:22px;border: 1px #ddd solid;text-align:center;" />
+                                            <span class="nowpage">0</span>/
+                                            <span class="totalpage">0</span>页</span>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;" class="next">下一页</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;" class="last">尾页</a>
+                                    </li>
+                                </ul>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="gongkaiModal" tabindex="-1" role="dialog" aria-labelledby="gongkaiModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="gongkaiModalLabel">查看详情</h4>
+            </div>
+            <div class="modal-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered">
+                        <tbody>
+                            <tr>
+                                <td style="width:80px;">标题</td>
+                                <td id="cmx-detail-title"></td>
+                            </tr>
+                            <tr>
+                                <td style="width:80px;">正文</td>
+                                <td id="cmx-detail-content"></td>
+                            </tr>
+                            <tr>
+                                <td style="width:80px;">责任人</td>
+                                <td id="cmx-detail-person"></td>
+                            </tr>
+                            <tr>
+                                <td style="width:80px;">发布日期</td>
+                                <td id="cmx-public-time"></td>
+                            </tr>
+                            <tr>
+                                <td style="width:80px;">附件</td>
+                                <td id="cmx-detail-file"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal -->
+</div>

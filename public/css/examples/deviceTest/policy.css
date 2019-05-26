@@ -1,0 +1,28 @@
+.list li{
+    list-style: none;
+}
+
+.custom-policy-select div{
+    min-height: 100px;
+    min-width: 100%;
+    word-wrap:break-word ;
+}
+.bootstrap-tagsinput input{
+    display: none;
+}
+.bootstrap-tagsinput .tag.label{
+    margin:0 2px 2px;
+}
+
+
+.border{
+    border-left: 1px solid #8a8a8a;
+}
+
+.left{
+    margin-left: 10px;
+}
+
+.show input{
+    display: block;
+}

@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+  <title>政府信息公开目录-更多</title>
+  <link href="../css/common/ie10-viewport-bug-workaround.css" rel="stylesheet">
+  <!-- Bootstrap -->
+  <link href="../css/common/bootstrap.min.css" rel="stylesheet">
+  <link href="../css/common/pageSwitch.min.css" rel="stylesheet">
+  <link href="../css/common/jquery.cxcalendar.css" rel="stylesheet">
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  <link href="../css/common/pagination.css" rel="stylesheet">
+  <link href="../css/common/common.css" rel="stylesheet">
+  <link href="../css/public/gov-info-dir.css" rel="stylesheet">
+</head>
+<body>
+  <!-- 头部 start -->
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+          aria-controls="navbar">
+          <span class="sr-only">切换导航</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html">
+          <img class="custom-logo" src="../img/custom-logo.png" />
+          <span class="adapt-webtitle visible-lg">国家文物局
+            <br>综合行政管理平台</span>
+        </a>
+      </div>
+      <div id="navbar" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav custom-navbar">
+          <li>
+            <a href="../index.html">首页</a>
+          </li>
+          <li>
+            <a href="../approval/admin-approval-manage.html">行政审批管理</a>
+          </li>
+          <li class="active">
+            <a href="../public/gov-info-open.html">政府信息公开</a>
+          </li>
+          <li>
+            <a href="../industry/integrated-manage.html">行业综合管理</a>
+          </li>
+          <li>
+            <a href="../service/public-info-service.html">公共信息服务</a>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right custom-navbar-right">
+          <li class="user-info">
+            <img src="../img/login.png" alt="">
+            <span class="login-2">登录</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- 头部 end -->
+
+<!-- 左侧侧边栏 start -->
+  <div class="left-bar hidden-xs">
+    <div>
+        <a href="" class="leftlink">
+
+        </a>
+    </div>
+    <div>
+        <a href="../administrative-approval.html">
+
+        </a>
+    </div>
+    <div>
+        <a href="../policy-and-regulations.html">
+
+        </a>
+    </div>
+    <div>
+        <a href="download.html">
+
+        </a>
+    </div>
+  </div>
+<!-- 左侧侧边栏 end -->
+
+<!-- 右侧侧边栏 start -->
+  <div class="right-bar hidden-xs">
+    <div>
+      <a href="" class="rightlink">
+
+      </a>
+    </div>
+    <div>
+      <a href="../complaint-box.html">
+
+      </a>
+    </div>
+  </div>
+<!-- 右侧侧边栏 end -->
+
+<div id="content-height">
+  <!-- 更多-普通 start -->
+    <div class="more-normal">
+      <div class="container" id="search-info">
+        <i></i><span>当前位置 >> </span><a href="../public/gov-info-open.html">政府信息公开</a><span> >> 政府信息公开目录</span>
+        <div class="row">
+          <form class="form-inline clearfix">
+            <div class="form-group col-lg-4">
+              <div class="row">
+                <div class="col-lg-3 col-xs-3 word-left"><label for="">关 键 字：</label></div>
+                <div class="col-lg-9 col-xs-9"><input type="text" id="keyword" class="form-control"></div>
+              </div>
+            </div>
+            <div class="form-group col-lg-4">
+              <div class="row">
+                <div class="col-lg-4 col-xs-3 word-left"><label for="">发布日期：</label></div>
+                <div class="col-lg-8 col-xs-9 date"><input class="calendar form-control" id="postdate" name="mydate" type="text" readonly></div>
+              </div>
+            </div>
+            <div class="form-group col-lg-3 col-lg-offset-1">
+              <div class="row">
+                <div class="col-lg-6 col-xs-6"><a href="" id="retrieve" class="search btn btn-default">检 索</a></div>
+                <div class="col-lg-6 col-xs-6"><a href="" class="resetting" id="reset">重置信息</a></div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="dotted-line"><img src="../img/down-arrow.png" alt=""></--></div>
+        <div class="row drop-down-box">
+          <form class="single-number form-inline clearfix">
+            <div class="form-group col-lg-4">
+              <div class="row">
+                <div class="col-lg-3 col-xs-3 word-left"><label for="">索 引 号：</label></div>
+                <div class="col-lg-9 col-xs-9"><input type="text" id="indexnum" class="form-control" placeholder=""></div>
+              </div>
+            </div>
+            <div class="form-group col-lg-4">
+              <div class="row">
+                <div class="col-lg-4 col-xs-3 word-left"><label for="">信息分类：</label></div>
+                  <div class="col-lg-8 col-xs-9 id-card">            
+                    <select class="form-control" id="column">
+                        <option>所有</option>
+                   </select>
+                  </div>
+              </div>
+            </div>
+            <div class="form-group col-lg-4">
+              <div class="row">
+                <div class="col-lg-3 col-xs-3 word-left"><label for="">标题：</label></div>
+                <div class="col-lg-9 col-xs-9"><input type="text" id="title" class="form-control" placeholder=""></div>
+              </div>
+            </div>
+            <div class="form-group col-lg-4">
+              <div class="row">
+                <div class="col-lg-3 col-xs-3"><label for="">机构分类：</label></div>
+                  <div class="col-lg-9 col-xs-9 menu">            
+                    <select class="form-control" id="postOffice">
+                        <option>所有</option>
+                   </select>
+                  </div>
+              </div>
+            </div>         
+            <div class="form-group col-lg-4">
+              <div class="row">
+                <div class="col-lg-4 col-xs-3 word-left"><label for="">成文日期：</label></div>
+                  <div class="col-lg-8 col-xs-9 date">            
+                      <input class="calendar form-control" id="worddate" name="mydate" type="text" readonly>
+                  </div>
+              </div>
+            </div>
+            <div class="form-group col-lg-4">
+              <div class="row">
+                <div class="col-lg-3 col-xs-3 word-left"><label for="">内容：</label></div>
+                <div class="col-lg-9 col-xs-9"><input class="calendar form-control" id="content" name="mydate" type="text"></div>
+              </div>
+            </div>
+              <div class="form-group col-lg-4 form-inline pick" style="">
+                <div class="row">
+                  <div class="col-lg-3 col-xs-3"><label for="" style="">发文字号：</label></div>
+                  <div class="col-lg-9 col-xs-9 id-card">            
+                    <select class="form-control num num1" style="" id="postnumbeg">
+                      <option>所有</option>
+                      <option>国发</option>
+                      <option>国令</option>
+                      <option>国函</option>
+                      <option>国发明电</option>
+                      <option>国办发</option>
+                      <option>国办函</option>
+                      <option>国办发明电</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group col-lg-4 form-inline pick" style="">
+                <div class="row">
+                  <div class="col-lg-4 col-xs-3 word-left"><label for="" style="">年份：</label></div>
+                  <div class="col-lg-8 col-xs-9 id-card">            
+                    <select class="form-control num num2" style="" id="postnummid">
+  
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group col-lg-4 form-inline" style="">
+                <div class="row">
+                  <div class="col-lg-10">
+                    <input type="text" class="form-control num num3" id="postnumend" placeholder="" style="">
+                  </div>
+                  <div class="col-lg-2"><label for="" class="num4">号</label></div>
+                </div>
+              </div>
+            <!-- </div> -->
+          </form>
+        </div>
+      </div>
+    </div>
+  <!-- 更多-普通 end -->
+  
+  <!-- 搜索部分 start -->
+      <div class="search-bar">
+          
+      </div>
+  <!-- 搜索部分 end -->
+  
+  <!-- 表格 start -->
+  <div class="sheet">
+    <div class="container" style="position: relative;">
+      <div class="modal-box">
+        <img src="../img/loading.gif" alt="" width="50">
+      </div>
+      <table class="table table-hover sheet-table table-condensed">
+          <thead>
+          <tr class="sheet-color row">
+              <th class="text-center col-lg-1">序号</th>
+              <th class="text-center col-lg-2">发文字号</th>
+              <th class="text-center col-lg-8">标题</th>
+              <th class="text-center col-lg-1">发布日期</th>
+              <!-- <th class="text-center col-lg-2">主题分类</th> -->
+          </tr>
+          </thead>
+          <tbody id="sheet-content">
+            <tr class="row" onclick="self.location='details.html'">
+              <td class="col-lg-1"></td>
+              <td class="col-lg-2"></td>
+              <td class="col-lg-8"></td>
+              <td class="col-lg-1"></td>
+            </tr>
+          </tbody>
+      </table>
+      <div class="row paging">
+        <div class="M-box4"></div>
+      </div>
+    </div>
+  </div>
+  <!-- 表格 end -->
+</div>
+
+<!-- 底部 start -->
+  <div class="footer">
+    <div class="container footer-content">
+      <div class="row">
+        <p><a href="../website-statement.html">网站声明</a><a href="../website-statement.html">联系我们</a></p>
+        <i></i>
+      </div>
+      <b>Copyright © 2017 国家文物局版权所有</b>
+    </div>
+  </div>
+<!-- 底部 end -->
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="../js/common/jquery-1.9.1.min.js"></script> 
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="../js/common/bootstrap.min.js"></script>
+  <script src="../js/common/ie10-viewport-bug-workaround.js"></script>
+  <script src="../js/common/pageSwitch.min.js"></script>
+  <script src="../js/common/pagination.js"></script>
+  <script src="../js/common/jquery.cxcalendar.min.js"></script>
+  <script src="../js/common/jquery.cxcalendar.languages.js"></script>
+  <script src="../js/common/main.js"></script>
+  <script src="../js/common/common.js"></script>
+  <script src="../js/public/gov-info-dir.js"></script>
+
+  <link href="../css/common/paging.css" rel="stylesheet">
+  <script src="../js/common/paging.js"></script>
+  <script src="../js/common/jquery.pagination.js"></script>
+
+  <!-- 模板 start -->
+  <script id="tSheetContent" type="text/template">
+    <tr class="row text-center">
+      <td class="col-lg-1">$i$</td>
+      <td class="col-lg-2">$infoNum$</td>
+      <td class="col-lg-8 text-justify justify"><a href="../details.html?public=more&sheet=office&standardRed=$standardRed$&id=$infoID$&column=$column$" target="_blank">$infoTitle$</a></td>
+      <td class="col-lg-1">$displayDate$</td>
+      <!-- <td class="col-lg-2">$className$</td> -->
+    </tr>
+  </script>
+  <!-- 模板 end -->
+</body>
+</html>

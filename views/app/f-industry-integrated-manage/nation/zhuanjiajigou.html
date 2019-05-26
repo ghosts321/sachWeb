@@ -1,0 +1,555 @@
+<!-- 文书室处理 -->
+<title>办理信息</title>
+
+<link rel="stylesheet" href="/vendor/jstree/jstree.css">
+<link rel="stylesheet" href="/css/app/f-industry-integrated-manage/processing-information.css">
+<link rel="stylesheet" href="/vendor/bootstrap-select/bootstrap-select.css">
+<link rel="stylesheet" href="/vendor/bootstrap-tokenfield/bootstrap-tokenfield.css">
+
+<script src="/vendor/jstree/jstree.min.js"></script>
+<script src="/vendor/bootstrap-select/bootstrap-select.min.js"></script>
+<script src="/vendor/bootstrap-tokenfield/bootstrap-tokenfield.js"></script>
+
+<script src="/vendor/clipboard/clipboard.min.js"></script>
+
+<script src="/js/app/f-industry-integrated-manage/models/public-model.js"></script>
+<script src="/js/app/f-industry-integrated-manage/views/public-view.js"></script>
+
+<script src="/js/app/f-industry-integrated-manage/nation/models/model.js"></script>
+<script src="/js/app/f-industry-integrated-manage/nation/views/view.js"></script>
+<script src="/js/app/f-industry-integrated-manage/nation/zhuanjiajigou.js"></script>
+<style>
+    /* .token a {
+        display: none !important;
+    } */
+
+    .tokenfield .token .token-label {
+        padding-right: 4px;
+    }
+
+    /* .third-institution .token-label span{
+        max-width: 100% !important;
+    } */
+
+    .widget-body {
+        position: relative;
+        padding: 30px 25px;
+        border: 1px solid #eee;
+    }
+
+    .cursorPointer {
+        cursor: pointer;
+    }
+</style>
+<div class="page animation-fade" style="background-color:#fff;">
+    <div class="cmx-header">
+        <div class="padding-top-10 padding-bottom-10 padding-left-20">
+            <span class="cmx-header-title hidden-md hidden-sm hidden-xs">
+                申请事项名称
+            </span>
+            <div class="cmx-button padding-right-0">
+                <!-- <button class="btn btn-primary" id="cmx-button-save" style="margin-right:10px;">保存</button> -->
+                <button class="btn btn-primary" id="cmx-button-confirm" style="margin-right:10px;">确定</button>
+                <button class="btn btn-primary" id="cmx-button-return" style="margin-right:10px;">返回</button>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <!-- 内容-->
+    <div class="page-main margin-top-50">
+        <div class="page-content" style="color:#76838f;">
+            <div class="example-wrap">
+                <div class="nav-tabs-horizontal">
+                    <ul class="nav nav-tabs nav-tabs-line" role="tablist">
+                        <li class="active" role="presentation">
+                            <a data-toggle="tab" href="#processTabOne" aria-controls="processTabOne" role="tab" aria-expanded="true">
+                                办理信息
+                            </a>
+                        </li>
+                        <li role="presentation" class="">
+                            <a data-toggle="tab" href="#processTabTwo" aria-controls="processTabTwo" role="tab" aria-expanded="false">
+                                原收文
+                            </a>
+                        </li>
+                        <li role="presentation" class="">
+                            <a data-toggle="tab" href="#processTabThree" aria-controls="processTabThree" role="tab" aria-expanded="false">
+                                流程跟踪
+                            </a>
+                        </li>
+                        <li role="presentation" id="cmx-pingshen-title" class="" style="display:none;">
+                            <a data-toggle="tab" href="#processTabFour" aria-controls="processTabFour" role="tab" aria-expanded="false">
+                                专家意见
+                            </a>
+                        </li>
+                    </ul>
+
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="processTabOne" role="tabpanel">
+                            <div id="cmx-processing">
+                                <div class="panel-body container-fluid">
+                                    <div class="pull-right" id="cmx-timeLimit">
+                                        <i class="icon wb-time" aria-hidden="true"></i> &nbsp;总限时
+                                        <span class="timeLimit"></span>个工作日，剩余
+                                        <span class="workDay"></span>个工作日。</div>
+                                    <div class="clearfix"></div>
+                                    <!-- table -->
+                                    <div class="example table-responsive">
+                                        <table class="table table-bordered">
+                                            <tbody class="table-matter">
+                                                <tr>
+                                                    <td colspan="1" class="backg text-center">审批事项</td>
+                                                    <td colspan="3" id="approvalItemName"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="1" class="backg text-center">项目名</td>
+                                                    <td colspan="3" id="projectName"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="1" class="backg text-center">文件标题</td>
+                                                    <td colspan="3" id="proFileTitle"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="backg text-center">文件号</td>
+                                                    <td id="proFileNum"></td>
+                                                    <td class="backg text-center">网审号</td>
+                                                    <td id="networkNum"></td>
+                                                    <!-- projectNum -->
+                                                </tr>
+                                                <tr>
+                                                    <td class="backg text-center">保护单位</td>
+                                                    <td id="protectUnitName"></td>
+                                                    <td class="backg text-center">类型</td>
+                                                    <td id="publishTypeName"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="backg text-center">主办人</td>
+                                                    <td id="hostPersonName"></td>
+                                                    <td class="backg text-center">受理时间</td>
+                                                    <td id="acceptTime"></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <!-- 分派处员、选择专家 、转发文-->
+                                    <div class="example-wrap">
+                                        <div class="nav-tabs-horizontal" id="cmx-tabpanels-zhuanjiajigou">
+                                            <ul class="nav nav-tabs" role="tablist" id="">
+                                                <li role="presentation" class="backg active" id="cmx-select-experts">
+                                                    <a data-toggle="tab" href="#tabsSelectExperts" aria-controls="tabsSelectExperts" role="tab" aria-expanded="true">
+                                                        选择专家
+                                                    </a>
+                                                </li>
+                                                <li role="presentation" class="backg hidden" id="cmx-tabsForwardingText">
+                                                    <a data-toggle="tab" href="#tabsForwardingText" aria-controls="tabsForwardingText" role="tab" aria-expanded="false">
+                                                        转发文
+                                                    </a>
+                                                </li>
+                                                <li role="presentation" class="backg hidden" id="cmx-branchTabs">
+                                                    <a data-toggle="tab" href="#tabsSendToAnother" aria-controls="tabsSendToAnother" role="tab" aria-expanded="false">
+                                                        转办
+                                                    </a>
+                                                </li>
+                                                <!-- <li role="presentation" class="backg" id="cmx-tabsToCertificate">
+                                                    <a data-toggle="tab" href="#tabsToCertificate" aria-controls="tabsToCertificate" role="tab" aria-expanded="false">
+                                                        发送办结
+                                                    </a>
+                                                </li> -->
+                                                <!-- <li role="presentation" class="backg" id="cmx-jointTrialTabs">
+                                                    <a data-toggle="tab" href="#tabsJointTrial" aria-controls="tabsJointTrial" role="tab" aria-expanded="false">
+                                                            专家会审
+                                                        </a>
+                                                </li> -->
+                                            </ul>
+                                            <div class="tab-content padding-top-20" id="div-option">
+
+                                                <!-- 选择专家 -->
+                                                <div class="tab-pane active" id="tabsSelectExperts" role="tabpanel">
+                                                    <div class="form-group" style="padding-left: 7.5%;">
+                                                        <!-- <div class="radio-custom radio-primary" style="display:inline">
+                                                            <input type="radio" id="radio-selectExpert" name="type1" value="1" checked>
+                                                            <label for="radio-selectExpert">选择专家</label>
+                                                        </div>
+                                                        <div class="radio-custom radio-primary" style="display:inline;margin-left:30px;">
+                                                            <input type="radio" id="radio-thirdParty" name="type1" value="2">
+                                                            <label for="radio-thirdParty">选择第三方评估机构</label>
+                                                        </div> -->
+                                                        <div class="radio-custom radio-primary" style="display:inline;margin-left:30px;" >
+                                                            <input type="radio" id="radio-huishen" name="type1" value="3" checked>
+                                                            <label for="radio-huishen">选择会审</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-horizontal expert" style="display: none">
+                                                        <div class="form-group">
+                                                            <label class="col-xs-12 col-md-2 control-label">选择评审专家</label>
+                                                            <div class="col-xs-12 col-md-8">
+                                                                <div id="cmx-chooseexport" style="border: 1px solid #eee;min-height: 50px;border-radius: 3px;">
+
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-xs-12 col-md-2">
+                                                                <div class="input-group">
+                                                                    <button type="button" id="click-expert" class="btn btn-primary">
+                                                                        选择
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="col-xs-12 col-md-2 control-label">已选专家</label>
+                                                            <div class="col-xs-12 col-md-10">
+                                                                <div class="cmx-havechooseexport" style="border: 1px solid #eee;min-height: 50px;border-radius: 3px;"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="col-xs-12 col-md-2 control-label">常用语</label>
+                                                            <div class="col-xs-12 col-md-6">
+                                                                <select class="commonwords form-control" style="width:100%;padding: 4px 12px !important;">
+                                                                </select>
+                                                            </div>
+                                                            <div class="col-md-4 col-xs-12">
+                                                                <button class="commonwords-use btn btn-primary margin-left-10">使用此常用语</button>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="col-xs-12 col-md-2 control-label">意见</label>
+                                                            <div class="col-xs-12 col-md-10">
+                                                                <textarea class="form-control" id="cmx-export-remark" style="resize: none;" rows="5"></textarea>
+                                                            </div>
+                                                            <div class="clearfix"></div>
+                                                            <div class="input-group" style="width: 100%;text-align: right;margin-top: 10px;">
+                                                                <label class="commonwords-manage">常用语管理，将上句办理意见加入/修改常用语：</label>
+                                                                <button class="commonwords-add btn btn-primary margin-left-10">新增</button>
+                                                                <button class="commonwords-update btn btn-primary margin-left-10">修改</button>
+                                                                <button class="commonwords-remove btn btn-default margin-left-10">删除</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-horizontal third-institution" style="display: none">
+                                                        <div class="form-group">
+                                                            <label class="col-xs-12 col-md-2 control-label">选择机构</label>
+                                                            <div class="col-xs-12 col-md-8">
+                                                                <div id="cmx-chooseinstitution" style="border: 1px solid #eee;min-height: 50px;border-radius: 3px;">
+
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-xs-12 col-md-2">
+                                                                <div class="input-group">
+                                                                    <button type="button" id="click-third" class="btn btn-primary">
+                                                                        选择
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="col-xs-12 col-md-2 control-label">已选评估机构</label>
+                                                            <div class="col-xs-12 col-md-10">
+                                                                <div class="cmx-havechooseinstitution" style="border: 1px solid #eee;min-height: 50px;border-radius: 3px;"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="col-xs-12 col-md-2 control-label">常用语</label>
+                                                            <div class="col-xs-12 col-md-6">
+                                                                <select class="commonwords form-control" style="width:100%;padding: 4px 12px !important;">
+                                                                </select>
+                                                            </div>
+                                                            <div class="col-md-4 col-xs-12">
+                                                                <button class="commonwords-use btn btn-primary margin-left-10">使用此常用语</button>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="col-xs-12 col-md-2 control-label">意见</label>
+                                                            <div class="col-xs-12 col-md-10">
+                                                                <textarea class="form-control" id="cmx-institution-remark" style="resize: none;" rows="5"></textarea>
+                                                            </div>
+                                                            <div class="clearfix"></div>
+                                                            <div class="input-group" style="width: 100%;text-align: right;margin-top: 10px;">
+                                                                <label class="commonwords-manage">常用语管理，将上句办理意见加入/修改常用语：</label>
+                                                                <button class="commonwords-add btn btn-primary margin-left-10">新增</button>
+                                                                <button class="commonwords-update btn btn-primary margin-left-10">修改</button>
+                                                                <button class="commonwords-remove btn btn-default margin-left-10">删除</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-horizontal huishen-institution">
+                                                        <div id="cmx-huishen-submit" class="form-group text-center">
+                                                            <button id="cmx-confirm-trial" type="button" class="btn btn-lg btn-raised btn-primary active">点此确认进行专家会审
+                                                            </button>
+                                                            <div style="margin-top:15px;">确认进行线下专家会审之后会停止计时</div>
+                                                        </div>
+                                                        <div id="cmx-huishen-upload-files" style="display:none;text-align: center;">
+                                                            <div id="uploadzhuanjiafujian">
+                                                                上传会审意见文件
+                                                            </div>
+                                                            <div class="dddd">
+                                                                <ul class="list-group margin-bottom-0 list-group-dividered file-upload-list">
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- 转发文 -->
+                                                <div class="tab-pane" id="tabsForwardingText" role="tabpanel">
+                                                    <div class="form-group text-center">
+                                                        <button id="cmx-confirm-zhuanfa" type="button" class="btn btn-lg btn-raised btn-primary active">确认进行转发文
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <!-- 发送办结，给kaoguchu虚拟账号去发证 -->
+                                                <div class="tab-pane" id="tabsToCertificate" role="tabpanel">
+                                                    <div class="form-group text-center">
+                                                        <button id="cmx-confirm-fazheng" type="button" class="btn btn-lg btn-raised btn-primary active">确认发送考古处进行办结
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <!-- 转办 -->
+                                                <div class="tab-pane" id="tabsSendToAnother" role="tabpanel">
+                                                    <div class="form-horizontal">
+                                                        <div class="form-group">
+                                                            <label class="col-sm-1 control-label">转办人员</label>
+                                                            <div class="col-sm-4">
+                                                                <div class="input-group">
+                                                                    <input type="text" class="form-control" name="" id="cmx-zhuanjiajigou-person">
+                                                                    <span class="input-group-btn">
+                                                                        <button type="button" class="btn btn-primary" id="cmx-zhuanjiajigou-chooseperson">
+                                                                            选择
+                                                                        </button>
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="col-xs-12 col-md-1 control-label">常用语</label>
+                                                            <div class="col-xs-12 col-md-6">
+                                                                <select class="commonwords form-control" style="width:100%;padding: 4px 12px !important;">
+                                                                </select>
+                                                            </div>
+                                                            <div class="col-md-4 col-xs-12">
+                                                                <button class="commonwords-use btn btn-primary margin-left-10">使用此常用语</button>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="col-sm-1 control-label">办理意见</label>
+                                                            <div class="col-sm-11">
+                                                                <textarea class="form-control" id="cmx-zhuanjiajigou-remark" style="resize: none;" rows="5"></textarea>
+                                                            </div>
+                                                            <div class="clearfix"></div>
+                                                            <div class="input-group" style="width: 100%;text-align: right;margin-top: 10px;">
+                                                                <label class="commonwords-manage">常用语管理，将上句办理意见加入/修改常用语：</label>
+                                                                <button class="commonwords-add btn btn-primary margin-left-10">新增</button>
+                                                                <button class="commonwords-update btn btn-primary margin-left-10">修改</button>
+                                                                <button class="commonwords-remove btn btn-default margin-left-10">删除</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="processTabTwo" role="tabpanel">
+                            <div class="panel" id="cmx-form-body" style="overflow: scroll;">
+                                <div class="panel-body container-fluid" style="overflow: hidden !important;width: 100%;height: 100%;padding: 0;">
+                                    <iframe id="cmx-form" frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="no" allowtransparency="yes"
+                                        style="width:100%;height:100%;">
+                                    </iframe>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="processTabThree" role="tabpanel">
+                            <div class="panel" id="cmx-record">
+                                <div class="panel-body container-fluid">
+                                    <div class="example table-responsive">
+                                        <table class="table table-bordered text-center">
+                                            <tbody>
+                                                <tr>
+                                                    <td colspan="5" class="handleRecord">流程跟踪</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="backg">序号</td>
+                                                    <td class="backg">办理人</td>
+                                                    <td class="backg">办理情况</td>
+                                                    <td class="backg">办理时间</td>
+                                                    <td class="backg">停留工作日</td>
+                                                </tr>
+                                            </tbody>
+                                            <tbody id="cmx-banli-record"></tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="processTabFour" role="tabpanel">
+                            <div class="panel" id="cmx-pingshen-list" style="overflow: scroll;">
+                                <div class="panel-body container-fluid" style="overflow: hidden !important;width: 100%;height: 100%;padding: 0;">
+                                    <div class="btn-group pull-right margin-top-10 padding-right-20" role="group">
+                                        <button type="button" class="btn btn-info" onclick="switchExpertList(event,this,1);" id="cmx-pingshen-grid-btn">
+                                            <i class="icon wb-grid-9" aria-hidden="true"></i>
+                                        </button>
+                                        <button type="button" class="btn  btn-default" onclick="switchExpertList(event,this,2);" id="cmx-pingshen-bulleted-btn">
+                                            <i class="icon wb-list-bulleted" aria-hidden="true"></i>
+                                        </button>
+                                    </div>
+                                    <button class="btn btn-default pull-right margin-top-10 margin-right-20" disabled="disabled" id="cmx-copy-zhuanjia-yijian"
+                                        data-clipboard-action="copy" data-clipboard-target="#cmx-pingshen-bulleted">一键复制专家意见</button>
+                                    <div class="clearfix"></div>
+                                    <div class="row pingshen-list" style="margin: 17.5px 6px;" id="cmx-pingshen-grid">
+                                    </div>
+                                    <div class="padding-20">
+                                        <div id="cmx-pingshen-bulleted" style="display:none"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div id="expert-modal"></div>
+    <div id="thirdParty-modal"></div>
+    <div id="cmx-person-modal"></div>
+    <div class="modal fade example-modal-lg" id="pingshen-modal" aria-hidden="true" aria-labelledby="pingshen-modal" role="dialog"
+        tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="关闭">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                    <h4 class="modal-title" id="exampleOptionalLarge">评审意见</h4>
+                </div>
+                <div class="modal-body">
+                    <iframe id="cmx-form-pingshen" frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="no" allowtransparency="yes"
+                        style="width:100%;    height: 450px;">
+                    </iframe>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade example-modal-lg" id="pingshen-modal-2" aria-hidden="true" aria-labelledby="pingshen-modal-2" role="dialog"
+    tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="关闭">
+                    <span aria-hidden="true">×</span>
+                </button>
+                <h4 class="modal-title">评审意见</h4>
+            </div>
+            <div class="modal-body">
+                <div id="cmx-form-pingshen-2"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="reminderModal" tabindex="-1" role="dialog" aria-labelledby="reminderModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="reminderModalLabel">催办</h4>
+            </div>
+            <div class="modal-body">
+                <table class="table table-bordered">
+                    <tbody>
+                        <tr>
+                            <td>项目名称</td>
+                            <td>
+                                <span id="cmx-reminder-projectname"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>当前处理人</td>
+                            <td>
+                                <span id="cmx-reminder-person"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>催办方式</td>
+                            <td>
+                                <div class="form-inline">
+                                    <div class="checkbox-custom checkbox-default">
+                                        <input type="checkbox" id="reminder-type-platform" name="reminder-type" value="1">
+                                        <label for="reminder-type-platform">平台催办</label>
+                                    </div>
+                                    <div class="checkbox-custom checkbox-default">
+                                        <input type="checkbox" id="reminder-type-msg" name="reminder-type" value="2">
+                                        <label for="reminder-type-msg">短信催办</label>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>催办标题</td>
+                            <td>
+                                <input type="text" class="form-control" id="reminder-title">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>催办内容</td>
+                            <td>
+                                <textarea class="form-control" id="reminder-content"></textarea>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-info" id="cmx-reminder-save-btn">确定</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal -->
+</div>
+
+<div class="modal fade" id="showExpertInfoModal" tabindex="-1" role="dialog" aria-labelledby="showExpertInfoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="showExpertInfoModalLabel">基本信息</h4>
+            </div>
+            <div class="modal-body">
+                <table class="table table-bordered">
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal -->
+</div>
+
+<div class="modal fade in modal-primary" id="openHuiShenModal" aria-hidden="true" aria-labelledby="openHuiShenModal" role="dialog"
+    style="height:500px !important;" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="关闭">
+                    <span aria-hidden="true">×</span>
+                </button>
+                <h4 class="modal-title">会审意见文件</h4>
+            </div>
+            <div class="modal-body">
+                <h4>会审意见文件列表：</h4>
+                <ul class="list-group padding-left-40" id="open-huishen-file-list"></ul>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+            </div>
+        </div>
+    </div>
+</div>

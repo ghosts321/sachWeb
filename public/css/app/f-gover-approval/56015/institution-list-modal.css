@@ -1,0 +1,110 @@
+.modal-header {
+    background-color: #4397e6;
+    color: white;
+}
+
+.modal-header button {
+    color: white;
+    opacity: 1;
+}
+
+.modal-body {
+    padding-bottom: 0;
+}
+
+.modal-body .tableDiv {
+    height: 280px;
+}
+
+table tr {
+    height: 30px;
+}
+
+.cmx-list-footer {
+    background-color: #4397e6;
+    color: white;
+}
+
+.right-part {
+    float: right;
+}
+
+.queryTerm {
+    margin-bottom: 5px;
+    margin-left: 10px;
+    margin-right: 20px;
+}
+
+.queryTerm input {
+    border: 1px solid #D7D8D9;
+    margin-right: 40px;
+}
+
+.queryTerm .form-group {
+    display: inline-block;
+}
+
+.queryTerm .form-control {
+    width: 180px;
+}
+
+.queryTerm input {
+    width: 180px;
+    display: inline-block;
+}
+
+button {
+    padding: 2px 18px;
+    border-radius: 25px;
+}
+
+.cmx-list-footer .pagination {
+    margin-left: 20px;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    vertical-align: middle;
+}
+
+.pagination li a,
+.pagination li span {
+    font-size: 14px;
+    color: white;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.pagination li span input {
+    color: #76838f;
+}
+
+.pagination li a:hover,
+.pagination li span:hover {
+    color: white;
+    opacity: 0.8;
+    background-color: #62a8ea;
+}
+
+.pagination li a:focus,
+.pagination li span:focus {
+    background-color: #62a8ea;
+}
+
+.cmx-list-footer .countInfo {
+    float: right;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.pagination li input {
+    width: 20px;
+    border: none;
+    padding: 0;
+}
+
+.cmx-more-search-div {
+    display: none;
+}
+
+.cmx-pack-up {
+    display: none;
+}

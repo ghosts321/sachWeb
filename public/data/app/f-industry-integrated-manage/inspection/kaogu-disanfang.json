@@ -1,0 +1,107 @@
+[{
+        "columnname": "cmx-i-1",
+        "columnindex": "cmx-i-1",
+        "serialnumber": "P0001",
+        "type": "separator",
+        "name": "评审意见",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "title": "评审意见",
+            "desc": ""
+        },
+        "extra": {
+            "class": "margin-bottom-10 ",
+            "func": "",
+            "width": 12,
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-2",
+        "columnindex": "cmx-i-2",
+        "serialnumber": "P0002",
+        "type": "single",
+        "name": "评审结果",
+        "key": "expertResultsName",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": 2,
+            "remark": [{
+                    "id": 1,
+                    "value": "通过"
+                },
+                {
+                    "id": 2,
+                    "value": "不通过"
+                }
+            ]
+        },
+        "extra": {
+            "class": "",
+            "func": "checkSingle('columnname','columnindex','type')",
+            "width": "",
+            "layout": "",
+            "placeholder": ""
+        }
+    }, {
+        "columnname": "cmx-i-3",
+        "columnindex": "cmx-i-3",
+        "serialnumber": "P0003",
+        "type": "separator",
+        "name": "附件",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "title": "附件",
+            "desc": ""
+        },
+        "extra": {
+            "class": "margin-bottom-10 ",
+            "func": "",
+            "width": 12,
+            "layout": "",
+            "placeholder": ""
+        }
+    }, {
+        "columnname": "cmx-i-4",
+        "columnindex": "cmx-i-4",
+        "serialnumber": "P0004",
+        "type": "file",
+        "name": "评估报告（盖章）",
+        "key": "eaMohPecExamList",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "single": "0"
+        },
+        "extra": {
+            "class": "baseinfo",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    }, {
+        "columnname": "cmx-i-5",
+        "columnindex": "cmx-i-5",
+        "serialnumber": "P0005",
+        "type": "text",
+        "key": "remark",
+        "name": "备注",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "long"
+        },
+        "extra": {
+            "class": "",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    }
+]

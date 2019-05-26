@@ -1,0 +1,157 @@
+body {
+  background: url('/images/collection-of-cultural-relics/museum-bg-old.png') repeat-y;
+  background-size: 100% auto;
+}
+.museum {
+  padding-top: 30px;
+  padding-bottom: 50px;
+}
+.museum .position i {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  background: url(/images/collection-of-cultural-relics/house-2-old.png) no-repeat center center;
+  background-size: cover;
+  vertical-align: -3px;
+  margin-right: 5px;
+  margin-left: -3px;
+}
+.museum .position span,
+.museum .position a {
+  color: #333;
+  font-size: 14px;
+  vertical-align: middle;
+}
+.museum .position a {
+  text-decoration: none;
+}
+.museum .relics {
+  margin-bottom: 20px;
+}
+.museum .relics .list {
+  font-size: 28px;
+  color: #353638;
+  letter-spacing: 0;
+  font-weight: bold;
+}
+.museum .search-info {
+  background: #FFF7E1;
+  box-shadow: 0 2px 0 0 #D0BC8E;
+  border-radius: 2px;
+  padding-top: 29px;
+  padding-bottom: 29px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.museum .search-info .museum-left {
+  border-right: 1px dotted #BCA57F;
+}
+.museum .search-info .museum-left .collection {
+  padding-right: 10px;
+}
+.museum .search-info .museum-left .collection input,
+.museum .search-info .museum-left .collection select {
+  min-width: 190px;
+  border-radius: 2px;
+}
+.museum .search-info .museum-left .collection select {
+  border-right: 0 none;
+  background: url(/images/collection-of-cultural-relics/arrow-old.png) no-repeat right center;
+  background-color: #fff;
+  background-size: contain;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+.museum .search-info .museum-left .collection label {
+  min-width: 85px;
+  text-align: right;
+}
+.museum .search-info .museum-left .second-line {
+  margin-top: 12px;
+}
+.museum .search-info .museum-right {
+  text-align: center;
+}
+.museum .search-info .museum-right a {
+  width: 140px;
+  height: 35px;
+  line-height: 35px;
+  background: #BCA57F;
+  border: 1px solid #BCA57F;
+  border-radius: 2px;
+  display: inline-block;
+  font-family: MicrosoftYaHei;
+  font-size: 14px;
+  color: #FFFFFF;
+  letter-spacing: 0;
+  text-decoration: none;
+  font-weight: bold;
+}
+.museum .search-info .museum-right a + a {
+  margin-top: 10px;
+}
+.museum .search-info .museum-right .disabled {
+  pointer-events: none;
+}
+.museum .museum-search-details {
+  min-height: 550px;
+  margin-top: 18px;
+  background-color: #F3CC7B;
+  border: 1px dashed #BA9E59;
+  background-size: 100% 100%;
+}
+.museum .museum-search-details table {
+  min-height: 500px;
+  border-color: #AF9554;
+}
+.museum .museum-search-details table th {
+  border-bottom: 0 none;
+  line-height: 25px;
+  border-bottom: 1px solid #C9AE68;
+}
+.museum .museum-search-details table td {
+  line-height: 20px;
+  height: 35px;
+  border-top: 0 none;
+}
+.museum .museum-search-details table td.antiqueId {
+  padding-left: 25px;
+}
+.museum .museum-search-details .paging {
+  padding-bottom: 15px;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  margin: 0;
+}
+.museum .museum-search-details .paging .box2 {
+  overflow: hidden;
+}
+.museum .museum-search-details .paging .modal-box {
+  height: 35px;
+  position: absolute;
+  width: 76%;
+  top: 0;
+  left: 12%;
+  z-index: 10;
+  opacity: 0.5;
+  background-color: #F3CC7B;
+  display: none;
+}
+.box2 button {
+  background-color: #F7E6BF;
+}
+.box2 .pageWrap ul li {
+  background-color: #F7E6BF;
+}
+.box2 .pageWrap ul li:hover {
+  color: #000;
+  border-color: #6b7279;
+  background-color: #f6da96;
+}
+.box2 .pageWrap ul .sel-page {
+  background: #f6da96;
+  color: #6a1b1b;
+  border-color: #6b7279;
+}

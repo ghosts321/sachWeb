@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+  <title>公共信息服务搜索</title>
+  <link href="../css/common/ie10-viewport-bug-workaround.css" rel="stylesheet">
+  <!-- Bootstrap -->
+  <link href="../css/common/bootstrap.min.css" rel="stylesheet">
+  <link href="../css/common/pageSwitch.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../css/common/pagination.css">
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  <link href="../css/common/common.css" rel="stylesheet">
+  <link href="../css/service/nation-museum-direct.css" rel="stylesheet">
+</head>
+<body>
+<!-- 头部 start -->
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+          aria-controls="navbar">
+          <span class="sr-only">切换导航</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html"><img class="custom-logo" src="../img/custom-logo.png"/><span class="adapt-webtitle visible-lg">国家文物局<br>综合行政管理平台</span></a>
+      </div>
+      <div id="navbar" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav custom-navbar">
+          <li><a href="../index.html">首页</a></li>
+          <li><a href="../approval/admin-approval-manage.html">行政审批管理</a></li>
+          <li><a href="../public/gov-info-open.html">政府信息公开</a></li>
+          <li><a href="../industry/integrated-manage.html">行业综合管理</a></li>
+          <li class="active"><a href="../service/public-info-service.html">公共信息服务</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right custom-navbar-right">
+          <li class="user-info">
+            <img src="../img/login.png" alt="">
+            <span class="login-2">登录</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+<!-- 头部 end -->
+
+<!-- 左侧侧边栏 start -->
+  <div class="left-bar hidden-xs">
+    <div>
+        <a href="" class="leftlink">
+
+        </a>
+    </div>
+    <div>
+        <a href="../administrative-approval.html">
+
+        </a>
+    </div>
+    <div>
+        <a href="../policy-and-regulations.html">
+
+        </a>
+    </div>
+    <div>
+        <a href="download.html">
+
+        </a>
+    </div>
+  </div>
+<!-- 左侧侧边栏 end -->
+
+<!-- 右侧侧边栏 start -->
+  <div class="right-bar hidden-xs">
+    <div>
+      <a href="" class="rightlink">
+
+      </a>
+    </div>
+    <div>
+      <a href="../complaint-box.html">
+
+      </a>
+    </div>
+  </div>
+<!-- 右侧侧边栏 end -->
+
+<!-- 巨幕 全国重点文物保护单位 start -->
+  <div class="giant-screen jumbotron text-center">
+    <div class="container classification" id="classification">
+      <h3 class="" id="title">全国博物馆名录</h3>
+      <div class="row classification">
+        <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12 classification-left">
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 form-inline">
+            <label for="" class="pis3">博物馆名称：</label>
+            <input type="text" class="form-control pis3" placeholder="" id="instName">
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 form-inline sf">
+            <label for="" style="" class="pis3">省份：</label>
+            <select class="form-control pis3" id="province">
+
+            </select>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 form-inline second-line">
+            <label for="" class="pis3">博物馆性质：</label>
+            <select class="form-control pis3" id="museumProperty">
+
+            </select>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 form-inline second-line">
+            <label for="" class="pis3">质量等级：</label>
+            <select class="form-control pis3" id="qualityLevel">
+
+            </select>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12 classification-right">
+          <a href="" class="" id="search">检索</a><a href="" id="reset">重置</a>
+          <!-- <a href="" class="download">下载</a> -->
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- 巨幕 全国重点文物保护单位 end -->
+
+<!-- 统计表格1 start -->
+  <div class="statistics unmovable">
+    <div class="modal-box">
+      <img src="../img/loading.gif" alt="" width="50">
+    </div>
+    <div class="container unmovableContent">
+      <div class="table-responsive">
+        <table class="table table-hover statistics-table table-condensed" style="word-wrap: break-word; word-break: break-all;">
+          <thead>
+            <tr class="statistics-color row">
+              <th class="text-center">博物馆名称</th>
+              <th class="text-center">省份</th>
+              <th class="text-center">博物馆性质</th>
+              <th class="text-center">质量等级</th>
+              <th class="text-center">是否免费开放</th>
+              <th class="text-center">电话</th>
+              <!-- <th class="text-center">地址</th> -->
+              <th class="text-center">网址</th>
+            </tr>
+          </thead>
+          <tbody id="naSecurityUnit">
+            <tr class="row text-center"><td colspan="8"><h5>数据加载中...</h5></td></tr>
+          </tbody>
+        </table>     
+      </div>    
+      <!-- 分页 -->
+      <div class="row paging">
+        <div class="M-box4"></div>
+      </div>
+    </div>
+  </div>
+<!-- 统计表格1 end -->
+
+<!-- 底部 start -->
+    <div class="footer">
+      <div class="container footer-content">
+        <div class="row">
+            <p><a href="../website-statement.html">网站声明</a><a href="../website-statement.html">联系我们</a></p>
+            <i></i>
+        </div>
+      <b>Copyright © 2017 国家文物局版权所有</b>
+      </div>
+    </div>
+<!-- 底部 end -->
+
+<!-- 模态框 start -->
+  <div id="modal">
+    <div class="modal-bg"></div>
+    <div id="modalBox" class="modal-box-2 modal-small">
+      <div class="modal-title">
+        <i>禁止性要求</i>
+        <span class="modal-close">&times;</span>
+      </div>
+      <div class="m-content">
+        <p class="modal-ctx">
+          test
+        </p>
+        <p class="modal-sure" style=""><em>确认</em></p>
+      </div>
+    </div>
+  </div>
+<!-- 模态框 end -->
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="../js/common/jquery-1.9.1.min.js"></script> 
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="../js/common/bootstrap.min.js"></script>
+  <script src="../js/common/ie10-viewport-bug-workaround.js"></script>
+  <script src="../js/common/pageSwitch.min.js"></script>
+  <script src="../js/common/pagination.js"></script>
+  <script src="../js/common/main.js"></script>
+  <script src="../js/common/common.js"></script>
+  <script src="../js/service/nation-museum-direct.js"></script>
+  
+  <script src="../js/common/paging.js"></script>
+  <script src="../js/common/jquery.pagination.js"></script>
+
+  <!-- 模板 start -->
+  <script id="tnaMuseumInfo" type="text/template"> <!-- 全国博物馆名录 -->
+    <tr class="row text-center">
+      <td width="30%" class="click-model" data-instName=$instName$ data-openTime="$openTime$" data-trafficInfo="$trafficInfo$" data-summary="$summary$">$instName$ <img src="../img/show-model.png" alt="" width="15" style="cursor: pointer;"></td>
+      <td width="10%"><span>$provinceName$</span></td>
+      <td width="7%">$museumPropertyName$</td>
+      <td width="7%">$qualityLevelName$</td>
+      <td width="6%">$isFreeName$</td>
+      <td width="15%">$orderTelNo$</td>
+      <!-- <td width="20%">$address$</td> -->
+      <td width="25%">$webSite$</td>
+    </tr>
+  </script>
+  <!-- 模板 end -->
+
+</body>
+</html>

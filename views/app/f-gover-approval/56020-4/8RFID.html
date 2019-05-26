@@ -1,0 +1,152 @@
+<title>电子标签登记</title>
+<link rel="stylesheet" href="/css/app/f-gover-approval/56020-pub.css">
+<script src="/js/app/f-gover-approval/models/public-model.js"></script>
+<script src="/js/app/f-gover-approval/56020-1/56020-pub.js"></script>
+<script src="/js/app/f-gover-approval/56020-4/8RFID.js"></script>
+<div class="page animation-fade">
+    <div class="page-content">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 part1">
+            <div class="panel">
+                <div class="panel-heading">
+                    <span class="panel-title">电子标签登记</span>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    贴签状态
+                                </span>
+                                <select class="form-control" id="aaa" name="name" autocomplete="off">
+                                    <option value="">全部</option>
+                                    <option value="01">已贴签</option>
+                                    <option value="02">未贴签</option>
+                                    <option value="03">部分贴签</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    携运人
+                                </span>
+                                <input type="text" id="carryUser" class="form-control" placeholder="" autocomplete="off">
+                            </div>
+                        </div>
+                        <div class="col-lg-8 col-md-8 col-sm-8 margin-top-10">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    受理号
+                                </span>
+                                <input type="text" id="acceptNum" class="form-control" placeholder="" autocomplete="off">
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-4 margin-top-10">
+                            <div class="input-group">
+                                <button type="button" class="btn margin-right-5 btn-primary" id="search-btn">查询</button>
+                                <button type="button" class="btn" id="clear-search-form">清除</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="example table-responsive">
+                        <table class="table table-bordered">
+                            <thead class="resizetable">
+                                <th class="customs">出境海关</th>
+                                <th class="destination">目的地</th>
+                                <th class="applyUser">申请人</th>
+                                <th class="carrier">携运人</th>
+                                <th class="processState">流程状态</th>
+                                <th class="labelState">贴签状态</th>
+                            </thead>
+                            <tbody id="cmx-dianzi-table">
+                            </tbody>
+                        </table>
+                    </div>
+                    <ul class="pagination">
+                        <li>
+                            <a id="left-first" href="javascript:;">首页</a>
+                        </li>
+                        <li>
+                            <a id="left-prev" href="javascript:;">上一页</a>
+                        </li>
+                        <li>
+                            <span>第
+                                <input id="left-count" type="text" value="1" />/
+                                <span id="left-total">1</span>页</span>
+                        </li>
+                        <li>
+                            <a id="left-next" href="javascript:;">下一页</a>
+                        </li>
+                        <li>
+                            <a id="left-last" href="javascript:;">尾页</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 cmx-relicInfo-list">
+            <div class="panel margin-bottom-0">
+                <div class="panel-heading">
+                    <span class="panel-title">文物列表</span>
+                    <a href="/data/userManualForShenhe.doc" download="国家文物局综合行政管理平台试运行阶段_社会文物进出境_操作手册_鉴定站.doc">
+                        <button style="position:absolute;right:0px; top:-20px;" class="btn btn-xs btn-dark" id="cmx-user-manual">点击下载用户手册</button>
+                    </a>
+                </div>
+                <div class="panel-body">
+                    <div class="example table-responsive" id="relicListDiv">
+                        <table class="table table-bordered">
+                            <thead class="resizetable">
+                                <th class="orderNum">序号</th>
+                                <th class="relicName">名称</th>
+                                <th class="relicSize">尺寸</th>
+                                <th class="relicQuality">质地</th>
+                                <th class="relicYear">年代</th>
+                                <th class="operation">操作</th>
+
+                            </thead>
+                            <tbody id="relicList">
+                            </tbody>
+                        </table>
+                    </div>
+                    <ul class="pagination">
+                        <li class="pull-left">
+                            <select class="form-control" id="selectRelicFews">
+                                <option value="10">10条/页</option>
+                                <option value="20" selected>20条/页</option>
+                                <option value="50">50条/页</option>
+                                <option value="100">100条/页</option>
+                            </select>
+                        </li>
+                        <li>
+                            <span id="relicTotal">共0条</span>
+                        </li>
+                        <li>
+                            <a id="right-first" href="javascript:;">首页</a>
+                        </li>
+                        <li>
+                            <a id="right-prev" href="javascript:;">上一页</a>
+                        </li>
+                        <li>
+                            <span>第
+                                <input id="right-count" type="text" value="1" />/
+                                <span id="right-total">1</span>页</span>
+                        </li>
+                        <li>
+                            <a id="right-next" href="javascript:;">下一页</a>
+                        </li>
+                        <li>
+                            <a id="right-last" href="javascript:;">尾页</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="cmx-relic-modal"></div>
+<div id="cmx-registLabel-modal"></div>
+<div id="cmx-readLabel-modal"></div>
+<div id="cmx-empower-modal"></div>
+<div id="cmx-carry-person-modal"></div>
+<div id="cmx-applicationForExhibition-modal"></div>

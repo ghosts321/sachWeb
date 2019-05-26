@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+  <title>全国馆藏文物名录</title>
+  <link href="/css/collection-of-cultural-relics/ie10-viewport-bug-workaround.css" rel="stylesheet">
+  <!-- Bootstrap -->
+  <link href="/css/collection-of-cultural-relics/bootstrap.min.css" rel="stylesheet">
+  <link href="/css/collection-of-cultural-relics/pageSwitch.min.css" rel="stylesheet">
+  <link href="/css/collection-of-cultural-relics/prettify.css" rel="stylesheet">
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--   [if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif] -->
+  <link href="/css/collection-of-cultural-relics/common.css" rel="stylesheet">
+  <link href="/css/collection-of-cultural-relics/collection-of-cultural-relics-old.css" rel="stylesheet">
+  <style type="text/css" id="css-common">
+      /*************** SCROLLBAR BASE CSS ***************/
+
+      .scroll-wrapper {
+          overflow: hidden !important;
+          padding: 0 !important;
+          position: relative;
+      }
+
+      .scroll-wrapper > .scroll-content {
+          border: none !important;
+          box-sizing: content-box !important;
+          height: auto;
+          left: 0;
+          margin: 0;
+          max-height: none;
+          max-width: none !important;
+          overflow: scroll !important;
+          padding: 0;
+          position: relative !important;
+          top: 0;
+          width: auto !important;
+      }
+
+      .scroll-wrapper > .scroll-content::-webkit-scrollbar {
+          height: 0;
+          width: 0;
+      }
+
+      .scroll-element {
+          display: none;
+      }
+      .scroll-element, .scroll-element div {
+          box-sizing: content-box;
+      }
+
+      .scroll-element.scroll-x.scroll-scrollx_visible,
+      .scroll-element.scroll-y.scroll-scrolly_visible {
+          display: block;
+      }
+
+      .scroll-element .scroll-bar,
+      .scroll-element .scroll-arrow {
+          cursor: default;
+      }
+
+      .scroll-textarea {
+          border: 1px solid #cccccc;
+          border-top-color: #999999;
+      }
+      .scroll-textarea > .scroll-content {
+          overflow: hidden !important;
+      }
+      .scroll-textarea > .scroll-content > textarea {
+          border: none !important;
+          box-sizing: border-box;
+          height: 100% !important;
+          margin: 0;
+          max-height: none !important;
+          max-width: none !important;
+          overflow: scroll !important;
+          outline: none;
+          padding: 2px;
+          position: relative !important;
+          top: 0;
+          width: 100% !important;
+      }
+      .scroll-textarea > .scroll-content > textarea::-webkit-scrollbar {
+          height: 0;
+          width: 0;
+      }
+  </style>
+  <style type="text/css">
+      /*************** SIMPLE INNER SCROLLBAR ***************/
+      .scrollbar-inner > .scroll-element,
+      .scrollbar-inner > .scroll-element div
+      {
+          border: none;
+          margin: 0;
+          padding: 0;
+          position: absolute;
+          z-index: 10;
+      }
+      .scrollbar-inner > .scroll-element div {
+          display: block;
+          height: 100%;
+          left: 0;
+          top: 0;
+          width: 100%;
+      }
+      .scrollbar-inner > .scroll-element.scroll-x {
+          bottom: 2px;
+          height: 8px;
+          left: 0;
+          width: 100%;
+      }
+      .scrollbar-inner > .scroll-element.scroll-y {
+          height: 100%;
+          right: 2px;
+          top: 0;
+          width: 8px;
+      }
+      .scrollbar-inner > .scroll-element .scroll-element_outer {
+          overflow: hidden;
+      }
+      .scrollbar-inner > .scroll-element .scroll-element_outer,
+      .scrollbar-inner > .scroll-element .scroll-element_track,
+      .scrollbar-inner > .scroll-element .scroll-bar {
+          -webkit-border-radius: 8px;
+          -moz-border-radius: 8px;
+          border-radius: 8px;
+      }
+      .scrollbar-inner > .scroll-element .scroll-element_track{
+          -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+          filter: alpha(opacity=40);
+          opacity: 0.5;
+      }
+      .scrollbar-inner > .scroll-element .scroll-element_track { background-color: #FDE2A3; }
+      .scrollbar-inner > .scroll-element .scroll-bar { background-color: #D2BC83; }
+      .scrollbar-inner > .scroll-element:hover .scroll-bar { background-color: #D2BC83; }
+      .scrollbar-inner > .scroll-element.scroll-draggable .scroll-bar { background-color: #D2BC83; }
+      /* update scrollbar offset if both scrolls are visible */
+      .scrollbar-inner > .scroll-element.scroll-x.scroll-scrolly_visible .scroll-element_track { left: -12px; }
+      .scrollbar-inner > .scroll-element.scroll-y.scroll-scrollx_visible .scroll-element_track { top: -12px; }
+      .scrollbar-inner > .scroll-element.scroll-x.scroll-scrolly_visible .scroll-element_size { left: -12px; }
+      .scrollbar-inner > .scroll-element.scroll-y.scroll-scrollx_visible .scroll-element_size { top: -12px; }
+  </style>
+</head>
+<body>
+  <!-- 全国馆藏文物名录 start -->
+  <div class="container museum">
+    <p class="relics text-center"><span class="list">全国馆藏文物名录</span></p>
+    <div class="search-info">
+      <div class="row">
+        <div class="col-lg-10 museum-left" style="">
+            <div class="collection" id="collection">
+                <div class="row">
+                  <div class="col-lg-6 form-inline" style="">
+                    <label for="" style="">藏品名称：</label>
+                      <input type="text" class="form-control" placeholder="" style="" id="antiqueName">
+                  </div>
+                  <div class="col-lg-6 form-inline date">
+                    <label for="" style="">普查登记号：</label>        
+                      <input type="text" class="form-control" id="antiqueId">
+                  </div>
+                  <div class="col-lg-6 form-inline second-line">
+                    <div>
+                      <label for="date_a">博物馆：</label>
+                      <input type="text" class="form-control" id="museumName">
+                    </div>
+                  </div>
+                  <div class="col-lg-6 form-inline second-line pick" style="">
+                    <label for="" style="">藏品年代：</label>
+                    <select class="form-control" style="" id="age">
+
+                    </select>
+                  </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-2 museum-right" style="">
+            <a style="" href="collection-of-cultural-relics-details.html" target="_blank" class="" id="search">检索</a>
+            <a href="" id="reset">重置</a>
+        </div>
+      </div>
+    </div>
+    <div class="museum-content">
+      <div class="province pull-left">
+        <p class="text-center"><span class="h3">省份</span></p>
+        <div class="reel scrollbar-inner" id="reel-province">
+
+        </div>
+      </div>
+      <div class="heritage pull-left">
+        <div class="left-2 pull-left">
+          <div class="left-1 pull-left">
+            <img src="/images/collection-of-cultural-relics/cocr-1-old.png" alt="">
+            <img src="/images/collection-of-cultural-relics/cocr-6-old.png" alt="">
+            <img src="/images/collection-of-cultural-relics/cocr-3-old.png" alt="" class="cocr-3">
+          </div>
+          <img src="/images/collection-of-cultural-relics/cocr-2-old.png" alt="" class="cocr-2">
+          <img src="/images/collection-of-cultural-relics/cocr-5-old.png" alt="">
+          <img src="/images/collection-of-cultural-relics/cocr-7-old.png" alt="">
+          <img src="/images/collection-of-cultural-relics/cocr-8-old.png" alt="">
+        </div>
+        <div class="left-3 pull-left">         
+          <img src="/images/collection-of-cultural-relics/cocr-4-old.png" alt="">    
+          <img src="/images/collection-of-cultural-relics/cocr-9-old.png" alt="">    
+        </div>
+      </div>
+      <div class="category pull-right">
+        <p class="text-center"><span class="h3">类别</span></p>
+        <div class="reel scrollbar-inner" id="reel-culturalclass">
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 全国馆藏文物名录 end -->
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="/js/collection-of-cultural-relics/jquery-1.9.1.min.js"></script> 
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="/js/collection-of-cultural-relics/bootstrap.min.js"></script>
+  <script src="/js/collection-of-cultural-relics/ie10-viewport-bug-workaround.js"></script>
+  <script src="/js/collection-of-cultural-relics/pageSwitch.min.js"></script>
+  <script src="/js/collection-of-cultural-relics/pagination.js"></script>
+  <script src="/themes/classic/global/js/main.js"></script>
+  <script src="/js/collection-of-cultural-relics/common.js"></script>
+  <script src="/js/collection-of-cultural-relics/index.js"></script>
+
+  <script src="/js/collection-of-cultural-relics/prettify.js"></script> <!-- 滚动条插件 -->
+  <script src="/js/collection-of-cultural-relics/jquery.scrollbar.min.js"></script>
+
+  <script>
+    $(function(){
+      // 自定义滚动条
+      $(document).ready(function(){
+          $('.scrollbar-inner').scrollbar();
+      });
+
+      // 设置ajax的全局默认选项
+      jQuery.support.cors = true; // 让jQuery支持跨域请求
+      $.ajaxSetup({
+        // url: ip + ':4040/dmDatadic/getDataDicFromRedis', // 默认URL
+        url: publicUrl_4 + '/dmDatadic/getDataDicFromRedis', // 默认URL
+        type: 'get' , // 默认使用get方式
+        aysnc: true , // 默认异步加载
+        cache: false,
+        dataType: 'json',
+        error: function(err){ // 出错时默认的处理函数
+          console.log('ajax请求出错了...' + err);    
+        }
+      });
+
+      // 页面加载时 获取藏品类别下拉列表
+      $.ajax({
+        data: {dataType: 'CulturalClass'},
+        success: function(res){
+          var result = JSON.parse(res.data),
+              str    = '';
+          for(var i in result.CulturalClass){
+            str += '<a href="" target="_blank" data-culturalclass=' + i + '>' + result.CulturalClass[i] + '</a>';  
+          }
+          $('#reel-culturalclass').html(str); // 右侧类别区域
+        }
+      });
+
+      // 页面加载时 获取省份下拉列表
+      $.ajax({
+        data: {dataType: 'Province'},
+        success: function(res){
+          var result = JSON.parse(res.data),
+              str    = '';
+          for(var i in result.Province){
+            str += '<a href="" target="_blank" data-province=' + i + '>' + result.Province[i] + '</a>';
+          }
+          $('#reel-province').html(str);
+        }
+      });
+
+      // 页面加载时 获取年代下拉列表
+      $.ajax({
+        data: {dataType: 'Years'},
+        success: function(res){
+          var result = JSON.parse(res.data),
+              str    = '<option value="">所有</option>';
+          for(var i in result.Years){
+            str += '<option title=' + result.Years[i] + ' value=' + i + '>' + result.Years[i] + '</option>';
+          }
+          $('#age').html(str);
+          $("#age").change(function(){ // 获取下拉框的文本值
+            var checkText = $(this).find('option:selected').attr('title');   
+            $(this).attr('title',checkText); // 修改title值
+          });
+        }
+      });
+
+      // 点击检索
+      $('#search').on('click',function(){
+        var antiqueName   = $('#antiqueName').val(),   // 藏品名称
+            museumName    = $('#museumName').val(),    // 博物馆
+            antiqueId     = $('#antiqueId').val(),     // 普查登记号
+            age           = $('#age').val(),           // 藏品年代
+        // 修改跳转url
+        $href = 'collection-of-cultural-relics-details-old.html?pageNumber=1&pageSize=10&antiqueName=' + antiqueName + '&antiqueId=' + antiqueId + '&culturalClass=' + '&museumName=' + museumName + '&province=' + '&age=' + age;
+        $('#search').attr('href',$href);
+        if(window.localStorage){
+          localStorage.setItem('museum','true');
+        }
+      });
+
+      // 点击左侧省份的一排链接
+      $(document).on('click', "#reel-province a", function(){
+        var antiqueName   = $('#antiqueName').val(),       // 藏品名称
+            museumName    = $('#museumName').val(),        // 博物馆
+            antiqueId     = $('#antiqueId').val(),         // 普查登记号
+            age           = $('#age').val(),               // 藏品年代
+            province      = $(this).attr('data-province'), // 省份
+        $href = 'collection-of-cultural-relics-details-old.html?pageNumber=1&pageSize=10&antiqueName=' + antiqueName + '&antiqueId=' + antiqueId + '&culturalClass=' + '&museumName=' + museumName + '&province=' + province + '&age=' + age;
+        $(this).attr('href',$href);
+        if(window.localStorage){
+          localStorage.setItem('museum','true');
+        }
+      });
+
+      // 点击右侧类别的一排链接
+      $(document).on('click', "#reel-culturalclass a", function(){
+        var antiqueName   = $('#antiqueName').val(),            // 藏品名称
+            museumName    = $('#museumName').val(),             // 博物馆
+            antiqueId     = $('#antiqueId').val(),              // 普查登记号
+            age           = $('#age').val(),                    // 藏品年代
+            culturalClass = $(this).attr('data-culturalclass'), // 类别
+        $href = 'collection-of-cultural-relics-details-old.html?pageNumber=1&pageSize=10&antiqueName=' + antiqueName + '&antiqueId=' + antiqueId + '&culturalClass=' + culturalClass + '&museumName=' + museumName + '&province=' + '&age=' + age;
+        $(this).attr('href',$href);
+        if(window.localStorage){
+          localStorage.setItem('museum','true');
+        }
+      });
+
+      // 点击重置
+      $('#reset').on('click',function(e){
+        e.preventDefault();
+        $('#collection input,#collection select').each(function(){
+          $(this).val('');
+        });
+      });
+
+    });
+  </script>
+</body>
+</html>

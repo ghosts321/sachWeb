@@ -1,0 +1,156 @@
+<link rel="stylesheet" href="/css/app/f-gover-approval/56016/56016-select-relic-modal.css">
+
+<div class="modal fade in" id="cmx-select-relic-modal" aria-hidden="true" aria-labelledby="relicList" role="dialog" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span>馆藏一级文物</span>
+                <button class="pull-right close" data-dismiss="modal" aria-label="关闭">关闭</button>
+                <div class="clearfix"></div>
+            </div>
+            <div class="modal-body">
+                <div class="cmx-prompt">
+                    <p class="margin-bottom-0">信息提示：</p>
+                    <ol>
+                        <li>文物数据来自一普平台,如存在查询不到的文物，请先去一普平台进行确认</li>
+                        <li>表格不支持翻页跨页多选，请在一页选择确认后再翻页选择</li>
+                    </ol>
+                </div>
+                <hr>
+                <div class="nav-tabs-horizontal">
+                    <div class="tab-content relic-content">
+                        <div class="tab-pane active" id="cmx-ancient-book" role="tabpanel">
+                            <div class="queryTerm">
+                                <div class="form-horizontal ">
+                                    <div class="row">
+                                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 form-group">
+                                            <label for="cmx-relic-name" class="col-sm-3">文物名称</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" id="cmx-relic-name" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 form-group">
+                                            <label for="cmx-relic-type" class="col-sm-3">文物类别</label>
+                                            <div class="col-sm-9">
+                                                <select id="cmx-relic-type" data-dic="CulturalClass" class="form-control"></select>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 form-group">
+                                            <div class="right-part">
+                                                <button type="button" class="btn btn-primary" id="cmx-relic-search">查询</button>
+                                                <button type="button" class="btn btn-primary" id="cmx-relic-delete">清除</button>
+                                                <button type="button" class="btn btn-primary cmx-more-research">更多查询条件</button>
+                                                <button type="button" class="btn btn-primary cmx-pack-up">收起更多条件</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cmx-more-search-div row">
+                                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 form-group">
+                                            <label for="cmx-relic-level" class="col-sm-3">文物级别</label>
+                                            <div class="col-sm-9">
+                                                <select class="form-control" data-dic="RelicLevel" id="cmx-relic-level"></select>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 form-group">
+                                            <label for="cmx-incomplete-degree" class="col-sm-3">完残程度</label>
+                                            <div class="col-sm-9">
+                                                <select id="cmx-incomplete-degree" data-dic="IntactStatus" class="form-control"></select>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 form-group">
+                                            <label for="cmx-relic-time" class="col-sm-3">所属年代</label>
+                                            <div class="col-sm-9">
+                                                <select id="cmx-relic-time" data-dic="Years" class="form-control"></select>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 form-group">
+                                            <label for="cmx-collection-institution" class="col-sm-3">收藏单位</label>
+                                            <div class="col-sm-9">
+                                                <select id="cmx-collection-institution" class="form-control"></select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tableDiv table-responsive">
+                                <table class="table table-hover table-bordered table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th></th>
+                                            <th>文物名称</th>
+                                            <th>总登记号</th>
+                                            <th>质地</th>
+                                            <th>文物级别</th>
+                                            <th>文物收藏单位</th>
+                                            <th>完残程度</th>
+                                            <th>完残状态</th>
+                                            <th>保存状态</th>
+                                            <th>数量</th>
+                                            <th>来源</th>
+                                            <th>收藏时间</th>
+                                            <th>所属年代</th>
+                                            <th>文物类别</th>
+                                            <th>尺寸</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="cmx-relic-info-tbody"> </tbody>
+                                </table>
+                            </div>
+                            <div class="relic-footer">
+                                <ul class="pagination" id="cmx-relic-Pagination">
+                                    <li>
+                                        <a href="javascript:;" class="first">首页</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;" class="pre">上一页</a>
+                                    </li>
+                                    <li>
+                                        <span>
+                                            <span class="nowpage">0</span>/
+                                            <span class="totalpage">0</span>页</span>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;" class="next">下一页</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;" class="last">尾页</a>
+                                    </li>
+                                </ul>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" id="cmx-confirm-btn" type="button">确认</button>
+                <button type="button" class="btn btn-default cmx-cancle-btn" data-dismiss="modal">关闭</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    new cmx.process()
+        .turn('buildDataDic', {
+            element: $('#cmx-relic-type'),
+            type: "select",
+            hasAll: true
+        })
+        .turn('buildDataDic', {
+            element: $('#cmx-relic-level'),
+            type: "select",
+            hasAll: true
+        })
+        .turn('buildDataDic', {
+            element: $('#cmx-incomplete-degree'),
+            type: "select",
+            hasAll: true
+        })
+        .turn('buildDataDic', {
+            element: $('#cmx-relic-time'),
+            type: "select",
+            hasAll: true
+        })
+        .cfinally(function () {})
+        .start();
+</script>

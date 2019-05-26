@@ -1,0 +1,489 @@
+[{
+        "columnname": "cmx-i-1",
+        "columnindex": "cmx-i-1",
+        "serialnumber": "P0001",
+        "type": "separator",
+        "name": "文件信息",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "title": "文件信息",
+            "desc": ""
+        },
+        "extra": {
+            "class": "margin-bottom-10 baseinfo",
+            "func": "",
+            "width": 12,
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-2",
+        "columnindex": "cmx-i-2",
+        "serialnumber": "P0002",
+        "type": "special",
+        "name": "文件号",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": ""
+        },
+        "extra": {
+            "class": "baseinfo",
+            "func": "cmx_special_1",
+            "width": "6",
+            "layout": "",
+            "placeholder": ""
+        }
+    }, {
+        "columnname": "cmx-i-3",
+        "columnindex": "cmx-i-3",
+        "serialnumber": "P0003",
+        "type": "text",
+        "name": "文件标题",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "short"
+        },
+        "extra": {
+            "class": "margin-left-0 baseinfo",
+            "func": "",
+            "width": "6",
+            "layout": "",
+            "placeholder": "请输入文件标题"
+        }
+    },
+    {
+        "columnname": "cmx-i-4",
+        "columnindex": "cmx-i-4",
+        "serialnumber": "P0004",
+        "type": "text",
+        "name": "联系人",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "short",
+            "max_length": 15
+        },
+        "extra": {
+            "class": "baseinfo",
+            "func": "",
+            "width": "6",
+            "layout": "",
+            "placeholder": "请输入联系人"
+        }
+    },
+    {
+        "columnname": "cmx-i-5",
+        "columnindex": "cmx-i-5",
+        "serialnumber": "P0005",
+        "type": "text",
+        "name": "联系方式",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "short",
+            "max_length": 40
+        },
+        "extra": {
+            "class": "baseinfo",
+            "func": "",
+            "width": "6",
+            "layout": "",
+            "placeholder": "请输入联系电话"
+        }
+    },
+    {
+        "columnname": "cmx-i-6",
+        "columnindex": "cmx-i-6",
+        "serialnumber": "P0006",
+        "type": "separator",
+        "name": "申请单位",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "title": "申请单位",
+            "desc": ""
+        },
+        "extra": {
+            "class": "margin-bottom-10 baseinfo",
+            "func": "",
+            "width": 12,
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-7",
+        "columnindex": "cmx-i-7",
+        "serialnumber": "P0007",
+        "type": "special",
+        "name": "博物馆名称",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": "short"
+        },
+        "extra": {
+            "class": "baseinfo",
+            "func": "cmx_special_2",
+            "width": "12",
+            "layout": "",
+            "placeholder": "请点击右侧选择按钮，选择博物馆"
+        }
+    },
+    {
+        "columnname": "cmx-i-8",
+        "columnindex": "cmx-i-8",
+        "serialnumber": "P0008",
+        "type": "text",
+        "name": "联系人",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "short",
+            "max_length": 60
+        },
+        "extra": {
+            "class": "baseinfo",
+            "func": "",
+            "width": "6",
+            "layout": "",
+            "placeholder": "请输入博物馆联系人"
+        }
+    },
+    {
+        "columnname": "cmx-i-9",
+        "columnindex": "cmx-i-9",
+        "serialnumber": "P0009",
+        "type": "text",
+        "name": "联系方式",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "short",
+            "max_length": 40
+        },
+        "extra": {
+            "class": "baseinfo",
+            "func": "",
+            "width": "6",
+            "layout": "",
+            "placeholder": "请输入博物馆联系电话"
+        }
+    },
+    {
+        "columnname": "cmx-i-10",
+        "columnindex": "cmx-i-10",
+        "serialnumber": "P0010",
+        "type": "separator",
+        "name": "文物出境展览申报材料复核表",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "title": "文物出境展览申报材料复核表",
+            "desc": ""
+        },
+        "extra": {
+            "class": "margin-bottom-10 baseinfo",
+            "func": "",
+            "width": 12,
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-11",
+        "columnindex": "cmx-i-11",
+        "serialnumber": "P0011",
+        "type": "expand",
+        "name": "办展请示",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "",
+            "id": "4",
+            "max_length": 1200
+        },
+        "extra": {
+            "class": "margin-bottom-10 cmx-textarea baseinfo  required-tag",
+            "func": "addExtra",
+            "width": "12",
+            "layout": "",
+            "placeholder": "请填写办展请示，不超过1200个汉字，如字数过多，可从下方上传办展请示文件。"
+        }
+    },
+    {
+        "columnname": "cmx-i-30",
+        "columnindex": "cmx-i-30",
+        "serialnumber": "P0030",
+        "type": "file",
+        "name": "",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "single": "1"
+        },
+        "extra": {
+            "class": "",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-12",
+        "columnindex": "cmx-i-12",
+        "serialnumber": "P0012",
+        "type": "expand",
+        "name": "展示方案、大纲",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "",
+            "id": "4",
+            "max_length": 1200
+        },
+        "extra": {
+            "class": "cmx-textarea baseinfo  required-tag",
+            "func": "addExtra",
+            "width": "12",
+            "layout": "",
+            "placeholder": "请填写展示方案、大纲，不超过1200个汉字，如字数过多，可从下方上传展示方案、大纲文件。"
+        }
+    },
+    {
+        "columnname": "cmx-i-31",
+        "columnindex": "cmx-i-31",
+        "serialnumber": "P0031",
+        "type": "file",
+        "name": "",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "single": "1"
+        },
+        "extra": {
+            "class": "",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-13",
+        "columnindex": "cmx-i-13",
+        "serialnumber": "P0013",
+        "type": "expand",
+        "name": "展览协议书、草案",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "",
+            "id": "4",
+            "max_length": 1200
+        },
+        "extra": {
+            "class": "cmx-textarea baseinfo required-tag",
+            "func": "addExtra",
+            "width": "12",
+            "layout": "",
+            "placeholder": "请填写展览协议书、草案，不超过1200个汉字，如字数过多，可从下方上传展览协议书、草案文件。"
+        }
+    },
+    {
+        "columnname": "cmx-i-32",
+        "columnindex": "cmx-i-32",
+        "serialnumber": "P0032",
+        "type": "file",
+        "name": "",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "single": "1"
+        },
+        "extra": {
+            "class": "",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-61",
+        "columnindex": "cmx-i-61",
+        "serialnumber": "P00060",
+        "type": "separator",
+        "name": "附件",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "title": "附件",
+            "desc": ""
+        },
+        "extra": {
+            "class": "margin-bottom-10 baseinfo",
+            "func": "appendDownloadAllFile",
+            "width": 12,
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-14",
+        "columnindex": "cmx-i-14",
+        "serialnumber": "P0014",
+        "type": "file",
+        "name": "1&nbsp;&nbsp;&nbsp;文物出境展览申报表",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "single": "1"
+        },
+        "extra": {
+            "class": "margin-bottom-10 baseinfo",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-16",
+        "columnindex": "cmx-i-16",
+        "serialnumber": "P0016",
+        "type": "file",
+        "name": "2&nbsp;&nbsp;&nbsp;馆方文物安全状况评估",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "single": "1"
+        },
+        "extra": {
+            "class": "margin-bottom-10 baseinfo",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-17",
+        "columnindex": "cmx-i-17",
+        "serialnumber": "P0017",
+        "type": "file",
+        "name": "3&nbsp;&nbsp;&nbsp;场馆考察报告（首次举办或三年未举办者）",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "single": "1"
+        },
+        "extra": {
+            "class": "margin-bottom-10 baseinfo",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-18",
+        "columnindex": "cmx-i-18",
+        "serialnumber": "P0018",
+        "type": "file",
+        "name": "4&nbsp;&nbsp;&nbsp;展览邀请函",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "single": "1"
+        },
+        "extra": {
+            "class": "margin-bottom-10 baseinfo",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-19",
+        "columnindex": "cmx-i-19",
+        "serialnumber": "P0019",
+        "type": "file",
+        "name": "5&nbsp;&nbsp;&nbsp;合作方介绍，资信证明",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "single": "1"
+        },
+        "extra": {
+            "class": "margin-bottom-10 baseinfo",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-20",
+        "columnindex": "cmx-i-20",
+        "serialnumber": "P0020",
+        "type": "file",
+        "name": "6&nbsp;&nbsp;&nbsp;标准设施报告",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "single": "1"
+        },
+        "extra": {
+            "class": "margin-bottom-10 baseinfo",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-21",
+        "columnindex": "cmx-i-21",
+        "serialnumber": "P0021",
+        "type": "file",
+        "name": "7&nbsp;&nbsp;&nbsp;全部展品目录（当有外方文物参展时需提供）",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "single": "1"
+        },
+        "extra": {
+            "class": "margin-bottom-10 baseinfo",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-22",
+        "columnindex": "cmx-i-22",
+        "serialnumber": "P0022",
+        "type": "file",
+        "name": "8&nbsp;&nbsp;&nbsp;藏品真实性及来源合法性证明（当有外方文物参展时需提供）",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "single": "1"
+        },
+        "extra": {
+            "class": "margin-bottom-10 baseinfo",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    }
+]

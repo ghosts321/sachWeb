@@ -1,0 +1,76 @@
+[{
+    "icon": "icon fa-shield",
+    "id": "cmx-nav-01",
+    "disable": "0",
+    "text": "欢迎您，相对人，上次登录时间",
+    "title": "",
+    "url": "javascript:void(0);",
+    "menu": [{
+            "icon": "fa-file-text",
+            "disable": "0",
+            "id": "cmx-nav-0200",
+            "url": "javascript:void(0);",
+            "text": "文物出境申请",
+            "submenu": [{
+                    "icon": "fa-file-text",
+                    "disable": "0",
+                    "id": "cmx-nav-0200",
+                    "url": "/app/f-gover-approval/56020-1/1shenqing.html",
+                    "text": "文物出境申请",
+                    "submenu": []
+                } 
+            ]
+        },
+        {
+            "icon": "fa-file-text",
+            "disable": "0",
+            "id": "cmx-nav-0300",
+            "url": "javascript:void(0);",
+            "text": "临时进境复出境申请",
+            "submenu": [
+                {
+                    "icon": "fa-file-text",
+                    "disable": "0",
+                    "id": "cmx-nav-0301",
+                    "url": "/app/f-gover-approval/56020-2/1shenqing.html",
+                    "text": "临时进境申请",
+                    "submenu": []
+                },
+                {
+                    "icon": "fa-file-text",
+                    "disable": "0",
+                    "id": "cmx-nav-0302",
+                    "url": "/app/f-gover-approval/56020-3/1shenqing.html",
+                    "text": "复出境申请",
+                    "submenu": []
+                }
+            ]
+        },
+        {
+            "icon": "fa-file-text",
+            "disable": "0",
+            "id": "cmx-nav-0400",
+            "url": "javascript:void(0);",
+            "text": "临时出境复进境申请",
+            "submenu": [
+                {
+                    "icon": "fa-file-text",
+                    "disable": "0",
+                    "id": "cmx-nav-0400",
+                    "url": "/app/f-gover-approval/56020-4/1shenqing.html",
+                    "text": "临时出境申请",
+                    "submenu": []
+                },
+                {
+                    "icon": "fa-file-text",
+                    "disable": "0",
+                    "id": "cmx-nav-0402",
+                    "url": "/app/f-gover-approval/56020-5/1shenqing.html",
+                    "text": "复进境申请",
+                    "submenu": []
+                }
+                
+            ]
+        }
+    ]
+}]

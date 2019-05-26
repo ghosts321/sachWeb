@@ -1,0 +1,40 @@
+[
+    {
+        "columnname": "cmx-z-10",
+        "columnindex": "cmx-z-RelicLevel",
+        "serialnumber": "P00031",
+        "type": "special",
+        "name": "已选文件:",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": ""
+        },
+        "extra": {
+            "class": "margin-bottom-40",
+            "func": "cmx_special_file",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-z-11",
+        "columnindex": "cmx-z-approvalDocuments",
+        "serialnumber": "P0uploadFile", 
+        "type": "handimg",
+        "name": "选择文件:",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": "1"
+        },
+        "extra": {
+            "class": "margin-bottom-40",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    }
+]

@@ -1,0 +1,43 @@
+[{
+    "icon": "icon fa-shield",
+    "id": "cmx-nav-01",
+    "disable": "0",
+    "text": "欢迎您，专家与评估机构，上次登录时间",
+    "title": "",
+    "url": "javascript:void(0);",
+    "menu": [{
+            "icon": "fa-file-text",
+            "disable": "0",
+            "id": "cmx-nav-011",
+            "url": "javascript:void(0);",
+            "text": "行政审批管理",
+            "submenu": [
+                {
+                    "icon": "fa-file-text",
+                    "disable": "0",
+                    "id": "cmx-nav-0112",
+                    "url": "javascript:void(0);",
+                    "class": "cmx-split",
+                    "text": "评审",
+                    "submenu": []
+                },
+                {
+                    "icon": "fa-file-text",
+                    "disable": "0",
+                    "id": "cmx-nav-01121",
+                    "url": "/app/f-gover-approval/inspection/inspection-needToDo.html?type=2",
+                    "text": "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;待办",
+                    "submenu": []
+                },
+                {
+                    "icon": "fa-file-text",
+                    "disable": "0",
+                    "id": "cmx-nav-01122",
+                    "url": "/app/f-gover-approval/inspection/inspection-haveToDo.html?type=2",
+                    "text": "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;已办",
+                    "submenu": []
+                }
+            ]
+        }
+    ]
+}]

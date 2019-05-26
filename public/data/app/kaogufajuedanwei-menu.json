@@ -1,0 +1,59 @@
+[{
+    "icon": "icon fa-shield",
+    "id": "cmx-nav-01",
+    "disable": "0",
+    "text": "欢迎您，考古发掘单位，上次登录时间",
+    "title": "",
+    "url": "javascript:void(0);",
+    "menu": [{
+            "icon": "wb-clipboard",
+            "disable": "0",
+            "id": "cmx-nav-011",
+            "url": "javascript:void(0);",
+            "text": "行政审批管理",
+            "submenu": [
+                {
+                    "icon": "fa-file-text",
+                    "disable": "0",
+                    "id": "cmx-nav-0112",
+                    "url": "javascript:void(0);",
+                    "class": "cmx-split",
+                    "text": "受理审批",
+                    "submenu": []
+                },
+                {
+                    "icon": "fa-file-text",
+                    "disable": "0",
+                    "id": "cmx-nav-01121",
+                    "url": "/app/f-gover-approval/counterpart/counterpart-needToDo.html?type=2",
+                    "text": "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;待办",
+                    "submenu": []
+                },
+                {
+                    "icon": "fa-file-text",
+                    "disable": "0",
+                    "id": "cmx-nav-01122",
+                    "url": "/app/f-gover-approval/counterpart/counterpart-haveToDo.html?type=3",
+                    "text": "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;已办",
+                    "submenu": []
+                },
+                {
+                    "icon": "fa-file-text",
+                    "disable": "0",
+                    "id": "cmx-nav-0113",
+                    "url": "/app/f-gover-approval/counterpart/counterpart-haveToDo.html?type=2",
+                    "text": "办结",
+                    "submenu": []
+                }
+            ]
+        },
+        {
+            "icon": "wb-pie-chart",
+            "disable": "1",
+            "id": "cmx-nav-013",
+            "url": "javascript:void(0);",
+            "text": "统计分析",
+            "submenu": []
+        }
+    ]
+}]

@@ -1,0 +1,164 @@
+<html>
+
+<head>
+    <title>国家文物局综合行政管理平台</title>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit">
+    <!-- <script type="text/javascript" src="plug-in/jquery/jquery-1.8.3.js"></script> -->
+    <style type="text/css">
+        body {
+            font-size: 23px;
+            padding-bottom: 0px;
+            text-align: center;
+            padding-top: 0px;
+            padding-left: 0px;
+            margin: 0px;
+            padding-right: 0px;
+            background-color: #F2F0F1;
+        }
+
+        .div1 {
+            vertical-align: middle;
+            padding-bottom: 50px;
+            padding-top: 50px;
+            padding-left: 0px;
+            margin: 20px auto 10px auto;
+            padding-right: 0px;
+            border-radius: 3px;
+            border: solid 2px #62a8ea;
+        }
+
+        .div2 {
+            vertical-align: middle;
+            border: solid 2px #62a8ea;
+            margin: 10px auto 10px auto;
+            padding-left: 0px;
+            padding-right: 0px;
+            border-radius: 3px;
+        }
+
+        ul {
+            padding-bottom: 0px;
+            padding-top: 0px;
+            padding-left: 0px;
+            padding-right: 0px
+        }
+
+        li {
+            padding-left: 10px;
+            display: inline
+        }
+
+        a {
+            color: #e91e63
+        }
+
+        a:hover {
+            text-decoration: none;
+            font-weight: bold
+        }
+
+        .logo {
+            margin: 20px auto 0 auto;
+            width: 360px;
+        }
+
+        .logo img {
+            width: 50px;
+            float: left;
+        }
+
+        .logo p {
+            float: left;
+            margin: 0;
+            line-height: 50px;
+        }
+
+        .clearfix {
+            clear: both;
+            overflow: hidden;
+        }
+    </style>
+
+    <script type="text/javascript">
+        window.onload = function () {
+            var info = browserInfo();
+            // if (info.msie && info.version >= 10) {
+            //     window.location.href = "loginController.do?login";
+            // } else {
+            //     if (!info.msie) {
+            //         window.location.href = "loginController.do?login";
+            //     }
+            // }
+        }
+        // 获取浏览器名称及版本信息 
+        function browserInfo() {
+            var browser = {
+                    msie: false,
+                    firefox: false,
+                    opera: false,
+                    safari: false,
+                    chrome: false,
+                    netscape: false,
+                    appname: 'unknown',
+                    version: 0
+                },
+                userAgent = window.navigator.userAgent.toLowerCase();
+            //alert(userAgent);
+            if (/(msie|firefox|opera|chrome|netscape)\D+(\d[\d.]*)/.test(userAgent)) {
+                browser[RegExp.$1] = true;
+                browser.appname = RegExp.$1;
+                browser.version = RegExp.$2;
+            } else if (/version\D+(\d[\d.]*).*safari/.test(userAgent)) { // safari 
+                browser.safari = true;
+                browser.appname = 'safari';
+                browser.version = RegExp.$2;
+            }
+            return browser;
+        }
+
+        function fo() {
+            $("#imghtml").show();
+        }
+    </script>
+
+</head>
+
+<body style="TEXT-ALIGN: center">
+    <div class="logo">
+        <img src="/images/favicon.png" />
+        <p>国家文物局综合行政管理平台</p>
+        <div class="clearfix"></div>
+    </div>
+    <div class="div1" style="background-color:#ffffff;width:80% ">
+        <br>
+        <br>
+        <b>您所使用浏览器的模式不正确，请使用IE11、360安全浏览器的极速模式、谷歌(Google Chrome)。</b>
+        <br>
+        <p>升级浏览器或切换模式后，
+            <a href="javascript:void(0);" onclick="history.go(-1);">点击重新尝试加载页面</a>
+        </p>
+        <p>或</p>
+        <ul>
+            <li>
+                <a href="http://down.360safe.com/se/360se9.1.0.414.exe">点击下载360安全浏览器（极速模式）</a>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <a herf="##" onclick="fo()" style="color:Black">如何设置360极速模式？☟☟☟
+                    <br>
+                    <span style="font-size:14px;">
+                        步骤：1-点击右上角更多按钮；2-点击进入设置菜单；3-左侧选择高级设置；4-点击内核切换设置；5-增加：ca.sach.gov.cn和gl.sach.gov.cn；6-重新访问官网页面</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div id="imghtml" class="div2" style="background-color:#ffffff;width:80%;margin-bottom:50px;">
+        <img alt="" width="100%" src="/images/360.png">
+    </div>
+    <br>
+    <br>
+</body>
+
+</html>

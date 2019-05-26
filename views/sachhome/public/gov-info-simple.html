@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>政府信息公开</title>
+    <link href="../css/common/ie10-viewport-bug-workaround.css" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="../css/common/bootstrap.min.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--   [if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif] -->
+    <link href="../css/common/common.css" rel="stylesheet">
+    <style>
+        li {
+            list-style: none;
+            height: 28px;
+            font-size: 12px;
+        }
+
+        li a,
+        li span {
+            font-size: 12px;
+            font-family: 宋体;
+            color: rgb(76, 76, 76);
+            text-decoration: none;
+        }
+
+        li a {
+            width: 299px;
+            white-space: nowrap;
+            display: block;
+            overflow: hidden;
+            float: left;
+            margin-top: 0px;
+            padding-right: 25px;
+            margin: 0;
+            text-decoration: none !important;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body class="offical-none">
+    <script src="../js/common/jquery-1.9.1.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../js/common/bootstrap.min.js"></script>
+    <script src="../js/common/ie10-viewport-bug-workaround.js"></script>
+    <!--[if lt IE 9]>
+    <script src="js/PIE_IE678.js"></script>
+  <![endif]-->
+    <div>
+        <ul id="list">
+
+        </ul>
+    </div>
+    <script>
+        //document.domain = 'sach.gov.cn';
+        function gotoUrl(_url) {
+            window.open(_url);
+        }
+        //获得url参数的值 &
+        function GetUrlParamString(name) { // 需要参数的key
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+            var _str = window.location.search.substr(1);
+            _str = _str.replace('?', '&');
+            var r = _str.match(reg); // 判断？后符合正则的部分代码
+            if (r != null) {
+                var myurl = unescape(r[2]); // 第三个元素是我们需要的值
+                if (myurl != null && myurl.toString().length >= 1) // 判断不为空返回该值
+                    return myurl;
+            }
+            return '';
+        }
+
+        $(document).ready(function () {
+            var column = '';
+            if (GetUrlParamString('type') == 'notify') {
+                column = '0700000000';
+            }
+            $.ajax({
+                url: 'http://gl.sach.gov.cn:9090/io/ioGovInfoPublic/queryByConditionWithPageGateway?pagenum=1&pagesize=8&column=' +
+                    column + '&_=1530794480092',
+                success: function (result) {
+                    if (result.state == '200') {
+                        for (var i = 0; i < result.data.dataList.length; i++) {
+                            var description = result.data.dataList[i].infoTitle;
+                            description = description.replace(/(\n)/g, "");
+                            description = description.replace(/(\t)/g, "");
+                            description = description.replace(/(\r)/g, "");
+                            description = description.replace(/<\/?[^>]*>/g, "");
+                            description = description.replace(/\s*/g, "");
+                            description = description.length > 20 ? (description.substr(0, 20) +
+                                '...') : description;
+                            $('#list').append([
+                                '<li>',
+                                '<a href="javascript:gotoUrl(\'http://202.41.241.161/sachhome/details.html?public=gcml&theme=public&id=' +
+                                result.data.dataList[i].infoID + '\')" target="_blank">',
+                                ' · ' + description,
+                                '</a>',
+                                '[' + result.data.dataList[i].displayDate.substr(5, 2) +
+                                '-' + result.data.dataList[i].displayDate.substr(8, 2) +
+                                ']',
+                                '</li>'
+                            ].join(''));
+                        }
+                    }
+                }
+            })
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,9 @@
+#cmx-flag2 {
+    text-align: center;
+}
+
+#cmx-accept-button,
+#cmx-refuse-button {
+    margin: 0 5px;
+    width: 80px;
+}

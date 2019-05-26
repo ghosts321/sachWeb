@@ -1,0 +1,471 @@
+[{
+        "columnname": "cmx-i-1",
+        "columnindex": "cmx-i-1",
+        "serialnumber": "P0001",
+        "type": "separator",
+        "name": "省文件信息",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "title": "省文件信息",
+            "desc": ""
+        },
+        "extra": {
+            "class": "margin-bottom-10 baseinfo",
+            "func": "",
+            "width": 12,
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-2",
+        "columnindex": "cmx-i-2",
+        "serialnumber": "P0002",
+        "type": "special",
+        "name": "省文件号",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": ""
+        },
+        "extra": {
+            "class": "baseinfo",
+            "func": "cmx_special_1",
+            "width": "6",
+            "layout": "",
+            "placeholder": ""
+        }
+    }, {
+        "columnname": "cmx-i-3",
+        "columnindex": "cmx-i-3",
+        "serialnumber": "P0003",
+        "type": "text",
+        "name": "省文件标题",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": "short",
+            "max_length": 200
+        },
+        "extra": {
+            "class": "baseinfo",
+            "func": "",
+            "width": "6",
+            "layout": "",
+            "placeholder": "请输入省局批准文件标题"
+        }
+    },
+    {
+        "columnname": "cmx-i-4",
+        "columnindex": "cmx-i-4",
+        "serialnumber": "P0004",
+        "type": "text",
+        "name": "联系人",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": "short",
+            "max_length": 15
+        },
+        "extra": {
+            "class": "baseinfo",
+            "func": "",
+            "width": "6",
+            "layout": "",
+            "placeholder": "请输入联系人"
+        }
+    },
+    {
+        "columnname": "cmx-i-5",
+        "columnindex": "cmx-i-5",
+        "serialnumber": "P0005",
+        "type": "text",
+        "name": "联系方式",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": "short",
+            "max_length": 20
+        },
+        "extra": {
+            "class": "baseinfo",
+            "func": "",
+            "width": "6",
+            "layout": "",
+            "placeholder": "请输入联系电话"
+        }
+    },
+    {
+        "columnname": "cmx-i-6",
+        "columnindex": "cmx-i-6",
+        "serialnumber": "P0006",
+        "type": "separator",
+        "name": "项目信息",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "title": "项目信息",
+            "desc": ""
+        },
+        "extra": {
+            "class": "baseinfo",
+            "func": "",
+            "width": 12,
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-7",
+        "columnindex": "cmx-i-7",
+        "serialnumber": "P0007",
+        "type": "special",
+        "name": "文物保护单位",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": "short"
+        },
+        "extra": {
+            "class": "format baseinfo",
+            "func": "cmx_special_2",
+            "width": "12",
+            "layout": "",
+            "placeholder": "请填写文保单位，如在名录内请点击右侧选择按钮，不在名录请直接填写，不超过200个汉字"
+        }
+    },
+    {
+        "columnname": "cmx-i-8",
+        "columnindex": "cmx-i-8",
+        "serialnumber": "P0008",
+        "type": "text",
+        "name": "项目名称",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": "short",
+            "max_length": 200
+        },
+        "extra": {
+            "class": "format baseinfo",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": "请填写本申报事项项目名称，不超过200个汉字"
+        }
+    },
+    {
+        "columnname": "cmx-i-9",
+        "columnindex": "cmx-i-9",
+        "serialnumber": "P0009",
+        "type": "special",
+        "name": "设计人(单位)",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "short"
+        },
+        "extra": {
+            "class": "format margin-bottom-10 baseinfo",
+            "func": "cmx_special_4",
+            "width": "12",
+            "layout": "",
+            "placeholder": "设计人（单位），如在名录内请点击右侧选择按钮，不在名录请直接填写"
+        }
+    },
+    {
+        "columnname": "cmx-i-10",
+        "columnindex": "cmx-i-10",
+        "serialnumber": "P0010",
+        "type": "text",
+        "name": "报送单位",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "short",
+            "max_length": 200
+        },
+        "extra": {
+            "class": "format baseinfo",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": "请填写报送单位名称，不超过200个汉字"
+        }
+    }, {
+        "columnname": "cmx-i-11",
+        "columnindex": "cmx-i-11",
+        "serialnumber": "P0011",
+        "type": "text",
+        "name": "其他说明事项",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "long",
+            "max_length": 500
+        },
+        "extra": {
+            "class": "format baseinfo",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": "请填写其他说明事项，不超过500个汉字"
+        }
+    },
+    {
+        "columnname": "cmx-i-12",
+        "columnindex": "cmx-i-12",
+        "serialnumber": "P0012",
+        "type": "separator",
+        "name": "附件信息",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "title": "附件信息",
+            "desc": ""
+        },
+        "extra": {
+            "class": "margin-bottom-10 baseinfo",
+            "func": "appendDownloadAllFile",
+            "width": 12,
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-13",
+        "columnindex": "cmx-i-13",
+        "serialnumber": "P0013",
+        "type": "file",
+        "name": "省文件",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "single": "0"
+        },
+        "extra": {
+            "class": "baseinfo",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    }, {
+        "columnname": "cmx-i-14",
+        "columnindex": "cmx-i-14",
+        "serialnumber": "P0014",
+        "type": "file",
+        "name": "保护规划",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "single": "0"
+        },
+        "extra": {
+            "class": "cmx-border-bottom-split baseinfo",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    }, {
+        "columnname": "cmx-i-15",
+        "columnindex": "cmx-i-15",
+        "serialnumber": "P0015",
+        "type": "file",
+        "name": "技术文件",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "single": "0"
+        },
+        "extra": {
+            "class": "baseinfo",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    }, {
+        "columnname": "cmx-i-16",
+        "columnindex": "cmx-i-16",
+        "serialnumber": "P0016",
+        "type": "file",
+        "name": "考古勘探或发掘报告",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "single": "0"
+        },
+        "extra": {
+            "class": "baseinfo",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    }, {
+        "columnname": "cmx-i-17",
+        "columnindex": "cmx-i-17",
+        "serialnumber": "P0017",
+        "type": "file",
+        "name": "文物影响评估报告",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "single": "0"
+        },
+        "extra": {
+            "class": "baseinfo",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    }, {
+        "columnname": "cmx-i-18",
+        "columnindex": "cmx-i-18",
+        "serialnumber": "P0018",
+        "type": "file",
+        "name": "其他",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "single": "0"
+        },
+        "extra": {
+            "class": "baseinfo",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-19",
+        "columnindex": "cmx-i-19",
+        "serialnumber": "P0019",
+        "type": "expand",
+        "name": "工程概况",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "",
+            "id": "1",
+            "max_length": 2000
+        },
+        "extra": {
+            "class": "margin-bottom-40 cmx-textarea",
+            "func": "addExtra",
+            "width": "12",
+            "layout": "",
+            "placeholder": "请填写工程概况，不超过2000个汉字"
+        }
+    },
+    {
+        "columnname": "cmx-i-20",
+        "columnindex": "cmx-i-20",
+        "serialnumber": "P0020",
+        "type": "expand",
+        "name": "建设的必要性概况",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "",
+            "id": "2",
+            "max_length": 2000
+        },
+        "extra": {
+            "class": "margin-bottom-40 cmx-textarea",
+            "func": "addExtra",
+            "width": "12",
+            "layout": "",
+            "placeholder": "请填写建设的必要性概况，不超过2000个汉字"
+        }
+    },
+    {
+        "columnname": "cmx-i-21",
+        "columnindex": "cmx-i-21",
+        "serialnumber": "P0021",
+        "type": "expand",
+        "name": "编制依据概况",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "",
+            "id": "3",
+            "max_length": 2000
+        },
+        "extra": {
+            "class": "margin-bottom-40 cmx-textarea",
+            "func": "addExtra",
+            "width": "12",
+            "layout": "",
+            "placeholder": "请填写编制依据概况，不超过2000个汉字"
+        }
+    },
+    {
+        "columnname": "cmx-i-22",
+        "columnindex": "cmx-i-22",
+        "serialnumber": "P0022",
+        "type": "expand",
+        "name": "线路选择概况",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "",
+            "id": "4",
+            "max_length": 2000
+        },
+        "extra": {
+            "class": "margin-bottom-40 cmx-textarea",
+            "func": "addExtra",
+            "width": "12",
+            "layout": "",
+            "placeholder": "请填写线路选择概况，不超过2000个汉字"
+        }
+    },
+    {
+        "columnname": "cmx-i-23",
+        "columnindex": "cmx-i-23",
+        "serialnumber": "P0023",
+        "type": "expand",
+        "name": "文物保护技术措施概况",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "",
+            "id": "5",
+            "max_length": 2000
+        },
+        "extra": {
+            "class": "margin-bottom-40 cmx-textarea",
+            "func": "addExtra",
+            "width": "12",
+            "layout": "",
+            "placeholder": "请填写文物保护技术措施概况，不超过2000个汉字"
+        }
+    },
+    {
+        "columnname": "cmx-i-24",
+        "columnindex": "cmx-i-24",
+        "serialnumber": "P0024",
+        "type": "expand",
+        "name": "文物保护应急措施概况",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "",
+            "id": "6",
+            "max_length": 2000
+        },
+        "extra": {
+            "class": "margin-bottom-40 cmx-textarea",
+            "func": "addExtra",
+            "width": "12",
+            "layout": "",
+            "placeholder": "请填写文物保护应急措施概况，不超过2000个汉字"
+        }
+    }
+]

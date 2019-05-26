@@ -1,0 +1,186 @@
+<title>
+    考古发掘计划许可</title>
+
+<link rel="stylesheet" href="/vendor/jstree/jstree.css">
+<link rel="stylesheet" href="/css/app/f-gover-approval/relicList.css">
+<link rel="stylesheet" href="/css/app/f-gover-approval/apply.css">
+<link rel="stylesheet" href="http://api.map.baidu.com/library/DrawingManager/1.4/src/DrawingManager_min.css" />
+<link rel="stylesheet" href="http://api.map.baidu.com/library/SearchInfoWindow/1.4/src/SearchInfoWindow_min.css" />
+<link rel="stylesheet" href="http://api.map.baidu.com/library/DrawingManager/1.4/src/DrawingManager_min.css" />
+<link rel="stylesheet" href="http://api.map.baidu.com/library/SearchInfoWindow/1.4/src/SearchInfoWindow_min.css" />
+
+<script src="/vendor/jstree/jstree.min.js"></script>
+<script src="/vendor/distpicker/distpicker.data.js"></script>
+<script src="/js/app/f-gover-approval/models/public-model.js"></script>
+<script src="/js/app/f-gover-approval/views/public-view.js"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=xlTflcyjcEOTeOVliu3eFSffUaBhH6si"></script>
+<!--加载鼠标绘制工具-->
+<script type="text/javascript" src="http://api.map.baidu.com/library/DrawingManager/1.4/src/DrawingManager_min.js"></script>
+<!--加载检索信息窗口-->
+<script type="text/javascript" src="http://api.map.baidu.com/library/SearchInfoWindow/1.4/src/SearchInfoWindow_min.js"></script>
+<script src="/js/app/f-gover-approval/56008/56008-b-apply.js"></script>
+<script src="http://api.map.baidu.com/api?v=2.0&ak=dlopFoACREQ4swqH2x3gxXE9wGv5hIwD"></script>
+
+<style type="text/css">
+    body,
+    html {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        font-family: "微软雅黑";
+    }
+    
+    #map {
+        width: 100%;
+        height: 500px;
+        overflow: hidden;
+    }
+    
+    #result {
+        width: 100%;
+        font-size: 12px;
+    }
+    
+    dl,
+    dt,
+    dd,
+    ul,
+    li {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    
+    dt {
+        font-size: 14px;
+        font-family: "微软雅黑";
+        font-weight: bold;
+        border-bottom: 1px dotted #000;
+        padding: 5px 0 5px 5px;
+        margin: 5px 0;
+    }
+    
+    dd {
+        padding: 5px 0 0 5px;
+    }
+    
+    li {
+        line-height: 28px;
+    }
+    
+    .cmx-map label {
+        width: 12%;
+    }
+    /* .shenpi label {
+        width: 12%;
+    } */
+    
+    .format label {
+        width: 12%;
+    }
+    
+    [data-plugin='datepicker'] {
+        height: 30px !important;
+    }
+    
+    #cmx-special-P0036 {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    
+    #cmx-person-list-tbody td {
+        margin: 0;
+    }
+    
+    #cmx-person-list-tbody td input {
+        border: none;
+        padding: 0;
+    }
+
+    .shenpi label {
+        width: 12%;
+    }
+
+    .format label {
+        width: 13%;
+    }
+
+    .radio-content label {
+        width: auto;
+    }
+</style>
+
+<div class="page animation-fade" style="background-color:#fff;">
+    <div class="cmx-header">
+        <div class="padding-top-10 padding-bottom-10 padding-left-20">
+            <span class="cmx-header-title hidden-md hidden-sm hidden-xs">
+                考古发掘计划一般事项-填报
+            </span>
+            <div class="cmx-button padding-right-0">
+                <button class="btn btn-primary" style="margin-right:10px;" id="cmx-button-save">保存</button>
+                <button class="btn btn-primary" style="margin-right:10px;" id="cmx-button-send">发送</button>
+                <button class="btn btn-primary" style="margin-right:10px;" id="cmx-qingmaojun-back">返回</button>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <!--  侧边栏 -->
+    <!-- <div class="page-aside">
+        <div class="page-header">
+        </div>
+        <div class="page-aside-switch">
+            <i class="icon wb-chevron-left" aria-hidden="true"></i>
+            <i class="icon wb-chevron-right" aria-hidden="true"></i>
+        </div>
+        <div class="page-aside-inner height-full margin-top-20">
+            <div class="left">
+                <div id="cmx-menu"></div>
+            </div>
+        </div>
+    </div> -->
+    <!-- 内容-->
+    <div class="page-main page-aside-inner">
+        <div class="page-content" style="color:#76838f;">
+            <div class="panel margin-top-50" id="cmx-edit" style="overflow: scroll;">
+                <div class="panel-body container-fluid">
+                    <div>
+                        <span style="font-size:16px;">填表说明</span>
+                        <button class="btn btn-md btn-primary pull-right" id="cmx-hide-shuoming">收起</button>
+                        <button class="btn btn-md btn-primary pull-right" style="display:none;" id="cmx-show-shuoming">展开</button>
+                        <div class="clearfix"></div>
+                        <ul id="cmx-shuoming">
+                            <li>1、本申请书只申报当年项目，完成发掘工作的期限可作跨年度计划，但必须每年履行报批手续。
+                            </li>
+                            <li>2、时代栏应选择大体的时代（旧石器、新石器、夏商周、春秋战国、秦汉、魏晋南北朝、隋唐五代、宋辽金元、明清、近现代、其他），再说明具体年代或考古学文化。</li>
+                            <li>3、文物保护单位级别栏只选择级别：全国重点；省、自治区、直辖市级；市县级。
+                            </li>
+                            <li>4、连续性发掘项目，必须填写年度发掘报告的完成情况。
+                            </li>
+                            <li>5、发掘目的栏，如为解决学术课题的主动发掘，应填写课题名称、立项机构和学术意义;配合建设工程的发掘应填写建设工程的名称和文物行政管理部门的批准文号。
+                            </li>
+                            <li>6、发掘地点在遗址的位置应附图说明。涉及全国重点文物保护单位和省级文物保护单位的发掘项目，应提交保护规划图和遗址实测图，并在图中标明发掘位置。
+                            </li>
+                            <li>7、经费来源和数额仅供审批时参考，不作申请补助经费的依据。
+                            </li>
+                            <li>8、对于大型古遗址、古墓葬的发掘申请，需要同时附有专项报告和发掘计划。
+                            </li>
+                            <li>9、前面加“*”号为必填项。
+                            </li>
+                            <li>10、涉及全国重点文物保护单位和省级文物保护单位的发掘项目，应由省级文物管理部门向国家文物局正式行文，说明发掘目的和后期保护思路。
+                            </li>
+                            <li>11、基本建设工程中涉及市（县）级文物保护单位的发掘项目，应将建设项目选址意见书、规划立项批复或其他审批文件扫描后，添加在附图中；市县级文物保护单位的抢救性发掘，应附相应级别人民政府或文物部门向省级文物部门的请示文件。
+                            </li>
+                        </ul>
+                    </div>
+                    <hr>
+                    <div id="cmx-form">
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="cmx-modalDiv"></div>
+    <div id="cmx-mainunit-modal"></div>
+</div>

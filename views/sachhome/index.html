@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+	<title>门户首页</title>
+	<link href="css/common/ie10-viewport-bug-workaround.css" rel="stylesheet">
+	<!-- Bootstrap -->
+	<link href="css/common/bootstrap.min.css" rel="stylesheet">
+	<link href="css/common/pageSwitch.min.css" rel="stylesheet">
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+			<script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+			<script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	<link href="css/common/common.css" rel="stylesheet">
+	<link href="css/index.css" rel="stylesheet">
+	<style>
+		.onlyoffical {
+		  display: none;
+		}
+	
+		.offical .onlyoffical {
+		  display: block;
+	
+		}
+	
+		.offical .offical-header {
+		  position: fixed;
+		  top: 0;
+		  width: 100%;
+		  background: #fff;
+		  z-index: 999;
+		}
+	
+		.offical .offical-header>div {
+		  background: url(http://www.sach.gov.cn/picture/0/1406241603206447246.jpg) top repeat-x;
+		  padding-left: 4%;
+		}
+	
+		.offical .navbar-fixed-top {
+		  top: 110px;
+		}
+	
+		.offical .container.management {
+		  margin-top: 130px;
+		}
+	
+		.offical .container.bsdt {
+		  margin-top: 110px;
+		}
+	
+	  </style>
+	</head>
+	
+	<body class="offical-none">
+	  <div class="onlyoffical offical-header">
+		<div>
+		  <img src="http://www.sach.gov.cn/picture/5/1405101522359844623.png" />
+		</div>
+	  </div>
+	<!-- 头部 start -->
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+				    aria-controls="navbar">
+					<span class="sr-only">切换导航</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="./index.html">
+					<img class="custom-logo" src="img/custom-logo.png" />
+					<span class="adapt-webtitle visible-lg">国家文物局
+						<br>综合行政管理平台</span>
+				</a>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav custom-navbar">
+					<li class="active">
+						<a href="index.html">首页</a>
+					</li>
+					<li>
+						<a href="approval/admin-approval-manage.html">行政审批管理</a>
+					</li>
+					<li>
+						<a href="public/gov-info-open.html">政府信息公开</a>
+					</li>
+					<li>
+						<a href="industry/integrated-manage.html">行业综合管理</a>
+					</li>
+					<li>
+						<a href="service/public-info-service.html">公共信息服务</a>
+					</li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right custom-navbar-right">
+					<li class="user-info">
+						<img src="img/login.png" alt="">
+						<span class="login-2">登录</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<!-- 头部 end -->
+
+	<!-- 左侧侧边栏 start -->
+	<div class="left-bar hidden-xs">
+		<div>
+			<a href="" class="leftlink">
+
+			</a>
+		</div>
+		<div>
+			<a href="administrative-approval.html">
+
+			</a>
+		</div>
+		<div>
+			<a href="policy-and-regulations.html">
+
+			</a>
+		</div>
+		<div>
+			<a href="download.html">
+
+			</a>
+		</div>
+	</div>
+	<!-- 左侧侧边栏 end -->
+
+	<!-- 右侧侧边栏 start -->
+	<div class="right-bar hidden-xs">
+		<div>
+			<a href="" class="rightlink">
+
+			</a>
+		</div>
+		<div>
+			<a href="complaint-box.html">
+
+			</a>
+		</div>
+	</div>
+	<!-- 右侧侧边栏 end -->
+
+	<div id="content-height">
+		<!-- 国家文物局在线办事大厅 start -->
+		<div class="container bsdt">
+			<div class="business-hall">
+				<h4>
+					<i></i>行政审批管理</h4>
+			</div>
+
+			<div class="tal">
+				<div class="container business-hall-links">
+					<div class="row">
+						<a href="" class="on">不可移动文物保护行政管理
+							<i></i>
+						</a>
+						<a href="">考古发掘管理
+							<i></i>
+						</a>
+						<a href="">博物馆和可移动文物综合管理
+							<i></i>
+						</a>
+						<a href="">文物安全防护
+							<i></i>
+						</a>
+						<a href="">文物进出境审核管理
+							<i></i>
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="header clearfix">
+				<div class="col-md-1 visible-md"></div>
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 bs-l table-responsive">
+					<table class="table tab-l table-condensed">
+						<tr class="row">
+							<td class="col-lg-4 col-md-4 col-xs-4 hov" data-id="0">
+								<a href="approval/admin-approval-manage.html?col=0&num=0">
+									<p class="title">全国重点文物保护单位原址保护措施审批</p>
+								</a>
+							</td>
+							<td class="col-lg-4 col-md-4 col-xs-4 hov" data-id="1">
+								<a href="approval/admin-approval-manage.html?col=0&num=1">
+									<p class="title">省级和全国重点文物保护单位保护范围内其他建设工程或者爆破、钻探、挖掘等作业审批</p>
+								</a>
+							</td>
+							<td class="col-lg-4 col-md-4 col-xs-4 hov" data-id="2">
+								<a href="approval/admin-approval-manage.html?col=0&num=2">
+									<p class="title">省级文物保护单位的迁移或拆除审批</p>
+								</a>
+							</td>
+						</tr>
+						<tr class="row">
+							<td class="col-lg-4 col-md-4 col-xs-4 hov" data-id="3">
+								<a href="approval/admin-approval-manage.html?col=0&num=3">
+									<p class="title">文物保护工程（勘察设计甲级、施工一级、监理甲级）资质审批</p>
+								</a>
+							</td>
+							<td class="col-lg-4 col-md-4 col-xs-4 hov" data-id="4">
+								<a href="approval/admin-approval-manage.html?col=0&num=4">
+									<p class="title">全国重点文物保护单位建设控制地带内建设工程设计方案审批</p>
+								</a>
+							</td>
+							<td class="col-lg-4 col-md-4 col-xs-4 hov" data-id="5">
+								<a href="approval/admin-approval-manage.html?col=0&num=5">
+									<p class="title">全国重点文物保护单位修缮审批</p>
+								</a>
+							</td>
+						</tr>
+					</table>
+
+
+					<table class="table tab-l table-condensed">
+						<tr class="row">
+							<td class="col-lg-4 col-md-4 col-xs-4 hov" data-id="0">
+								<a href="approval/admin-approval-manage.html?col=1&num=0">
+									<p class="title">外国人或者外国团体在中国境内考古调查、勘探、发掘许可</p>
+								</a>
+							</td>
+							<td class="col-lg-4 col-md-4 col-xs-4 hov" data-id="1">
+								<a href="approval/admin-approval-manage.html?col=1&num=1">
+									<p class="title">考古发掘资质许可</p>
+								</a>
+							</td>
+							<td class="col-lg-4 col-md-4 col-xs-4 hov" data-id="2">
+								<a href="approval/admin-approval-manage.html?col=1&num=2">
+									<p class="title">考古发掘计划许可</p>
+								</a>
+							</td>
+						</tr>
+						<tr class="row">
+							<td class="col-lg-4 col-md-4 col-xs-4 hov" data-id="3">
+								<a href="approval/admin-approval-manage.html?col=1&num=3">
+									<p class="title">水下文物的考古勘探和发掘活动许可</p>
+								</a>
+							</td>
+							<td class="col-lg-4 col-md-4 col-xs-4 hov" data-id="4">
+								<a href="approval/admin-approval-manage.html?col=1&num=4">
+									<p class="title">国际合作考古调查、勘探、发掘的文物或自然标本送到境外进行分析化验或技术鉴定许可</p>
+								</a>
+							</td>
+							<td class="col-lg-4 col-md-4 col-xs-4"></td>
+						</tr>
+					</table>
+
+
+					<table class="table tab-l table-condensed">
+						<tr class="row">
+							<td class="col-lg-4 col-md-4 col-xs-4 hov" data-id="0">
+								<a href="approval/admin-approval-manage.html?col=2&num=0">
+									<p class="title">馆藏一级文物的修复、复制、拓印许可</p>
+								</a>
+							</td>
+							<td class="col-lg-4 col-md-4 col-xs-4 hov" data-id="1">
+								<a href="approval/admin-approval-manage.html?col=2&num=1">
+									<p class="title">文物出境展览许可</p>
+								</a>
+							</td>
+							<td class="col-lg-4 col-md-4 col-xs-4 hov" data-id="2">
+								<a href="approval/admin-approval-manage.html?col=2&num=2">
+									<p class="title">博物馆一级藏品取样分析许可</p>
+								</a>
+							</td>
+						</tr>
+						<tr class="row">
+							<td class="col-lg-4 col-md-4 col-sm-4 col-xs-4 hov" data-id="3">
+								<a href="approval/admin-approval-manage.html?col=2&num=3">
+									<p class="title">非国有文物收藏单位和其他单位借用国有馆藏一级文物许可</p>
+								</a>
+							</td>
+							<td class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+
+							</td>
+							<td class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+
+							</td>
+						</tr>
+					</table>
+
+
+					<table class="table tab-l table-condensed">
+						<tr class="row">
+							<td class="col-lg-4 col-md-4 col-xs-4 hov" data-id="0">
+								<a href="approval/admin-approval-manage.html?col=3&num=0">
+									<p class="title">全国重点文物保护单位安全防护工程项目审批</p>
+								</a>
+							</td>
+							<td class="col-lg-4 col-md-4 col-xs-4">
+
+							</td>
+							<td class="col-lg-4 col-md-4 col-xs-4">
+
+							</td>
+						</tr>
+					</table>
+
+
+					<table class="table tab-l table-condensed">
+						<tr class="row">
+							<td class="col-lg-4 col-md-4 col-xs-4 hov" data-id="0">
+								<a href="approval/admin-approval-manage.html?col=4&num=0">
+									<p class="title">文物出境许可</p>
+								</a>
+							</td>
+							<td class="col-lg-4 col-md-4 col-xs-4 hov" data-id="1">
+								<a href="approval/admin-approval-manage.html?col=4&num=1">
+									<p class="title">文物临时进境复出境</p>
+								</a>
+							</td>
+							<td class="col-lg-4 col-md-4 col-xs-4 hov" data-id="2">
+								<a href="approval/admin-approval-manage.html?col=4&num=2">
+									<p class="title">文物临时出境复进境</p>
+								</a>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+		<!-- 国家文物局在线办事大厅 end -->
+
+		<!-- 政府信息公开 start -->
+		<div class="container infomation-open">
+			<h4>
+				<i></i>政府信息公开</h4>
+		</div>
+
+		<div class="infomation-card">
+			<div class="container">
+				<div class="col-lg-10 col-lg-offset-1 clearfix">
+					<div class="col-xs-6 col-sm-4 col-md-2 col-lg-2 infomation-card-item">
+						<a href="public/gov-public-guide.html">
+							<img src="img/img-2-1.png" alt="">
+							<span>政府信息公开指南</span>
+						</a>
+						<strong class="hidden-xs"></strong>
+					</div>
+					<div class="col-xs-6 col-sm-4 col-md-2 col-lg-2 infomation-card-item">
+						<a href="policy-and-regulations.html">
+							<img src="img/img-2-2.png" alt="">
+							<span>政策法规库</span>
+						</a>
+						<strong class="hidden-xs"></strong>
+					</div>
+					<div class="col-xs-6 col-sm-4 col-md-2 col-lg-2 infomation-card-item">
+						<a href="public/gov-info-open.html">
+							<img src="img/img-2-3.png" alt="">
+							<span>政府信息公开目录</span>
+						</a>
+						<strong class="hidden-xs visible-lg"></strong>
+					</div>
+					<div class="col-xs-6 col-sm-4 col-md-2 col-lg-2 infomation-card-item">
+						<a href="public/public-application.html">
+							<img src="img/img-2-4.png" alt="">
+							<span>政府信息依申请公开</span>
+						</a>
+						<strong class="hidden-xs"></strong>
+					</div>
+					<div class="col-xs-6 col-sm-4 col-md-2 col-lg-2 infomation-card-item">
+						<a href="approval/admin-approval-manage.html">
+							<img src="img/img-2-5.png" alt="">
+							<span>行政审批公开</span>
+						</a>
+						<strong class="hidden-xs"></strong>
+					</div>
+					<div class="col-xs-6 col-sm-4 col-md-2 col-lg-2 infomation-card-item">
+						<a href="public/statistics.html?column=0300000000">
+							<img src="img/img-2-6.png" alt="">
+							<span>信息公开年报</span>
+						</a>
+					</div>
+				</div>
+				<a href="public/gov-info-open.html" class="more">更
+					<i>多</i>
+				</a>
+			</div>
+		</div>
+		<!-- 政府信息公开 end -->
+
+		<!-- 行业综合管理 start -->
+		<div class="container comprehensive-manage">
+			<h4>
+				<i></i>行业综合管理</h4>
+			<div class="comprehensive-manage-tab nav row">
+				<div class="comprehensive-manage-left col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<p id="management">
+						<!-- <span class="on">行业监督</span><span>政策法规</span><span>行业标准</span>
+				<a href="more-normal.html" class="more">更多</a> -->
+						<!-- <span class="on" data-index="0101000000">双随机—公开执法检查事项清单</span><span data-index="0102000000">双随机—公开检查主体名录库</span><span data-index="0103000000">双随机—公开检查结果公开机制</span><a href="more-normal.html" class="more">更多</a> -->
+					</p>
+					<!-- <div class="table-responsive">          -->
+					<table class="table table-hover comprehensive-manage-table table-condensed">
+						<thead>
+							<tr class="manage-color row">
+								<th class="text-center col-lg-2">序号</th>
+								<th class="text-center col-lg-7">名称</th>
+								<th class="text-center col-lg-3">发布日期</th>
+							</tr>
+						</thead>
+						<tbody id="management-table">
+							<tr class="row" onclick="self.location='gov-public-guide.html'">
+								<td class="col-lg-2"></td>
+								<td class="col-lg-7"></td>
+								<td class="col-lg-3"></td>
+							</tr>
+							<!--               <tr class="row" onclick="self.location='gov-public-guide.html'">
+									<td class="col-lg-2"></td>
+									<td class="col-lg-7"></td>
+									<td class="col-lg-3"></td>
+								</tr>
+								<tr class="row" onclick="self.location='gov-public-guide.html'">
+									<td class="col-lg-2"></td>
+									<td class="col-lg-7"></td>
+									<td class="col-lg-3"></td>
+								</tr>
+								<tr class="row" onclick="self.location='gov-public-guide.html'">
+									<td class="col-lg-2"></td>
+									<td class="col-lg-7"></td>
+									<td class="col-lg-3"></td>
+								</tr>
+								<tr class="row" onclick="self.location='gov-public-guide.html'">
+									<td class="col-lg-2"></td>
+									<td class="col-lg-7"></td>
+									<td class="col-lg-3"></td>
+								</tr> -->
+						</tbody>
+					</table>
+					<!-- </div> -->
+				</div>
+				<!--       <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 comprehensive-manage-right">
+					<a target="_blank" href="collection-of-cultural-relics.html"><img src="img/gcwwml.png" alt=""></a>
+				</div> -->
+			</div>
+		</div>
+		<!-- 行业综合管理 end -->
+
+		<!-- 公共信息服务 start -->
+		<div class="category">
+			<div class="container">
+				<h4 class="first-title" data-classid="0100000000">
+					<i class="dot dot-1"></i>资源信息
+				</h4>
+				<div class="second-bg">
+					<div class="second-title">
+						
+					</div>
+				</div>
+				<div class="third-bg">
+					<div class="container">
+						<div class="row clearfix third-title">
+	
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 公共信息服务 end -->
+	</div>
+
+	<!-- 底部 start -->
+	<div class="footer" style="margin-top: 40px;">
+		<div class="container footer-content">
+			<div class="row">
+				<p>
+					<a href="website-statement.html">网站声明</a>
+					<a href="website-statement.html">联系我们</a>
+				</p>
+				<i></i>
+			</div>
+			<b>Copyright © 2017 国家文物局版权所有</b>
+		</div>
+	</div>
+	<!-- 底部 end -->
+
+	<!-- 首页通知公告 start -->
+	<!-- <div class="announcement" style="padding:10px;">
+		<p class="msg-title" id="msgTitle" style="background-color:transparent;">
+			<span>平台升级通知</span>
+		</p>
+		<p class="msg-cont" id="msgCont" style="text-indent:0em;margin-bottom:20px;">国家文物局综合行政管理平台用户：
+			<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;国家文物局综合行政管理平台拟定于2018年7月4日22点整进行系统升级，升级持续时间约2小时。在此期间，平台将不能为您提供服务，为此带来的不便敬请谅解！
+			<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本次升级内容涉及：修复转发文BUG、修复文物进出境功能、优化工作台功能、界面优化等。
+		</p>
+		<p style="text-align:right;">国家文物局综合行政管理平台项目组</p>
+		<p style="text-align:right;">2018年7月4日</p>
+		<span class="ad" id="ad">&times;</span>
+	</div> -->
+
+	  <!-- <div class="announcement">
+		<p class="msg-title" id="msgTitle"><span></span></p>
+		<div class="msg-cont" id="msgCont"></div>
+		<p class="msg-cont" style="text-align: right;margin-right: 10px;"></p>
+		<span class="display-date"><i id="publishDate"></i></span>
+		<span class="ad" id="ad">&times;</span>
+	</div> -->
+	<!-- 首页通知公告 end -->
+
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="js/common/jquery-1.9.1.min.js"></script>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="js/common/bootstrap.min.js"></script>
+	<script src="js/common/ie10-viewport-bug-workaround.js"></script>
+	<script src="js/common/pageSwitch.min.js"></script>
+	<script src="js/common/main.js"></script>
+	<script src="js/common/common.js"></script>
+	<script src="js/index.js"></script>
+
+	<!-- 模板 start -->
+	<script id="tManagement" type="text/template">
+		<tr class="row text-center">
+			<td class="col-lg-2">$i$</td>
+			<td class="col-lg-7 text-justify justify" title="$infoTitle$">
+				<a href="details.html?industry=double&id=$infoId$" target="_blank">$infoTitle$</a>
+			</td>
+			<td class="col-lg-3">$displayDate$</td>
+		</tr>
+	</script>
+	<!-- 模板 end -->
+
+</body>
+</html>

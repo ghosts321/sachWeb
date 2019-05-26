@@ -1,0 +1,337 @@
+[
+   
+    {
+        "columnname": "cmx-i-2",
+        "columnindex": "cmx-1-CarryUser",
+        "serialnumber": "P0002",
+        "type": "text",
+        "name": "携运人:",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "short",
+            "max_length": 40
+        },
+        "extra": {
+            "class": "margin-bottom-40",
+            "func": "",
+            "width": "6",
+            "layout": "",
+            "placeholder": "",
+            "readonly":"disabled"
+        }
+    },
+    {
+        "columnname": "cmx-i-3",
+        "columnindex": "cmx-1-Nationality",
+        "serialnumber": "P0003",
+        "type": "text",
+        "name": "国籍:",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "short"
+        },
+        "extra": {
+            "class": "margin-bottom-40",
+            "func": "",
+            "width": "6",
+            "layout": "",
+            "placeholder": "",
+            "readonly":"disabled"
+        }
+    },
+    {
+        "columnname": "cmx-i-7",
+        "columnindex": "cmx-1-IDCardType",
+        "serialnumber": "P0007",
+        "type": "text",
+        "name": "证件类型:",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "short"
+        },
+        "extra": {
+            "class": "margin-bottom-40",
+            "func": "",
+            "width": "6",
+            "layout": "",
+            "placeholder": "",
+            "readonly":"disabled"
+        }
+    },
+    {
+        "columnname": "cmx-i-6",
+        "columnindex": "cmx-1-TelNO",
+        "serialnumber": "P0006",
+        "type": "text",
+        "name": "电话:",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "short"
+        },
+        "extra": {
+            "class": "margin-bottom-40",
+            "func": "",
+            "width": 6,
+            "layout": "",
+            "placeholder": "",
+            "readonly":"disabled"
+        }
+    },
+    {
+        "columnname": "cmx-i-8",
+        "columnindex": "cmx-1-IDNumber",
+        "serialnumber": "P0008",
+        "type": "text",
+        "name": "证件号码:",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "short",
+            "max_length": 20
+        },
+        "extra": {
+            "class": "margin-bottom-40",
+            "func": "",
+            "width": "6",
+            "layout": "",
+            "placeholder": "",
+            "readonly":"disabled"
+        }
+    },
+    {
+        "columnname": "cmx-i-10",
+        "columnindex": "cmx-1-Address",
+        "serialnumber": "P0010",
+        "type": "text",
+        "name": "住所:",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "long",
+            "max_length": 200
+        },
+        "extra": {
+            "class": "margin-bottom-40",
+            "func": "",
+            "width": "6",
+            "layout": "",
+            "placeholder": "",
+            "readonly":"disabled"
+        }
+    },
+    {
+        "columnname": "cmx-z-1",
+        "columnindex": "cmx-z-name",
+        "serialnumber": "P0002name",
+        "type": "text",
+        "name": "展览名称:",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "short",
+            "max_length": 50
+        },
+        "extra": {
+            "class": "margin-bottom-40",
+            "func": "",
+            "width": "6",
+            "layout": "",
+            "placeholder": "",
+            "readonly":"disabled"
+        }
+    },
+    {
+        "columnname": "cmx-z-3",
+        "columnindex": "cmx-z-startTime",
+        "serialnumber": "P0002startTime",
+        "type": "text",
+        "name": "展览时间:(起)",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "short"
+        },
+        "extra": {
+            "class": "margin-bottom-40",
+            "func": "",
+            "width": "6",
+            "layout": "",
+            "placeholder": "",
+            "readonly":"disabled"
+        }
+    },
+    {
+        "columnname": "cmx-z-4",
+        "columnindex": "cmx-z-endTime",
+        "serialnumber": "P0002endTime",
+        "type": "text",
+        "name": "展览时间:(止)",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "short"
+          
+        },
+        "extra": {
+            "class": "margin-bottom-40",
+            "func": "",
+            "width": "6",
+            "layout": "",
+            "placeholder": "",
+            "readonly":"disabled"
+        }
+    },
+    {
+        "columnname": "cmx-z-2",
+        "columnindex": "cmx-z-unit",
+        "serialnumber": "P0002unit",
+        "type": "text",
+        "name": "申报单位:",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "short",
+            "max_length": 400
+        },
+        "extra": {
+            "class": "margin-bottom-40",
+            "func": "",
+            "width": "6",
+            "layout": "",
+            "placeholder": "",
+            "readonly":"disabled"
+        }
+    },
+    {
+        "columnname": "cmx-z-5",
+        "columnindex": "cmx-z-director",
+        "serialnumber": "P0002director",
+        "type": "text",
+        "name": "负责人:",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "short",
+            "max_length": 100
+        },
+        "extra": {
+            "class": "margin-bottom-40",
+            "func": "",
+            "width": "6",
+            "layout": "",
+            "placeholder": "",
+            "readonly":"disabled"
+        }
+    },
+    {
+        "columnname": "cmx-z-6",
+        "columnindex": "cmx-z-competentUnit",
+        "serialnumber": "P0002competentUnit",
+        "type": "text",
+        "name": "主管单位:",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "short",
+            "max_length": 100
+        },
+        "extra": {
+            "class": "margin-bottom-40",
+            "func": "",
+            "width": "6",
+            "layout": "",
+            "placeholder": "",
+            "readonly":"disabled"
+        }
+    },
+   
+    {
+        "columnname": "cmx-z-7",
+        "columnindex": "cmx-z-externalInstitution",
+        "serialnumber": "P0002externalInstitution",
+        "type": "text",
+        "name": "境外机构:",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "short",
+            "max_length": 100
+        },
+        "extra": {
+            "class": "margin-bottom-40",
+            "func": "",
+            "width": "6",
+            "layout": "",
+            "placeholder": "",
+            "readonly":"disabled"
+        }
+    },
+   
+    {
+        "columnname": "cmx-z-8",
+        "columnindex": "cmx-z-organizer",
+        "serialnumber": "P0002organizer",
+        "type": "text",
+        "name": "承办单位:",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "short",
+            "max_length": 100
+        },
+        "extra": {
+            "class": "margin-bottom-40",
+            "func": "",
+            "width": "6",
+            "layout": "",
+            "placeholder": "",
+            "readonly":"disabled"
+        }
+    },
+    {
+        "columnname": "cmx-z-10",
+        "columnindex": "cmx-z-exhibitionVenue",
+        "serialnumber": "P0002exhibitionVenue",
+        "type": "text",
+        "name": "展览地点:",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "short",
+            "max_length": 100
+        },
+        "extra": {
+            "class": "margin-bottom-40",
+            "func": "",
+            "width": "6",
+            "layout": "",
+            "placeholder": "",
+            "readonly":"disabled"
+        }
+    },
+    {
+        "columnname": "cmx-i-11",
+        "columnindex": "cmx-1-turnDate",
+        "serialnumber": "P0011",
+        "type": "text",
+        "name": "进境时间:",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "short",
+            "max_length": 200
+        },
+        "extra": {
+            "class": "margin-bottom-40",
+            "func": "",
+            "width": "6",
+            "layout": "",
+            "placeholder": "",
+            "readonly":"disabled"
+        }
+    }
+]

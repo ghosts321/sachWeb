@@ -1,0 +1,70 @@
+<div class="modal fade in" id="cmx-depart-identify" aria-hidden="true" aria-labelledby="identify" role="dialog" tabindex="-1">
+    <div class="modal-dialog modal-center" style="width:85%;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span>文物鉴定</span>
+                <button class="pull-right close" data-dismiss="modal" aria-label="关闭">关闭</button>
+                <div class="clearfix"></div>
+            </div>
+            <div class="modal-body row">
+                <div class="col-md-12 col-lg-12" id="cmx-identify-data"></div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" style="margin-right:10px;">保存</button>
+                <button type="button" class="btn btn-default cmx-cancle-btn" data-dismiss="modal" style="margin-right:10px;">取消</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+$(document).ready(function () {
+    $.ajax({
+        url: getDepartIdentifyData,
+        type: "GET",
+        async: false,
+        success: function (result) {
+                var data = result;
+                for (var i = 0; i < data.length; i++) {
+                    var type = data[i].type;
+                    var width = data[i].extra.width;
+                    var notnull = (data[i].attribute.notnull == 1) ? true : false;
+                    var attrstring = 'cmx-tag="cmx" cmx-lib="' + data[i].serialnumber + '" cmx-index="' + data[i].columnindex +
+                        '" cmx-column="' + data[i].columnname + '" cmx-type="' + data[i].type + '" cmx-require="' +
+                        notnull + '"';
+                    if (data[i].extra.width == "") {
+                        width = 12;
+                    }
+                    if (type == 'text' || type == 'single' || type == 'extra') {
+                        attrstring = attrstring + 'cmx-stype="' + data[i].attribute.stype + '"';
+                    }
+                    new cmx.process()
+                        .turn('automated-form-' + type, {
+                            "element": "#cmx-identify-data",
+                            "data": data[i],
+                            "width": width,
+                            "notnull": notnull,
+                            "attrstring": attrstring
+                        })
+                        .ccatch(function (msg) {
+                            console.log('异常终止了 ' + msg);
+                        })
+                        .cfinally(function () {
+                            try {
+                                eval(data[i].extra.func + '(' + JSON.stringify(data[i]) + ')');
+                            } catch (exception) {
+                                console.log(exception)
+                            }
+                        }).start();
+                }
+            //  send.toviewresolve(result.data).go();  
+        },
+        error: function (result) {
+            // showAlert({type:'error',content:'网络连接失败，请确认网络连接'});
+        },
+        complete: function (result) {
+            
+        }
+    });
+});
+
+</script>

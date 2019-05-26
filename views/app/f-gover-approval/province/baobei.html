@@ -1,0 +1,127 @@
+<!-- 文书室处理 -->
+<title>办理信息</title>
+
+<link rel="stylesheet" href="/vendor/jstree/jstree.css">
+<link rel="stylesheet" href="/css/app/f-gover-approval/processing-information.css">
+<link rel="stylesheet" href="/vendor/bootstrap-select/bootstrap-select.css">
+<script src="/vendor/jstree/jstree.min.js"></script>
+<script src="/vendor/bootstrap-select/bootstrap-select.min.js"></script>
+
+<script src="/js/app/f-gover-approval/models/public-model.js"></script>
+<script src="/js/app/f-gover-approval/views/public-view.js"></script>
+
+<script src="/js/app/f-gover-approval/province/models/model.js"></script>
+<script src="/js/app/f-gover-approval/province/views/view.js"></script>
+<script src="/js/app/f-gover-approval/province/baobei.js"></script>
+
+<div class="page animation-fade" style="background-color:#fff;">
+    <div class="cmx-header">
+        <div class="padding-top-10 padding-bottom-10 padding-left-20">
+            <span class="cmx-header-title hidden-md hidden-sm hidden-xs">
+                申请事项名称
+            </span>
+            <div class="cmx-button padding-right-0">
+                <!-- <button class="btn btn-primary" id="cmx-button-save" style="margin-right:10px;">保存</button> -->
+                <button class="btn btn-primary" id="cmx-button-return" style="margin-right:10px;">返回</button>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <!-- 内容-->
+    <div class="page-main margin-top-50">
+        <div class="page-content" style="color:#76838f;">
+            <div class="example-wrap">
+                <div class="nav-tabs-horizontal">
+                    <ul class="nav nav-tabs nav-tabs-line" role="tablist">
+                        <li class="active" role="presentation">
+                            <a data-toggle="tab" href="#processTabOne" aria-controls="processTabOne" role="tab" aria-expanded="true">
+                                办理信息
+                            </a>
+                        </li>
+                        <li role="presentation" class="">
+                            <a data-toggle="tab" href="#processTabTwo" aria-controls="processTabTwo" role="tab" aria-expanded="false">
+                                原收文
+                            </a>
+                        </li>
+                        <li role="presentation" class="">
+                            <a data-toggle="tab" href="#processTabThree" aria-controls="processTabThree" role="tab" aria-expanded="false">
+                                流程跟踪
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="processTabOne" role="tabpanel">
+                            <div id="cmx-processing">
+                                <div class="panel-body container-fluid">
+                                    <!-- table -->
+                                    <div class="example table-responsive">
+                                        <table class="table table-bordered">
+                                            <tbody class="table-matter">
+                                                <tr>
+                                                    <td class="backg text-center">审批事项</td>
+                                                    <td colspan="3" id="cmx-approvalitemname"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="backg text-center">文件号</td>
+                                                    <td id="cmx-profilenum"></td>
+                                                    <td class="backg text-center">文件标题</td>
+                                                    <td id="cmx-profiletitle"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="backg text-center">文保单位</td>
+                                                    <td id="cmx-protectunit"></td>
+                                                    <td class="backg text-center">类型</td>
+                                                    <td id="cmx-publishtypename"></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="form-group text-center">
+                                        <button id="cmx-confirm-baobei" type="button" class="btn btn-lg btn-raised btn-primary active">确认进行报备
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="processTabTwo" role="tabpanel">
+                            <div class="panel" id="cmx-form-body" style="overflow: scroll;">
+                                <div class="panel-body container-fluid" style="overflow: hidden !important;width: 100%;height: 100%;padding: 0;">
+                                    <iframe id="cmx-form" frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="no" allowtransparency="yes"
+                                        style="width:100%;height:100%;">
+                                    </iframe>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="processTabThree" role="tabpanel">
+                            <div class="panel" id="cmx-record">
+                                <div class="panel-body container-fluid">
+                                    <div class="example table-responsive">
+                                        <table class="table table-bordered text-center">
+                                            <tbody>
+                                                <tr>
+                                                    <td colspan="5" class="handleRecord">流程跟踪</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="backg">序号</td>
+                                                    <td class="backg">办理人</td>
+                                                    <td class="backg">办理情况</td>
+                                                    <td class="backg">办理时间</td>
+                                                    <td class="backg">停留工作日</td>
+                                                </tr>
+                                            </tbody>
+                                            <tbody id="cmx-banli-record"></tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div id="expert-modal"></div>
+    <div id="thirdParty-modal"></div>
+</div>

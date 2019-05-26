@@ -1,0 +1,41 @@
+[
+    {
+        "columnname": "cmx-b-1",
+        "columnindex": "cmx-b-1",
+        "serialnumber": "batchUploadRelic",
+        "type": "special",
+        "name": "操作说明",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": ""
+
+        },
+        "extra": {
+            "class": "margin-bottom-40",
+            "func": "cmx_special_batchUploadRelic",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-b-1",
+        "columnindex": "cmx-b-1",
+        "serialnumber": "P0batchUploadRelic", 
+        "type": "file56020",
+        "name": "选择文件:",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": "1"
+        },
+        "extra": {
+            "class": "margin-bottom-40",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    }
+]

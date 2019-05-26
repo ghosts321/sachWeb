@@ -1,0 +1,155 @@
+.site-navbar .navbar-header .navbar-brand {
+    padding: 9px 20px;
+}
+
+.site-navbar .navbar-header .navbar-brand p {
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+.site-navbar .navbar-header .navbar-brand img {
+    width: 46px;
+    height: 46px;
+    padding-top: 5px;
+}
+
+.navbar-toolbar-right #cmx-navbarMessage .dropdown-menu .list-group .slimScrollDiv {
+    position: relative;
+    overflow: hidden;
+    width: auto;
+    height: 220px;
+}
+
+#cmx-messageContent {
+    overflow: hidden;
+    width: auto;
+    height: 220px;
+}
+
+#cmx-slimScrollBar {
+    background: rgb(118, 131, 143);
+    width: 4px;
+    position: absolute;
+    top: 0px;
+    opacity: 0.4;
+    display: block;
+    border-radius: 4px;
+    z-index: 99;
+    right: 1px;
+}
+
+#cmx-slimScrollRail {
+    width: 4px;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    display: none;
+    border-radius: 4px;
+    background: rgb(204, 213, 219);
+    opacity: 0.1;
+    z-index: 90;
+    right: 1px;
+}
+
+#cmx-right-sidebar {
+    position: fixed;
+    right: 15px;
+    top: 150px;
+    z-index: 99;
+    padding-left: 0;
+}
+
+#cmx-right-sidebar li {
+    text-align: center;
+    margin-top: 20px;
+    box-shadow: 1px 1px 6px 0px #c5c5c5;
+    list-style: none;
+}
+
+#cmx-right-sidebar li i {
+    font-size: 30px;
+    margin-top: 5px;
+}
+
+#cmx-right-sidebar li div {
+    width: 70px;
+    height: 60px;
+    background-color: white;
+}
+
+#cmx-right-sidebar li p {
+    font-size: 12px;
+}
+
+/* 表格拖拽样式 */
+
+.rc-handle-container {
+    position: relative;
+}
+
+.rc-handle {
+    position: absolute;
+    width: 7px;
+    cursor: ew-resize;
+    *cursor: pointer;
+    margin-left: -3px;
+}
+
+.resizetable {
+    max-width: none !important;
+    table-layout: fixed;
+}
+
+.cmx-checkboxFirst {
+    width: 35px !important;
+}
+
+.resizetable>thead>tr>td,
+.resizetable>tbody>tr>td,
+.resizetable>tfoot>tr>td {
+    padding: 4px 6px;
+    min-width: 120px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.resizetable>thead>tr>th,
+.resizetable>tbody>tr>th,
+.resizetable>tfoot>tr>th {
+    min-width: 120px;
+    width: 120px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.resizetable>thead>tr>td:first-child,
+.resizetable>tbody>tr>td:first-child,
+.resizetable>tfoot>tr>td:first-child {
+    min-width: 60px;
+}
+
+.resizetable>thead>tr>th:first-child,
+.resizetable>tbody>tr>th:first-child,
+.resizetable>tfoot>tr>th:first-child {
+    width: 60px;
+}
+
+.resizetable td p {
+    margin-bottom: 0;
+}
+
+.theadTr th:not(:first-child) span {
+    display: inline-block;
+    width: calc(100% - 20px);
+}
+
+.theadTr th i {
+    opacity: 0.3;
+}
+
+.tooltip-inner {
+    max-width: 300px !important;
+    white-space: normal !important;
+}

@@ -1,0 +1,224 @@
+/*
+* @Author: Marte
+* @Date:   2018-04-12 14:39:46
+* @Last Modified by:   Marte
+* @Last Modified time: 2018-06-29 14:56:30
+*/
+.main2{
+    color:#333;
+    font-size:16px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #d9d7d7;
+    height: 32px;
+}
+.main2 span{
+    display: inline-block;
+    height: 32px;
+    line-height: 32px;
+    border-bottom: 3px solid #62a8ea;
+}
+.main3{
+    color:#333;
+    font-size:14px;
+    font-weight: 700;
+}
+@media screen (max-width:992px){
+   #Area{
+        height:800px;
+   }
+}
+#year{
+    padding: 5px;
+    border-radius: 5px;
+    outline: none;
+    border-color: #e4eaec;
+}
+.class_bg{
+    background-color:#f3f7f9;
+}
+.vessel{
+    display: none;
+}
+.is-fullscreen .vessel{
+    display: block;
+    overflow-y: scroll;
+    height:90vh;
+}
+.statistic_shadow{
+    box-shadow: 2px 2px 5px #d4d4d4;
+}
+.is-fullscreen .statistic_shadow{
+    box-shadow:none;
+}
+.statistic_shadow h3{
+    width:70%;
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+    font-weight: 700;
+    font-size: 16px;
+
+}
+.is-fullscreen .statistic_shadow h3{
+    width: 100%;
+    overflow:visible;
+}
+.col-md-4 .is-fullscreen .panel-heading .panel-title{
+    text-align: center;
+}
+/* 固定表格 */
+.fixation th,.fixation td{
+    width:12%;
+}
+.fixationpassOne th,.fixationpassOne td{
+    width:11%;
+}
+.administrationbody tr td:nth-child(2){
+    /* width: 20%; */
+}
+.administrationhead tr:nth-child(3) th:nth-child(2){
+/* width: 20%; */
+}
+.administrationhead tr:first-child th:first-child,
+.administrationhead tr:nth-child(2) th:first-child,.nationalhead tr:first-child th,.statehead tr:first-child th,.museumhead tr:first-child th,.passInhead tr:first-child th,.approvalhead tr:first-child th,.characterhead tr:first-child th,.losehead tr:first-child th,.goalhead tr:first-child th,.aptitudehead tr:first-child th,.leaderhead tr:first-child th,.dighead tr:first-child th,.mustnothead tr:first-child th,.supervisehead tr:first-child th,.administrationhead tr:first-child th,.referhead tr:first-child th.ShengJuhead tr:first-child th{
+    font-weight:700;
+    font-size:17px;
+}
+/* 固定表格 */
+/* 模态框表格 */
+.form-wrap{
+    margin-bottom: 10px;
+}
+.title{
+    color: #62a8ea;
+    font-weight: 600;
+}
+.inputon{
+    display:inline-block;
+}
+
+.proType{
+    color: #358fe4;
+}
+.unitType{
+    opacity: 0.6;
+}
+#th-head{
+    background-color: #1d7dd8 !important;
+    border-color: #1869b4;
+}
+#th-head th{
+    color: white;
+}
+#cmx-ntd-tbody tr:hover{
+    background: #f4f4f4;
+}
+#cmx-ntd-tbody td{
+    overflow: hidden;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+.data-info{
+    cursor:pointer;
+}
+
+.form-control .single-box{
+    text-align: left;
+    width: 20%;
+    display: inline-block !important;
+    margin: 0px;
+}
+
+.nc{
+    text-align: center !important;
+}
+/* 模态框表格 */
+/* 表格最后一行没有右边框 */
+table.table-bordered th:last-child, table.table-bordered td:last-child{
+    border-right-width:1px;
+}
+/* 表格最后一行没有右边框 */
+.nationalhead tr th{
+    width: 12%;
+}
+table{
+ table-layout:fixed;
+}
+.administrationbody tr td:hover{
+    cursor:pointer;
+}
+/* 国有馆藏珍贵文物分布情况 */
+#rarity table{
+    table-layout:auto !important;
+}
+
+#passIntitle{
+    margin-bottom: 0;
+    font-weight: 700;
+    font-size: 18px;
+    color: #000;
+    text-align:center;
+}
+
+/* 出入境申请目的 两行文字 */
+#aimText{
+    margin-top:20%;
+}
+/* 遮罩 */
+.spinners {
+  margin: 100px auto;
+  width: 50px;
+  height: 60px;
+  text-align: center;
+  font-size: 10px;
+}
+
+.spinners > div {
+  background-color: #62a8ea;
+  height: 100%;
+  width: 6px;
+  display: inline-block;
+
+  -webkit-animation: stretchdelay 1.2s infinite ease-in-out;
+  animation: stretchdelay 1.2s infinite ease-in-out;
+}
+
+.spinners .rects2 {
+  -webkit-animation-delay: -1.1s;
+  animation-delay: -1.1s;
+}
+
+.spinners .rects3 {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+
+.spinners .rects4 {
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s;
+}
+
+.spinners .rects5 {
+  -webkit-animation-delay: -0.8s;
+  animation-delay: -0.8s;
+}
+
+@-webkit-keyframes stretchdelay {
+  0%, 40%, 100% { -webkit-transform: scaleY(0.4) }
+  20% { -webkit-transform: scaleY(1.0) }
+}
+
+@keyframes stretchdelay {
+  0%, 40%, 100% {
+    transform: scaleY(0.4);
+    -webkit-transform: scaleY(0.4);
+  }  20% {
+    transform: scaleY(1.0);
+    -webkit-transform: scaleY(1.0);
+  }
+}
+/* 遮罩 */
+.statebody1 tr:nth-child(1) td:nth-child(1){
+  background:#f9fbfc;
+}

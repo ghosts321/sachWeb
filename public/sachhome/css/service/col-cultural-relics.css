@@ -1,0 +1,207 @@
+body {
+  background: url('../../img/museum-bg.png') repeat-y;
+  background-size: 100% auto;
+}
+.museum {
+  padding-top: 30px;
+  padding-bottom: 50px;
+}
+.museum .position {
+  margin: 0;
+  margin-bottom: 12px;
+}
+.museum .position i {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  background: url(../../img/house-2.png) no-repeat center center;
+  background-size: cover;
+  vertical-align: -3px;
+  margin-right: 5px;
+  margin-left: -3px;
+}
+.museum .position span,
+.museum .position a {
+  color: #333;
+  font-size: 14px;
+  vertical-align: middle;
+}
+.museum .position a {
+  text-decoration: none;
+}
+.museum .relics {
+  margin-bottom: 20px;
+}
+.museum .relics .list {
+  font-size: 28px;
+  color: #202020;
+  letter-spacing: 0;
+  font-weight: bold;
+}
+.museum .search-info {
+  background: #F2F9FF;
+  border: 1px solid #62AAEC;
+  box-shadow: 0 2px 0 0 #62AAEC;
+  border-radius: 2px;
+  padding-top: 29px;
+  padding-bottom: 29px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.museum .search-info .museum-left {
+  border-right: 1px dotted #62AAEC;
+}
+.museum .search-info .museum-left .collection {
+  padding-right: 10px;
+}
+.museum .search-info .museum-left .second-line {
+  margin-top: 12px;
+}
+.museum .search-info .museum-right {
+  text-align: center;
+}
+.museum .search-info .museum-right a {
+  width: 140px;
+  height: 35px;
+  line-height: 35px;
+  background: #62AAEC;
+  border: 1px solid #62AAEC;
+  border-radius: 2px;
+  display: inline-block;
+  font-family: MicrosoftYaHei;
+  font-size: 14px;
+  color: #FFFFFF;
+  letter-spacing: 0;
+  text-decoration: none;
+  font-weight: bold;
+}
+.museum .search-info .museum-right a + a {
+  margin-top: 10px;
+}
+.museum input,
+.museum select {
+  min-width: 300px;
+  border-radius: 2px;
+}
+.museum select {
+  border-right: 0 none;
+  background: url(../../img/arrow.png) no-repeat right center;
+  background-color: #fff;
+  background-size: contain;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+.museum select::-ms-expand {
+  display: none;
+}
+.museum label {
+  min-width: 85px;
+  text-align: right;
+}
+.museum .museum-content {
+  margin-top: 38px;
+  height: 450px;
+}
+.museum .museum-content .province,
+.museum .museum-content .category {
+  height: 512px;
+  background: url('../../img/paper.png') no-repeat;
+  background-size: contain;
+}
+.museum .museum-content .province p,
+.museum .museum-content .category p {
+  height: 47px;
+  line-height: 52px;
+  width: 195px;
+}
+.museum .museum-content .province p span,
+.museum .museum-content .category p span {
+  font-family: MicrosoftYaHei-Bold;
+  font-size: 20px;
+  color: #fff;
+  font-weight: bold;
+}
+.museum .museum-content .province .reel,
+.museum .museum-content .category .reel {
+  text-align: center;
+  width: 193px;
+  height: 420px;
+  overflow-y: auto;
+  padding: 0 15px;
+}
+.museum .museum-content .province .reel a,
+.museum .museum-content .category .reel a {
+  display: block;
+  cursor: pointer;
+  font-family: MicrosoftYaHei;
+  font-size: 14px;
+  color: #000;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-decoration: none;
+}
+.museum .museum-content .province .reel a:hover,
+.museum .museum-content .category .reel a:hover {
+  background-color: #62AAEC;
+  color: #fff;
+}
+.museum .museum-content .heritage {
+  width: 610px;
+  margin-top: 47.6px;
+}
+.museum .museum-content .heritage .left-1 {
+  width: 218px;
+}
+.museum .museum-content .heritage .left-1 .cocr-3 {
+  margin-top: 8px;
+}
+.museum .museum-content .heritage .left-2 {
+  width: 410px;
+}
+.museum .museum-content .heritage .left-2 .cocr-2 {
+  margin-left: 8px;
+  margin-bottom: 8px;
+}
+.museum .museum-content .heritage .left-2 .cocr-2 + img ~ img {
+  margin-left: 3px;
+}
+.museum .museum-content .heritage .left-3 {
+  width: 192px;
+}
+.museum .museum-content .heritage .left-3 img {
+  margin-left: 8px;
+}
+.museum .museum-content .heritage .left-3 img + img {
+  margin-top: 8px;
+}
+@media (max-width: 767px) {
+  .museum .search-info .museum-right a {
+    margin-top: 10px;
+  }
+  .museum .search-info .museum-left {
+    border-right: 0 none;
+  }
+  .museum .search-info .date {
+    margin-top: 12px;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .museum .search-info .museum-right a {
+    margin-top: 10px;
+  }
+  .museum .search-info .museum-left {
+    border-right: 0 none;
+  }
+  .museum .search-info .date {
+    margin-top: 12px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+  .museum .search-info .museum-right a {
+    margin-top: 10px;
+  }
+  .museum .search-info .museum-left {
+    border-right: 0 none;
+  }
+}

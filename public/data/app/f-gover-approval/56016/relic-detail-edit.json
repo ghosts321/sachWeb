@@ -1,0 +1,324 @@
+[{
+        "columnname": "cmx-k-1",
+        "columnindex": "cmx-k-1",
+        "serialnumber": "R0001",
+        "type": "text",
+        "name": "编号",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "short"
+        },
+        "extra": {
+            "class": "margin-left-0",
+            "func": "",
+            "width": "4",
+            "layout": "",
+            "placeholder": "请填写文物编号"
+        }
+    },
+    {
+        "columnname": "cmx-k-2",
+        "columnindex": "cmx-k-2",
+        "serialnumber": "R0002",
+        "type": "special",
+        "name": "文物名称",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "short"
+        },
+        "extra": {
+            "class": "format baseinfo",
+            "func": "cmx_choose_relicFunc_edit",
+            "width": "8",
+            "layout": "",
+            "placeholder": "如是馆藏一级文物请点击右侧选择按钮，不是请直接填写"
+        }
+    },
+    {
+        "columnname": "cmx-k-3",
+        "columnindex": "cmx-k-3",
+        "serialnumber": "R0003",
+        "type": "text",
+        "name": "出土地点",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "short"
+        },
+        "extra": {
+            "class": "margin-left-0",
+            "func": "",
+            "width": "4",
+            "layout": "",
+            "placeholder": "请填写出土地点"
+        }
+    },
+    {
+        "columnname": "cmx-k-4",
+        "columnindex": "cmx-k-4",
+        "serialnumber": "R0004",
+        "type": "text",
+        "name": "出土时间",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "short"
+        },
+        "extra": {
+            "class": "margin-left-0",
+            "func": "",
+            "width": "4",
+            "layout": "",
+            "placeholder": "请选择出土时间"
+        }
+    },
+    {
+        "columnname": "cmx-k-5",
+        "columnindex": "cmx-k-5",
+        "serialnumber": "R0005",
+        "type": "text",
+        "name": "具体年代",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "short"
+        },
+        "extra": {
+            "class": "margin-left-0",
+            "func": "",
+            "width": "4",
+            "layout": "",
+            "placeholder": "请填写具体年代"
+        }
+    },
+    {
+        "columnname": "cmx-k-6",
+        "columnindex": "cmx-k-6",
+        "serialnumber": "R0006",
+        "type": "text",
+        "name": "尺寸",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "short"
+        },
+        "extra": {
+            "class": "margin-left-0",
+            "func": "",
+            "width": "4",
+            "layout": "",
+            "placeholder": "请填写尺寸"
+        }
+    },
+    {
+        "columnname": "cmx-k-7",
+        "columnindex": "cmx-k-7",
+        "serialnumber": "R0007",
+        "type": "text",
+        "name": "文物级别",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "short"
+        },
+        "extra": {
+            "class": "margin-left-0",
+            "func": "",
+            "width": "4",
+            "layout": "",
+            "placeholder": "请填写文物级别"
+        }
+    },
+    {
+        "columnname": "cmx-k-8",
+        "columnindex": "cmx-k-8",
+        "serialnumber": "R0008",
+        "type": "text",
+        "name": "文物质地",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "short"
+        },
+        "extra": {
+            "class": "margin-left-0",
+            "func": "",
+            "width": "4",
+            "layout": "",
+            "placeholder": "请填写文物质地"
+        }
+    },
+    {
+        "columnname": "cmx-k-9",
+        "columnindex": "cmx-k-9",
+        "serialnumber": "R0009",
+        "type": "text",
+        "name": "数量",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "short"
+        },
+        "extra": {
+            "class": "margin-left-0",
+            "func": "",
+            "width": "4",
+            "layout": "",
+            "placeholder": "请填写文物数量"
+        }
+    },
+    {
+        "columnname": "cmx-k-10",
+        "columnindex": "cmx-k-10",
+        "serialnumber": "R0010",
+        "type": "text",
+        "name": "总登记号",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "short"
+        },
+        "extra": {
+            "class": "margin-left-0",
+            "func": "",
+            "width": "4",
+            "layout": "",
+            "placeholder": "请填写总登记号"
+        }
+    },
+    {
+        "columnname": "cmx-k-11",
+        "columnindex": "cmx-k-11",
+        "serialnumber": "R0011",
+        "type": "text",
+        "name": "文物收藏单位",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "short"
+        },
+        "extra": {
+            "class": "margin-left-0",
+            "func": "",
+            "width": "4",
+            "layout": "",
+            "placeholder": "请填写文物收藏单位"
+        }
+    },
+    {
+        "columnname": "cmx-k-12",
+        "columnindex": "cmx-k-12",
+        "serialnumber": "R0012",
+        "type": "text",
+        "name": "发表书刊",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "short"
+        },
+        "extra": {
+            "class": "margin-left-0",
+            "func": "",
+            "width": "4",
+            "layout": "",
+            "placeholder": "请填写发表书刊"
+        }
+    },
+    {
+        "columnname": "cmx-k-13",
+        "columnindex": "cmx-k-13",
+        "serialnumber": "R0013",
+        "type": "text",
+        "name": "发表时间",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "short"
+        },
+        "extra": {
+            "class": "margin-left-0",
+            "func": "",
+            "width": "4",
+            "layout": "",
+            "placeholder": "请选择发表时间"
+        }
+    },
+    {
+        "columnname": "cmx-k-14",
+        "columnindex": "cmx-k-14",
+        "serialnumber": "R0014",
+        "type": "text",
+        "name": "保险估价",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "short"
+        },
+        "extra": {
+            "class": "margin-left-0",
+            "func": "",
+            "width": "4",
+            "layout": "",
+            "placeholder": "请填写保险估价"
+        }
+    },
+    {
+        "columnname": "cmx-k-15",
+        "columnindex": "cmx-k-15",
+        "serialnumber": "R0015",
+        "type": "special",
+        "name": "外展历史",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "long"
+        },
+        "extra": {
+            "class": "margin-left-0",
+            "func": "cmx_exhibitionHistoryFunc_edit",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-k-16",
+        "columnindex": "cmx-k-16",
+        "serialnumber": "R0016",
+        "type": "text",
+        "name": "简要说明（1000字以内）",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "long"
+        },
+        "extra": {
+            "class": "margin-left-0",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": "请填写简要说明，不超过1000个汉字"
+        }
+    }, {
+        "columnname": "image",
+        "columnindex": "fieldsign-columnname",
+        "serialnumber": "R0017",
+        "type": "image",
+        "name": "图片",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "single": "1"
+        },
+        "extra": {
+            "class": "",
+            "func": "",
+            "width": "",
+            "layout": "",
+            "placeholder": ""
+        }
+    }
+
+]

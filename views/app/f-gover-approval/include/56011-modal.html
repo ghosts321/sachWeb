@@ -1,0 +1,51 @@
+
+<div class="modal fade" id="addProtectModal" tabindex="-1" role="dialog" aria-labelledby="addProtectModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="addProtectModalLabel">新增独立承担并且已完成的文物保护工程勘察设计项目</h4>
+            </div>
+            <div class="modal-body">
+                <div id="cmx-protect-form"></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-info" id="cmx-add-protect-save">保存</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal -->
+</div>
+<div class="modal fade" id="editProtectModal" tabindex="-1" role="dialog" aria-labelledby="editProtectModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="editProtectModalLabel">编辑独立承担并且已完成的文物保护工程勘察设计项目</h4>
+            </div>
+            <div class="modal-body">
+                <div id="cmx-editprotect-form"></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-info" id="cmx-edit-protect-save">保存</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal -->
+</div>
+<script>
+    //创建表单
+    CreateApplicationForm({
+        element: "#cmx-protect-form",
+        url: public_url + 'data/app/f-gover-approval/56011/56011-modal.json'
+    });
+    //创建表单
+    CreateApplicationForm({
+        element: "#cmx-editprotect-form",
+        url: public_url + 'data/app/f-gover-approval/56011/56011-modaledit.json'
+    });
+</script>

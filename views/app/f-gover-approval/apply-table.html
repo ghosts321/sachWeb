@@ -1,0 +1,326 @@
+<title>行政审批申请</title>
+
+<link rel="stylesheet" href="/css/app/f-gover-approval/apply-table.css">
+<link rel="stylesheet" href="/css/app/f-gover-approval/relicList.css">
+
+<script src="/js/app/f-gover-approval/apply-table.js"></script>
+<script src="/js/app/f-gover-approval/models/public-model.js"></script>
+<script src="/js/app/f-gover-approval/views/public-view.js"></script>
+<style>
+    .cmx-apply-table td {
+        vertical-align: middle !important;
+    }
+    
+    .cmx-apply-table {
+        display: none;
+    }
+</style>
+<div class="page page-full">
+    <div class="page-content vertical-align-top">
+        <table class="table table-bordered table-striped cmx-apply-table">
+            <col class="col1" />
+            <col class="col2" />
+            <col class="col3" />
+            <col class="col4" />
+            <thead>
+                <tr>
+                    <th colspan="4">
+                        <span>*</span>请选择申报类型</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="applyId 56004">56004</td>
+                    <td colspan="2" class="56004">全国重点文物保护单位原址保护措施审批</td>
+                    <td class="applyBtn 56004">
+                        <button  class="btn btn-primary" cmx-approval-id="56004">申报</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="applyId 56005">56005</td>
+                    <td colspan="2" class="56005">省级和全国重点文物保护单位保护范围内其他建设工程或者爆破、钻探、挖掘等作业审批</td>
+                    <td class="applyBtn 56005">
+                        <button  class="btn btn-primary" cmx-approval-id="56005">申报</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td rowspan="2" class="applyId 56008_a 56008_b">56008</td>
+                    <td rowspan="2" class="56008_a 56008_b">考古发掘计划许可</td>
+                    <td class="56008_a">重大事项（考古工作方案或规划）</td>
+                    <td class="applyBtn 56008_a">
+                        <button  class="btn btn-primary" cmx-approval-id="56008_a">申报</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="56008_b">一般事项（考古发掘项目）</td>
+                    <td class="applyBtn 56008_b">
+                        <button  class="btn btn-primary" cmx-approval-id="56008_b">申报</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="applyId 56009">56009</td>
+                    <td colspan="2" class="56009">水下文物的考古勘探和发掘活动许可</td>
+                    <td class="applyBtn 56009">
+                        <button  class="btn btn-primary" cmx-approval-id="56009">申报</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="applyId 56010">56010</td>
+                    <td colspan="2" class="56010">省级文物保护单位的迁移或拆除审批</td>
+                    <td class="applyBtn 56010">
+                        <button  class="btn btn-primary" cmx-approval-id="56010">申报</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="applyId 56012">56012</td>
+                    <td colspan="2" class="56012">全国重点文物保护单位建设控制地带内建设工程设计方案审批</td>
+                    <td class="applyBtn 56012">
+                        <button  class="btn btn-primary" cmx-approval-id="56012">申报</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="applyId 56013">56013</td>
+                    <td colspan="2" class="56013">国际合作考古调查、勘探、发掘的文物或自然标本送到境外进行分析化验或者技术鉴定许可</td>
+                    <td class="applyBtn 56013">
+                        <button  class="btn btn-primary" cmx-approval-id="56013">申报</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td rowspan="5" class="applyId 56014_a 56014_b 56014_c 56014_d 56014_e">56014</td>
+                    <td rowspan="5" class="56014_a 56014_b 56014_c 56014_d 56014_e">全国重点文物保护单位修缮审批</td>
+                    <td class="56014_a">全国重点文物保护单位修缮计划审批</td>
+                    <td class="applyBtn 56014_a">
+                        <button  class="btn btn-primary" cmx-approval-id="56014_a">申报</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="56014_b">抢救性工程方案</td>
+                    <td class="applyBtn 56014_b">
+                        <button  class="btn btn-primary" cmx-approval-id="56014_b">申报</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="56014_c">不申请中央财政补贴资金方案</td>
+                    <td class="applyBtn 56014_c">
+                        <button  class="btn btn-primary" cmx-approval-id="56014_c">申报</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="56014_d">【省局审批事项】项目计划(立项)已获批方案</td>
+                    <td class="applyBtn 56014_d">
+                        <button  class="btn btn-primary" cmx-approval-id="56014_d">申报</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="56014_e">【国家局审批事项】项目计划(立项)已获批方案</td>
+                    <td class="applyBtn 56014_e">
+                        <button  class="btn btn-primary" cmx-approval-id="56014_e">申报</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td rowspan="5" class="applyId 56014-3_a 56014-3_b 56014-3_c 56014-3_d 56014-3_e">56014-3</td>
+                    <td rowspan="5" class="56014-3_a 56014-3_b 56014-3_c 56014-3_d 56014-3_e">全国重点文物保护单位安全防护工程项目审批</td>
+                    <td class="56014-3_a">项目工作计划已获批项目</td>
+                    <td class="applyBtn 56014-3_a">
+                        <button  class="btn btn-primary" cmx-approval-id="56014-3_a">申报</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="56014-3_b">抢救性工程方案</td>
+                    <td class="applyBtn 56014-3_b">
+                        <button  class="btn btn-primary" cmx-approval-id="56014-3_b">申报</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="56014-3_c">不申请中央财政补贴资金方案</td>
+                    <td class="applyBtn 56014-3_c">
+                        <button  class="btn btn-primary" cmx-approval-id="56014-3_c">申报</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="56014-3_e">【省局审批事项】三防方案</td>
+                    <td class="applyBtn 56014-3_e">
+                        <button  class="btn btn-primary" cmx-approval-id="56014-3_e">申报</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="56014-3_d">【国家局审批事项】三防方案</td>
+                    <td class="applyBtn 56014-3_d">
+                        <button  class="btn btn-primary" cmx-approval-id="56014-3_d">申报</button>
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td rowspan="7" class="applyId 56015_a 56015_b 56015_c 56015_d 56015_e 56015_f 56015_g">56015</td>
+                    <td rowspan="7" class="56015_a 56015_b 56015_c 56015_d 56015_e 56015_f 56015_g">馆藏一级文物的修复、复制、拓印许可</td>
+                    <td class="56015_a">文物修复计划</td>
+                    <td class="applyBtn 56015_a">
+                        <button  class="btn btn-primary" cmx-approval-id="56015_a">申报</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="56015_b">文物修复方案（修复计划已获批项目）</td>
+                    <td class="applyBtn 56015_b">
+                        <button  class="btn btn-primary" cmx-approval-id="56015_b">申报</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="56015_c">文物复制方案</td>
+                    <td class="applyBtn 56015_c">
+                        <button  class="btn btn-primary" cmx-approval-id="56015_c" type="1">申报</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="56015_c">文物拓印方案</td>
+                    <td class="applyBtn 56015_c">
+                        <button  class="btn btn-primary" cmx-approval-id="56015_c" type="2">申报</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="56015_e">复制</td>
+                    <td class="applyBtn 56015_e">
+                        <button  class="btn btn-primary" cmx-approval-id="56015_e">申报</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="56015_f">拓印</td>
+                    <td class="applyBtn 56015_f">
+                        <button  class="btn btn-primary" cmx-approval-id="56015_f">申报</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="56015_g">修复</td>
+                    <td class="applyBtn 56015_g">
+                        <button  class="btn btn-primary" cmx-approval-id="56015_g">申报</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="applyId 56016">56016</td>
+                    <td colspan="2" class="56016">文物出境展览许可</td>
+                    <td class="applyBtn 56016">
+                        <button  class="btn btn-primary" cmx-approval-id="56016">申报</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="applyId 56019">56019</td>
+                    <td colspan="2" class="56019">博物馆一级藏品取样分析许可</td>
+                    <td class="applyBtn 56019">
+                        <button  class="btn btn-primary" cmx-approval-id="56019">申报</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td rowspan="5" class="applyId 56020_a 56020_b 56020_c 56020_d 56020_e">56020</td>
+                    <td rowspan="5" class="56020_a 56020_b 56020_c 56020_d 56020_e">文物出境许可证核发</td>
+                    <td class="56020_a">文物出境申请</td>
+                    <td class="applyBtn 56020_a">
+                        <button  class="btn btn-primary" cmx-approval-id="56020_a">申请</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="56020_b">临时进境申请</td>
+                    <td class="applyBtn 56020_b">
+                        <button class="btn btn-primary" cmx-approval-id="56020_b">申请</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="56020_c">复出境申请</td>
+                    <td class="applyBtn 56020_c">
+                        <button  class="btn btn-primary" cmx-approval-id="56020_c">申请</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="56020_d">临时出境申请</td>
+                    <td class="applyBtn 56020_d">
+                        <button  class="btn btn-primary" cmx-approval-id="56020_d">申请</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="56020_e">复进境申请</td>
+                    <td class="applyBtn 56020_e">
+                        <button  class="btn btn-primary" cmx-approval-id="56020_e">申请</button>
+                    </td>
+                </tr>
+
+                <!-- <tr>
+                    <td class="applyId 56022">56022</td>
+                    <td class="56022">全国重点文物保护单位保护规划审批</td>
+                    <td class="56022">保护规划</td>
+                    <td class="applyBtn 56022">
+                        <button  class="btn btn-primary" cmx-approval-id="56022">申报</button>
+                    </td>
+                </tr> -->
+                <tr>
+                    <td rowspan="2" class="applyId 56022_b 56022_c">56022</td>
+                    <td rowspan="2" class="56022_b 56022_c">全国重点文物保护单位保护规划审批</td>
+                    <td class="56022_b">【省局审批事项】保护规划</td>
+                    <td class="applyBtn 56022_b">
+                        <button  class="btn btn-primary" cmx-approval-id="56022_b">申报</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="56022_c">【国家局审批事项】保护规划</td>
+                    <td class="applyBtn 56022_c">
+                        <button class="btn btn-primary" cmx-approval-id="56022_c">申报</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td rowspan="3" class="applyId 56011 56011">56011</td>
+                    <td rowspan="3" class="56011 56011">文物保护工程（勘察设计甲级、施工一级、监理甲级）资质审批</td>
+                    <td class="56011">申请</td>
+                    <td class="applyBtn 56011">
+                        <button  class="btn btn-primary" cmx-approval-id="56011" data-type="1">申报</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="56011">变更</td>
+                    <td class="applyBtn 56011">
+                        <button  class="btn btn-primary" cmx-approval-id="56011"  data-type="2">申报</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="56011">升级</td>
+                    <td class="applyBtn 56011">
+                        <button  class="btn btn-primary" cmx-approval-id="56011"  data-type="3">申报</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<script>
+    // if (getData('userName') == '于平') {
+    //     $('#cmx-apply-tr-1').show();
+    //     $('#cmx-apply-tr-3').show();
+    //     $('#cmx-apply-tr-4').show();
+    //     $('#cmx-apply-tr-7').show();
+    // } else {
+    //     $('#cmx-apply-tr-16').show();
+    //     $('#cmx-apply-tr-17').show();
+    //     $('#cmx-apply-tr-18').show();
+    //     $('#cmx-apply-tr-5').show();
+    //     $('#cmx-apply-tr-6').show();
+    //     $('#cmx-apply-tr-2').show();
+    //     $('#cmx-apply-tr-9').show();
+    //     $('#cmx-apply-tr-10').show();
+    //     $('#cmx-apply-tr-11').show();
+    //     $('#cmx-apply-tr-5').show();
+    // }
+</script>
+<div id="cmx-modalDiv"></div>
+
+<div id="cmx-new-scheme-div"></div>
+
+<!-- 安全防护工程 -->
+<div id="cmx-modalDiv1"></div>
+<div id="cmx-56008-modal"></div>

@@ -1,0 +1,91 @@
+<div class="modal fade in" id="cmx-applyForExhibition-info" aria-hidden="true" aria-labelledby="" role="dialog" tabindex="-1">
+    <div class="modal-dialog modal-center" style="width:85%;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span>海关文件上传(请上传图片)</span>
+                <button class="pull-right close" data-dismiss="modal" aria-label="关闭">关闭</button>
+                <div class="clearfix"></div>
+            </div>
+            <div class="modal-body" style="height:200px;overflow:scroll">
+                <div class="col-md-12 col-lg-12" id="cmx-applyForExhibition-div"></div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" style="margin-right:10px;" id="applyForExhibitionSave">确定</button>
+                <button type="button" class="btn btn-default cmx-cancle-btn" data-dismiss="modal" style="margin-right:10px;">取消</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    //上传附件
+    function upload(applyId) {
+        $.ajax({
+            url: uploadJson,
+            type: "GET",
+            async: false,
+            success: function (result) {
+                var data = result;
+                for (var i = 0; i < data.length; i++) {
+                    var type = data[i].type;
+                    var width = data[i].extra.width;
+                    var notnull = (data[i].attribute.notnull == 1) ? true : false;
+                    var attrstring = 'cmx-tag="cmx" cmx-lib="' + data[i].serialnumber + '" cmx-index="' + data[i].columnindex +
+                        '" cmx-column="' + data[i].columnname + '" cmx-type="' + data[i].type + '" cmx-require="' +
+                        notnull + '"';
+                    if (data[i].extra.width == "") {
+                        width = 12;
+                    }
+                    if (type == 'text' || type == 'single' || type == 'extra') {
+                        attrstring = attrstring + 'cmx-stype="' + data[i].attribute.stype + '"';
+                    }
+                    new cmx.process()
+                        .turn('automated-form-' + type, {
+                            "element": "#cmx-applyForExhibition-div",
+                            "data": data[i],
+                            "width": width,
+                            "notnull": notnull,
+                            "attrstring": attrstring
+                        })
+                        .ccatch(function (msg) {
+                            console.log('异常终止了 ' + msg);
+                        })
+                        .cfinally(function () {
+                            try {
+                                eval(data[i].extra.func + '(' + JSON.stringify(data[i]) + ')');
+                            } catch (exception) {
+                                console.log(exception)
+                            }
+                        }).start();
+                }
+            }
+        });
+        function cmx_special_file(data) {
+            new cmx.process()
+                .turn('callajax', {
+                    url: api_ea + "/eaScrApplyInfo/selectCustomsFile",
+                    data: JSON.stringify({
+                        token: getData("token"),
+                        applyId: applyId
+                    })
+                }).log()
+                .turn(function (prevModelData, noviewsend, abort) {
+                    if (prevModelData.state == '200' && !IsNull(prevModelData.data.index)) {
+                        var html = ['<div class="cmx-form-body col-sm-12 col-xs-12 col-md-12 col-lg-12" style="margin:0;padding:0">' + prevModelData.data.fileName,
+
+                            '</div>'].join('');
+                        $("#cmx-special-" + data.serialnumber).append(html);
+
+                    } else {
+                        var html = ['<div class="cmx-form-body col-sm-12 col-xs-12 col-md-12 col-lg-12" style="margin:0;padding:0">您还未选择文件',
+
+                            '</div>'].join('');
+                        $("#cmx-special-" + data.serialnumber).append(html);
+                    }
+                })
+                .start();
+        }
+    }
+
+
+</script>

@@ -1,0 +1,187 @@
+<title id="duban">督办</title>
+<link rel="stylesheet" href="/css/app/f-gover-approval/56020-pub.css">
+<script src="/js/app/f-gover-approval/56020-1/shewenchu-duban.js"></script>
+<script src="/js/app/f-gover-approval/56020-1/56020-pub.js"></script>
+<script src="/js/app/f-gover-approval/models/public-model.js"></script>
+
+<div class="page animation-fade">
+    <div class="page-content">
+
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
+            <div class="panel">
+
+                <div class="panel-heading">
+                    <span class="panel-title" id="dubanList">进出境督办列表</span>
+                </div>
+                <div class="panel-body">
+                    <div class="row row-lg">
+                        <div class="col-xs-6 col-md-4 col-lg-4">
+                            <div class="form-wrap">
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <span class="input-group-addon">
+                                            事项
+                                        </span>
+                                        <select class="form-control" id="inOutClass" name="name" autocomplete="off">
+                                            <option value="" style="display:none;"></option>
+                                            <option value="1">文物出境</option>
+                                            <option value="2">文物临时进境</option>
+                                            <option value="3">文物复出境</option>
+                                            <option value="4">文物临时出境</option>
+                                            <option value="5">文物复进境</option>
+                                            <select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-md-4 col-lg-4">
+                            <div class="form-wrap">
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <span class="input-group-addon">
+                                            机构
+                                        </span>
+
+                                        <select id="reviewInst" type="text" style="background: white;" class="form-control">
+                                            <option value="" style="display:none;"></option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-md-4 col-lg-4">
+                            <div class="form-wrap">
+                                <div class="form-group">
+                                    <button type="button" class="btn btn-primary inputon" id="search-btn">查询</button>
+                                    <button type="button" class="btn inputon" id="clear-search-form">清除</button>
+                                    <button type="button" id="show-hide-info" class="pull-right show-info btn btn-outline btn-primary inputon">更多条件
+                                        <i class="icon wb-chevron-down" aria-hidden="true"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row row-lg condition-info margin-top-10" style="display:none;">
+                        <div class="col-xs-6 col-md-4 col-lg-4">
+                            <div class="form-wrap">
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <span class="input-group-addon">
+                                            节点
+                                        </span>
+
+                                        <select id="applyStatus" type="text" style="background: white;" class="form-control">
+                                            <option value="" style="display:none;"></option>
+                                            <option value="2">预约</option>
+                                            <option value="3">受理</option>
+                                            <option value="4">分办</option>
+                                            <option value="5">登记</option>
+                                            <option value="6">查验/鉴定</option>
+                                            <option value="8">审批</option>
+                                            <option value="9">办结</option>
+                                            <option value="N">不予受理</option>
+                                            <option value="O">一次性补正</option>
+                                            <option value="B">不予预约</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-md-4 col-lg-4">
+                            <div class="form-wrap">
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <span class="input-group-addon">
+                                            申请人
+                                        </span>
+                                        <input type="text" id="appUserId" class="form-control" placeholder="" autocomplete="off">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-md-4 col-lg-4">
+                            <div class="form-wrap">
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <span class="input-group-addon">
+                                            携运人
+                                        </span>
+                                        <input type="text" id="carryUser" class="form-control" placeholder="" autocomplete="off">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-md-4 col-lg-4 margin-top-10"">
+                            <div class="form-wrap">
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <span class="input-group-addon">
+                                            受理号
+                                        </span>
+                                        <input type="text" id="acceptNum" class="form-control" placeholder="" autocomplete="off">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-md-4 col-lg-4 margin-top-10">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    类型
+                                </span>
+                                <select class="form-control" id="applyClass" name="name" autocomplete="off">
+                                    <option value="">全部</option>
+                                    <option value="1">展览</option>
+                                    <option value="2">个人携带</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="example table-responsive">
+                        <table class="table table-bordered">
+                            <thead class="resizetable">
+                                <th>事项</th>
+                                <th>携运人</th>
+                                <th>申请人</th>
+                                <th>类型</th>
+                                <th>状态</th>
+                                <th>出入境目的</th>
+                                <th>受理号</th>
+                                <th>预约时间</th>
+                                <th>受理时间</th>
+                                <th>办结时间</th>
+                                <th>申请时间</th>
+                            </thead>
+                            <tbody id="cmx-auditFinished-table">
+
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <ul class="pagination">
+                        <li>
+                            <a id="left-first" href="javascript:;">首页</a>
+                        </li>
+                        <li>
+                            <a id="left-prev" href="javascript:;">上一页</a>
+                        </li>
+                        <li>
+                            <span>第
+                                <input id="left-count" type="text" value="1" />/
+                                <span id="left-total">1</span>页</span>
+                        </li>
+                        <li>
+                            <a id="left-next" href="javascript:;">下一页</a>
+                        </li>
+                        <li>
+                            <a id="left-last" href="javascript:;">尾页</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="cmx-getDetails-modal"></div>
+<div id="cmx-relic-modal"></div>
+<div id="cmx-carry-person-modal"></div>
+<div id="cmx-applicationForExhibition-modal"></div>

@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 移动设备 viewport -->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui">
+    <meta name="author" content="sach">
+    <!-- 360浏览器默认使用Webkit内核 -->
+    <meta name="renderer" content="webkit">
+    <!-- 禁止搜索引擎抓取 -->
+    <meta name="robots" content="nofollow">
+    <!-- 禁止百度SiteAPP转码 -->
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <!-- Chrome浏览器添加桌面快捷方式（安卓） -->
+    <link rel="icon" type="image/png" href="/images/favicon.png">
+    <meta name="mobile-web-app-capable" content="yes">
+    <!-- Safari浏览器添加到主屏幕（IOS） -->
+    <link rel="icon" sizes="192x192" href="/images/apple-touch-icon.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Admui">
+    <!-- Win8标题栏及ICON图标 -->
+    <link rel="apple-touch-icon-precomposed" href="/images/apple-touch-icon.png">
+    <meta name="msapplication-TileImage" content="/images/app-icon72x72@2x.png">
+    <meta name="msapplication-TileColor" content="#62a8ea">
+    <!--[if lte IE 9]>
+        <meta http-equiv="refresh" content="0; url='http://gl.sach.gov.cn/browser.html'" />
+        <![endif]-->
+    <!--[if lt IE 10]>
+        <script src="/vendor/media-match/media.match.min.js"></script>
+        <script src="/vendor/respond/respond.min.js"></script>
+        <![endif]-->
+    <title>国家文物局综合行政管理平台</title>
+    <style>
+        .btn {
+            display: inline-block;
+            margin-bottom: 0;
+            font-weight: 400;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: middle;
+            -ms-touch-action: manipulation;
+            touch-action: manipulation;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            background-image: none;
+            border: 1px solid transparent;
+            border-radius: 3px;
+            padding: 4px 12px;
+            font-size: 14px;
+            line-height: 1.6;
+            border-radius: 3px;
+            -webkit-transition: border .2s linear, color .2s linear, width .2s linear, background-color .2s linear;
+            -o-transition: border .2s linear, color .2s linear, width .2s linear, background-color .2s linear;
+            transition: border .2s linear, color .2s linear, width .2s linear, background-color .2s linear;
+        }
+
+        .btn-default {
+            color: #76838f;
+            background-color: #e4eaec;
+            border-color: #e4eaec;
+        }
+
+        body {
+            font-family: "Microsoft Yahei", 微软雅黑, arial, 宋体, sans-serif;
+        }
+
+        .progress-bar {
+            font-size: 12px;
+            color: #fff;
+            text-align: center;
+            background-color: #62a8ea;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            height: 10px;
+            -webkit-transition: width .6s ease;
+            -o-transition: width .6s ease;
+            transition: width .6s ease;
+            border-top-left-radius: 4px;
+            border-bottom-left-radius: 4px;
+        }
+
+        .progress-bar-border {
+            background: transparent;
+            width: 400px;
+            border-radius: 7px;
+            border: 2px solid #62a8ea;
+            height: 10px;
+            -webkit-box-shadow: 0.3px 1px 0px rgba(0, 0, 0, .15);
+            box-shadow: 0.3px 1px 0px rgba(0, 0, 0, .15);
+        }
+
+        img {
+            width: 150px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 80px;
+        }
+
+        p {
+            height: auto;
+            font-size: 20px;
+            color: #999;
+            margin: 0 0 30px 0;
+        }
+
+        .screen-center {
+            position: fixed;
+            width: 404px;
+            bottom: 50%;
+            left: 50%;
+            margin-left: -202px;
+            margin-bottom: -200px;
+            text-align: center;
+        }
+
+        div#cmx-role-list {
+            margin: 0 auto 20px;
+            display: table;
+        }
+
+        div#cmx-role-list .item {
+            padding: 0 10px;
+            display: inline;
+        }
+
+        div#cmx-role-list button {
+            border: 2px solid #62a8ea;
+            background: #fff;
+            font-size: 18px;
+            height: 40px;
+            padding: 0 10px;
+            color: #62a8ea;
+            margin: 5px 0;
+        }
+
+        div#cmx-role-list button:hover {
+            background: #62a8ea;
+            color: #fff;
+            cursor: pointer;
+        }
+    </style>
+    <script src="/themes/classic/global/js/main.js"></script>
+    <script>
+        var autoSelectRole = false;
+        //是否为NULL
+        function IsNull(value) { // 需要判断的内容
+            if (value == null || typeof (value) == 'undefined' || value === undefined) {
+                return true;
+            }
+            return false;
+        }
+        //是否为空(包括空字符串)
+        function IsEmpty(strings) {
+            if (!IsNull(strings)) { // 先判断是否为null，返回true ，判断是否为空字符串，返回true
+                if ((strings + '').replace(/(^\s*)|(\s*$)/g, '').length === 0) { //已修正bug，当strings为数字时，会报strings.replace is not a function
+                    return true;
+                }
+            } else {
+                return true;
+            }
+            // 不为空返回false
+            return false;
+        }
+        // 获取cookie
+        function getCookie(c_name) { // name
+            if (document.cookie.length > 0) {
+                var c_start = document.cookie.indexOf(c_name + "=");
+                if (c_start != -1) { //判断 cookie 键是否存在
+                    c_start = c_start + c_name.length + 1;
+                    var c_end = document.cookie.indexOf(";", c_start);
+                    if (c_end == -1)
+                        c_end = document.cookie.length;
+                    return unescape(document.cookie.substring(c_start, c_end));
+                }
+            }
+            return "";
+        }
+        // 获取缓存内容
+        function getData(key, defaultvalue) { // defaultvalue 为数据获取不到或为空时默认的数据
+            var temp = null;
+            if (typeof (Storage) == "undefined") {
+                temp = getCookie(key);
+            } else {
+                temp = localStorage.getItem(key);
+            }
+            return temp !== '' ? temp : defaultvalue;
+        }
+
+        //获得url参数的值 &
+        function GetUrlParamString(name) { // 需要参数的key
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+            var r = window.location.search.substr(1).match(reg); //判断？后符合正则的部分代码
+            if (r != null) {
+                var myurl = unescape(r[2]); // 第三个元素是我们需要的值
+                if (myurl != null && myurl.toString().length >= 1) // 判断不为空返回该值
+                    return myurl;
+            }
+            return '';
+        }
+
+        function getScript(url, callback) {
+            var request = new XMLHttpRequest();
+            var timeout = false;
+            request.open("GET", url);
+            request.onreadystatechange = function () {
+                if (request.readyState !== 4) return;
+                callback();
+            }
+            request.send(null);
+        }
+
+        function appendScript(url, callback) {
+            var newScript = document.createElement('script');
+            newScript.type = 'text/javascript';
+            newScript.src = url;
+            newScript.onload = function () {
+                callback();
+            }
+            document.getElementById('cmx-cont').appendChild(newScript);
+        }
+        if (IsEmpty(getData('token'))) {
+            var str = location.href;
+            var num = str.indexOf("?")
+            if (num > 0) {
+                str = str.substr(num + 1);
+                if (!IsEmpty(str)) {
+                    location.href = "/login.html?from=" + encodeURIComponent(location.href);
+                } else {
+                    location.href = "/login.html";
+                }
+            } else {
+                location.href = "/login.html";
+            }
+        } else if (getData('agreement') != '1') {
+            getScript('/vendor/jquery/jquery.min.js', function () {
+                getScript('/themes/classic/global/js/openapi.js', function () {
+                    appendScript('/themes/classic/global/js/openapi.js', function () {
+                        appendScript('/vendor/jquery/jquery.min.js', function () {
+                            $.ajax({
+                                url: api_aa + '/user/getUserInfo',
+                                data: {
+                                    token: getData('token')
+                                },
+                                type: "GET",
+                                success: function (result) {
+                                    console.log(result);
+                                    if (result.state == "200" && !IsEmpty(
+                                        result.data)) {
+                                        if (IsEmpty(getData('lastlogintime'))) {
+                                            location.href = "/reset.html";
+                                        } else if (result.data.roles[0].roleId ==
+                                            "RGZ0000001") {
+                                            init();
+                                        } else {
+                                            var str = location.href;
+                                            var num = str.indexOf("?")
+                                            if (num > 0) {
+                                                str = str.substr(num + 1);
+                                                if (!IsEmpty(str)) {
+                                                    location.href =
+                                                        "/agreement.html?from=" +
+                                                        encodeURIComponent(
+                                                            location.href);
+                                                } else {
+                                                    location.href =
+                                                        "/agreement.html";
+                                                }
+                                            } else {
+                                                location.href =
+                                                    "/agreement.html";
+                                            }
+                                        }
+                                    } else {
+                                        showAlert({
+                                            type: 'error',
+                                            content: result.msg
+                                        });
+                                        clearData('token');
+                                        setTimeout(function () {
+                                            location.href =
+                                                "/login.html";
+                                        }, 1000);
+                                    }
+                                }
+                            })
+                        });
+                    });
+                });
+            });
+        } else {
+            init();
+        }
+
+        function init() {
+            var script_arr = ['/vendor/jquery/jquery.min.js', '/vendor/bootstrap/bootstrap.min.js',
+                '/vendor/modernizr/modernizr.min.js', '/vendor/breakpoints/breakpoints.min.js',
+                '/vendor/artTemplate/template.min.js', '/vendor/toastr/toastr.min.js',
+                '/vendor/bootbox/bootbox.min.js', '/themes/classic/global/js/core.js',
+                '/themes/classic/base/js/site.js', '/themes/classic/global/js/components.js',
+                '/themes/classic/global/js/cmx-route.js', '/themes/classic/global/js/openapi.js',
+                '/themes/classic/global/js/global-model.js',
+                '/themes/classic/global/js/global-view.js', '/js/index.js', '/themes/classic/global/js/struct.js',
+                '/themes/classic/global/js/build-modal-form.js',
+                '/themes/classic/global/js/build-horizonal-form.js', '/themes/classic/global/js/md5.min.js',
+                '/themes/classic/base/js/sections/menu.js', '/themes/classic/base/js/sections/media-menu.js',
+                '/themes/classic/base/js/sections/content-tabs.js',
+                '/themes/classic/global/js/plugins/responsive-tabs.js',
+                '/vendor/ashoverscroll/jquery-asHoverScroll.min.js', '/vendor/slimscroll/jquery.slimscroll.min.js',
+                '/vendor/screenfull/screenfull.min.js'
+            ];
+            var _progress_count = 0;
+            var count_per = 80 / script_arr.length;
+            var load_time = 0;
+            for (var i = 0; i < script_arr.length; i++) {
+                getScript(script_arr[i],
+                    function () {
+                        _progress_count = _progress_count + count_per;
+                        document.getElementById("cmx-load-progress").style.width = _progress_count + '%';
+                        load_time++;
+                        if (load_time >= script_arr.length) {
+                            appendScript('/themes/classic/global/js/openapi.js',
+                                function () {
+                                    document.getElementById("cmx-load-progress").style.width = '85%';
+                                    appendScript('/vendor/jquery/jquery.min.js',
+                                        function () {
+                                            document.getElementById("cmx-load-progress").style.width =
+                                                '90%';
+                                            document.getElementById("cmx-load-progress").style.width =
+                                                '95%';
+                                            //fake
+                                            //putData('role', 'client');
+                                            var fake_url = '';
+                                            /* switch (getData("role")) {
+                                                        
+                                                    } */
+                                            $.ajax({
+                                                url: api_aa + '/user/getUserInfo',
+                                                data: {
+                                                    /* role: getData('role'); */
+                                                    token: getData('token')
+                                                },
+                                                type: "GET",
+                                                success: function (result) {
+                                                    if (result.state == "200" && !
+                                                        IsEmpty(result.data)) {
+                                                        var _roles = result.data.roles;
+                                                        var roleClassArr = [];
+                                                        for (var i = 0; i < _roles.length; i++) {
+                                                            roleClassArr[i] = _roles[i].roleClass;
+                                                        }
+                                                        putData('roleClassArr', JSON.stringify(
+                                                            roleClassArr));
+                                                        var role2client = [];
+                                                        role2client['11'] =
+                                                            'nation'; //国家局
+                                                        role2client['12'] =
+                                                            'province'; //省级
+                                                        role2client['13'] =
+                                                            'wenwujinchujingshenhe'; //文物进出境
+                                                        role2client['14'] =
+                                                            'bowuguan'; //博物馆
+                                                        role2client['15'] =
+                                                            'guobaodanwei'; //国保单位
+                                                        role2client['16'] =
+                                                            'inspection'; //专业评估机构
+                                                        role2client['17'] =
+                                                            'inspection'; //专家
+                                                        role2client['18'] =
+                                                            'paimaijigou'; //拍卖机构
+                                                        role2client['19'] =
+                                                            'gongzhongyonghu'; //公众用户
+                                                        role2client['1A'] =
+                                                            'kaogufajuedanwei'; //考古发掘单位
+                                                        role2client['1B'] =
+                                                            'kaogulingdui'; //考古领队
+                                                        role2client['1C'] =
+                                                            'zizhijigou'; //资质用户
+                                                        role2client['21'] = 'admin'; //系统管理员
+                                                        role2client['22'] = 'admin'; //系统安全员
+                                                        role2client['23'] = 'admin'; //安全审计员
+                                                        role2client['24'] = 'admin'; //系统操作员
+                                                        var obj = {};
+                                                        if (IsEmpty(result.data.inst)) {
+                                                            obj.instName = '';
+                                                        } else {
+                                                            obj = eval('(' + result
+                                                                .data.inst +
+                                                                ')');
+                                                        }
+                                                        var userObj = {};
+                                                        if (!IsEmpty(result.data.user)) {
+                                                            userObj = eval('(' +
+                                                                result.data.user +
+                                                                ')');
+                                                            putData('phoneNo',
+                                                                IsEmpty(userObj
+                                                                    .phoneNo) ?
+                                                                    '无' : userObj.phoneNo
+                                                            );
+                                                            putData('telNo',
+                                                                IsEmpty(userObj
+                                                                    .telNo) ?
+                                                                    '无' : userObj.telNo
+                                                            );
+                                                            putData('fax', IsEmpty(
+                                                                userObj.fax
+                                                            ) ? '无' :
+                                                                userObj.fax);
+                                                            putData('email',
+                                                                IsEmpty(userObj
+                                                                    .email) ?
+                                                                    '无' : userObj.email
+                                                            );
+                                                        } else {
+                                                            putData('phoneNo', '无');
+                                                            putData('fax', '无');
+                                                            putData('email', '无');
+                                                        }
+                                                        if (userObj.role == 'nation' || userObj
+                                                            .role == 'province') {
+                                                            putData('contactTelno',
+                                                                IsEmpty(obj
+                                                                    .contactTelno) ?
+                                                                    '无' : obj.contactTelno
+                                                            );
+                                                        }
+                                                        $("#cmx-role-info").hide();
+                                                        putData('userName', result.data
+                                                            .username);
+                                                        putData('userId', result.data
+                                                            .userId);
+
+                                                        putData('instName', IsNull(
+                                                            obj) || IsNull(
+                                                                obj.instName) ?
+                                                            "" : obj.instName);
+                                                        putData('instId', IsNull(
+                                                            obj) || IsNull(
+                                                                obj.instId) ?
+                                                            "" : obj.instId);
+                                                        putData('accClass', result.data
+                                                            .userclass.accClass
+                                                        );
+
+                                                        $('#cmx-role-info').html(
+                                                            '欢迎你，' + (IsNull(
+                                                                obj) || IsNull(
+                                                                    obj.instName) ?
+                                                                "" : (obj.instName)
+                                                            ) + ' ' + result.data
+                                                                .username);
+                                                        $('#cmx-role-info').fadeIn(
+                                                            'slow');
+                                                        putData("role", role2client[
+                                                            result.data.userclass
+                                                                .accClass]);
+                                                        var projectNum =
+                                                            GetUrlParamString(
+                                                                'projectNum');
+                                                        switch (role2client[result.data
+                                                            .userclass.accClass
+                                                        ]) {
+                                                            case 'nation':
+                                                                if (getData('userId') ==
+                                                                    'kaoguchu') {
+                                                                    putData("menuurl",
+                                                                        '/data/app/kaoguchu-menu.json'
+                                                                    );
+                                                                } else {
+                                                                    putData("menuurl",
+                                                                        '/data/app/nation-menu.json'
+                                                                    );
+                                                                }
+                                                                if (
+                                                                    GetUrlParamString(
+                                                                        'to') ==
+                                                                    'applyTable') {
+                                                                    jumpto_url =
+                                                                        "/app/f-gover-approval/nation/country-needToDo.html?nowid=" +
+                                                                        GetUrlParamString(
+                                                                            'nowid');
+                                                                } else {
+                                                                    jumpto_url =
+                                                                        "/app/f-administrative-platform-protal/nation-workbench.html?nowid=cmx-nav-012";
+                                                                }
+                                                                break;
+                                                            case 'province':
+                                                                putData("menuurl",
+                                                                    '/data/app/province-menu.json'
+                                                                );
+                                                                if (
+                                                                    GetUrlParamString(
+                                                                        'to') ==
+                                                                    'applyTable') {
+                                                                    jumpto_url =
+                                                                        "app/f-gover-approval/apply-table.html?nowid=cmx-nav-0111" +
+                                                                        ((!IsEmpty(
+                                                                            projectNum
+                                                                        )) ?
+                                                                            "&projectNum=" +
+                                                                            projectNum :
+                                                                            "") +
+                                                                        "";
+                                                                } else {
+                                                                    jumpto_url =
+                                                                        "/app/f-administrative-platform-protal/province-workbench.html?nowid=cmx-nav-012";
+                                                                }
+                                                                autoSelectRole =
+                                                                    true;
+                                                                break;
+                                                            case 'inspection':
+                                                                putData("menuurl",
+                                                                    '/data/app/inspection-menu.json'
+                                                                );
+                                                                if (
+                                                                    GetUrlParamString(
+                                                                        'to') ==
+                                                                    'applyTable') {
+                                                                    jumpto_url =
+                                                                        "/app/f-gover-approval/nation/country-needToDo.html?nowid=cmx-nav-0111" +
+                                                                        ((!IsEmpty(
+                                                                            projectNum
+                                                                        )) ?
+                                                                            "&projectNum=" +
+                                                                            projectNum :
+                                                                            "") +
+                                                                        "";
+                                                                } else {
+                                                                    jumpto_url =
+                                                                        "/app/f-administrative-platform-protal/inspection-workbench.html";
+                                                                }
+                                                                break;
+                                                            case 'gongzhongyonghu':
+                                                                putData("menuurl",
+                                                                    '/data/app/gongzhongyonghu-menu.json'
+                                                                );
+                                                                if (
+                                                                    GetUrlParamString(
+                                                                        'to') ==
+                                                                    'applyTable') {
+                                                                    jumpto_url =
+                                                                        "/app/f-gover-approval/56020-1/1shenqing.html?nowid=cmx-nav-0131";
+                                                                } else {
+                                                                    jumpto_url =
+                                                                        "/app/f-gover-approval/56020-1/1shenqing.html?nowid=cmx-nav-0131";
+                                                                }
+                                                                break;
+                                                            case 'wenwujinchujingshenhe':
+                                                                putData("menuurl",
+                                                                    '/data/app/wenwujinchujingshenhe-menu.json'
+                                                                );
+                                                                if (
+                                                                    GetUrlParamString(
+                                                                        'to') ==
+                                                                    'applyTable') {
+                                                                    jumpto_url =
+                                                                        "/app/f-gover-approval/nation/statistic/statistic.html?nowid=0-1";
+                                                                } else {
+                                                                    jumpto_url =
+                                                                        "/app/f-gover-approval/nation/statistic/statistic.html?nowid=0-1";
+                                                                }
+                                                                autoSelectRole =
+                                                                    true;
+                                                                break;
+                                                            case 'bowuguan':
+                                                            case 'guobaodanwei':
+                                                            case 'paimaijigou':
+                                                            case 'kaogulingdui':
+                                                                putData("menuurl",
+                                                                    '/data/app/counterpart-menu.json'
+                                                                );
+                                                                if (
+                                                                    GetUrlParamString(
+                                                                        'to') ==
+                                                                    'applyTable') {
+                                                                    jumpto_url =
+                                                                        "app/f-gover-approval/apply-table.html?nowid=cmx-nav-0111" +
+                                                                        ((!IsEmpty(
+                                                                            projectNum
+                                                                        )) ?
+                                                                            "&projectNum=" +
+                                                                            projectNum :
+                                                                            "") +
+                                                                        "";
+                                                                } else {
+                                                                    jumpto_url =
+                                                                        "/app/f-administrative-platform-protal/counterpart-workbench.html?nowid=cmx-nav-012";
+                                                                }
+                                                                break;
+                                                            case 'zizhijigou':
+                                                                putData("menuurl",
+                                                                    '/data/app/counterpart-menu.json'
+                                                                );
+                                                                if (
+                                                                    GetUrlParamString(
+                                                                        'to') ==
+                                                                    'applyTable') {
+                                                                    jumpto_url =
+                                                                        "app/f-gover-approval/apply-table.html?nowid=cmx-nav-0111" +
+                                                                        ((!IsEmpty(
+                                                                            projectNum
+                                                                        )) ?
+                                                                            "&projectNum=" +
+                                                                            projectNum :
+                                                                            "") +
+                                                                        "";
+                                                                } else {
+                                                                    jumpto_url =
+                                                                        "/app/f-administrative-platform-protal/counterpart-workbench.html?nowid=cmx-nav-012";
+                                                                }
+                                                                putData('unitId', JSON.parse(
+                                                                    result.data.inst).unitId);
+                                                                break;
+                                                            case 'kaogufajuedanwei':
+                                                                putData("menuurl",
+                                                                    '/data/app/kaogufajuedanwei-menu.json'
+                                                                );
+                                                                if (
+                                                                    GetUrlParamString(
+                                                                        'to') ==
+                                                                    'applyTable') {
+                                                                    jumpto_url =
+                                                                        "/app/f-administrative-platform-protal/counterpart-workbench.html?nowid=cmx-nav-012";
+                                                                } else {
+                                                                    jumpto_url =
+                                                                        "/app/f-administrative-platform-protal/counterpart-workbench.html?nowid=cmx-nav-012";
+                                                                }
+                                                                break;
+                                                            default:
+                                                                putData("menuurl",
+                                                                    '/data/app/menu.json'
+                                                                );
+                                                                jumpto_url =
+                                                                    "/error.html";
+                                                                break;
+                                                        }
+                                                        if (IsEmpty(getData(
+                                                            'roleId'))) {
+                                                            var roles = result.data
+                                                                .roles;
+                                                            if (roles.length <= 0) {
+                                                                clearData('token');
+                                                                clearData('roleId');
+                                                                showAlert({
+                                                                    type: 'alert',
+                                                                    content: '该用户没有配置角色，不能使用！'
+                                                                });
+                                                                setTimeout(function () {
+                                                                    var str =
+                                                                        location
+                                                                            .href;
+                                                                    var num =
+                                                                        str
+                                                                            .indexOf(
+                                                                                "?"
+                                                                            );
+                                                                    if (num >
+                                                                        0) {
+                                                                        str
+                                                                            =
+                                                                            str
+                                                                                .substr(
+                                                                                    num +
+                                                                                    1
+                                                                                );
+                                                                        if (!
+                                                                            IsEmpty(
+                                                                                str
+                                                                            )
+                                                                        ) {
+                                                                            location
+                                                                                .href =
+                                                                                "/login.html?from=" +
+                                                                                encodeURIComponent(
+                                                                                    location
+                                                                                        .href
+                                                                                );
+                                                                        } else {
+                                                                            location
+                                                                                .href =
+                                                                                "/login.html";
+                                                                        }
+                                                                    } else {
+                                                                        location
+                                                                            .href =
+                                                                            "/login.html";
+                                                                    }
+                                                                }, 2000);
+                                                            } else if (roles.length ==
+                                                                1) {
+                                                                if (IsEmpty(roles[0]
+                                                                    .roleId)) {
+                                                                    clearData(
+                                                                        'token'
+                                                                    );
+                                                                    clearData(
+                                                                        'roleId'
+                                                                    );
+                                                                    showAlert({
+                                                                        type: 'alert',
+                                                                        content: '该用户没有配置角色，不能使用！'
+                                                                    });
+                                                                    setTimeout(
+                                                                        function () {
+                                                                            var
+                                                                                str =
+                                                                                    location
+                                                                                        .href;
+                                                                            var
+                                                                                num =
+                                                                                    str
+                                                                                        .indexOf(
+                                                                                            "?"
+                                                                                        );
+                                                                            if (
+                                                                                num >
+                                                                                0
+                                                                            ) {
+                                                                                str
+                                                                                    =
+                                                                                    str
+                                                                                        .substr(
+                                                                                            num +
+                                                                                            1
+                                                                                        );
+                                                                                if (!
+                                                                                    IsEmpty(
+                                                                                        str
+                                                                                    )
+                                                                                ) {
+                                                                                    location
+                                                                                        .href =
+                                                                                        "/login.html?from=" +
+                                                                                        encodeURIComponent(
+                                                                                            location
+                                                                                                .href
+                                                                                        );
+                                                                                } else {
+                                                                                    location
+                                                                                        .href =
+                                                                                        "/login.html";
+                                                                                }
+                                                                            } else {
+                                                                                location
+                                                                                    .href =
+                                                                                    "/login.html";
+                                                                            }
+                                                                        }, 2000
+                                                                    );
+                                                                } else {
+                                                                    putData(
+                                                                        'roleId',
+                                                                        roles[0]
+                                                                            .roleId
+                                                                    );
+                                                                    putData(
+                                                                        'roleName',
+                                                                        roles[0]
+                                                                            .roleName
+                                                                    );
+                                                                    selectRole(
+                                                                        roles[0]
+                                                                            .roleId,
+                                                                        roles[0]
+                                                                            .roleName
+                                                                    )
+                                                                    //goIndex();
+                                                                }
+                                                            } else {
+                                                                if (!autoSelectRole) {
+                                                                    var _html = '';
+                                                                    for (var i in
+                                                                        roles) {
+                                                                        _html += [
+                                                                            '<div class="item">',
+                                                                            '<button onclick="selectRole(\'' +
+                                                                            roles[
+                                                                                i
+                                                                            ].roleId +
+                                                                            '\',\'' +
+                                                                            roles[
+                                                                                i
+                                                                            ].roleName +
+                                                                            '\')">' +
+                                                                            roles[
+                                                                                i
+                                                                            ].roleName +
+                                                                            '</button>',
+                                                                            '</div>'
+                                                                        ].join(
+                                                                            '');
+                                                                    }
+                                                                    $(
+                                                                        '#cmx-role-list'
+                                                                    ).html(
+                                                                        _html +
+                                                                        '<div style="clear:both;overflow: hidden;"></div>'
+                                                                    );
+                                                                    $(
+                                                                        '#cmx-role-list'
+                                                                    ).fadeIn(
+                                                                        'slow');
+                                                                } else {
+                                                                    if (IsEmpty(
+                                                                        roles[0]
+                                                                            .roleId
+                                                                    )) {
+                                                                        clearData(
+                                                                            'token'
+                                                                        );
+                                                                        clearData(
+                                                                            'roleId'
+                                                                        );
+                                                                        showAlert({
+                                                                            type: 'alert',
+                                                                            content: '该用户没有配置角色，不能使用！'
+                                                                        });
+                                                                        setTimeout(
+                                                                            function () {
+                                                                                var
+                                                                                    str =
+                                                                                        location
+                                                                                            .href;
+                                                                                var
+                                                                                    num =
+                                                                                        str
+                                                                                            .indexOf(
+                                                                                                "?"
+                                                                                            );
+                                                                                if (
+                                                                                    num >
+                                                                                    0
+                                                                                ) {
+                                                                                    str
+                                                                                        =
+                                                                                        str
+                                                                                            .substr(
+                                                                                                num +
+                                                                                                1
+                                                                                            );
+                                                                                    if (!
+                                                                                        IsEmpty(
+                                                                                            str
+                                                                                        )
+                                                                                    ) {
+                                                                                        location
+                                                                                            .href =
+                                                                                            "/login.html?from=" +
+                                                                                            encodeURIComponent(
+                                                                                                location
+                                                                                                    .href
+                                                                                            );
+                                                                                    } else {
+                                                                                        location
+                                                                                            .href =
+                                                                                            "/login.html";
+                                                                                    }
+                                                                                } else {
+                                                                                    location
+                                                                                        .href =
+                                                                                        "/login.html";
+                                                                                }
+                                                                            },
+                                                                            2000
+                                                                        );
+                                                                    } else {
+                                                                        putData(
+                                                                            'roleId',
+                                                                            roles[
+                                                                                0
+                                                                            ].roleId
+                                                                        );
+                                                                        putData(
+                                                                            'roleName',
+                                                                            roles[
+                                                                                0
+                                                                            ].roleName
+                                                                        );
+                                                                        selectRole(
+                                                                            roles[
+                                                                                0
+                                                                            ].roleId,
+                                                                            roles[
+                                                                                0
+                                                                            ].roleName
+                                                                        )
+                                                                        //goIndex();
+                                                                    }
+                                                                }
+                                                            }
+                                                        } else {
+                                                            goIndex();
+                                                        }
+
+                                                    } else {
+                                                        showAlert({
+                                                            type: 'alert',
+                                                            content: result
+                                                                .msg
+                                                        });
+                                                        clearData('token');
+                                                        clearData('roleId');
+                                                        setTimeout(function () {
+                                                            var str =
+                                                                location.href;
+                                                            var num = str.indexOf(
+                                                                "?");
+                                                            if (num > 0) {
+                                                                str = str.substr(
+                                                                    num +
+                                                                    1);
+                                                                if (!
+                                                                    IsEmpty(
+                                                                        str
+                                                                    )) {
+                                                                    location
+                                                                        .href =
+                                                                        "/login.html?from=" +
+                                                                        encodeURIComponent(
+                                                                            location
+                                                                                .href
+                                                                        );
+                                                                } else {
+                                                                    location
+                                                                        .href =
+                                                                        "/login.html";
+                                                                }
+                                                            } else {
+                                                                location.href =
+                                                                    "/login.html";
+                                                            }
+                                                        }, 2000);
+                                                    }
+                                                },
+                                                error: function (result) {
+                                                    showAlert({
+                                                        type: 'warning',
+                                                        content: '网络连接失败，请重试'
+                                                    });
+                                                    clearData('token');
+                                                    clearData('roleId');
+                                                },
+                                                complete: function (result) {
+                                                    document.getElementById(
+                                                        "cmx-load-progress").style
+                                                        .width = '100%';
+                                                }
+                                            });
+                                        });
+                                })
+                        }
+                    });
+            }
+        }
+
+        function selectRole(roleId, roleName) {
+            $.ajax({
+                url: api_aa + '/user/saveDefaultRole',
+                data: {
+                    /* role: getData('role'); */
+                    token: getData('token'),
+                    roleid: roleId
+                },
+                type: "GET",
+                success: function (result) {
+                    if (result.state == '200') {
+                        putData('roleId', roleId);
+                        putData('roleName', roleName);
+                        goIndex();
+                    } else {
+                        showAlert({
+                            type: 'warning',
+                            content: result.msg
+                        });
+                    }
+                },
+                error: function (result) {
+                    showAlert({
+                        type: 'warning',
+                        content: '网络连接失败，请重试'
+                    });
+                },
+                complete: function (result) { }
+            });
+        }
+
+        function goIndex() {
+            setTimeout(function () {
+                var jump_to_url = decodeURIComponent(GetUrlParamString('from'));
+                if (!IsEmpty(jump_to_url)) {
+                    location.href = jump_to_url;
+                } else {
+                    location.href = jumpto_url;
+                }
+            }, 500);
+        }
+    </script>
+</head>
+
+<body>
+    <div class="screen-center">
+        <img src="/images/logo-dark.png" />
+        <p id="cmx-role-info"></p>
+        <div id="cmx-role-list">
+        </div>
+        <div class="progress-bar-border">
+            <div id="cmx-load-progress" class="progress-bar progress-bar-warning progress-bar-indicating active" style="width: 0%;" role="progressbar">
+            </div>
+        </div>
+    </div>
+    <div id="cmx-cont"></div>
+</body>
+
+</html>

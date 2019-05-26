@@ -1,0 +1,67 @@
+<div class="modal fade in" id="cmx-museum-modal" aria-hidden="true" aria-labelledby="museumlist" role="dialog" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span>选择博物馆</span>
+                <button class="pull-right close" data-dismiss="modal" aria-label="关闭">关闭</button>
+                <div class="clearfix"></div>
+            </div>
+            <div class="modal-body">
+                <div class="row margin-top-10 margin-bottom-10">
+                    <div class="col-xs-12 col-sm-4">
+                        <label for="cmx-museum-name" class="col-xs-3">名称</label>
+                        <input type="text" id="cmx-museum-name" class="form-control width-200">
+                    </div>
+                    <div class="col-xs-12 col-sm-8 ">
+                        <button class="btn btn-primary pull-right margin-right-10" id="cmx-museum-delete">清除</button>
+                        <button class="btn btn-primary pull-right margin-right-10" id="cmx-museum-search">查询</button>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+                <div class="padding-10">
+                    <div class="table-responsive tableDiv">
+                        <table class="table table-bordered table-hover">
+                            <thead>
+                                <tr>
+                                    <th>序号</th>
+                                    <th>名称</th>
+                                    <th>业务范围</th>
+                                    <th>联系人</th>
+                                    <th>联系电话</th>
+                                </tr>
+                            </thead>
+                            <tbody id="cmx-mmuseum-tbody"></tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="relic-footer">
+                    <!--  分页 -->
+                    <ul class="pagination" id="cmx-museum-Pagination">
+                        <li>
+                            <a href="javascript:;" class="first">首页</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" class="pre">上一页</a>
+                        </li>
+                        <li>
+                            <span>
+                                <span class="nowpage">0</span>/
+                            <span class="totalpage">0</span>页</span>
+                        </li>
+                        <li>
+                            <a href="javascript:;" class="next">下一页</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" class="last">尾页</a>
+                        </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" id="cmx-museum-confirm-btn" type="button">确认</button>
+                <button type="button" class="btn btn-default cmx-cancle-btn" data-dismiss="modal">取消</button>
+            </div>
+        </div>
+    </div>
+</div>

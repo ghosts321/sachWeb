@@ -1,0 +1,263 @@
+// 政策法规库 页面
+
+select,input,a{
+    border-radius: 0 !important;
+}
+
+// 当前位置 政府信息公开 政策法规库 start
+.regulations{
+    background-color: #FDFDFA;
+    color: #B0B0AF;
+    // min-height: 325px;
+    line-height: 50px;
+    border-bottom: 1px solid #D7D8D9;
+    i.house{
+        width: 16px;
+        height: 16px;
+        display: inline-block;
+        background: url(../img/house.png) no-repeat center center;
+        background-size: cover;
+        vertical-align: -3px;
+        margin-right: 5px;
+        margin-left: -3px;
+    }
+    .menu{
+        margin-top: 12px;
+        margin-bottom: 17px;
+        .item{
+            text-align: center;
+            span{
+                min-width: 124px;
+                // margin-right: 10px;
+                text-align: center;
+                display: inline-block;
+                height: 30px;
+                line-height: 30px;
+                color: #202020;
+                cursor: pointer;
+                background-color: #EDF7FF;
+                border: 1px solid #62AAEC;
+                border-radius: 2px;
+                &.on{
+                    color: #fff;
+                    background-color: #62AAEC;
+                    border-color: #62AAEC;
+                }
+            }
+        }
+    }
+    b{
+        width: 16px;
+        height: 16px;
+        display: inline-block;
+        background: url('../img/house.png') no-repeat center center;
+        background-size: cover;
+        vertical-align: -3px;
+        margin-right: 5px;
+        margin-left: -3px;
+    }
+    span,a{
+        color: #B4B4B3;
+        font-size: 14px;
+    }
+    a{
+        text-decoration: none;
+    }
+    .regulations-left{
+        // min-height: 203px;
+        label{
+            white-space: nowrap;
+            // min-width: 75px;
+        }
+        select,input{
+            min-width: 76%;
+        }
+        input{
+            color: #B0B0AF;
+        }
+        select{
+            color: #B0B0AF;
+        }
+        .import{
+            // min-height: 203px;
+            margin-left: 70px;
+            margin-right: 50px;
+            .pick{
+                select{
+                    border-right: 0 none;
+                    background:url('../img/option.png') no-repeat right center;
+                    background-color: #fff;
+                    background-size: contain;
+                    appearance:none;
+                    -moz-appearance:none;
+                    -webkit-appearance:none;
+                    &::-ms-expand{
+                        display: none;
+                    }
+                }
+            }
+            select{
+                &.num{
+                    min-width: 63%;
+                    &.num1{
+                        min-width: 73%;
+                    }
+                    &.num2{
+                        min-width: 78%;
+                    }
+                }
+            }
+            input{
+                &.num3{
+                    width: 80%;
+                }
+            }
+            .opinion{
+                width: 88%;
+            }
+            .date{
+                .calendar{
+                    height: 34px;
+                    padding-top: 6px;
+                    padding-bottom: 6px;
+                    border-top-width: 1px;
+                    border-bottom-width: 1px;
+                    padding-left: 12px;
+                    padding-right: 12px;
+                    border-left-width: 1px;
+                    border-right-width: 1px;
+                    border-radius: 4px;
+                    outline: none;
+                    border: 1px solid #ccc;
+                    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+                    background:url('../img/calendar.png') no-repeat 98% center;
+                    background-color: #fff;
+                }
+            }
+        }
+    }
+    .retrieve{
+        // min-height: 203px;
+        border-left: 1px dashed #CACAC9;
+        .retrieve-right{
+            // min-height: 203px;
+            margin-left: 15px;
+            a{
+                margin-top: 50px;
+                display: inline-block;
+                min-width: 160px;
+                padding: 8px 35px;
+                border: 1px solid #D7D8D9;
+                color: #657179;
+                &:hover{
+                    background-color: #62AAEC;
+                    border-color: #D7D8D9;
+                    color: #fff;
+                }
+                &:visited {
+                    background-color: none;
+                }
+            }
+            .reset{
+                margin-top: 26px;
+            }
+        }
+    }
+    form{
+        label{
+            color: #2F2F2F;
+            font-weight: normal;
+        }
+        input{
+            border-radius: 0;
+        }
+        .word-left{
+            // text-align: right;
+        }
+        .search{
+            border-radius: 0;
+            border: 0 none;
+            background-color: #62AAEC;
+            color: #fff;
+            padding-left: 60px;
+            padding-right: 60px;
+        }
+        .resetting{
+            text-decoration: underline;
+            color: #2F2F2F;
+            margin-left: 20px;
+        }
+    }
+}
+
+// 搜索结果 start
+.result{
+    // min-height: 195px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    position: relative;
+    .modal-box{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left:0;
+        background: rgba(255,255,255,.5);
+        z-index: 10;
+        display: none;
+        img{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+    }
+    ul{
+        // display: inline-block;
+        list-style: none;
+        // min-height: 350px;
+        li{
+            // cursor: pointer;
+            margin-bottom: 30px;
+            a{
+                text-decoration: none;
+                display: inline-block;
+            }
+            p{
+                font-size: 18px;
+                color: #5055B0;
+                margin-bottom: 0;
+            }
+            span{
+                font-size: 13px;
+                color: #888888;
+                &+span{
+                    margin-left: 20px;
+                }
+                &.standardred{
+                    color: red;
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+    .paging{
+        padding-top: 25px;
+        padding-bottom: 15px;
+        position: relative;
+        // text-align: center;
+        .modal-box{
+            height: 35px;
+            position: absolute;
+            width: 100%;
+            top: 25px;
+            z-index: 10;
+            opacity: 0.5;
+            background-color: #fff;
+            display: none;
+        }
+    }
+}
+
+
+// 搜索结果 end
+

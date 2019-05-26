@@ -1,0 +1,21 @@
+.www-statement {
+  margin-bottom: 20px;
+}
+.statement h4,
+.relation h4 {
+  margin: 20px 0;
+}
+.statement i,
+.relation i {
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  background: #F96868;
+  border: 1px solid #D13535;
+  border-radius: 100px;
+  margin-right: 10px;
+}
+.statement p,
+.relation p {
+  padding-left: 20px;
+}

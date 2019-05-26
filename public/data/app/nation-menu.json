@@ -1,0 +1,171 @@
+[{
+    "icon": "icon fa-shield",
+    "id": "cmx-nav-01",
+    "disable": "0",
+    "text": "欢迎您，国家文物局，上次登录时间",
+    "title": "",
+    "url": "javascript:void(0);",
+    "menu": [{
+            "icon": "fa-file-text",
+            "disable": "0",
+            "id": "cmx-nav-011",
+            "url": "javascript:void(0);",
+            "text": "行政审批管理",
+            "submenu": [
+                {
+                    "icon": "fa-file-text",
+                    "disable": "0",
+                    "id": "cmx-nav-0112",
+                    "url": "javascript:void(0);",
+                    "class": "cmx-split",
+                    "text": "受理审批",
+                    "submenu": []
+                },{
+                    "icon": "fa-file-text",
+                    "disable": "0",
+                    "id": "cmx-nav-0111",
+                    "url": "/app/f-gover-approval/nation/country-needToDo.html",
+                    "text": "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;待办",
+                    "submenu": []
+                },
+                {
+                    "icon": "fa-file-text",
+                    "disable": "0",
+                    "id": "cmx-nav-0112",
+                    "url": "/app/f-gover-approval/nation/country-haveToDo.html",
+                    "text": "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;已办",
+                    "submenu": []
+                },
+                {
+                    "icon": "fa-file-text",
+                    "disable": "0",
+                    "id": "cmx-nav-0113",
+                    "url": "/app/f-gover-approval/nation/country-hostToDo.html",
+                    "text": "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;主办",
+                    "submenu": []
+                },
+                {
+                    "icon": "fa-file-text",
+                    "disable": "0",
+                    "id": "cmx-nav-0114",
+                    "url": "/app/f-gover-approval/nation/country-overseeToDo.html",
+                    "text": "备案查看",
+                    "submenu": []
+                },
+                {
+                    "icon": "fa-file-text",
+                    "disable": "0",
+                    "id": "cmx-nav-0119",
+                    "url": "/app/f-gover-approval/nation/country-superviseList.html",
+                    "text": "国家局督办",
+                    "submenu": []
+                },
+                {
+                    "icon": "fa-file-text",
+                    "disable": "0",
+                    "id": "cmx-nav-0115",
+                    "url": "/app/f-gover-approval/nation/gongshi.html",
+                    "text": "公示",
+                    "submenu": []
+                },
+                {
+                    "icon": "fa-file-text",
+                    "disable": "0",
+                    "id": "cmx-nav-0117",
+                    "url": "/app/f-gover-approval/nation/country-handleover.html",
+                    "text": "办结",
+                    "submenu": []
+                },
+                {
+                    "icon": "fa-file-text",
+                    "disable": "0",
+                    "id": "cmx-nav-0116",
+                    "url": "/app/f-gover-approval/nation/gongkai.html",
+                    "text": "公开",
+                    "submenu": []
+                },
+                {
+                    "icon": "fa-file-text",
+                    "disable": "0",
+                    "id": "cmx-nav-0117",
+                    "url": "/app/f-gover-approval/nation/country-historicalList.html",
+                    "text": "查询检索",
+                    "submenu": []
+                },
+                {
+                    "icon": "fa-file-text",
+                    "disable": "0",
+                    "id": "cmx-nav-0118",
+                    "url": "/app/f-gover-approval/nation/openApply.html",
+                    "text": "依申请公开查看",
+                    "submenu": []
+                }
+            ]
+        },
+        {
+            "icon": "fa-file-text",
+            "disable": "0",
+            "id": "cmx-nav-012",
+            "url": "javascript:void(0);",
+            "text": "行业综合管理",
+            "submenu": [
+                {
+                    "icon": "fa-file-text",
+                    "disable": "0",
+                    "id": "cmx-nav-0121",
+                    "url": "/app/f-industry-integrated-manage/nation/country-needToDo.html",
+                    "text": "待办",
+                    "submenu": []
+                },
+                {
+                    "icon": "fa-file-text",
+                    "disable": "0",
+                    "id": "cmx-nav-0122",
+                    "url": "/app/f-industry-integrated-manage/nation/country-haveToDo.html?type=1",
+                    "text": "已办",
+                    "submenu": []
+                },
+                {
+                    "icon": "fa-file-text",
+                    "disable": "0",
+                    "id": "cmx-nav-0123",
+                    "url": "/app/f-industry-integrated-manage/nation/country-hostToDo.html",
+                    "text": "主办",
+                    "submenu": []
+                },
+                {
+                    "icon": "fa-file-text",
+                    "disable": "0",
+                    "id": "cmx-nav-0124",
+                    "url": "/app/f-industry-integrated-manage/nation/country-superviseList.html",
+                    "text": "国家局督办",
+                    "submenu": []
+                },
+                {
+                    "icon": "fa-file-text",
+                    "disable": "0",
+                    "id": "cmx-nav-0125",
+                    "url": "/app/f-industry-integrated-manage/nation/country-haveToDo.html?type=2",
+                    "text": "办结",
+                    "submenu": []
+                },
+                {
+                    "icon": "fa-file-text",
+                    "disable": "0",
+                    "id": "cmx-nav-0127",
+                    "url": "/app/f-industry-integrated-manage/nation/country-historicalList.html",
+                    "text": "查询检索",
+                    "submenu": []
+                }
+            ]
+        },
+        {
+           "icon": "fa-file-text",
+            "disable": "0",
+            "id": "cmx-nav-013",
+            "url": "/app/f-gover-approval/nation/statistic/statistic.html",
+            "text": "统计分析",
+            "submenu": []
+        }
+    ]
+}]

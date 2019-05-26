@@ -1,0 +1,156 @@
+[{
+    "icon": "icon fa-shield",
+    "id": "cmx-nav-01",
+    "disable": "0",
+    "text": "欢迎您，省文物局，上次登录时间",
+    "title": "",
+    "url": "javascript:void(0);",
+    "menu": [{
+            "icon": "wb-clipboard",
+            "disable": "0",
+            "id": "cmx-nav-011",
+            "url": "javascript:void(0);",
+            "text": "行政审批管理",
+            "submenu": [{
+                    "icon": "fa-file-text",
+                    "disable": "0",
+                    "id": "cmx-nav-0112",
+                    "class": "cmx-split",
+                    "url": "javascript:void(0);",
+                    "text": "申请",
+                    "submenu": []
+                },
+                {
+                    "icon": "fa-file-text",
+                    "disable": "0",
+                    "id": "cmx-nav-0111",
+                    "url": "/app/f-gover-approval/apply-table.html",
+                    "text": "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class=\"icon wb-edit\" aria-hidden=\"true\"></i>&nbsp;&nbsp;新申请",
+                    "submenu": []
+                },
+                {
+                    "icon": "fa-file-text",
+                    "disable": "0",
+                    "id": "cmx-nav-01111",
+                    "url": "/app/f-gover-approval/province/province-needToDo.html?type=1",
+                    "text": "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;填报中",
+                    "submenu": []
+                },
+                {
+                    "icon": "fa-file-text",
+                    "disable": "0",
+                    "id": "cmx-nav-01112",
+                    "url": "/app/f-gover-approval/province/province-haveToDo.html?type=1",
+                    "text": "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;已报送",
+                    "submenu": []
+                },
+                {
+                    "icon": "fa-file-text",
+                    "disable": "0",
+                    "id": "cmx-nav-0113",
+                    "url": "/app/f-gover-approval/province/province-haveToDo.html?type=3",
+                    "text": "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;申请办结",
+                    "submenu": []
+                },
+                {
+                    "icon": "fa-file-text",
+                    "disable": "0",
+                    "id": "cmx-nav-0112",
+                    "url": "javascript:void(0);",
+                    "class": "cmx-split",
+                    "text": "受理审批",
+                    "submenu": []
+                },
+                {
+                    "icon": "fa-file-text",
+                    "disable": "0",
+                    "id": "cmx-nav-01121",
+                    "url": "/app/f-gover-approval/province/province-needToDo.html?type=2",
+                    "text": "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;待办",
+                    "submenu": []
+                },
+                {
+                    "icon": "fa-file-text",
+                    "disable": "0",
+                    "id": "cmx-nav-01122",
+                    "url": "/app/f-gover-approval/province/province-haveToDo.html?type=2",
+                    "text": "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;已办",
+                    "submenu": []
+                },
+                {
+                    "icon": "fa-file-text",
+                    "disable": "0",
+                    "id": "cmx-nav-0113",
+                    "url": "/app/f-gover-approval/province/province-haveToDo.html?type=4",
+                    "text": "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;审批办结",
+                    "submenu": []
+                },
+                {
+                    "icon": "fa-file-text",
+                    "disable": "0",
+                    "id": "cmx-nav-0114",
+                    "url": "/app/f-gover-approval/province/province-seeAll.html",
+                    "text": "查询检索",
+                    "submenu": []
+                }
+
+            ]
+        },
+        {
+            "icon": "wb-clipboard",
+            "disable": "0",
+            "id": "cmx-nav-012",
+            "url": "javascript:void(0);",
+            "text": "行业综合管理",
+            "submenu": [{
+                    "icon": "fa-file-text",
+                    "disable": "0",
+                    "id": "cmx-nav-0121",
+                    "url": "/app/f-industry-integrated-manage/apply-table.html",
+                    "text": "新申请",
+                    "submenu": []
+                },
+                {
+                    "icon": "fa-file-text",
+                    "disable": "0",
+                    "id": "cmx-nav-0122",
+                    "url": "/app/f-industry-integrated-manage/province/province-needToDo.html",
+                    "text": "填报中",
+                    "submenu": []
+                },
+                {
+                    "icon": "fa-file-text",
+                    "disable": "0",
+                    "id": "cmx-nav-0123",
+                    "url": "/app/f-industry-integrated-manage/province/province-haveToDo.html?type=1",
+                    "text": "已报送",
+                    "submenu": []
+                },
+                {
+                    "icon": "fa-file-text",
+                    "disable": "0",
+                    "id": "cmx-nav-0124",
+                    "url": "/app/f-industry-integrated-manage/province/province-haveToDo.html?type=2",
+                    "text": "申请办结",
+                    "submenu": []
+                },
+                {
+                    "icon": "fa-file-text",
+                    "disable": "0",
+                    "id": "cmx-nav-0125",
+                    "url": "/app/f-industry-integrated-manage/province/province-seeAll.html",
+                    "text": "查询检索",
+                    "submenu": []
+                }
+            ]
+        },
+        {
+            "icon": "wb-pie-chart",
+            "disable": "1",
+            "id": "cmx-nav-013",
+            "url": "javascript:void(0);",
+            "text": "统计分析",
+            "submenu": []
+        }
+    ]
+}]

@@ -1,0 +1,329 @@
+[{
+    "icon": "icon fa-shield",
+    "id": "cmx-nav-01",
+    "disable": "0",
+    "text": "欢迎您，国家文物局，上次登录时间",
+    "title": "",
+    "url": "javascript:void(0);",
+    "menu": [{
+            "icon": "fa-credit-card",
+            "disable": "0",
+            "id": "cmx-nav-012",
+            "text": "单证管理",
+            "url": "/app/f-gover-approval/56020-1/shenhe-haveToDo.html",
+            "submenu": []
+        },
+        {
+            "icon": "fa-search",
+            "disable": "0",
+            "id": "cmx-nav-0121",
+            "text": "已办查询",
+            "url": "/app/f-gover-approval/56020-1/shenhe-alreadyToDo.html",
+            "submenu": []
+        },
+        {
+            "icon": "fa-pencil",
+            "disable": "0",
+            "id": "cmx-nav-013",
+            "text": "文物出境审核",
+            "url": "javascript:void(0);",
+            "submenu": [{
+                    "icon": "fa-calendar",
+                    "disable": "0",
+                    "id": "cmx-nav-0132",
+                    "text": "出境预约",
+                    "url": "/app/f-gover-approval/56020-1/2yuyue.html",
+                    "submenu": []
+                },
+                {
+                    "icon": "fa-bookmark-o",
+                    "disable": "0",
+                    "id": "cmx-nav-0133",
+                    "text": "出境受理",
+                    "url": "/app/f-gover-approval/56020-1/3shouli.html",
+                    "submenu": []
+                },
+                {
+                    "icon": "fa-code-fork",
+                    "disable": "0",
+                    "id": "cmx-nav-0134",
+                    "text": "出境分办",
+                    "url": "/app/f-gover-approval/56020-1/4fenban.html",
+                    "submenu": []
+                },
+                {
+                    "icon": "fa-pencil-square-o",
+                    "disable": "0",
+                    "id": "cmx-nav-0135",
+                    "text": "出境登记",
+                    "url": "/app/f-gover-approval/56020-1/5dengji.html",
+                    "submenu": []
+                },
+                {
+                    "icon": "fa-qrcode",
+                    "disable": "0",
+                    "id": "cmx-nav-0136",
+                    "text": "出境鉴定",
+                    "url": "/app/f-gover-approval/56020-1/6jianding.html",
+                    "submenu": []
+                },
+                {
+                    "icon": "fa-check-square-o",
+                    "disable": "0",
+                    "id": "cmx-nav-0137",
+                    "text": "出境审批",
+                    "url": "/app/f-gover-approval/56020-1/7shenpi.html",
+                    "submenu": []
+                },
+                {
+                    "icon": "fa-check-square-o",
+                    "disable": "0",
+                    "id": "cmx-nav-0138",
+                    "text": "电子标签登记",
+                    "url": "/app/f-gover-approval/56020-1/8RFID.html",
+                    "submenu": []
+                }
+            ]
+        },
+        {
+            "icon": "fa-pencil",
+            "disable": "0",
+            "id": "cmx-nav-014",
+            "text": "临时进境复出境审核",
+            "url": "javascript:void(0);",
+            "submenu": [{
+                    "icon": "fa-calendar",
+                    "disable": "0",
+                    "id": "cmx-nav-0142",
+                    "text": "临时进境预约",
+                    "url": "/app/f-gover-approval/56020-2/2yuyue.html",
+                    "submenu": []
+                },
+                {
+                    "icon": "fa-bookmark-o",
+                    "disable": "0",
+                    "id": "cmx-nav-0143",
+                    "text": "临时进境受理",
+                    "url": "/app/f-gover-approval/56020-2/3shouli.html",
+                    "submenu": []
+                },
+                {
+                    "icon": "fa-code-fork",
+                    "disable": "0",
+                    "id": "cmx-nav-0144",
+                    "text": "临时进境分办",
+                    "url": "/app/f-gover-approval/56020-2/4fenban.html",
+                    "submenu": []
+                },
+                {
+                    "icon": "fa-pencil-square-o",
+                    "disable": "0",
+                    "id": "cmx-nav-0145",
+                    "text": "临时进境登记",
+                    "url": "/app/f-gover-approval/56020-2/5dengji.html",
+                    "submenu": []
+                },
+                {
+                    "icon": "fa-qrcode",
+                    "disable": "0",
+                    "id": "cmx-nav-0146",
+                    "text": "临时进境查验",
+                    "url": "/app/f-gover-approval/56020-2/6jianding.html",
+                    "submenu": []
+                },
+                {
+                    "icon": "fa-check-square-o",
+                    "disable": "0",
+                    "id": "cmx-nav-0147",
+                    "text": "临时进境审批",
+                    "url": "/app/f-gover-approval/56020-2/7shenpi.html",
+                    "submenu": []
+                },
+                {
+                    "icon": "fa-check-square-o",
+                    "disable": "0",
+                    "id": "cmx-nav-0148",
+                    "text": "电子标签登记",
+                    "url": "/app/f-gover-approval/56020-2/8RFID.html",
+                    "submenu": []
+                },
+                {
+                    "icon": "fa-calendar",
+                    "disable": "0",
+                    "id": "cmx-nav-0152",
+                    "text": "复出境预约",
+                    "url": "/app/f-gover-approval/56020-3/2yuyue.html",
+                    "submenu": []
+                },
+                {
+                    "icon": "fa-bookmark-o",
+                    "disable": "0",
+                    "id": "cmx-nav-0153",
+                    "text": "复出境受理",
+                    "url": "/app/f-gover-approval/56020-3/3shouli.html",
+                    "submenu": []
+                },
+                {
+                    "icon": "fa-code-fork",
+                    "disable": "0",
+                    "id": "cmx-nav-0154",
+                    "text": "复出境分办",
+                    "url": "/app/f-gover-approval/56020-3/4fenban.html",
+                    "submenu": []
+                },
+                {
+                    "icon": "fa-pencil-square-o",
+                    "disable": "0",
+                    "id": "cmx-nav-0155",
+                    "text": "复出境登记",
+                    "url": "/app/f-gover-approval/56020-3/5dengji.html",
+                    "submenu": []
+                },
+                {
+                    "icon": "fa-qrcode",
+                    "disable": "0",
+                    "id": "cmx-nav-0156",
+                    "text": "复出境查验",
+                    "url": "/app/f-gover-approval/56020-3/6jianding.html",
+                    "submenu": []
+                },
+                {
+                    "icon": "fa-check-square-o",
+                    "disable": "0",
+                    "id": "cmx-nav-0157",
+                    "text": "复出境审批",
+                    "url": "/app/f-gover-approval/56020-3/7shenpi.html",
+                    "submenu": []
+                },
+                {
+                    "icon": "fa-check-square-o",
+                    "disable": "0",
+                    "id": "cmx-nav-0158",
+                    "text": "电子标签登记",
+                    "url": "/app/f-gover-approval/56020-3/8RFID.html",
+                    "submenu": []
+                }
+            ]
+        },
+        {
+            "icon": "fa-pencil",
+            "disable": "0",
+            "id": "cmx-nav-016",
+            "text": "临时出境复进境审核",
+            "url": "javascript:void(0);",
+            "submenu": [{
+                    "icon": "fa-calendar",
+                    "disable": "0",
+                    "id": "cmx-nav-0162",
+                    "text": "临时出境预约",
+                    "url": "/app/f-gover-approval/56020-4/2yuyue.html",
+                    "submenu": []
+                },
+                {
+                    "icon": "fa-bookmark-o",
+                    "disable": "0",
+                    "id": "cmx-nav-0163",
+                    "text": "临时出境受理",
+                    "url": "/app/f-gover-approval/56020-4/3shouli.html",
+                    "submenu": []
+                },
+                {
+                    "icon": "fa-code-fork",
+                    "disable": "0",
+                    "id": "cmx-nav-0164",
+                    "text": "临时出境分办",
+                    "url": "/app/f-gover-approval/56020-4/4fenban.html",
+                    "submenu": []
+                },
+                {
+                    "icon": "fa-pencil-square-o",
+                    "disable": "0",
+                    "id": "cmx-nav-0165",
+                    "text": "临时出境登记",
+                    "url": "/app/f-gover-approval/56020-4/5dengji.html",
+                    "submenu": []
+                },
+                {
+                    "icon": "fa-qrcode",
+                    "disable": "0",
+                    "id": "cmx-nav-0166",
+                    "text": "临时出境查验",
+                    "url": "/app/f-gover-approval/56020-4/6jianding.html",
+                    "submenu": []
+                },
+                {
+                    "icon": "fa-check-square-o",
+                    "disable": "0",
+                    "id": "cmx-nav-0167",
+                    "text": "临时出境审批",
+                    "url": "/app/f-gover-approval/56020-4/7shenpi.html",
+                    "submenu": []
+                },
+                {
+                    "icon": "fa-check-square-o",
+                    "disable": "0",
+                    "id": "cmx-nav-0168",
+                    "text": "电子标签登记",
+                    "url": "/app/f-gover-approval/56020-4/8RFID.html",
+                    "submenu": []
+                },
+                {
+                    "icon": "fa-calendar",
+                    "disable": "0",
+                    "id": "cmx-nav-0172",
+                    "text": "复进境预约",
+                    "url": "/app/f-gover-approval/56020-5/2yuyue.html",
+                    "submenu": []
+                },
+                {
+                    "icon": "fa-bookmark-o",
+                    "disable": "0",
+                    "id": "cmx-nav-0173",
+                    "text": "复进境受理",
+                    "url": "/app/f-gover-approval/56020-5/3shouli.html",
+                    "submenu": []
+                },
+                {
+                    "icon": "fa-code-fork",
+                    "disable": "0",
+                    "id": "cmx-nav-0174",
+                    "text": "复进境分办",
+                    "url": "/app/f-gover-approval/56020-5/4fenban.html",
+                    "submenu": []
+                },
+                {
+                    "icon": "fa-pencil-square-o",
+                    "disable": "0",
+                    "id": "cmx-nav-0175",
+                    "text": "复进境登记",
+                    "url": "/app/f-gover-approval/56020-5/5dengji.html",
+                    "submenu": []
+                },
+                {
+                    "icon": "fa-qrcode",
+                    "disable": "0",
+                    "id": "cmx-nav-0176",
+                    "text": "复进境查验",
+                    "url": "/app/f-gover-approval/56020-5/6jianding.html",
+                    "submenu": []
+                },
+                {
+                    "icon": "fa-check-square-o",
+                    "disable": "0",
+                    "id": "cmx-nav-0177",
+                    "text": "复进境审批",
+                    "url": "/app/f-gover-approval/56020-5/7shenpi.html",
+                    "submenu": []
+                },
+                {
+                    "icon": "fa-check-square-o",
+                    "disable": "0",
+                    "id": "cmx-nav-0178",
+                    "text": "电子标签登记",
+                    "url": "/app/f-gover-approval/56020-5/8RFID.html",
+                    "submenu": []
+                }
+            ]
+        }
+    ]
+}]

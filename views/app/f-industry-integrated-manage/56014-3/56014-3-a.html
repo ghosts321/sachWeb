@@ -1,0 +1,236 @@
+<title>项目工作计划已获批项目</title>
+<script src="/js/app/f-industry-integrated-manage/models/public-model.js"></script>
+<script src="/js/app/f-industry-integrated-manage/views/public-view.js"></script>
+
+<script src="/js/app/f-industry-integrated-manage/56014-3/56014-3-a.js"></script>
+<link rel="stylesheet" href="/css/app/f-industry-integrated-manage/relicList.css">
+<link rel="stylesheet" href="/css/app/f-industry-integrated-manage/apply.css">
+<style>
+    #showJianzhuPlanDetailModal table td {
+        min-width: 100px !important;
+        max-width: 300px !important;
+        text-align: left !important;
+    }
+
+    #showMuzangPlanDetailModal table td {
+        min-width: 100px !important;
+        max-width: 300px !important;
+        text-align: left !important;
+    }
+</style>
+
+<div class="page animation-fade" style="background-color:#fff;">
+    <div class="cmx-header">
+        <div class="padding-top-10 padding-bottom-10 padding-left-20">
+            <span class="cmx-header-title hidden-md hidden-sm hidden-xs">
+                项目工作计划已获批项目-填报
+            </span>
+            <div class="cmx-button padding-right-0">
+                <button class="btn btn-primary" style="margin-right:10px;" id="cmx-button-save">保存</button>
+                <button class="btn btn-primary" style="margin-right:10px;" id="cmx-button-send">发送</button>
+                <button class="btn btn-primary" style="margin-right:10px;" onclick="window.location.href='/app/f-industry-integrated-manage/apply-table.html?nowid=0-1-1'">返回</button>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <!-- 侧边栏-->
+    <!-- <div class="page-aside">
+        <div class="page-header">
+        </div>
+        <div class="page-aside-switch">
+            <i class="icon wb-chevron-left" aria-hidden="true"></i>
+            <i class="icon wb-chevron-right" aria-hidden="true"></i>
+        </div>
+        <div class="page-aside-inner height-full margin-top-20">
+            <div class="left">
+                <div id="cmx-menu"></div>
+            </div>
+        </div>
+    </div> -->
+    <!-- 内容-->
+    <div class="page-main page-aside-inner margin-top-50">
+        <div class="page-content" style="color:#76838f;">
+            <div class="panel" id="cmx-edit" style="overflow: scroll;">
+                <div class="panel-body container-fluid">
+                    <div id="cmx-form">
+                    </div>
+                    <div class="clearfix"></div>
+                    <div style="margin-bottom:15px;">
+                        <div id="upload-zip" class="inline-block"></div>
+                        <button class="btn btn-primary" style="margin-top: -25px;" id="cmx-export-plan">生成项目计划表</button>
+                        <button class="btn btn-primary" style="margin-top: -25px;" id="cmx-old-security">安防消防防雷模板下载</button>
+                        <button class="btn btn-danger" style="margin-top: -25px;" id="cmx-old-userdoc">年度计划模板填表说明</button>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table table-bordered text-nowrap" id="cmx-copy-table">
+                            <thead>
+                                <tr>
+                                    <th>序号</th>
+                                    <th>操作</th>
+                                    <th>工程类型</th>
+                                    <th>文物保护单位名称</th>
+                                    <th>项目名称</th>
+                                    <th>是否为升级改造工程</th>
+                                    <th>资金来源</th>
+                                    <th>工程估算（万元）</th>
+                                    <th>工程防护对象</th>
+                                    <th>工程防护范围</th>
+                                    <th>拟采取的主要措施</th>
+                                    <th>备注</th>
+                                </tr>
+                            </thead>
+                            <tbody id="cmx-copy-tbody">
+                                <tr>
+                                    <td colspan="8"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div id="cmx-modalDiv"></div>
+    <div id="cmx-editrelic-modal"></div>
+    <div id="cmx-modalDiv2"></div>
+    <div class="modal fade" id="showJianzhuPlanDetailModal" tabindex="-1" role="dialog" aria-labelledby="showJianzhuPlanDetailModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="close" data-dismiss="modal" aria-hidden="true">&times;</span>
+                    <h4 class="modal-title" id="showJianzhuPlanDetailModalLabel">详细信息</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="table-responsive">
+                        <table class="table table-bordered">
+                            <tbody>
+                                <tr>
+                                    <td>工程对象名称</td>
+                                    <td colspan="3" key="projectName"></td>
+                                </tr>
+                                <tr>
+                                    <td>保护工程类型</td>
+                                    <td colspan="3" key="projectType"></td>
+                                </tr>
+                                <tr>
+                                    <td>所在地</td>
+                                    <td colspan="3" id="key-address"></td>
+                                </tr>
+                                <tr>
+                                    <td>使用管理单位</td>
+                                    <td key="useMngUnit"></td>
+                                    <td>上级主管部门</td>
+                                    <td key="mngDep"></td>
+                                </tr>
+                                <tr>
+                                    <td>文物保护单位名称</td>
+                                    <td colspan="3" key="protectUnitName"></td>
+                                </tr>
+                                <tr>
+                                    <td>公布批次及编号</td>
+                                    <td colspan="3" key="batchNo"></td>
+                                </tr>
+                                <tr>
+                                    <td>文物保护单位简介</td>
+                                    <td colspan="3" key="unitIntroduce"></td>
+                                </tr>
+                                <tr>
+                                    <td>工程实施必要性（风险评估）</td>
+                                    <td colspan="3" key="impNecessity"></td>
+                                </tr>
+                                <tr>
+                                    <td>工程防护范围</td>
+                                    <td colspan="3" key="protectScope"></td>
+                                </tr>
+                                <tr>
+                                    <td>工程防护对象</td>
+                                    <td colspan="3" key="protectObject"></td>
+                                </tr>
+                                <tr>
+                                    <td>工程估算（万元）</td>
+                                    <td colspan="3" key="estimateAmount"></td>
+                                </tr>
+                                <tr>
+                                    <td>是否为升级改造</td>
+                                    <td colspan="3" key="isRepair"></td>
+                                </tr>
+                                <tr>
+                                    <td>资金来源</td>
+                                    <td colspan="3" key="amountSource"></td>
+                                </tr>
+                                <tr>
+                                    <td>工程内容</td>
+                                    <td colspan="3" key="projectContent"></td>
+                                </tr>
+                                <tr>
+                                    <td>测算依据</td>
+                                    <td colspan="3" key="measureAccord"></td>
+                                </tr>
+                                <tr>
+                                    <td>拟采取的具体措施</td>
+                                    <td colspan="3" key="dealWay"></td>
+                                </tr>
+                                <tr>
+                                    <td>原有设施简况</td>
+                                    <td colspan="3" key="oldFacInt"></td>
+                                </tr>
+                                <tr>
+                                    <td>项目实施保障条件</td>
+                                    <td colspan="3" key="ensureCondition"></td>
+                                </tr>
+                                <tr>
+                                    <td>附件</td>
+                                    <td colspan="3" id="key-file"></td>
+                                </tr>
+                                <tr>
+                                    <td>项目计划申报单位</td>
+                                    <td colspan="3" key="reportUnitsName"></td>
+                                </tr>
+                                <tr>
+                                    <td>联系人</td>
+                                    <td colspan="3" key="contactName"></td>
+                                </tr>
+                                <tr>
+                                    <td>电话</td>
+                                    <td colspan="3" key="contactTel"></td>
+                                </tr>
+                                <tr>
+                                    <td>填报时间</td>
+                                    <td colspan="3" key="reportDay"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <span class="btn btn-default" data-dismiss="modal">关闭</span>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal -->
+    </div>
+</div>
+
+<div class="modal fade" id="editJianzhuPlanDetailModal" tabindex="-1" role="dialog" aria-labelledby="editJianzhuPlanDetailModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="editJianzhuPlanDetailModalLabel">编辑信息</h4>
+            </div>
+            <div class="modal-body">
+                <div id="cmx-edit-zip-form"></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-info">保存</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal -->
+</div>

@@ -1,0 +1,11 @@
+#allmap {
+    height: 500px;
+    width: 100%;
+    margin: 0;
+    font-family: "微软雅黑";
+}
+#allmap label{max-width:none;}
+
+#control {
+    width: 100%;
+}

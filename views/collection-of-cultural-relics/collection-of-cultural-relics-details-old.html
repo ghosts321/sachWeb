@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+  <title>全国馆藏文物名录-详情</title>
+  <link href="/css/collection-of-cultural-relics/ie10-viewport-bug-workaround.css" rel="stylesheet">
+  <!-- Bootstrap -->
+  <link href="/css/collection-of-cultural-relics/bootstrap.min.css" rel="stylesheet">
+  <link href="/css/collection-of-cultural-relics/pageSwitch.min.css" rel="stylesheet">
+  <link href="/css/collection-of-cultural-relics/paging.css" rel="stylesheet">
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--   [if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif] -->
+  <link rel="stylesheet" type="text/css" href="/css/collection-of-cultural-relics/pagination-old.css">
+  <link href="/css/collection-of-cultural-relics/common.css" rel="stylesheet">
+  <link href="/css/collection-of-cultural-relics/collection-of-cultural-relics-details-old.css" rel="stylesheet">
+</head>
+<body>
+  <!-- 全国馆藏文物名录 start -->
+  <div class="container museum">
+    <p class="relics text-center"><span class="list">全国馆藏文物名录</span></p>
+    <div class="search-info">
+      <div class="row">
+        <div class="col-lg-10 museum-left" style="">
+            <div class="collection" id="collection">
+                <div class="row">
+                  <div class="col-lg-4 form-inline" style="">
+                    <label for="" style="">藏品名称：</label>
+                      <input type="text" class="form-control" placeholder="" style="" id="antiqueName">
+                  </div>
+                  <div class="col-lg-4 form-inline date">
+                    <label for="" style="">普查登记号：</label>        
+                      <input type="text" class="form-control" id="antiqueId">
+                  </div>
+                  <div class="col-lg-4 form-inline pick" style="">
+                    <label for="" style="">藏品类别：</label>
+                    <select class="form-control" style="" id="culturalClass">
+
+                    </select>
+                  </div>
+                  <div class="col-lg-4 form-inline second-line">
+                    <div>
+                      <label for="date_a">博物馆：</label>
+                      <input type="text" class="form-control" id="museumName">
+                    </div>
+                  </div>
+                  <div class="col-lg-4 form-inline second-line pick" style="">
+                    <label for="" style="">省份：</label>
+                    <select class="form-control" style="" id="province">
+
+                    </select>
+                  </div>
+                  <div class="col-lg-4 form-inline second-line pick" style="">
+                    <label for="" style="">藏品年代：</label>
+                    <select class="form-control" id="age">
+
+                    </select>
+                  </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-2 museum-right" style="">
+            <a style="" href="collection-of-cultural-relics-details.html" target="_blank" class="" id="search">检索</a>            
+            <a href="" id="reset">重置</a>
+        </div>
+      </div>
+    </div>
+    <div class="museum-search-details" id="museum-search-details">
+      <table class="table table-condensed">
+        <thead>
+          <tr class="provide-color row text-center">
+              <th class="text-center col-lg-1">普查登记号</th>
+              <th class="text-center col-lg-4">藏品名称</th>
+              <th class="text-center col-lg-2">类别</th>
+              <th class="text-center col-lg-2">年代</th>
+              <th class="text-center col-lg-2">所属博物馆</th>
+              <th class="text-center col-lg-1">省份</th>
+          </tr>
+        </thead>
+        <tbody id="museum-search-tbody">
+          <tr class="row text-center">
+            <td class="col-lg-1"></td>
+            <td class="col-lg-4"></td>
+            <td class="col-lg-2"></td>
+            <td class="col-lg-2"></td>
+            <td class="col-lg-2"></td>
+            <td class="col-lg-1"></td>
+          </tr>
+          <tr class="row text-center">
+            <td class="col-lg-1"></td>
+            <td class="col-lg-4"></td>
+            <td class="col-lg-2"></td>
+            <td class="col-lg-2"></td>
+            <td class="col-lg-2"></td>
+            <td class="col-lg-1"></td>
+          </tr>
+          <tr class="row text-center">
+            <td class="col-lg-1"></td>
+            <td class="col-lg-4"></td>
+            <td class="col-lg-2"></td>
+            <td class="col-lg-2"></td>
+            <td class="col-lg-2"></td>
+            <td class="col-lg-1"></td>
+          </tr>
+          <tr class="row text-center">
+            <td class="col-lg-1"></td>
+            <td class="col-lg-4"></td>
+            <td class="col-lg-2"></td>
+            <td class="col-lg-2"></td>
+            <td class="col-lg-2"></td>
+            <td class="col-lg-1"></td>
+          </tr>
+          <tr class="row text-center">
+            <td class="col-lg-1"></td>
+            <td class="col-lg-4"></td>
+            <td class="col-lg-2"></td>
+            <td class="col-lg-2"></td>
+            <td class="col-lg-2"></td>
+            <td class="col-lg-1"></td>
+          </tr>
+        </tbody>
+      </table>
+      <!-- 分页 -->
+      <div class="row paging">
+        <!-- <div class="box2" id="box2"></div> -->
+        <div class="M-box4"></div>
+        <div class="modal-box"></div>
+      </div>
+    </div>
+  </div>
+  <!-- 全国馆藏文物名录 end -->
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="/js/collection-of-cultural-relics/jquery-1.9.1.min.js"></script> 
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="/js/collection-of-cultural-relics/bootstrap.min.js"></script>
+  <script src="/js/collection-of-cultural-relics/ie10-viewport-bug-workaround.js"></script>
+  <script src="/js/collection-of-cultural-relics/pageSwitch.min.js"></script>
+  <script src="/js/collection-of-cultural-relics/pagination.js"></script>
+  <script src="/themes/classic/global/js/main.js"></script>
+  <script src="/js/collection-of-cultural-relics/common.js"></script>
+  <script src="/js/collection-of-cultural-relics/index.js"></script>
+
+  <script src="/js/collection-of-cultural-relics/paging.js"></script>
+  <script src="/js/collection-of-cultural-relics/jquery.pagination.js"></script>
+
+ <!-- 模板 start -->
+  <script id="tMuseumSearch" type="text/template">
+    <tr class="row text-center">
+      <td class="col-lg-1 antiqueId">$antiqueId$</td>
+      <td class="col-lg-4">$antiqueName$</td>
+      <td class="col-lg-2">$culturalClassName$</td>
+      <td class="col-lg-2">$ageName$</td>
+      <td class="col-lg-2">$museumName$</td>
+      <td class="col-lg-1">$provinceName$</td>
+    </tr>
+  </script>
+  <!-- 模板 end -->
+
+  <script>
+    $(function(){
+      var message = {
+        mLoading: '<tr class="row text-center"><td colspan="6"></td></tr><tr class="row text-center"><td colspan="6"></td></tr><tr class="row text-center"><td colspan="6"></td></tr><tr class="row text-center"><td colspan="6"><h4>数据加载中...</h4></td></tr><tr class="row text-center"><td colspan="6"></td></tr><tr class="row text-center"><td colspan="6"></td></tr><tr class="row text-center"><td colspan="6"></td></tr><tr class="row text-center"><td colspan="6"></td></tr><tr class="row text-center"><td colspan="6"></td></tr><tr class="row text-center"><td colspan="6"></td></tr><tr class="row text-center"><td colspan="6"></td></tr>',
+        noMsg: '<tr class="row text-center"><td colspan="6"></td></tr><tr class="row text-center"><td colspan="6"></td></tr><tr class="row text-center"><td colspan="6"></td></tr><tr class="row text-center"><td colspan="6"><h4>暂无数据</h4></td></tr><tr class="row text-center"><td colspan="6"></td></tr><tr class="row text-center"><td colspan="6"></td></tr><tr class="row text-center"><td colspan="6"></td></tr><tr class="row text-center"><td colspan="6"></td></tr><tr class="row text-center"><td colspan="6"></td></tr><tr class="row text-center"><td colspan="6"></td></tr>',
+        mError: '<tr class="row text-center"><td colspan="6"></td></tr><tr class="row text-center"><td colspan="6"></td></tr><tr class="row text-center"><td colspan="6"></td></tr><tr class="row text-center"><td colspan="6"><h4>数据加载失败，请检查网络</h4></td></tr><tr class="row text-center"><td colspan="6"></td></tr><tr class="row text-center"><td colspan="6"></td></tr><tr class="row text-center"><td colspan="6"></td></tr><tr class="row text-center"><td colspan="6"></td></tr><tr class="row text-center"><td colspan="6"></td></tr><tr class="row text-center"><td colspan="6"></td></tr>',
+      }
+      // 设置ajax的全局默认选项
+      jQuery.support.cors = true; // 让jQuery支持跨域请求
+      $.ajaxSetup({
+        // url: ip + ':4040/dmDatadic/getDataDicFromRedis', // 默认URL
+        url: publicUrl_4 + '/dmDatadic/getDataDicFromRedis', // 默认URL
+        type: 'get' , // 默认使用get方式
+        aysnc: true , // 默认异步加载
+        cache: false,
+        dataType: 'json',
+        error: function(err){ // 出错时默认的处理函数
+          console.log('ajax请求出错了...' + err);    
+        }
+      });
+
+      var status = 0, // 定义一个变量 看最后的请求
+          obj    = getQuery(window.location.href);
+      function judgeTheLast(){ // 判断哪个异步请求最后返回 然后赋值、检索
+        status++;
+        if(status == 3){ // ststus等于3时 异步请求全部完成
+          setInput();
+          $('#search').click();
+          // if(window.localStorage){ // 刷新之后没有了
+          //   localStorage.removeItem('museum');
+          // }
+        }
+      }
+      function setInput(){ // 把上个页面在输入框中的值通过url获取赋值到输入框中
+        if(localStorage.getItem('museum')){        
+          $('#collection input,#collection select').each(function(){
+            $(this).val(obj[$(this).attr('id')]); // 赋值到输入框、下拉框
+          });        
+        }
+      }
+
+      // 页面加载时 获取藏品类别下拉列表
+      $.ajax({
+        data: {dataType: 'CulturalClass'},
+        success: function(res){
+          var result = JSON.parse(res.data),
+              str    = '<option value="">所有</option>';
+          for(var i in result.CulturalClass){
+            str += '<option value=' + i + '>' + result.CulturalClass[i] + '</option>';  
+          }
+          $('#culturalClass').html(str);
+          judgeTheLast();
+        }
+      });
+
+      // 页面加载时 获取省份下拉列表
+      $.ajax({
+        data: {dataType: 'Province'},
+        success: function(res){
+          var result = JSON.parse(res.data),
+              str    = '<option value="">所有</option>';
+          for(var i in result.Province){
+            str   += '<option value=' + i + '>' + result.Province[i] + '</option>';
+          }
+          $('#province').html(str);
+          judgeTheLast();
+        }
+      });
+
+      // 页面加载时 获取年代下拉列表
+      $.ajax({
+        data: {dataType: 'Years'},
+        success: function(res){
+          var result = JSON.parse(res.data),
+              str    = '<option value="">所有</option>';
+          for(var i in result.Years){
+            var interceptStr = result.Years[i]; // 截取字符串长度
+            if(result.Years[i].length >= 15){
+              interceptStr = result.Years[i].substring(0,12) + '..';
+            }
+            str += '<option title=' + result.Years[i] + ' value=' + i + '>' + interceptStr + '</option>';
+          }
+          $('#age').html(str);
+          $("#age").change(function(){ // 获取下拉框的文本值
+            var checkText = $(this).find('option:selected').attr('title');   
+            $(this).attr('title',checkText); // 修改title值
+          });
+          judgeTheLast();
+        }
+      });
+
+      // 点击检索
+      $('#search').on('click',function(e){
+        e.preventDefault();
+        $that = $(this);
+        var data = {pageNumber: 1,pageSize:10};
+        $('#collection input,#collection select').each(function(){
+          data[$(this).attr('id')] = $(this).val(); // 获取所有输入框的值
+        });
+        // 发起ajax请求
+        $.ajax({
+          url: publicUrl_4 + '/dmPublicrelics/queryDataByPublicrelics',
+          data: data,
+          beforeSend: function(){
+            $('#museum-search-tbody').html(message.mLoading);
+            $('.modal-box').show();
+            $that.text('检索中').addClass('disabled'); // 禁止点击搜索按钮
+          },
+          success: function(res){
+            // 这里想办法优化！ 这里和下面写重复了
+            var pages = res.data.pages, // 数据总页数
+                total = res.data.total; // 数据总条数
+            if(pages > 1){ // 大于1页时显示分页
+              $('.paging').show();
+            }else{
+              $('.paging').hide();
+            }
+            $('.modal-box').hide();
+            var html = $('#tMuseumSearch').html(),
+                content = '';
+            for(var i = 0,len = res.data.dataList.length; i < len; i++){
+              var str = html; // 重新设置为模板内容
+              str = str.replace('$antiqueId$',res.data.dataList[i].antiqueId);
+              str = str.replace('$antiqueName$',res.data.dataList[i].antiqueName);
+              str = str.replace('$culturalClassName$',res.data.dataList[i].culturalClassName);
+              str = str.replace('$ageName$',res.data.dataList[i].ageName);
+              str = str.replace('$museumName$',res.data.dataList[i].museumName);
+              str = str.replace('$provinceName$',res.data.dataList[i].provinceName);
+              content += str;
+            }
+            $('#museum-search-tbody').html(content);
+
+            if(res.data.dataList.length){
+              // $('.paging').show(); // 写在前面 有数据的时候让分页显示出来
+              $('.M-box4').pagination({
+                pageCount: pages,
+                totalData: total,
+                jump: true,
+                count:2,
+                current: 1,
+                homePage: '首页',
+                endPage: '尾页',
+                prevContent: '上一页',
+                nextContent: '下一页',
+                coping: true,
+                // isHide: true,
+                keepShowPN: true,
+                callback:function(api){
+                  data.pageNumber = api.getCurrent();
+                  $.ajax({
+                    url: publicUrl_4 + '/dmPublicrelics/queryDataByPublicrelics',
+                    data: data,
+                    beforeSend: function(){
+                      // $('#museum-search-tbody').html(message.mLoading);
+                      // $('.modal-box').show(); // 点击分页的时候出现模态框，不让用户继续点击
+                    },
+                    success: function(res){
+                      $('.modal-box').hide();
+                      var html = $('#tMuseumSearch').html(),
+                          content = '';
+                      for(var i = 0,len = res.data.dataList.length; i < len; i++){
+                        var str = html; // 重新设置为模板内容
+                        str = str.replace('$antiqueId$',res.data.dataList[i].antiqueId);
+                        str = str.replace('$antiqueName$',res.data.dataList[i].antiqueName);
+                        str = str.replace('$culturalClassName$',res.data.dataList[i].culturalClassName);
+                        str = str.replace('$ageName$',res.data.dataList[i].ageName);
+                        str = str.replace('$museumName$',res.data.dataList[i].museumName);
+                        str = str.replace('$provinceName$',res.data.dataList[i].provinceName);
+                        content += str;
+                      }
+                      $('#museum-search-tbody').html(content);
+                    },
+                    complete: function(){
+                      // $('.modal-box').hide(); // 让模态框隐藏 
+                    }
+                  });
+                }
+              });
+            }else{
+              $('#museum-search-tbody').html(message.noMsg);
+              // $('.paging').hide();
+            }
+          },
+          complete: function(){
+            $('.modal-box').hide(); // 让模态框隐藏 
+            $that.text('检索').removeClass('disabled');
+          },
+          error: function(){
+            $('#museum-search-tbody').html(message.mError);
+          }
+        });
+      });
+
+      // 点击重置输入框
+      $('#reset').on('click',function(e){
+        e.preventDefault();
+        $('#collection input,#collection select').each(function(){
+          $(this).val('');
+        });
+        if(window.localStorage){
+          localStorage.removeItem('museum');
+        }
+      });
+
+    });
+  </script>
+</body>
+</html>

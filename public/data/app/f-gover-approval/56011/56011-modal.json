@@ -1,0 +1,120 @@
+[{
+        "columnname": "cmx-i-1012",
+        "columnindex": "cmx-i-1012",
+        "serialnumber": "P0001012",
+        "type": "text",
+        "name": "文物保护单位名称",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": "short",
+            "max_length": 100
+        },
+        "extra": {
+            "class": "baseinfo",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": "请输入文物保护单位名称"
+        }
+    },
+    {
+        "columnname": "cmx-i-1013",
+        "columnindex": "cmx-i-1013",
+        "serialnumber": "P0001013",
+        "type": "text",
+        "name": "保护单位级别",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": "short",
+            "max_length": 10
+        },
+        "extra": {
+            "class": "baseinfo",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": "请输入保护单位级别"
+        }
+    },
+    {
+        "columnname": "cmx-i-1014",
+        "columnindex": "cmx-i-1014",
+        "serialnumber": "P0001014",
+        "type": "text",
+        "name": "勘察设计方案名称",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": "short",
+            "max_length": 100
+        },
+        "extra": {
+            "class": "baseinfo",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": "请输入勘察设计方案名称"
+        }
+    },
+    {
+        "columnname": "cmx-i-1015",
+        "columnindex": "cmx-i-1015",
+        "serialnumber": "P0001015",
+        "type": "text",
+        "name": "批准机关",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": "short",
+            "max_length": 50
+        },
+        "extra": {
+            "class": "baseinfo",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": "请输入批准机关"
+        }
+    },
+    {
+        "columnname": "cmx-i-1016",
+        "columnindex": "cmx-i-1016",
+        "serialnumber": "P0001016",
+        "type": "special",
+        "name": "批准文号",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": ""
+        },
+        "extra": {
+            "class": "baseinfo",
+            "func": "cmx_special_1",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-1017",
+        "columnindex": "cmx-i-1017",
+        "serialnumber": "P0001017",
+        "type": "text",
+        "name": "备注",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "long",
+            "max_length": 200
+        },
+        "extra": {
+            "class": "baseinfo",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": "请输入备注"
+        }
+    }
+]

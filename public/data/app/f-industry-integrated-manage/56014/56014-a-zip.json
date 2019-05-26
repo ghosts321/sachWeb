@@ -1,0 +1,512 @@
+[{
+        "columnname": "cmx-zip-1",
+        "columnindex": "cmx-zip-1",
+        "serialnumber": "P0001",
+        "type": "text",
+        "name": "工程对象名称",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": "short",
+            "max_length": 200
+        },
+        "extra": {
+            "class": "",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    }, {
+        "columnname": "cmx-zip-2",
+        "columnindex": "cmx-zip-2",
+        "serialnumber": "P0002",
+        "type": "multi",
+        "name": "保护工程类型",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "remark": [{
+                    "id": "修缮工程",
+                    "value": "修缮工程"
+                },
+                {
+                    "id": "展示工程",
+                    "value": "展示工程"
+                },
+                {
+                    "id": "迁建工程",
+                    "value": "迁建工程"
+                },
+                {
+                    "id": "其他保护性设施建设工程",
+                    "value": "其他保护性设施建设工程"
+                }
+            ]
+        },
+        "extra": {
+            "class": "",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    }, {
+        "columnname": "cmx-zip-20",
+        "columnindex": "cmx-zip-20",
+        "serialnumber": "P00020",
+        "type": "separator",
+        "name": "所在地",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "title": "所在地",
+            "desc": ""
+        },
+        "extra": {
+            "class": "margin-bottom-10",
+            "func": "",
+            "width": 12,
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-zip-21",
+        "columnindex": "cmx-zip-21",
+        "serialnumber": "P00021",
+        "type": "text",
+        "name": "省（自治区、直辖市）",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": "short",
+            "max_length": 200
+        },
+        "extra": {
+            "class": "",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-zip-22",
+        "columnindex": "cmx-zip-22",
+        "serialnumber": "P00022",
+        "type": "text",
+        "name": "市（地区）",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": "short",
+            "max_length": 200
+        },
+        "extra": {
+            "class": "",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-zip-23",
+        "columnindex": "cmx-zip-23",
+        "serialnumber": "P00023",
+        "type": "text",
+        "name": " 县（市）",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": "short",
+            "max_length": 200
+        },
+        "extra": {
+            "class": "",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-zip-24",
+        "columnindex": "cmx-zip-24",
+        "serialnumber": "P00024",
+        "type": "text",
+        "name": "镇（乡、街道）",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": "short",
+            "max_length": 200
+        },
+        "extra": {
+            "class": "",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-zip-25",
+        "columnindex": "cmx-zip-25",
+        "serialnumber": "P00025",
+        "type": "text",
+        "name": "村（门牌号）",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": "short",
+            "max_length": 200
+        },
+        "extra": {
+            "class": "",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    }, {
+        "columnname": "cmx-zip-26",
+        "columnindex": "cmx-zip-26",
+        "serialnumber": "P00026",
+        "type": "separator",
+        "name": "基本信息",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "title": "基本信息",
+            "desc": ""
+        },
+        "extra": {
+            "class": "margin-bottom-10",
+            "func": "",
+            "width": 12,
+            "layout": "",
+            "placeholder": ""
+        }
+    }, {
+        "columnname": "cmx-zip-4",
+        "columnindex": "cmx-zip-4",
+        "serialnumber": "P0004",
+        "type": "text",
+        "name": "使用管理单位",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": "short",
+            "max_length": 200
+        },
+        "extra": {
+            "class": "",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    }, {
+        "columnname": "cmx-zip-5",
+        "columnindex": "cmx-zip-5",
+        "serialnumber": "P0005",
+        "type": "text",
+        "name": "上级主管部门",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": "short",
+            "max_length": 200
+        },
+        "extra": {
+            "class": "",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    }, {
+        "columnname": "cmx-zip-6",
+        "columnindex": "cmx-zip-6",
+        "serialnumber": "P0006",
+        "type": "text",
+        "name": "文物保护单位名称",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": "short",
+            "max_length": 200
+        },
+        "extra": {
+            "class": "",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    }, {
+        "columnname": "cmx-zip-7",
+        "columnindex": "cmx-zip-7",
+        "serialnumber": "P0007",
+        "type": "text",
+        "name": "公布批次及编号",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": "short",
+            "max_length": 200
+        },
+        "extra": {
+            "class": "",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    }, {
+        "columnname": "cmx-zip-8",
+        "columnindex": "cmx-zip-8",
+        "serialnumber": "P0008",
+        "type": "text",
+        "name": "文物保护单位简介",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": "long",
+            "max_length": 200
+        },
+        "extra": {
+            "class": "",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-zip-9",
+        "columnindex": "cmx-zip-9",
+        "serialnumber": "P009",
+        "type": "special",
+        "name": " 文物保护单位历次保护修缮及经费补助情况",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "short"
+        },
+        "extra": {
+            "class": "",
+            "func": "cmx_special_3",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    }, {
+        "columnname": "cmx-zip-10",
+        "columnindex": "cmx-zip-10",
+        "serialnumber": "P00010",
+        "type": "text",
+        "name": "工程项目内容",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": "long",
+            "max_length": 200
+        },
+        "extra": {
+            "class": "",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    }, {
+        "columnname": "cmx-zip-11",
+        "columnindex": "cmx-zip-11",
+        "serialnumber": "P00011",
+        "type": "text",
+        "name": "工程立项的必要性",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": "long",
+            "max_length": 200
+        },
+        "extra": {
+            "class": "",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    }, {
+        "columnname": "cmx-zip-12",
+        "columnindex": "cmx-zip-12",
+        "serialnumber": "P00012",
+        "type": "text",
+        "name": "工程项目计划",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": "long",
+            "max_length": 200
+        },
+        "extra": {
+            "class": "",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": ""
+        }
+    }, {
+        "columnname": "cmx-zip-13",
+        "columnindex": "cmx-zip-13",
+        "serialnumber": "P00013",
+        "type": "separator",
+        "name": "工程经费估算（万元）",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "title": "工程经费估算（万元）",
+            "desc": ""
+        },
+        "extra": {
+            "class": "margin-bottom-10",
+            "func": "",
+            "width": 12,
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-zip-14",
+        "columnindex": "cmx-zip-14",
+        "serialnumber": "P0014",
+        "type": "num",
+        "name": "工程经费总估算",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": "count",
+            "prefix": 0,
+            "unit": "（万元）",
+            "decimal": 1,
+            "min": 0,
+            "max": 100
+        },
+        "extra": {
+            "class": "format",
+            "func": "",
+            "width": "6",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-zip-15",
+        "columnindex": "cmx-zip-15",
+        "serialnumber": "P0015",
+        "type": "num",
+        "name": "前期勘察设计经费",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": "count",
+            "prefix": 0,
+            "unit": "（万元）",
+            "decimal": 1,
+            "min": 0,
+            "max": 100
+        },
+        "extra": {
+            "class": "format",
+            "func": "",
+            "width": "6",
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-zip-16",
+        "columnindex": "cmx-zip-16",
+        "serialnumber": "P0016",
+        "type": "num",
+        "name": "工程实施经费",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": "count",
+            "prefix": 0,
+            "unit": "（万元）",
+            "decimal": 1,
+            "min": 0,
+            "max": 100
+        },
+        "extra": {
+            "class": "format",
+            "func": "",
+            "width": "6",
+            "layout": "",
+            "placeholder": ""
+        }
+    }, {
+        "columnname": "cmx-zip-17",
+        "columnindex": "cmx-zip-17",
+        "serialnumber": "P00017",
+        "type": "text",
+        "name": "项目计划申报单位",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": "short",
+            "max_length": 200
+        },
+        "extra": {
+            "class": "",
+            "func": "",
+            "width": "6",
+            "layout": "",
+            "placeholder": ""
+        }
+    }, {
+        "columnname": "cmx-zip-18",
+        "columnindex": "cmx-zip-18",
+        "serialnumber": "P00018",
+        "type": "text",
+        "name": "联系人",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": "short",
+            "max_length": 200
+        },
+        "extra": {
+            "class": "",
+            "func": "",
+            "width": "6",
+            "layout": "",
+            "placeholder": ""
+        }
+    }, {
+        "columnname": "cmx-zip-19",
+        "columnindex": "cmx-zip-19",
+        "serialnumber": "P00019",
+        "type": "text",
+        "name": "电话",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": "short",
+            "max_length": 200
+        },
+        "extra": {
+            "class": "",
+            "func": "",
+            "width": "6",
+            "layout": "",
+            "placeholder": ""
+        }
+    }
+]

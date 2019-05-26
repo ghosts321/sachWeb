@@ -1,0 +1,57 @@
+<div class="modal fade in" id="cmx-depart-identify" aria-hidden="true" aria-labelledby="addrelicinfo" role="dialog" tabindex="-1">
+    <div class="modal-dialog modal-center" style="width:60%;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="jianding-title">批量鉴定信息</span>
+                <button class="pull-right close" data-dismiss="modal" aria-label="关闭">关闭</button>
+                
+            </div>
+            <div id="fromDiv" class="modal-body" style="height:200px;overflow:scroll;">
+                <div class="cmx-form-body col-sm-12 col-xs-12 col-md-12 col-lg-12">
+                    <div class="form-group margin-bottom-20" cmx-tag="cmx" cmx-lib="P0030" cmx-index="cmx-30-IsRelic" cmx-column="cmx-i-30" cmx-type="single"
+                        cmx-require="false" cmx-stype="2">
+                        <label class="control-label col-sm-3">是否文物</label>
+                        <div id="cmx-30-IsRelic" class="radio-set col-sm-9">
+                            <div class="radio-custom radio-primary radio-inline">
+                                <input  type="radio" id="cmx-30-IsRelic-1" name="cmx-30-IsRelic" value="1">
+                                <label for="cmx-30-IsRelic-1">是</label>
+                            </div>
+                            <div class="radio-custom radio-primary radio-inline">
+                                <input checked  type="radio" id="cmx-30-IsRelic-2" name="cmx-30-IsRelic" value="2">
+                                <label for="cmx-30-IsRelic-2">否</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cmx-form-body col-sm-12 col-xs-12 col-md-12 col-lg-12">
+                    <div class="form-group margin-bottom-20" cmx-tag="cmx" cmx-lib="P0031" cmx-index="cmx-30-IsAllow" cmx-column="cmx-i-31"
+                        cmx-type="single" cmx-require="false" cmx-stype="2">
+                        <label class="control-label col-sm-3">同意出境</label>
+                        <div id="cmx-30-IsAllow" class="radio-set col-sm-9">
+                            <div class="radio-custom radio-primary radio-inline">
+                                <input checked  type="radio" id="cmx-30-IsAllow-1" name="cmx-30-IsAllow" value="1">
+                                <label for="cmx-30-IsAllow-1">允许</label>
+                            </div>
+                            <div class="radio-custom radio-primary radio-inline">
+                                <input  type="radio" id="cmx-30-IsAllow-2" name="cmx-30-IsAllow" value="2">
+                                <label for="cmx-30-IsAllow-2">不允许</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cmx-form-body col-sm-12 col-xs-12 col-md-12 col-lg-12">
+                    <div class="form-group margin-top-20" style="color:red;font-size: 12px;">
+                        <label class="control-label col-sm-3">提示:</label>
+                        <div class="col-sm-9">
+                            <p>批量鉴定时，已经在文物列表鉴定过的结果将不被修改。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button id="submitRelics" class="btn btn-primary" style="margin-right:10px;">保存</button>
+                <button type="button" class="btn btn-default cmx-cancle-btn" data-dismiss="modal" style="margin-right:10px;">取消</button>
+            </div>
+        </div>
+    </div>
+</div>

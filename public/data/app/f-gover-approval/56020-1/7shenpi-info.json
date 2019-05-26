@@ -1,0 +1,401 @@
+[
+    {
+        "columnname": "cmx-i-32",
+        "columnindex": "cmx-30-CheckOpinion",
+        "serialnumber": "P0032",
+        "type": "text",
+        "name": "审批意见",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "long",
+            "max_length": 500
+        },
+        "extra": {
+            "class": "margin-bottom-20",
+            "func": "",
+            "width": 12,
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-33",
+        "columnindex": "cmx-30-jianRemark",
+        "serialnumber": "P0033",
+        "type": "text",
+        "name": "备注",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "long",
+            "max_length": 500
+        },
+        "extra": {
+            "class": "margin-bottom-20",
+            "func": "",
+            "width": 12,
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-28",
+        "columnindex": "cmx-30-jianding",
+        "serialnumber": "P0028",
+        "type": "special",
+        "name": "鉴定人信息",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "title": "鉴定信息",
+            "desc": ""
+        },
+        "extra": {
+            "class": "margin-bottom-10",
+            "func": "cmx_special_jiandingInfo",
+            "width": 12,
+            "layout": "",
+            "placeholder": ""
+        }
+    },
+    {
+        "columnname": "cmx-i-30",
+        "columnindex": "cmx-30-RelicName",
+        "serialnumber": "P00030",
+        "type": "text",
+        "name": "文物艺术品名称",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": "short"
+        },
+        "extra": {
+            "class": "margin-bottom-40",
+            "func": "",
+            "width": "6",
+            "layout": "",
+            "placeholder": "",
+            "readonly":"disabled"
+        }
+    },
+    {
+        "columnname": "cmx-i-2",
+        "columnindex": "cmx-30-RelicType",
+        "serialnumber": "P0002",
+        "type": "single",
+        "name": "类别",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": 1,
+            "remark": [
+                {
+                    "id": 1,
+                    "value": "文物",
+                    "selected":""
+                },
+                {
+                    "id": 2,
+                    "value": "复仿制品",
+                    "selected":""
+                }
+            ]
+        },
+        "extra": {
+            "class": "margin-bottom-40",
+            "func": "",
+            "width": "6",
+            "layout": "",
+            "placeholder": "",
+            "readonly":"disabled"
+        }
+    },
+    {
+        "columnname": "cmx-i-3",
+        "columnindex": "cmx-30-RelicYear",
+        "serialnumber": "P00030",
+        "type": "text",
+        "name": "年代",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "short"
+        },
+        "extra": {
+            "class": "margin-bottom-40",
+            "func": "",
+            "width": "6",
+            "layout": "",
+            "placeholder": "",
+            "readonly":"disabled"
+        }
+    },
+    {
+        "columnname": "cmx-i-4",
+        "columnindex": "cmx-30-RelicQuality",
+        "serialnumber": "P00030",
+        "type": "special",
+        "name": "质地",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": ""
+            
+        },
+        "extra": {
+            "class": "margin-bottom-40",
+            "func": "cmx_special_ScrRelicQuality",
+            "width": "6",
+            "layout": "",
+            "placeholder": "",
+            "readonly":"disabled"
+        }
+    },
+    {
+        "columnname": "cmx-i-5",
+        "columnindex": "cmx-30-RelicLevel",
+        "serialnumber": "P00031",
+        "type": "special",
+        "name": "级别",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": ""
+           
+        },
+        "extra": {
+            "class": "margin-bottom-40",
+            "func": "cmx_special_RelicLevel",
+            "width": "6",
+            "layout": "",
+            "placeholder": "",
+            "readonly":"disabled"
+        }
+    },
+    {
+        "columnname": "cmx-i-6",
+        "columnindex": "cmx-30-RelicNumber",
+        "serialnumber": "P00030",
+        "type": "num",
+        "name": "数量",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": "count",
+            "prefix": 0,
+            "unit": "个",
+            "decimal": 1,
+            "min": 0,
+            "max": 100
+        },
+        "extra": {
+            "class": "margin-bottom-40",
+            "func": "",
+            "width": "6",
+            "layout": "",
+            "placeholder": "",
+            "readonly":"disabled"
+        }
+    },
+    {
+        "columnname": "cmx-i-7",
+        "columnindex": "cmx-30-RelicSize",
+        "serialnumber": "P00030",
+        "type": "text",
+        "name": "尺寸:",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "stype": "short"
+        },
+        "extra": {
+            "class": "margin-bottom-40",
+            "func": "",
+            "width": 6,
+            "layout": "",
+            "placeholder": "",
+            "readonly":"disabled"
+        }
+    },
+   
+    {
+        "columnname": "cmx-i-10",
+        "columnindex": "cmx-30-CultureCollec",
+        "serialnumber": "P00030",
+        "type": "text",
+        "name": "收藏单位",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "short"
+        },
+        "extra": {
+            "class": "margin-bottom-40",
+            "func": "",
+            "width": "6",
+            "layout": "",
+            "placeholder": "",
+            "readonly":"disabled"
+        }
+    },
+    {
+        "columnname": "cmx-i-30",
+        "columnindex": "cmx-30-RelicWidth",
+        "serialnumber": "P00030",
+        "type": "text",
+        "name": "宽度",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "short"
+        },
+        "extra": {
+            "class": "margin-bottom-40",
+            "func": "",
+            "width": "6",
+            "layout": "",
+            "placeholder": "",
+            "readonly":"disabled"
+        }
+    },
+    {
+        "columnname": "cmx-i-30",
+        "columnindex": "cmx-30-RelicLength",
+        "serialnumber": "P00030",
+        "type": "text",
+        "name": "长度",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "short"
+        },
+        "extra": {
+            "class": "margin-bottom-40",
+            "func": "",
+            "width": "6",
+            "layout": "",
+            "placeholder": "",
+            "readonly":"disabled"
+        }
+    },
+    {
+        "columnname": "cmx-i-30",
+        "columnindex": "cmx-30-RelicCaliber",
+        "serialnumber": "P00030",
+        "type": "text",
+        "name": "口径",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "short"
+        },
+        "extra": {
+            "class": "margin-bottom-40",
+            "func": "",
+            "width": "6",
+            "layout": "",
+            "placeholder": "",
+            "readonly":"disabled"
+        }
+    },
+    {
+        "columnname": "cmx-i-30",
+        "columnindex": "cmx-30-RelicHeight",
+        "serialnumber": "P00030",
+        "type": "text",
+        "name": "高度",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "short"
+        },
+        "extra": {
+            "class": "margin-bottom-40",
+            "func": "",
+            "width": "6",
+            "layout": "",
+            "placeholder": "",
+            "readonly":"disabled"
+        }
+    },
+    {
+        "columnname": "cmx-i-30",
+        "columnindex": "cmx-30-RelicBottom",
+        "serialnumber": "P00030",
+        "type": "text",
+        "name": "底径",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "short"
+        },
+        "extra": {
+            "class": "margin-bottom-40",
+            "func": "",
+            "width": "6",
+            "layout": "",
+            "placeholder": "",
+            "readonly":"disabled"
+        }
+    },
+    {
+        "columnname": "cmx-i-30",
+        "columnindex": "cmx-30-RelicMicro",
+        "serialnumber": "P00030",
+        "type": "text",
+        "name": " 腹径",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "short"
+        },
+        "extra": {
+            "class": "margin-bottom-40",
+            "func": "",
+            "width": "6",
+            "layout": "",
+            "placeholder": "",
+            "readonly":"disabled"
+        }
+    },{
+        "columnname": "cmx-i-8",
+        "columnindex": "cmx-30-Remark",
+        "serialnumber": "P00030",
+        "type": "text",
+        "name": "备注",
+        "attribute": {
+            "default": "",
+            "notnull": 0,
+            "stype": "long"
+        },
+        "extra": {
+            "class": "margin-bottom-40",
+            "func": "",
+            "width": "6",
+            "layout": "",
+            "placeholder": "",
+            "readonly":"disabled"
+        }
+    },
+    {
+        "columnname": "cmx-i-9",
+        "columnindex": "cmx-30-showimg",
+        "serialnumber": "P00030",
+        "type": "handimg",
+        "name": "文物图片",
+        "attribute": {
+            "default": "",
+            "notnull": 1,
+            "single": "0"
+        },
+        "extra": {
+            "class": "",
+            "func": "",
+            "width": "12",
+            "layout": "",
+            "placeholder": "sss"
+        }
+    }
+
+]

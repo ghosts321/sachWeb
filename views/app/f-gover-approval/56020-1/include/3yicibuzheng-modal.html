@@ -1,0 +1,72 @@
+<div class="modal fade in" id="yicibuzhengModal" aria-hidden="true" aria-labelledby="yicibuzhengModal" role="dialog" tabindex="-1"
+    style="display: block; padding-right: 19px;">
+    <div class="modal-dialog modal-center">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="关闭">
+                    <span aria-hidden="true">×</span>
+                </button>
+                <h4 class="modal-title">一次性补正</h4>
+            </div>
+            <div class="modal-body">
+                <table class="table table-bordered">
+                    <tbody>
+                        <tr>
+                            <td colspan="4" class="backg text-center">
+                                <h1 id="notice-title">国家文物局一次性补正告知书</h1>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="4">
+                                <div class="example-wrap form-group text-left">
+                                    <div class="checkbox-custom checkbox-primary">
+                                        <input id="r1-1" name="rNo" value="1-1" type="checkbox" checked>
+                                        <label for="r1-1">申请材料不全。</label>
+                                        <br>
+                                        <textarea maxlength="1000" onfocus="defaultChecked1()" placeholder="请填写原因……" class="form-control" id="yicibuzheng-reson1" rows="3" style="resize:none;margin: 0px 0px 0px 5px; width: 90%; height: 55px;"></textarea>
+                                    </div>
+                                    <div class="checkbox-custom checkbox-primary">
+                                        <input id="r1-2" name="rNo" value="1-2" type="checkbox">
+                                        <label for="r1-2">不符合法定形式。</label>
+                                        <br>
+                                        <textarea maxlength="1000" onfocus="defaultChecked2()" placeholder="请填写原因……" class="form-control" id="yicibuzheng-reson2" rows="3" style="resize:none;margin: 0px 0px 0px 5px; width: 90%; height: 55px;"></textarea>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="4" style="padding-left:4%" id="notice-foot">如有疑议，请致电010-56792137详细咨询</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <button type="button" id="yicibuzhengSave" class="btn btn-primary">保存</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">
+                    取消
+                </button>
+
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        // $("[name='rNo']").click(function () {
+        //     if ($(this).attr('id') == 'r1-1') {
+        //         $('#yicibuzheng-reson1').val('').css('visibility', 'visible');
+        //         $('#yicibuzheng-reson2').val('').css('visibility', 'hidden')
+        //     } else {
+        //         $('#yicibuzheng-reson2').val('').css('visibility', 'visible');
+        //         $('#yicibuzheng-reson1').val('').css('visibility', 'hidden')
+
+        //     }
+        // })
+    });
+    function defaultChecked1() {
+        $('#r1-1').prop('checked', true);
+    }
+    function defaultChecked2() {
+        $('#r1-2').prop('checked', true);
+    }
+</script>

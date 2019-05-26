@@ -1,0 +1,580 @@
+<title>国家文物局-工作台</title>
+
+<link rel="stylesheet" href="/css/app/f-administrative-platform-protal/nation-workbench.css">
+<script src="/themes/classic/global/js/echarts.js"></script>
+
+
+<div class="page animation-fade">
+    <div class="page-content">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="nation-workbench-panel">
+                <div class="panel">
+                    <div class="panel-body padding-top-10">
+                        <div class="example-wrap margin-lg-0">
+                            <div class="nav-tabs-horizontal">
+                                <ul class="nav nav-tabs nav-tabs-line" role="tablist" id="nation-workbench-tasklist">
+                                    <li class="active" role="presentation" func-id="F000000000000029">
+                                        <a data-toggle="tab" href="#cmxGoverCheck" aria-controls="cmxGoverCheck" role="tab">
+                                            行政审批待办
+                                            <botton class="margin-left-10 btn btn-xs btn-primary" title="更多" id="cmxGoverCheck-more">查看更多</botton>
+                                        </a>
+                                    </li>
+                                    <li role="presentation" func-id="F000000000000028">
+                                        <a data-toggle="tab" href="#cmxGoverAll" aria-controls="cmxGoverAll" role="tab">
+                                            行业综合待办
+                                            <botton class="margin-left-10 btn btn-xs btn-primary" title="更多" id="cmxGoverAll-more">查看更多</botton>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <div class="tab-content padding-top-10">
+                                    <div class="tab-pane active" id="cmxGoverCheck" role="tabpanel" func-id="F000000000000029">
+                                        <div class="margin-bottom-0"  style="box-shadow: none;">
+                                            <div class="table-responsive  text-nowrap" style="min-height: 240px;">
+                                                <table class="table margin-bottom-0">
+                                                    <thead>
+                                                        <tr>
+                                                            <th style="width: 30px">编号</th>
+                                                            <th style="width: 180px">文件标题</th>
+                                                            <th style="width: 60px">文博单位</th>
+                                                            <th style="width: 80px">状态</th>
+                                                            <th style="width: 80px">收到时间</th>
+                                                            <th style="width: 50px">剩余工作日</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody id="cmx-ntd-tbody">
+
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <ul class="pagination margin-top-10" id="cmx-pneedPage" style="float:right;">
+                                                <li>
+                                                    <a href="javascript:;" class="first">首页</a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:;" class="pre">上一页</a>
+                                                </li>
+                                                <li>
+                                                    <span>
+                                                        <input type="text" class="jumppage" style="width:30px;float:left;height:22px;border: 1px #ddd solid;text-align:center;" />
+                                                        <span class="nowpage">0</span>/
+                                                        <span class="totalpage">0</span>页</span>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:;" class="next">下一页</a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:;" class="last">尾页</a>
+                                                </li>
+                                            </ul>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane" id="cmxGoverAll" role="tabpanel" func-id="F000000000000028">
+                                        <div class="margin-bottom-0">
+                                            <div class="table-responsive  text-nowrap" style="min-height: 200px;">
+                                                <table class="table margin-bottom-0">
+                                                    <thead>
+                                                        <tr>
+                                                            <th style="width: 30px">编号</th>
+                                                            <th style="width: 180px">文件标题</th>
+                                                            <th style="width: 60px">文博单位</th>
+                                                            <th style="width: 80px">状态</th>
+                                                            <th style="width: 80px">收到时间</th>
+                                                            <th style="width: 50px">剩余工作日</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody id="cmx-ntd-tbody-all">
+
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <ul class="pagination margin-top-10" id="cmx-pneedPage-all" style="float:right;">
+                                                <li>
+                                                    <a href="javascript:;" class="first">首页</a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:;" class="pre">上一页</a>
+                                                </li>
+                                                <li>
+                                                    <span>
+                                                        <input type="text" class="jumppage" style="width:30px;float:left;height:22px;border: 1px #ddd solid;text-align:center;" />
+                                                        <span class="nowpage">0</span>/
+                                                        <span class="totalpage">0</span>页</span>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:;" class="next">下一页</a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:;" class="last">尾页</a>
+                                                </li>
+                                            </ul>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 左侧栏 -->
+            <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9" func-id="F000000000000026">
+                <!-- 监测 -->
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 part4 padding-0" id="jianceqixian" >
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">监测期限功能（仅显示距离时限不足三天的审批事项）</h3>
+                        </div>
+                        <div class="panel-body">
+                            <!-- 国局监测 -->
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                <div class="table-responsive text-nowrap col-xs-12 padding-0 margin-top-10" style="min-height:300px;">
+                                    <table class="table table-striped table-bordered">
+                                        <thead id="monitor-head" style="background-color: #1d7dd8 ;border-color:#1869b4;">
+                                        </thead>
+                                        <tbody id="monitor-tbody">
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <ul class="pagination" id="cmx-phavePage5" style="float:right;">
+                                    <li>
+                                        <a href="javascript:;" class="first">首页</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;" class="pre">上一页</a>
+                                    </li>
+                                    <li>
+                                        <span>
+                                            <input type="text" class="jumppage" style="width:30px;float:left;height:22px;border: 1px #ddd solid;text-align:center;" />
+                                            <span class="nowpage">0</span>/
+                                            <span class="totalpage">0</span>页</span>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;" class="next">下一页</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;" class="last">尾页</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- 右侧栏 -->
+            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                <!-- 快捷功能入口 -->
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 part3  padding-0">
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <h3 class="panel-title text-center">
+                                常用功能快捷入口
+                            </h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="col-lg-12 col-md-12 col-sm-4 col-xs-6 imgDiv ">
+                                <div onclick="window.open('/app/国家文物局综合行政管理平台_国家局用户操作手册V1.1.pdf');" class="widget widget-shadow">
+                                    <!-- <div class="widget-content bg-white padding-20"> -->
+                                    <button type="button" class="btn btn-floating btn-sm btn-primary">
+                                        <i class="icon wb-book"></i>
+                                    </button>
+                                    <div class="content-text text-center margin-bottom-0 margin-top-5">
+                                        <span class="font-size-14 font-weight-100">用户手册下载</span>
+                                    </div>
+                                    <!-- </div> -->
+                                </div>
+                            </div>
+                            <!-- <div class="col-lg-12 col-md-12 col-sm-4 col-xs-6 imgDiv">
+                                <div class="widget widget-shadow">
+
+                                    <button type="button" class="btn btn-floating btn-sm btn-warning">
+                                        <i class="icon wb-layout"></i>
+                                    </button>
+                                    <div class="content-text text-center margin-bottom-0 margin-top-5">
+                                        <span class="font-size-14 font-weight-100">评估机构库</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-4 col-xs-6 imgDiv">
+                                <div class="widget widget-shadow">
+                                    <button type="button" class="btn btn-floating btn-sm btn-danger">
+                                        <i class="icon wb-order"></i>
+                                    </button>
+                                    <div class="content-text text-center margin-bottom-0 margin-top-5">
+                                        <span class="font-size-14 font-weight-100">国保单位名录</span>
+                                    </div>
+                                </div>
+                            </div> -->
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+                <!-- 个人工作情况统计 -->
+                <!--                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 part4  padding-0">
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">个人工作情况统计
+
+                            </h3>
+                        </div>
+                        <div class="panel-body">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>待办</th>
+                                        <th>已办</th> -->
+                <!-- <th>本周内需处理业务</th> -->
+                <!--                                </tr>
+                                </thead>
+                                <tbody id="cmx-province-count"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+            <!-- 公开栏 -->
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 part4">
+                <div class="panel">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">公开栏
+                            <a href="/app/f-gover-approval/nation/gongkai.html?nowid=cmx-nav-0115" class="pull-right">更多
+                                <i class="icon fa-angle-double-right" aria-hidden="true"></i>
+                            </a>
+                        </h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="example-wrap margin-lg-0">
+                            <div class="nav-tabs-horizontal">
+                                <ul class="nav nav-tabs nav-tabs-line" role="tablist">
+                                    <li class="active" role="presentation">
+                                        <a data-toggle="tab" href="#cmxProactiveDisclosure" aria-controls="cmxProactiveDisclosure" role="tab">
+                                            主动公开
+                                        </a>
+                                    </li>
+                                    <li role="presentation">
+                                        <a data-toggle="tab" href="#cmxNotPublic" aria-controls="cmxNotPublic" role="tab">
+                                            依申请公开
+                                        </a>
+                                    </li>
+                                    <li role="presentation">
+                                        <a data-toggle="tab" href="#cmxApplyPublic" aria-controls="cmxApplyPublic" role="tab">
+                                            不公开
+                                        </a>
+                                    </li>
+                                </ul>
+                                <div class="tab-content padding-top-20">
+                                    <div class="tab-pane active" id="cmxProactiveDisclosure" role="tabpanel">
+                                        <div class="table-responsive">
+                                            <table class="table table-bordered text-nowrap">
+                                                <thead>
+                                                    <tr>
+                                                        <th>文号</th>
+                                                        <th>拟稿单位</th>
+                                                        <th>标题</th>
+                                                        <th>内容分类</th>
+                                                        <th>形式代码</th>
+                                                        <th>签发时间</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody></tbody>
+                                            </table>
+                                        </div>
+                                        <ul class="pagination" id="cmx-phavePage2" style="float:right;">
+                                            <li>
+                                                <a href="javascript:;" class="first">首页</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;" class="pre">上一页</a>
+                                            </li>
+                                            <li>
+                                                <span>
+                                                    <input type="text" class="jumppage" style="width:30px;float:left;height:22px;border: 1px #ddd solid;text-align:center;" />
+                                                    <span class="nowpage">0</span>/
+                                                    <span class="totalpage">0</span>页</span>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;" class="next">下一页</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;" class="last">尾页</a>
+                                            </li>
+                                        </ul>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                    <div class="tab-pane" id="cmxNotPublic" role="tabpanel">
+                                        <div class="table-responsive">
+                                            <table class="table table-bordered text-nowrap">
+                                                <thead>
+                                                    <tr>
+                                                        <th>文号</th>
+                                                        <th>拟稿单位</th>
+                                                        <th>标题</th>
+                                                        <th>内容分类</th>
+                                                        <th>形式代码</th>
+                                                        <th>签发时间</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody></tbody>
+                                            </table>
+                                        </div>
+                                        <ul class="pagination" id="cmx-phavePage3" style="float:right;">
+                                            <li>
+                                                <a href="javascript:;" class="first">首页</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;" class="pre">上一页</a>
+                                            </li>
+                                            <li>
+                                                <span>
+                                                    <input type="text" class="jumppage" style="width:30px;float:left;height:22px;border: 1px #ddd solid;text-align:center;" />
+                                                    <span class="nowpage">0</span>/
+                                                    <span class="totalpage">0</span>页</span>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;" class="next">下一页</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;" class="last">尾页</a>
+                                            </li>
+                                        </ul>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                    <div class="tab-pane" id="cmxApplyPublic" role="tabpanel">
+                                        <div class="table-responsive">
+                                            <table class="table table-bordered text-nowrap">
+                                                <thead>
+                                                    <tr>
+                                                        <th>文号</th>
+                                                        <th>拟稿单位</th>
+                                                        <th>标题</th>
+                                                        <th>内容分类</th>
+                                                        <th>形式代码</th>
+                                                        <th>签发时间</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody></tbody>
+                                            </table>
+                                        </div>
+                                        <ul class="pagination" id="cmx-phavePage4" style="float:right;">
+                                            <li>
+                                                <a href="javascript:;" class="first">首页</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;" class="pre">上一页</a>
+                                            </li>
+                                            <li>
+                                                <span>
+                                                    <input type="text" class="jumppage" style="width:30px;float:left;height:22px;border: 1px #ddd solid;text-align:center;" />
+                                                    <span class="nowpage">0</span>/
+                                                    <span class="totalpage">0</span>页</span>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;" class="next">下一页</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;" class="last">尾页</a>
+                                            </li>
+                                        </ul>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 公示栏 -->
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 part4">
+                <div class="panel">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">公示栏
+                            <a href="/app/f-gover-approval/nation/gongshi.html?nowid=cmx-nav-0115" class="pull-right">更多
+                                <i class="icon fa-angle-double-right" aria-hidden="true"></i>
+                            </a>
+                        </h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="example-wrap margin-lg-0">
+                            <div class="list-group" id="cmxPublicity" style="min-height: 102px;"></div>
+                            <ul class="pagination" id="cmx-phavePage1" style="float:right;">
+                                <li>
+                                    <a href="javascript:;" class="first">首页</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;" class="pre">上一页</a>
+                                </li>
+                                <li>
+                                    <span>
+                                        <input type="text" class="jumppage" style="width:30px;float:left;height:22px;border: 1px #ddd solid;text-align:center;" />
+                                        <span class="nowpage">0</span>/
+                                        <span class="totalpage">0</span>页</span>
+                                </li>
+                                <li>
+                                    <a href="javascript:;" class="next">下一页</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;" class="last">尾页</a>
+                                </li>
+                            </ul>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 仪表盘驾驶舱 -->
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" func-id="F000000000000027">
+                <div class="panel">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">仪表盘驾驶舱</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="col-xs-6 col-md-6 col-lg-6">
+                            <h3 class="list-group-item-heading">个人当前工作情况统计</h3>
+                            <div class="col-xs-12 col-md-12 col-lg-12">
+
+                                <div class="col-xs-12 col-md-6 col-lg-6 margin-top-10 margin-bottom-10 margin-right-0" style="display:none;">
+                                    <div class="input-daterange">
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                待办中超时
+                                            </span>
+                                            <input type="number" class="form-control" id="personstartDate">
+                                        </div>
+                                        <div class="input-group">
+                                            <span class="input-group-addon"> 至 </span>
+                                            <input type="number" class="form-control" id="personendDate">
+                                        </div>
+                                    </div>
+                                    <div class="input-daterange">
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                0-5天剩余工作日
+                                            </span>
+                                            <input type="number" class="form-control" id="personstartDate1">
+                                        </div>
+                                        <div class="input-group">
+                                            <span class="input-group-addon"> 至 </span>
+                                            <input type="number" class="form-control" id="personendDate1">
+                                        </div>
+                                    </div>
+                                    <div class="input-daterange">
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                5-10天剩余工作日
+                                            </span>
+                                            <input type="number" class="form-control" id="personstartDate2">
+                                        </div>
+                                        <div class="input-group">
+                                            <span class="input-group-addon"> 至 </span>
+                                            <input type="number" class="form-control" id="personendDate2">
+                                        </div>
+                                    </div>
+                                    <div class="input-daterange">
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                10-20天剩余工作日
+                                            </span>
+                                            <input type="number" class="form-control" id="personstartDate3">
+                                        </div>
+                                        <div class="input-group">
+                                            <span class="input-group-addon"> 至 </span>
+                                            <input type="number" class="form-control" id="personendDate3">
+                                        </div>
+                                    </div>
+                                    <span class="input-group-btn" onclick="benchOne()">
+                                        <button type="submit" class="btn btn-primary" id="personbtn">
+                                            <i class="icon wb-search" aria-hidden="true"></i>
+                                        </button>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="person">
+
+                            </div>
+                        </div>
+
+                        <div class="col-xs-6 col-md-6 col-lg-6">
+                            <h3 class="list-group-item-heading">本年度工作情况统计</h3>
+                            <div class="col-xs-12 col-md-12 col-lg-12 margin-top-10 margin-bottom-10">
+                                <div class="input-daterange" id="yearxuan" data-plugin="datepicker">
+                                    <div class="input-group">
+                                        <span class="input-group-addon">
+                                            统计区间
+                                        </span>
+                                        <input type="text" class="form-control" name="start" id="thisyearstartDate">
+                                    </div>
+                                    <div class="input-group">
+                                        <span class="input-group-addon"> 至 </span>
+                                        <input type="text" class="form-control" name="end" id="thisyearendDate">
+                                        <span class="input-group-btn" onclick="benchTwo()">
+                                            <button type="submit" class="btn btn-primary">
+                                                <i class="icon wb-search" aria-hidden="true"></i>
+                                            </button>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="thisyear">
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="gongkaiModal" tabindex="-1" role="dialog" aria-labelledby="gongkaiModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="gongkaiModalLabel">查看详情</h4>
+            </div>
+            <div class="modal-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered">
+                        <tbody>
+                            <tr>
+                                <td style="width:80px;">标题</td>
+                                <td id="cmx-detail-title"></td>
+                            </tr>
+                            <tr>
+                                <td style="width:80px;">正文</td>
+                                <td id="cmx-detail-content"></td>
+                            </tr>
+                            <tr>
+                                <td style="width:80px;">责任人</td>
+                                <td id="cmx-detail-person"></td>
+                            </tr>
+                            <tr>
+                                <td style="width:80px;">发布日期</td>
+                                <td id="cmx-public-time"></td>
+                            </tr>
+                            <tr>
+                                <td style="width:80px;">附件</td>
+                                <td id="cmx-detail-file"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal -->
+</div>
+<script src="/js/app/f-gover-approval/models/public-model.js"></script>
+<script src="/js/app/f-gover-approval/views/public-view.js"></script>
+<script src="/js/app/f-administrative-platform-protal/nation-workbench.js"></script>
+<!-- echarts 图表-->
+<script src="/js/app/f-gover-approval/nation/statistic/echarts.js"></script>
+<script src="/js/app/f-gover-approval/nation/statistic/workbench.js"></script>
+<!-- echarts 图表-->

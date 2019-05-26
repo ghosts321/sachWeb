@@ -1,0 +1,68 @@
+[{
+    "columnname": "cmx-i-1",
+    "columnindex": "cmx-i-1",
+    "serialnumber": "P0001",
+    "type": "separator",
+    "name": "综合评价",
+    "attribute": {
+        "default": "",
+        "notnull": 1,
+        "title": "综合评价",
+        "desc": ""
+    },
+    "extra": {
+        "class": "margin-bottom-10 ",
+        "func": "",
+        "width": 12,
+        "layout": "",
+        "placeholder": ""
+    }
+}, {
+    "columnname": "cmx-i-3",
+    "columnindex": "cmx-i-3",
+    "serialnumber": "P0003",
+    "type": "single",
+    "name": "评审结论",
+    "key": "expertResultsName",
+    "attribute": {
+        "default": "",
+        "notnull": 1,
+        "stype": 2,
+        "remark": [{
+                "id": 1,
+                "value": "通过"
+            },
+            {
+                "id": 2,
+                "value": "不通过"
+            }
+        ]
+    },
+    "extra": {
+        "class": "",
+        "func": "checkSingle('columnname','columnindex','type')",
+        "width": "",
+        "layout": "",
+        "placeholder": ""
+    }
+}, {
+    "columnname": "cmx-i-2",
+    "columnindex": "cmx-i-2",
+    "serialnumber": "P0002",
+    "type": "text",
+    "key": "expertOpinion",
+    "name": "专家意见",
+    "attribute": {
+        "default": "",
+        "notnull": 1,
+        "stype": "long",
+        "max_length": 500
+    },
+    "extra": {
+        "class": "",
+        "func": "",
+        "width": "12",
+        "layout": "",
+        "placeholder": ""
+    }
+}]

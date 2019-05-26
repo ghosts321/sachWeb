@@ -1,0 +1,549 @@
+<title>签报</title>
+<link rel="stylesheet" href="/css/app/f-gover-approval/relicList.css">
+<link rel="stylesheet" href="/vendor/html5sortable/sortable.css">
+
+<style>
+    .list-group {
+        min-height: 200px;
+        border: 1px #ddd solid;
+        border-bottom: none;
+    }
+
+    .list-group-item {
+        padding: 2px 5px;
+    }
+
+    .title {
+        padding: 5px;
+        margin: 0;
+        color: #fff;
+        background-color: #62a8ea;
+        border-color: #62a8ea;
+    }
+
+    .label-nowrap {
+        white-space: nowrap;
+    }
+
+    .control-label {
+        padding-left: 0;
+        text-align: justify !important;
+        color: gray;
+        max-height: 60px;
+    }
+
+    .control-label:after {
+        display: inline-block;
+        content: '';
+        overflow: hidden;
+        width: 100%;
+        height: 0;
+    }
+
+    .formate>.control-label {
+        width: 100px !important;
+        white-space: none;
+    }
+
+    .formate>.col-sm-9 {
+        width: -webkit-calc(100% - 100px);
+        width: -moz-calc(100% - 100px);
+        width: calc(100% - 100px);
+    }
+
+    .height-42 {
+        height: 42px !important;
+    }
+
+    .form-wrap {
+        margin-bottom: 10px;
+    }
+
+    .wenhao div {
+        float: left;
+        line-height: 32px;
+    }
+
+    .wenhao .p1 {
+        width: 25% !important;
+    }
+
+    .wenhao .p2 {
+        width: 20% !important;
+    }
+
+    .wenhao .p3 {
+        width: 47.5% !important;
+    }
+
+    .fengfa div {
+        float: left;
+        line-height: 32px;
+    }
+
+    .fengfa input {
+        width: 30% !important;
+    }
+
+    .fengfa select {
+        width: 30% !important;
+    }
+
+    .zhengwen .row {
+        border-bottom: 1px solid gray;
+        margin-top: 10px;
+    }
+
+    .zhengwen .row.noborder {
+        border-bottom: none;
+    }
+
+    .input-group-addon {
+        background: transparent;
+        color: gray;
+        border: none;
+        padding: 5px 12px;
+        width: 80px;
+        text-align: justify;
+        text-align-last: justify;
+        line-height: 0;
+    }
+
+    ul.list-group {
+        overflow: auto;
+        height: 208px;
+    }
+
+    textarea {
+        resize: vertical;
+        border-radius: 0 !important;
+    }
+
+    input {
+        border-radius: 0 !important;
+    }
+
+    select {
+        border-radius: 0 !important;
+        padding: 3px !important;
+    }
+
+    .cmx-opt button,
+    .cmx-opt a {
+        margin-bottom: 10px;
+        display: none;
+        height: 35px;
+        width: auto;
+        padding: 0 15px;
+        line-height: 35px;
+        vertical-align: middle;
+    }
+
+    .list-group-item {
+        cursor: pointer;
+    }
+
+    .list-group-item:hover {
+        background: #efefef;
+    }
+
+    .webuploader-pick {
+        border-radius: 0;
+        background: #efefef;
+        color: #222;
+    }
+
+    #uploadfawenfujian:hover .webuploader-pick {
+        background: #fefefe;
+    }
+
+    #uploadqitafujian:hover .webuploader-pick {
+        background: #fefefe;
+    }
+
+    #uploadfawenfujian {
+        padding: 0;
+        border: 0;
+        margin-top: -30px;
+        height: 27px;
+        position: absolute;
+        right: 3px;
+    }
+
+    #uploadqitafujian {
+        padding: 0;
+        border: 0;
+        margin-top: -30px;
+        height: 27px;
+        position: absolute;
+        right: 3px;
+    }
+
+    .cmx-upload-file-name {
+        border: none;
+        padding: 0;
+        width: 60%;
+        text-align: left;
+    }
+
+    .remove-btn {
+        border: none;
+        float: right;
+        padding: 0;
+    }
+
+    #related-file {
+        width: 78px;
+        height: 28px;
+        position: absolute;
+        right: 3px;
+        margin-top: -2px;
+    }
+
+    #cmx-upload-file {
+        margin-top: -10px;
+        display: none;
+    }
+
+    #cmx-upload-file .webuploader-pick {
+        height: 26px;
+        color: #fff;
+        background: transparent;
+    }
+
+    html.fromiframe #cmx-edit-formtag {
+        overflow: auto !important;
+    }
+
+    .cmx-minwidth {
+        min-width: 95px !important;
+    }
+</style>
+
+<div class="page animation-fade page-main">
+    <div class="page-content padding-0">
+        <div class="panel" style="padding:0 20px 20px 20px;background-color: #fefefe;">
+            <div class="panel-heading">
+                <div style="width: 100%;padding-top:20px;position: fixed;left:0px; padding-right:50px;right: 0px;background: #fff;z-index: 99;">
+                    <div class="pull-right cmx-opt">
+                        <a class="btn btn-primary" id="cmx-receipt" target="_blank">编辑正文</a>
+                        <button class="btn btn-primary" id="cmx-save">保存</button>
+                        <button class="btn btn-primary" id="cmx-send">发送</button>
+                        <!-- <button class="btn btn-primary" id="cmx-approval">报批件</button> -->
+                        <a class="btn btn-primary" id="cmx-add-receipt" target="_blank">新建正文</a>
+                        <button class="btn btn-primary" id="cmx-send-toprint">发送文印室</button>
+                        <button class="btn btn-danger" id="cmx-send-leader">发送局领导</button>
+                        <button class="btn btn-warning" id="cmx-send-draftor">发回拟稿人</button>
+                        <button class="btn btn-info" id="cmx-cancel">作废</button>
+                        <button class="btn btn-primary" id="cmx-duibi">发文对比</button>
+                        <button class="btn btn-primary" id="cmx-henji">修改痕迹</button>
+                        <button class="btn btn-primary" id="cmx-liucheng">流程跟踪</button>
+                        
+                        <!-- <button class="btn btn-info hidden" id="cmx-zhuanjia">补选专家</button> -->
+                        <button class="btn btn-danger" id="cmx-complete">办结</button>
+                        <a class="btn btn-primary" id="cmx-print" target="_blank">打印</a>
+                        <button class="btn btn-info" id="cmx-back">返回</button>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <div class="panel-body margin-top-60" id="cmx-edit-formtag" style="overflow: scroll;">
+                <div class="row">
+                    <div class="col-md-9 zhengwen">
+                        <h1 class="text-center margin-top-20" style="color:gray;letter-spacing: 18px;">国家文物局签报</h1>
+                        <div class="row">
+                            <div class="col-xs-12 col-md-12 col-lg-12">
+                                <div class="form-wrap">
+                                    <div class="form-group">
+                                        <div class="input-group" style="width: 100%;">
+                                            <span class="input-group-addon">
+                                                签报标题*
+                                            </span>
+                                            <input type="text" style="width: 100%;" class="form-control" id="proTitle" placeholder="" autocomplete="off">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 col-md-12 col-lg-6">
+                                <div class="form-wrap">
+                                    <div class="form-wrap">
+                                        <div class="form-group">
+                                            <div class="input-group wenhao">
+                                                <span class="input-group-addon">
+                                                    流水号
+                                                </span>
+                                                <!-- <input readonly id="flowWaterBeg" class="form-control p2" style=""> -->
+                                                <input readonly type="text" class="form-control p3" id="flowWaterBeg" placeholder="" autocomplete="off">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-md-12 col-lg-6">
+                                <div class="form-wrap">
+                                    <div class="form-wrap">
+                                        <div class="form-group">
+                                            <div class="input-group wenhao">
+                                                <span class="input-group-addon">
+                                                    缓急
+                                                </span>
+                                                <select id="degreeUrgen" data-dic="EmergencyStatus" class="form-control" style="padding: 4px 20px !important;">
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 col-md-12 col-lg-6">
+                                <div class="form-wrap">
+                                    <div class="form-wrap">
+                                        <div class="form-group">
+                                            <div class="input-group">
+                                                <span class="input-group-addon">
+                                                    拟稿人*
+                                                </span>
+                                                <select class="form-control" id="isThePerson" style="padding: 4px 12px !important;"></select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-md-12 col-lg-6">
+                                <div class="form-wrap">
+                                    <div class="form-wrap">
+                                        <div class="form-group">
+                                            <div class="input-group">
+                                                <span class="input-group-addon">
+                                                    电话*
+                                                </span>
+                                                <input type="text" style="width: 100%;" id="contactTel" class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 col-md-12 col-lg-6">
+                                <div class="form-wrap">
+                                    <div class="form-wrap">
+                                        <div class="form-group">
+                                            <div class="input-group">
+                                                <span class="input-group-addon">
+                                                    拟稿单位
+                                                </span>
+                                                <input style="width:100%" id="isTheUnit" type="text" class="form-control" readonly>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-md-12 col-lg-6">
+                                <div class="form-wrap">
+                                    <div class="form-wrap">
+                                        <div class="form-group">
+                                            <div class="input-group">
+                                                <span class="input-group-addon">
+                                                    拟稿日期
+                                                </span>
+                                                <input style="width:100%" type="text" id="isTheDate" class="form-control" data-plug="datepicker" data-language="zh-CN">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row noborder">
+                            <div class="col-xs-12 col-md-12 col-lg-12">
+                                <div class="form-wrap">
+                                    <div class="form-group">
+                                        <div class="input-group" style="width: 100%;">
+                                            <span class="input-group-addon" style="color:#000;">
+                                                备注
+                                            </span>
+                                            <textarea style="width: 100%;height:80px;" class="form-control" id="remark" placeholder="" autocomplete="off"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row noborder changyongyu hidden">
+                            <div class="col-xs-12 col-md-12 col-lg-12">
+                                <div class="form-wrap">
+                                    <div class="form-group">
+                                        <div class="input-group" style="width: 100%;">
+                                            <label class="input-group-addon" style="color:#000;">常用语</label>
+                                            <div class="input-group" style="display: inline-block;">
+                                                <select class="commonwords form-control" style="width:100%;padding: 4px 12px !important;">
+                                                </select>
+                                            </div>
+                                            <div class="input-group" style="display: inline-block;">
+                                                <button class="commonwords-use form-control btn btn-primary margin-left-10" style="border-radius: 3px">使用此常用语</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row noborder banliyijian-tag hidden">
+                            <div class="col-xs-12 col-md-12 col-lg-12">
+                                <div class="form-wrap">
+                                    <div class="form-group">
+                                        <div class="input-group" style="width: 100%;">
+                                            <span class="input-group-addon" style="color:#000;">
+                                                办理意见
+                                            </span>
+                                            <textarea style="width: 100%;height:80px;" class="form-control" id="opinions" placeholder="" autocomplete="off"></textarea>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                        <div class="input-group" style="width: 100%;text-align: right;margin-top: 10px;">
+                                            <label class="commonwords-manage">常用语管理，将上句办理意见加入/修改常用语：</label>
+                                            <button class="commonwords-add btn btn-primary margin-left-10">新增</button>
+                                            <button class="commonwords-update btn btn-primary margin-left-10">修改</button>
+                                            <button class="commonwords-remove btn btn-default margin-left-10">删除</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row noborder banliyijian-list hidden">
+                            <div class="col-xs-12 col-md-12 col-lg-12 text-center">
+                                <h1>办理意见列表</h1>
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>序号</th>
+                                            <th>办理人</th>
+                                            <th>办理意见</th>
+                                            <th>办理时间</th>
+                                            <th>停留时间</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="cmx-banli-record">
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 padding-top-20 padding-right-0">
+                        <p class="title">附件</p>
+                        <div id="uploadfawenfujian" class="btn btn-squared btn-default btn-xs pull-right">
+                            上传文件
+                        </div>
+                        <ul id="filelist-P0912" class="list-group margin-bottom-0 list-group-dividered file-upload-list">
+                        </ul>
+                        <p class="title">相关文件
+                            <button type="button" class="btn btn-squared btn-default btn-xs pull-right" id="related-file">
+                                选择
+                            </button>
+                        </p>
+                        <ul id="filelist-P0907" class="list-group margin-bottom-0 list-group-dividered xiangguanwenjian  file-upload-list" style="border-bottom: 1px #ddd solid;">
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="cmx-liuchengModel" class="modal fade" aria-hidden="true" aria-labelledby="cmx-liuchengModel" role="dialog" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span>流程跟踪</span>
+                <button class="pull-right close" data-dismiss="modal" aria-label="关闭">关闭</button>
+                <div class="clearfix"></div>
+            </div>
+            <div class="modal-body" style="max-height: 400px;overflow: auto;">
+                <div class="example table-responsive">
+                    <table class="table table-bordered text-center">
+                        <tbody>
+                            <tr>
+                                <td class="backg">序号</td>
+                                <td class="backg">办理人</td>
+                                <td class="backg">办理情况</td>
+                                <td class="backg">办理时间</td>
+                                <td class="backg">停留工作日</td>
+                            </tr>
+                        </tbody>
+                        <tbody id="cmx-liucheng-record"></tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default cmx-cancle-btn" data-dismiss="modal">关闭</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 修改痕迹 -->
+<div id="cmx-henjiModel" class="modal fade" aria-hidden="true" aria-labelledby="cmx-henjiModel" role="dialog" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span>修改痕迹</span>
+                <button class="pull-right close" data-dismiss="modal" aria-label="关闭">关闭</button>
+                <div class="clearfix"></div>
+            </div>
+            <div class="modal-body" style="max-height: 400px;overflow: auto;">
+                <div class="example table-responsive">
+                    <table class="table table-bordered text-center">
+                        <tbody>
+                            <tr>
+                                <td class="backg">序号</td>
+                                <td class="backg">栏目名称</td>
+                                <td class="backg">栏目原值</td>
+                                <td class="backg">栏目新值</td>
+                                <td class="backg">版本日期</td>
+                                <td class="backg">操作人</td>
+                            </tr>
+                        </tbody>
+                        <tbody id="cmx-henji-record"></tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default cmx-cancle-btn" data-dismiss="modal">关闭</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- <div class="modal fade in example-modal-lg" id="confirm-modal" aria-hidden="true" aria-labelledby="pingshen-modal" role="dialog"
+    tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="关闭">
+                    <span aria-hidden="true">×</span>
+                </button>
+                <h4 class="modal-title">确认信息</h4>
+            </div>
+            <div class="modal-body">
+                <h3>您现在选择的公开形式是
+                    <span id="deal-type" style="color:red;"></span>,请确认并完成保密审查。</h3>
+                <div class="clearfix"></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" id="cmx-confirm-save" class="btn btn-primary">确定</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<div id="cmx-choosemodalDiv"></div>
+<div id="cmx-chooseLeaderDiv"></div>
+<div id="cmx-relatedFileModel"></div>
+
+<script src="/vendor/html5sortable/html.sortable.min.js"></script>
+<script src="/js/app/f-gover-approval/models/public-model.js"></script>
+<script src="/js/app/f-gover-approval/views/public-view.js"></script>
+<script src="/js/app/f-gover-approval/nation/models/model.js"></script>
+<script src="/js/app/f-gover-approval/nation/views/view.js"></script>
+<script src="/js/app/f-gover-approval/nation/qianbao.js"></script>

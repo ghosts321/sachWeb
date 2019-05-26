@@ -1,0 +1,178 @@
+<style>
+    .cmx-select-no-border-radius button {
+        border-top-right-radius: 3px !important;
+        border-bottom-right-radius: 3px !important;
+    }
+</style>
+<div class="modal fade in" id="cmx-relicList" aria-hidden="true" aria-labelledby="relicList" role="dialog" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-center">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span>文保保护单位列表</span>
+                <button class="pull-right close" data-dismiss="modal" aria-label="关闭">关闭</button>
+                <div class="clearfix"></div>
+            </div>
+            <div class="modal-body">
+                <div class="panel">
+                    <div class="panel-body">
+                        <div class="nav-tabs-horizontal">
+                            <ul class="nav nav-tabs cmx-relicNav" role="tablist">
+                                <li class="active" role="presentation" id="cmx-tab1">
+                                    <a data-toggle="tab" href="#relicTabOne" aria-controls="relicTabOne" role="tab" aria-expanded="true">国保单位</a>
+                                </li>
+                                <li role="presentation" class="" id="cmx-tab2" style="display:none;">
+                                    <a data-toggle="tab" href="#relicTabTwo" aria-controls="relicTabTwo" role="tab" aria-expanded="false">世界遗产</a>
+                                </li>
+                            </ul>
+                            <div class="tab-content relic-content">
+                                <div class="tab-pane active" id="relicTabOne" role="tabpanel">
+                                    <div class="row margin-bottom-10">
+                                        <div class="col-xs-6 col-md-4 col-lg-4">
+                                            <div class="form-wrap">
+                                                <div class="form-group">
+                                                    <div class="input-group">
+                                                        <span class="input-group-addon">
+                                                            名称
+                                                        </span>
+                                                        <input type="text" class="form-control" id="cmx-national-protect-name" name="name" placeholder="" autocomplete="off">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-6 col-md-4 col-lg-4">
+                                            <div class="form-wrap">
+                                                <div class="form-group">
+                                                    <div class="input-group cmx-select-no-border-radius">
+                                                        <span class="input-group-addon">
+                                                            批次
+                                                        </span>
+                                                        <select id="cmx-national-protect-batch" data-dic="PublishBatch" class="form-control" style="min-width:130px;">
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xs-12 col-md-4 col-lg-4">
+                                            <div class="form-wrap">
+                                                <div class="form-group">
+                                                    <button type="button" class="btn btn-primary inputon" id="cmx-nation-search">查询</button>
+                                                    <button type="button" class="btn inputon" id="cmx-nation-delete">清除</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tableDiv table-responsive text-nowrap">
+                                        <table class="table table-hover table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th class="num"></th>
+                                                    <th class="relicType">单位类型</th>
+                                                    <th class="relicName">名称</th>
+                                                    <th class="batchNum">批次</th>
+                                                    <th class="relicClass">类别</th>
+                                                    <th class="relicTimes">时代</th>
+                                                    <th class="relicProvince">省别</th>
+                                                    <th class="relicAddr">地址</th>
+                                                    <th class="relicCity">所在市</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="cmx-tbody-1">
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                    <div class="relic-footer">
+                                        <!--  分页 -->
+                                        <ul class="pagination" id="relicTabOne-page">
+                                            <li>
+                                                <a href="javascript:;" class="first">首页</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;" class="pre">上一页</a>
+                                            </li>
+                                            <li>
+                                                <span>
+                                                    <span class="nowpage">0</span>/
+                                                    <span class="totalpage">0</span>页</span>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;" class="next">下一页</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;" class="last">尾页</a>
+                                            </li>
+                                        </ul>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane" id="relicTabTwo" role="tabpanel">
+                                    <div class="queryTerm">
+                                        <label for="cmx-world-heritage-name">名称</label>
+                                        <input type="text" id="cmx-world-heritage-name">
+                                        <label for="cmx-world-heritage-name">批次</label>
+                                        <input type="text" id="cmx-world-heritage-batch">
+                                        <div class="right-part">
+                                            <span>更多查询条件</span>
+                                            <button class="btn btn-primary" id="cmx-heritage-search">查询</button>
+                                            <button class="btn btn-primary" id="cmx-heritage-delete">清除</button>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                    <div class="tableDiv">
+                                        <table class="table table-hover table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th class="num"></th>
+                                                    <th class="relicType">单位类型</th>
+                                                    <th class="relicName">名称</th>
+                                                    <th class="relicClass">类别</th>
+                                                    <th class="relicTimes">时代</th>
+                                                    <th class="relicProvince">省别</th>
+                                                    <th class="relicAddr">地址</th>
+                                                    <th class="relicCity">所在市</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="cmx-tbody-2">
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="relic-footer">
+
+                                        <ul class="pagination" id="relicTabTwo-page">
+                                            <li>
+                                                <a href="javascript:;" class="first">首页</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;" class="pre">上一页</a>
+                                            </li>
+                                            <li>
+                                                <span>
+                                                    <span class="nowpage">0</span>/
+                                                    <span class="totalpage">0</span>页</span>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;" class="next">下一页</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;" class="last">尾页</a>
+                                            </li>
+                                        </ul>
+
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button id="cmx-confirm-btn" class="btn btn-primary" type="button">确认</button>
+                <button id="newly" class="btn btn-primary" type="button">非国保单位</button>
+                <button type="button" class="btn btn-default cmx-cancle-btn" data-dismiss="modal">取消</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- onclick="{location.href='no-nation-protect.html'}" -->
